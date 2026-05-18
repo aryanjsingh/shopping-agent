@@ -5,6 +5,8 @@ import { compareProducts } from "./tools/compare-products";
 import { compareSellers } from "./tools/compare-sellers";
 import { getProduct } from "./tools/get-product";
 import { searchProducts } from "./tools/search-products";
+import { webSearch } from "./tools/web-search";
+import { webFetch } from "./tools/web-fetch";
 
 export const track1ShoppingAgent = {
   id: "track1-shopping" as const,
@@ -18,6 +20,8 @@ export const track1ShoppingAgent = {
     compareSellers,
     buyProduct,
     clarifyIntent,
+    webSearch,
+    webFetch,
   },
   activeToolNames: [
     "searchProducts",
@@ -26,6 +30,8 @@ export const track1ShoppingAgent = {
     "compareSellers",
     "buyProduct",
     "clarifyIntent",
+    "webSearch",
+    "webFetch",
   ] as const,
 };
 

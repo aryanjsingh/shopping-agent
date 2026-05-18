@@ -54,6 +54,7 @@ export const searchProducts = tool({
             priceRange: p.priceRange,
             rating: p.rating,
             sellers,
+            productUrl: p.lookupUrl,
             primaryCheckoutUrl: primarySeller?.checkoutUrl ?? "",
             primaryVariantId: primarySeller?.variantId ?? "",
           };

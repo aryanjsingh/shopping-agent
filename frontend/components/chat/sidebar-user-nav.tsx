@@ -55,7 +55,7 @@ export function SidebarUserNav({ user }: { user: User }) {
               </SidebarMenuButton>
             ) : (
               <SidebarMenuButton
-                className="h-8 px-2 rounded-lg bg-transparent text-sidebar-foreground/70 transition-colors duration-150 hover:text-sidebar-foreground data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+                className="h-8 cursor-pointer px-2 rounded-lg bg-transparent text-sidebar-foreground/70 transition-colors duration-150 hover:bg-sidebar-accent/50 hover:text-sidebar-foreground data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                 data-testid="user-nav-button"
               >
                 <div
@@ -67,12 +67,12 @@ export function SidebarUserNav({ user }: { user: User }) {
                 <span className="truncate text-[13px]" data-testid="user-email">
                   {isGuest ? "Guest" : user?.email}
                 </span>
-                <ChevronUp className="ml-auto size-3.5 text-sidebar-foreground/50" />
+                <ChevronUp className="ml-auto size-3.5 text-sidebar-foreground/50 transition-transform duration-200 group-data-[state=open]/menu-button:rotate-180" />
               </SidebarMenuButton>
             )}
           </DropdownMenuTrigger>
           <DropdownMenuContent
-            className="w-(--radix-popper-anchor-width) rounded-lg border border-border/60 bg-card/95 backdrop-blur-xl shadow-[var(--shadow-float)]"
+            className="w-(--radix-popper-anchor-width) rounded-lg border border-border bg-card shadow-[var(--shadow-float)]"
             data-testid="user-nav-menu"
             side="top"
           >

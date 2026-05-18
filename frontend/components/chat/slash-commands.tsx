@@ -96,7 +96,7 @@ export function SlashCommandMenu({
 
   return (
     <div
-      className="absolute bottom-full left-0 right-0 z-50 mb-2 overflow-hidden rounded-xl border border-border/50 bg-card/95 shadow-[var(--shadow-float)] backdrop-blur-xl"
+      className="absolute right-0 bottom-full left-0 z-50 mb-2 overflow-hidden rounded-lg border border-border bg-card shadow-[var(--shadow-float)]"
       ref={menuRef}
     >
       <div className="px-4 py-2.5 text-[10px] font-medium uppercase tracking-wider text-muted-foreground/40">
@@ -106,7 +106,7 @@ export function SlashCommandMenu({
         {filtered.map((cmd, index) => (
           <button
             className={cn(
-              "flex w-full items-center gap-3 px-4 py-2.5 text-left transition-colors",
+              "flex w-full cursor-pointer items-center gap-3 px-4 py-2.5 text-left transition-colors",
               index === selectedIndex ? "bg-muted/70" : "hover:bg-muted/40"
             )}
             data-selected={index === selectedIndex}

@@ -1,5 +1,3 @@
-import "server-only";
-
 const MCP_ENDPOINT =
   process.env.SHOPIFY_CATALOG_MCP_URL ??
   "https://catalog.shopify.com/api/ucp/mcp";

@@ -1,11 +1,7 @@
-import { config } from "dotenv";
+import "../../env";
 import { drizzle } from "drizzle-orm/postgres-js";
 import { migrate } from "drizzle-orm/postgres-js/migrator";
 import postgres from "postgres";
-
-config({
-  path: ".env.local",
-});
 
 const runMigrate = async () => {
   if (!process.env.POSTGRES_URL) {
@@ -19,7 +15,7 @@ const runMigrate = async () => {
   console.log("Running migrations...");
 
   const start = Date.now();
-  await migrate(db, { migrationsFolder: "./lib/db/migrations" });
+  await migrate(db, { migrationsFolder: "./src/lib/db/migrations" });
   const end = Date.now();
 
   console.log("Migrations completed in", end - start, "ms");

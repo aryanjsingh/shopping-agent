@@ -1,8 +1,14 @@
 "use server";
 
-import { getSuggestionsByDocumentId } from "@/lib/db/queries";
+import { backendFetch } from "@/lib/backend/client";
+import type { Suggestion } from "@/lib/db/schema";
 
 export async function getSuggestions({ documentId }: { documentId: string }) {
-  const suggestions = await getSuggestionsByDocumentId({ documentId });
-  return suggestions ?? [];
+  const response = await backendFetch(
+    `/api/suggestions?documentId=${encodeURIComponent(documentId)}`
+  );
+  if (!response.ok) {
+    return [];
+  }
+  return (await response.json()) as Suggestion[];
 }

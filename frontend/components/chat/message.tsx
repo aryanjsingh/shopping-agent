@@ -4,7 +4,6 @@ import type { Vote } from "@/lib/db/schema";
 import type { ChatMessage } from "@/lib/types";
 import { cn, sanitizeText } from "@/lib/utils";
 import { MessageContent, MessageResponse } from "../ai-elements/message";
-import { Shimmer } from "../ai-elements/shimmer";
 import {
   Tool,
   ToolContent,
@@ -17,14 +16,37 @@ import { DocumentToolResult } from "./document";
 import { DocumentPreview } from "./document-preview";
 import { SparklesIcon } from "./icons";
 import { MessageActions } from "./message-actions";
-import { MessageReasoning } from "./message-reasoning";
+import { MessageThinking, toThinkingTool } from "./message-thinking";
 import { PreviewAttachment } from "./preview-attachment";
 import { BuyCta } from "./shopping/buy-cta";
 import { ComparisonTable } from "./shopping/comparison-table";
 import { OptionChips } from "./shopping/option-chips";
-import { ProductGrid } from "./shopping/product-grid";
+import { ProductGrid, ProductGridSkeleton } from "./shopping/product-grid";
 import { SellerComparison } from "./shopping/seller-comparison";
 import { Weather } from "./weather";
+
+type SearchProductsPart = {
+  toolCallId?: string;
+  state?: string;
+  output?: {
+    error?: unknown;
+    products?: Parameters<typeof ProductGrid>[0]["products"];
+    query?: string;
+  };
+};
+
+type ThinkingDataPart = {
+  type: "data-thinking";
+  data?: {
+    durationSeconds?: number;
+    toolTrace?: {
+      name: string;
+      state?: string;
+      inputSummary?: string;
+      errorText?: string;
+    }[];
+  };
+};
 
 const PurePreviewMessage = ({
   addToolApprovalResponse,
@@ -69,6 +91,9 @@ const PurePreviewMessage = ({
       part.type.startsWith("tool-")
   );
   const isThinking = isAssistant && isLoading && !hasAnyContent;
+  const hasTextContent = message.parts?.some(
+    (part) => part.type === "text" && part.text?.trim().length > 0
+  );
 
   const attachments = attachmentsFromMessage.length > 0 && (
     <div
@@ -102,21 +127,110 @@ const PurePreviewMessage = ({
     { text: "", isStreaming: false, rendered: false }
   ) ?? { text: "", isStreaming: false, rendered: false };
 
+  const renderSearchProducts = (part: SearchProductsPart, key: string) => {
+    const { toolCallId, state } = part;
+    if (
+      state === "output-available" &&
+      part.output &&
+      !("error" in part.output)
+    ) {
+      return (
+        <div className="w-full" key={toolCallId ?? key}>
+          <ProductGrid
+            products={part.output.products ?? []}
+            query={part.output.query ?? "products"}
+          />
+        </div>
+      );
+    }
+    if (
+      state === "output-available" &&
+      part.output &&
+      "error" in part.output
+    ) {
+      return (
+        <div
+          className="rounded-lg border border-red-200 bg-red-50 p-3 text-red-600 text-sm dark:bg-red-950/50"
+          key={toolCallId ?? key}
+        >
+          Search failed: {String(part.output.error)}
+        </div>
+      );
+    }
+    return (
+      <div className="w-full" key={toolCallId ?? key}>
+        <ProductGridSkeleton count={4} />
+      </div>
+    );
+  };
+
+  const productResults = message.parts
+    ?.map((part, index) =>
+      part.type === "tool-searchProducts"
+        ? renderSearchProducts(
+            part as SearchProductsPart,
+            `message-${message.id}-product-${index}`
+          )
+        : null
+    )
+    .filter(Boolean);
+
+  const thinkingTools =
+    message.parts
+      ?.filter((part) => part.type.startsWith("tool-"))
+      .map((part) =>
+        toThinkingTool(
+          part as {
+            type: string;
+            toolCallId?: string;
+            state?: string;
+            input?: unknown;
+            errorText?: string;
+          }
+        )
+      ) ?? [];
+  const thinkingData = message.parts?.find(
+    (part) => part.type === "data-thinking"
+  ) as ThinkingDataPart | undefined;
+  const persistedThinkingTools =
+    thinkingData?.data?.toolTrace?.map((tool, index) =>
+      toThinkingTool({
+        errorText: tool.errorText,
+        input: tool.inputSummary ? { query: tool.inputSummary } : undefined,
+        state: tool.state,
+        toolCallId: `persisted-${index}-${tool.name}`,
+        type: `tool-${tool.name}`,
+      })
+    ) ?? [];
+  const displayThinkingTools =
+    thinkingTools.length > 0 ? thinkingTools : persistedThinkingTools;
+  const hasRunningTool = thinkingTools.some(
+    (tool) =>
+      tool.state !== "output-available" &&
+      tool.state !== "output-denied" &&
+      tool.state !== "output-error"
+  );
+  const isThinkingPanelStreaming =
+    isAssistant && isLoading && (!hasTextContent || hasRunningTool);
+  const thinkingPanel =
+    isAssistant &&
+    (mergedReasoning.text ||
+      displayThinkingTools.length > 0 ||
+      thinkingData?.data?.durationSeconds) ? (
+      <MessageThinking
+        durationSeconds={thinkingData?.data?.durationSeconds}
+        isStreaming={isThinkingPanelStreaming}
+        reasoning={mergedReasoning.text}
+        tools={displayThinkingTools}
+      />
+    ) : null;
+
   const parts = message.parts?.map((part, index) => {
     const { type } = part;
     const key = `message-${message.id}-part-${index}`;
 
     if (type === "reasoning") {
-      if (!mergedReasoning.rendered && mergedReasoning.text) {
-        mergedReasoning.rendered = true;
-        return (
-          <MessageReasoning
-            isLoading={isLoading || mergedReasoning.isStreaming}
-            key={key}
-            reasoning={mergedReasoning.text}
-          />
-        );
-      }
+      mergedReasoning.rendered = true;
       return null;
     }
 
@@ -124,7 +238,7 @@ const PurePreviewMessage = ({
       return (
         <MessageContent
           className={cn("text-[13px] leading-[1.65]", {
-            "w-fit max-w-[min(80%,56ch)] overflow-hidden break-words rounded-2xl rounded-br-lg border border-border/30 bg-gradient-to-br from-secondary to-muted px-3.5 py-2 shadow-[var(--shadow-card)]":
+            "w-fit max-w-[min(80%,56ch)] overflow-hidden break-words rounded-lg border border-border/40 bg-secondary px-3.5 py-2 shadow-[var(--shadow-card)]":
               message.role === "user",
           })}
           data-testid="message-content"
@@ -136,43 +250,7 @@ const PurePreviewMessage = ({
     }
 
     if (type === "tool-searchProducts") {
-      const { toolCallId, state } = part;
-      if (
-        state === "output-available" &&
-        part.output &&
-        !("error" in part.output)
-      ) {
-        return (
-          <div className="w-full" key={toolCallId}>
-            <ProductGrid
-              products={part.output.products}
-              query={part.output.query}
-            />
-          </div>
-        );
-      }
-      if (
-        state === "output-available" &&
-        part.output &&
-        "error" in part.output
-      ) {
-        return (
-          <div
-            className="rounded-lg border border-red-200 bg-red-50 p-3 text-red-600 text-sm dark:bg-red-950/50"
-            key={toolCallId}
-          >
-            Search failed: {String(part.output.error)}
-          </div>
-        );
-      }
-      return (
-        <div
-          className="rounded-lg border border-border/40 bg-muted/30 px-3 py-2 text-muted-foreground text-xs"
-          key={toolCallId}
-        >
-          Searching catalog…
-        </div>
-      );
+      return null;
     }
 
     if (type === "tool-compareProducts") {
@@ -499,15 +577,13 @@ const PurePreviewMessage = ({
   );
 
   const content = isThinking ? (
-    <div className="flex h-[calc(13px*1.65)] items-center text-[13px] leading-[1.65]">
-      <Shimmer className="font-medium" duration={1}>
-        Thinking...
-      </Shimmer>
-    </div>
+    <MessageThinking isStreaming={true} reasoning="" tools={[]} />
   ) : (
     <>
       {attachments}
+      {thinkingPanel}
       {parts}
+      {productResults}
       {actions}
     </>
   );
@@ -559,10 +635,12 @@ export const ThinkingMessage = () => {
           </div>
         </div>
 
-        <div className="flex h-[calc(13px*1.65)] items-center text-[13px] leading-[1.65]">
-          <Shimmer className="font-medium" duration={1}>
-            Thinking...
-          </Shimmer>
+        <div className="min-w-0 flex-1">
+          <MessageThinking
+            isStreaming={true}
+            reasoning=""
+            tools={[]}
+          />
         </div>
       </div>
     </div>

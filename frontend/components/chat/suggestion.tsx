@@ -20,7 +20,7 @@ export const SuggestionDialog = ({
       <div className="sticky inset-0 z-40 h-full w-full">
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-black/20 backdrop-blur-[2px]"
+          className="absolute inset-0 bg-black/25"
           onClick={onClose}
           onKeyDown={(e) => {
             if (e.key === "Escape") {
@@ -31,7 +31,7 @@ export const SuggestionDialog = ({
         />
         <motion.div
           animate={{ opacity: 1, scale: 1 }}
-          className="absolute left-1/2 top-1/2 z-50 flex w-[min(20rem,calc(100%-2rem))] -translate-x-1/2 -translate-y-1/2 flex-col gap-3 rounded-2xl border bg-background p-4 font-sans text-sm shadow-xl"
+          className="absolute top-1/2 left-1/2 z-50 flex w-[min(20rem,calc(100%-2rem))] -translate-x-1/2 -translate-y-1/2 flex-col gap-3 rounded-lg border bg-background p-4 font-sans text-sm shadow-[var(--shadow-float)]"
           exit={{ opacity: 0, scale: 0.95 }}
           initial={{ opacity: 0, scale: 0.95 }}
           key={suggestion.id}

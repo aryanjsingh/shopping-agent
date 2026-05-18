@@ -2,8 +2,9 @@ import { compare } from "bcrypt-ts";
 import NextAuth, { type DefaultSession } from "next-auth";
 import type { DefaultJWT } from "next-auth/jwt";
 import Credentials from "next-auth/providers/credentials";
+import { applyInternalHeaders, backendUrl } from "@/lib/backend/core";
 import { DUMMY_PASSWORD } from "@/lib/constants";
-import { createGuestUser, getUser } from "@/lib/db/queries";
+import type { User } from "@/lib/db/schema";
 import { authConfig } from "./auth.config";
 
 export type UserType = "guest" | "regular";
@@ -46,7 +47,9 @@ export const {
       async authorize(credentials) {
         const email = String(credentials.email ?? "");
         const password = String(credentials.password ?? "");
-        const users = await getUser(email);
+        const users = await backendGet<User[]>(
+          `/internal/users/by-email?email=${encodeURIComponent(email)}`
+        );
 
         if (users.length === 0) {
           await compare(password, DUMMY_PASSWORD);
@@ -73,7 +76,9 @@ export const {
       id: "guest",
       credentials: {},
       async authorize() {
-        const [guestUser] = await createGuestUser();
+        const [guestUser] = await backendGet<User[]>("/internal/users/guest", {
+          method: "POST",
+        });
         return { ...guestUser, type: "guest" };
       },
     }),
@@ -97,3 +102,16 @@ export const {
     },
   },
 });
+
+async function backendGet<T>(path: string, init?: RequestInit): Promise<T> {
+  const headers = applyInternalHeaders(new Headers(init?.headers));
+  const response = await fetch(backendUrl(path), {
+    ...init,
+    headers,
+    cache: "no-store",
+  });
+  if (!response.ok) {
+    throw new Error(await response.text());
+  }
+  return response.json() as Promise<T>;
+}

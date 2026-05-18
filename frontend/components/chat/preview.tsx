@@ -49,7 +49,7 @@ export function Preview() {
 
       <div className="shrink-0 px-5 pb-5">
         <button
-          className="flex w-full items-center rounded-2xl border border-border/30 bg-card/30 px-4 py-3 text-left text-[13px] text-muted-foreground/40 transition-colors hover:border-border/50 hover:text-muted-foreground/60"
+          className="flex w-full items-center rounded-lg border border-border/40 bg-card px-4 py-3 text-left text-[13px] text-muted-foreground/60 transition-colors hover:border-border hover:text-foreground"
           onClick={() => handleAction()}
           type="button"
         >

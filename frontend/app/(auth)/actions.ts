@@ -1,8 +1,8 @@
 "use server";
 
 import { z } from "zod";
-
-import { createUser, getUser } from "@/lib/db/queries";
+import { applyInternalHeaders, backendUrl } from "@/lib/backend/core";
+import type { User } from "@/lib/db/schema";
 
 import { signIn } from "./auth";
 
@@ -61,12 +61,21 @@ export const register = async (
       password: formData.get("password"),
     });
 
-    const [user] = await getUser(validatedData.email);
+    const [user] = await backendJson<User[]>(
+      `/internal/users/by-email?email=${encodeURIComponent(validatedData.email)}`
+    );
 
     if (user) {
       return { status: "user_exists" } as RegisterActionState;
     }
-    await createUser(validatedData.email, validatedData.password);
+    await backendJson("/internal/users", {
+      method: "POST",
+      body: JSON.stringify({
+        email: validatedData.email,
+        password: validatedData.password,
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
     await signIn("credentials", {
       email: validatedData.email,
       password: validatedData.password,
@@ -82,3 +91,16 @@ export const register = async (
     return { status: "failed" };
   }
 };
+
+async function backendJson<T>(path: string, init?: RequestInit): Promise<T> {
+  const headers = applyInternalHeaders(new Headers(init?.headers));
+  const response = await fetch(backendUrl(path), {
+    ...init,
+    headers,
+    cache: "no-store",
+  });
+  if (!response.ok) {
+    throw new Error(await response.text());
+  }
+  return response.json() as Promise<T>;
+}

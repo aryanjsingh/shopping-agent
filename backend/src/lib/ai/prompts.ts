@@ -1,10 +1,8 @@
-import type { Geo } from "@vercel/functions";
-
 export type RequestHints = {
-  latitude: Geo["latitude"];
-  longitude: Geo["longitude"];
-  city: Geo["city"];
-  country: Geo["country"];
+  latitude?: string;
+  longitude?: string;
+  city?: string;
+  country?: string;
 };
 
 export const getRequestPromptFromHints = (requestHints: RequestHints) => `\

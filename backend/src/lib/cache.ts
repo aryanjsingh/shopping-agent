@@ -1,4 +1,3 @@
-import "server-only";
 import { createClient, type RedisClientType } from "redis";
 
 let client: RedisClientType | null = null;

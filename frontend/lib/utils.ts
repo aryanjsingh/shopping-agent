@@ -13,12 +13,42 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+async function readErrorPayload(response: Response) {
+  const text = await response.text();
+
+  if (!text) {
+    return {};
+  }
+
+  try {
+    return JSON.parse(text) as { code?: ErrorCode; cause?: unknown };
+  } catch {
+    return { cause: text };
+  }
+}
+
+function getErrorCause(cause: unknown) {
+  if (typeof cause === 'string') {
+    return cause;
+  }
+
+  if (cause === undefined) {
+    return undefined;
+  }
+
+  try {
+    return JSON.stringify(cause);
+  } catch {
+    return String(cause);
+  }
+}
+
 export const fetcher = async (url: string) => {
   const response = await fetch(url);
 
   if (!response.ok) {
-    const { code, cause } = await response.json();
-    throw new ChatbotError(code as ErrorCode, cause);
+    const { code, cause } = await readErrorPayload(response);
+    throw new ChatbotError(code ?? 'bad_request:api', getErrorCause(cause));
   }
 
   return response.json();
@@ -32,8 +62,8 @@ export async function fetchWithErrorHandlers(
     const response = await fetch(input, init);
 
     if (!response.ok) {
-      const { code, cause } = await response.json();
-      throw new ChatbotError(code as ErrorCode, cause);
+      const { code, cause } = await readErrorPayload(response);
+      throw new ChatbotError(code ?? 'bad_request:api', getErrorCause(cause));
     }
 
     return response;

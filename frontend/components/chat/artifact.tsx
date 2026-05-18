@@ -52,6 +52,25 @@ export type UIArtifact = {
   };
 };
 
+type PureArtifactProps = {
+  addToolApprovalResponse: UseChatHelpers<ChatMessage>["addToolApprovalResponse"];
+  chatId: string;
+  input: string;
+  setInput: Dispatch<SetStateAction<string>>;
+  status: UseChatHelpers<ChatMessage>["status"];
+  stop: UseChatHelpers<ChatMessage>["stop"];
+  attachments: Attachment[];
+  setAttachments: Dispatch<SetStateAction<Attachment[]>>;
+  messages: ChatMessage[];
+  setMessages: UseChatHelpers<ChatMessage>["setMessages"];
+  votes: Vote[] | undefined;
+  sendMessage: UseChatHelpers<ChatMessage>["sendMessage"];
+  regenerate: UseChatHelpers<ChatMessage>["regenerate"];
+  isReadonly: boolean;
+  selectedVisibilityType: VisibilityType;
+  selectedModelId: string;
+};
+
 function PureArtifact({
   addToolApprovalResponse: _addToolApprovalResponse,
   chatId: _chatId,
@@ -69,24 +88,7 @@ function PureArtifact({
   isReadonly: _isReadonly,
   selectedVisibilityType: _selectedVisibilityType,
   selectedModelId: _selectedModelId,
-}: {
-  addToolApprovalResponse: UseChatHelpers<ChatMessage>["addToolApprovalResponse"];
-  chatId: string;
-  input: string;
-  setInput: Dispatch<SetStateAction<string>>;
-  status: UseChatHelpers<ChatMessage>["status"];
-  stop: UseChatHelpers<ChatMessage>["stop"];
-  attachments: Attachment[];
-  setAttachments: Dispatch<SetStateAction<Attachment[]>>;
-  messages: ChatMessage[];
-  setMessages: UseChatHelpers<ChatMessage>["setMessages"];
-  votes: Vote[] | undefined;
-  sendMessage: UseChatHelpers<ChatMessage>["sendMessage"];
-  regenerate: UseChatHelpers<ChatMessage>["regenerate"];
-  isReadonly: boolean;
-  selectedVisibilityType: VisibilityType;
-  selectedModelId: string;
-}) {
+}: PureArtifactProps) {
   const { artifact, setArtifact, metadata, setMetadata } = useArtifact();
 
   const {
@@ -472,9 +474,6 @@ export const Artifact = memo(PureArtifact, (prevProps, nextProps) => {
     return false;
   }
   if (prevProps.messages.length !== nextProps.messages.length) {
-    return false;
-  }
-  if (prevProps.selectedVisibilityType !== nextProps.selectedVisibilityType) {
     return false;
   }
 
