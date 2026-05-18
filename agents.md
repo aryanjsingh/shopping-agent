@@ -49,3 +49,8 @@ Memory:
 - When aryan gives durable, critical, or repeated preferences, add them to an appropriate memory file.
 - Do not store secrets.
 - Keep global preferences general.
+
+Build documentation:
+- Keep `BUILD_PROCESS.md` updated with major product, data, architecture, and implementation decisions.
+- Use `BUILD_PROCESS.md` later as source material for the Product Document, Technical Document, README, demo script, and decision log.
+- Record why important choices were made, not only what changed.

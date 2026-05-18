@@ -1,0 +1,10 @@
+{
+  "name": "shopping-agent-backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "shopify:admin-token": "node scripts/get-admin-token.js",
+    "shopify:storefront-token": "node scripts/create-storefront-token.js",
+    "shopify:test-storefront": "node scripts/test-storefront-products.js"
+  }
+}

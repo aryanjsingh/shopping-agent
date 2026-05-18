@@ -6,7 +6,7 @@ Track 1 submission for the Kasparro Agentic Commerce Hackathon.
 
 Online shopping still depends on browse, search, filter, compare, and guess. Buyers often know what they need in plain language, but product catalogs are structured for keywords and categories. The result is too many options, weak explanations, and low confidence before purchase.
 
-This project builds an AI shopping agent for a Shopify storefront. The agent helps a buyer explain their intent, asks useful follow-up questions, narrows products, compares tradeoffs, and recommends products with clear reasoning.
+This project builds an AI shopping agent on Shopify Catalog MCP. The agent helps a buyer explain their intent, asks useful follow-up questions, searches live Shopify catalog data, compares tradeoffs, and recommends products with clear reasoning.
 
 ## Track
 
@@ -18,25 +18,21 @@ Goal: build an AI shopping agent that helps users discover the right products ac
 
 1. Buyer describes what they want in natural language.
 2. Agent asks follow-up questions only when needed.
-3. Agent searches the Shopify catalog.
+3. Agent searches Shopify Catalog MCP.
 4. Agent compares relevant products across useful dimensions.
 5. Agent explains why each recommendation fits.
 6. Buyer can inspect product details and move toward cart or checkout.
 
-## Shopify Setup
+## Shopify Runtime
 
-This project is intended to use a Shopify development store with synthetic product data.
+The runtime uses Shopify's UCP-compliant Catalog MCP server instead of a custom REST catalog or Storefront API search path.
 
-Recommended setup:
+- Global MCP endpoint: `https://catalog.shopify.com/api/ucp/mcp`
+- Tools used: `search_catalog`, `lookup_catalog`, `get_product`
+- Agent profile is sent in `meta.ucp-agent.profile`
+- Catalog images render directly from merchant URLs so results stay live and compliant
 
-1. Create a free Shopify Partner account.
-2. Create a Shopify development store.
-3. Add realistic dummy products for one focused product category.
-4. Create a custom Shopify app for API access.
-5. Use Shopify Storefront API for buyer-facing product discovery.
-6. Keep API tokens in local environment variables, never committed.
-
-Shopify API access is scoped to the store that installs or owns the app. It does not provide access to all Shopify stores.
+Optional environment overrides live in `frontend/.env.example`.
 
 ## What Makes This Strong
 
@@ -73,4 +69,4 @@ The hackathon judging weights are:
 
 ## Project Status
 
-Initial planning stage. Current repo contains hackathon instructions and submission notes. Implementation will be added next.
+Working frontend implementation with Shopify Catalog MCP tools, generative shopping UI cards, and guest auth flow.

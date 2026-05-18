@@ -1,0 +1,43 @@
+import type { Geo } from "@vercel/functions";
+
+export type RequestHints = {
+  latitude: Geo["latitude"];
+  longitude: Geo["longitude"];
+  city: Geo["city"];
+  country: Geo["country"];
+};
+
+export const getRequestPromptFromHints = (requestHints: RequestHints) => `\
+About the origin of user's request:
+- lat: ${requestHints.latitude ?? "unknown"}
+- lon: ${requestHints.longitude ?? "unknown"}
+- city: ${requestHints.city ?? "unknown"}
+- country: ${requestHints.country ?? "unknown"}
+`;
+
+export function buildSystemPrompt({
+  agentPrompt,
+  requestHints,
+}: {
+  agentPrompt: string;
+  requestHints: RequestHints;
+}) {
+  return `${agentPrompt}\n\n${getRequestPromptFromHints(requestHints)}`;
+}
+
+// Legacy prompts retained so dormant artifact modules type-check.
+export const codePrompt = "";
+export const sheetPrompt = "";
+export const updateDocumentPrompt = (
+  _currentContent: string | null,
+  _type: string
+) => "";
+
+export const titlePrompt = `Generate a short chat title (2-5 words) summarizing the user's shopping intent.
+
+Output ONLY the title text. No prefixes, no formatting, no quotes.
+
+Examples:
+- "I need a phone under 30k with good camera" → Mobile under 30k
+- "wireless headphones" → Wireless Headphones
+- "hi" → New Chat`;

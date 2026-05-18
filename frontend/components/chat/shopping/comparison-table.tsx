@@ -1,0 +1,131 @@
+"use client";
+
+import { ExternalLinkIcon, StarIcon } from "lucide-react";
+import { formatMoney, formatRating } from "./format";
+
+type Row = {
+  id: string;
+  title: string;
+  image?: string;
+  priceMin: { amount: number; currency: string };
+  priceMax: { amount: number; currency: string };
+  rating?: { rating: number; count: number };
+  topFeatures: string[];
+  techSpecs: string[];
+  bestCheckoutUrl: string;
+};
+
+export function ComparisonTable({ rows }: { rows: Row[] }) {
+  if (rows.length === 0) {
+    return null;
+  }
+  return (
+    <div className="overflow-x-auto rounded-xl border border-border/40 bg-card">
+      <table className="w-full min-w-[480px] text-[12px]">
+        <thead className="border-border/40 border-b bg-muted/40 text-muted-foreground">
+          <tr>
+            <th className="p-3 text-left font-medium">Product</th>
+            {rows.map((row) => (
+              <th className="p-3 text-left font-medium" key={`h-${row.id}`}>
+                <div className="line-clamp-2 max-w-[180px]">{row.title}</div>
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody className="[&_td]:align-top [&_td]:p-3 [&_tr]:border-border/30 [&_tr]:border-b">
+          <tr>
+            <td className="font-medium text-muted-foreground">Image</td>
+            {rows.map((row) => (
+              <td key={`img-${row.id}`}>
+                {row.image ? (
+                  // biome-ignore lint/performance/noImgElement: Shopify Catalog images must be rendered live, not cached through an optimizer.
+                  <img
+                    alt={row.title}
+                    className="size-20 rounded-md object-cover"
+                    src={row.image}
+                  />
+                ) : (
+                  <div className="size-20 rounded-md bg-muted" />
+                )}
+              </td>
+            ))}
+          </tr>
+          <tr>
+            <td className="font-medium text-muted-foreground">Price</td>
+            {rows.map((row) => (
+              <td className="font-semibold" key={`p-${row.id}`}>
+                {formatMoney(row.priceMin.amount, row.priceMin.currency)}
+                {row.priceMax.amount > row.priceMin.amount ? (
+                  <span className="ml-1 font-normal text-muted-foreground">
+                    – {formatMoney(row.priceMax.amount, row.priceMax.currency)}
+                  </span>
+                ) : null}
+              </td>
+            ))}
+          </tr>
+          <tr>
+            <td className="font-medium text-muted-foreground">Rating</td>
+            {rows.map((row) => (
+              <td key={`r-${row.id}`}>
+                {row.rating ? (
+                  <span className="inline-flex items-center gap-1">
+                    <StarIcon className="size-3 fill-amber-400 text-amber-400" />
+                    {formatRating(row.rating.rating, row.rating.count)}
+                  </span>
+                ) : (
+                  <span className="text-muted-foreground">—</span>
+                )}
+              </td>
+            ))}
+          </tr>
+          <tr>
+            <td className="font-medium text-muted-foreground">Top features</td>
+            {rows.map((row) => (
+              <td key={`f-${row.id}`}>
+                <ul className="ml-3 list-disc space-y-1">
+                  {row.topFeatures.map((f) => (
+                    <li className="line-clamp-2" key={f}>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </td>
+            ))}
+          </tr>
+          <tr>
+            <td className="font-medium text-muted-foreground">Specs</td>
+            {rows.map((row) => (
+              <td key={`s-${row.id}`}>
+                <ul className="ml-3 list-disc space-y-1">
+                  {row.techSpecs.map((s) => (
+                    <li className="line-clamp-2" key={s}>
+                      {s}
+                    </li>
+                  ))}
+                </ul>
+              </td>
+            ))}
+          </tr>
+          <tr>
+            <td className="font-medium text-muted-foreground">Action</td>
+            {rows.map((row) => (
+              <td key={`b-${row.id}`}>
+                {row.bestCheckoutUrl ? (
+                  <a
+                    className="inline-flex items-center gap-1 rounded-md bg-primary px-2.5 py-1.5 font-medium text-[11px] text-primary-foreground transition hover:bg-primary/90"
+                    href={row.bestCheckoutUrl}
+                    rel="noreferrer noopener"
+                    target="_blank"
+                  >
+                    Buy
+                    <ExternalLinkIcon className="size-3" />
+                  </a>
+                ) : null}
+              </td>
+            ))}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  );
+}
