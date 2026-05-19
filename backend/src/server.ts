@@ -12,15 +12,10 @@ import {
 import { z } from "zod";
 import { DEFAULT_AGENT_ID, getAgent } from "@/lib/agents/registry";
 import {
-  entitlementsByUserType,
-  type UserType,
-} from "@/lib/ai/entitlements";
-import {
   allowedModelIds,
   DEFAULT_CHAT_MODEL,
   getAllGatewayModels,
   getCapabilities,
-  isDemo,
 } from "@/lib/ai/models";
 import { buildSystemPrompt, titlePrompt } from "@/lib/ai/prompts";
 import { getLanguageModel, getTitleModel } from "@/lib/ai/providers";
@@ -35,7 +30,6 @@ import {
   getDocumentById,
   getDocumentsById,
   getMessageById,
-  getMessageCountByUserId,
   getMessagesByChatId,
   getSuggestionsByDocumentId,
   getOrCreateGuestUser,
@@ -54,10 +48,11 @@ import {
 } from "@/lib/db/queries";
 import type { DBMessage } from "@/lib/db/schema";
 import { ChatbotError } from "@/lib/errors";
-import { checkIpRateLimit } from "@/lib/ratelimit";
 import type { ChatMessage } from "@/lib/types";
 import { convertToUIMessages, getTextFromMessage, generateUUID } from "@/lib/utils";
 import { postRequestBodySchema } from "./chat-api/chat/schema";
+
+type UserType = "guest" | "regular";
 
 type SessionUser = {
   id: string;
@@ -103,21 +98,74 @@ function requireUser(request: Request) {
   return user;
 }
 
-function getClientIp(request: Request) {
-  return (
-    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    request.headers.get("x-real-ip") ||
-    "127.0.0.1"
-  );
+async function generateTitleFromUserMessage(message: UIMessage) {
+  const userText = getTextFromMessage(message);
+  const fallbackTitle = generateFallbackTitle(userText);
+
+  try {
+    const { text } = await generateText({
+      model: getTitleModel(),
+      system: titlePrompt,
+      prompt: userText,
+    });
+    const title = cleanTitle(text);
+    return title || fallbackTitle;
+  } catch (error) {
+    console.warn("[backend-chat-title] model title generation failed", error);
+    return fallbackTitle;
+  }
 }
 
-async function generateTitleFromUserMessage(message: UIMessage) {
-  const { text } = await generateText({
-    model: getTitleModel(),
-    system: titlePrompt,
-    prompt: getTextFromMessage(message),
-  });
-  return text.replace(/^[#*"\s]+/, "").replace(/["]+$/, "").trim();
+function cleanTitle(value: string) {
+  return value
+    .replace(/^[#*"\s]+/, "")
+    .replace(/[".]+$/, "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 60);
+}
+
+function generateFallbackTitle(text: string) {
+  const cleaned = text
+    .replace(/https?:\/\/\S+/g, "")
+    .replace(/[^\p{L}\p{N}\s$₹€£.-]/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (!cleaned) {
+    return "New Chat";
+  }
+
+  const words = cleaned.split(" ").filter(Boolean);
+  const stopWords = new Set([
+    "a",
+    "an",
+    "and",
+    "are",
+    "can",
+    "could",
+    "find",
+    "for",
+    "get",
+    "give",
+    "help",
+    "i",
+    "me",
+    "need",
+    "please",
+    "show",
+    "the",
+    "to",
+    "want",
+    "with",
+  ]);
+  const meaningful = words.filter((word) => !stopWords.has(word.toLowerCase()));
+  const selected = (meaningful.length >= 2 ? meaningful : words).slice(0, 5);
+  const title = selected
+    .join(" ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+
+  return cleanTitle(title) || "New Chat";
 }
 
 function getToolName(type: string) {
@@ -217,17 +265,6 @@ async function handleChatPost(request: Request) {
     ? selectedChatModel
     : DEFAULT_CHAT_MODEL;
 
-  await checkIpRateLimit(getClientIp(request));
-
-  const messageCount = await getMessageCountByUserId({
-    id: user.id,
-    differenceInHours: 1,
-  });
-
-  if (messageCount > entitlementsByUserType[user.type].maxMessagesPerHour) {
-    throw new ChatbotError("rate_limit:chat");
-  }
-
   const isToolApprovalFlow = Boolean(messages);
   const chat = await getChatById({ id });
   let messagesFromDb: DBMessage[] = [];
@@ -296,6 +333,11 @@ async function handleChatPost(request: Request) {
 
   const agent = getAgent(selectedAgentId ?? DEFAULT_AGENT_ID);
   const modelMessages = await convertToModelMessages(withoutThinkingData(uiMessages));
+  const modelCapabilities = getCapabilities()[chatModel] ?? {
+    reasoning: false,
+    tools: true,
+    vision: false,
+  };
 
   const stream = createUIMessageStream({
     originalMessages: isToolApprovalFlow ? uiMessages : undefined,
@@ -313,15 +355,19 @@ async function handleChatPost(request: Request) {
         }),
         messages: modelMessages,
         stopWhen: stepCountIs(6),
-        experimental_activeTools: [...agent.activeToolNames] as string[],
-        tools: agent.tools as Parameters<typeof streamText>[0]["tools"],
+        experimental_activeTools: modelCapabilities.tools
+          ? ([...agent.activeToolNames] as string[])
+          : [],
+        tools: modelCapabilities.tools
+          ? (agent.tools as Parameters<typeof streamText>[0]["tools"])
+          : undefined,
         experimental_telemetry: {
           isEnabled: false,
           functionId: "backend-stream-text",
         },
       });
 
-      dataStream.merge(result.toUIMessageStream({ sendReasoning: false }));
+      dataStream.merge(result.toUIMessageStream({ sendReasoning: true }));
 
       if (titlePromise) {
         try {
@@ -329,7 +375,7 @@ async function handleChatPost(request: Request) {
           dataStream.write({ type: "data-chat-title", data: title });
           await updateChatTitleById({ chatId: id, title });
         } catch (error) {
-          console.warn("[backend-chat-title] failed to generate title", error);
+          console.warn("[backend-chat-title] failed to persist title", error);
         }
       }
     },
@@ -674,19 +720,16 @@ export async function appFetch(request: Request): Promise<Response> {
       return await handleInternalUsers(request, pathname);
     }
     if (pathname === "/api/models") {
-      const headers = { "Cache-Control": "public, max-age=86400, s-maxage=86400" };
+      const headers = { "Cache-Control": "public, max-age=3600, s-maxage=3600" };
       const curatedCapabilities = getCapabilities();
-      if (isDemo) {
-        const models = getAllGatewayModels();
-        const capabilities = Object.fromEntries(
-          models.map((model) => [
-            model.id,
-            curatedCapabilities[model.id] ?? model.capabilities,
-          ])
-        );
-        return json({ capabilities, models }, { headers });
-      }
-      return json(curatedCapabilities, { headers });
+      const models = getAllGatewayModels();
+      const capabilities = Object.fromEntries(
+        models.map((model) => [
+          model.id,
+          curatedCapabilities[model.id] ?? model.capabilities,
+        ])
+      );
+      return json({ capabilities, models }, { headers });
     }
     if (pathname === "/api/chat" && request.method === "POST") {
       return await handleChatPost(request);

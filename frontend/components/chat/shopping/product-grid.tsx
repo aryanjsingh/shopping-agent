@@ -3,13 +3,16 @@
 import {
   ChevronDownIcon,
   ChevronUpIcon,
+  CheckIcon,
   ExternalLinkIcon,
   ShoppingCartIcon,
   StarIcon,
   StoreIcon,
+  XIcon,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
 import { formatMoney, formatRating } from "./format";
 
 type Seller = {
@@ -21,7 +24,7 @@ type Seller = {
   variantId: string;
 };
 
-type Product = {
+export type Product = {
   id: string;
   title: string;
   description: string;
@@ -69,13 +72,16 @@ export function ProductGridSkeleton({ count = 4 }: { count?: number }) {
 }
 
 export function ProductGrid({
+  defaultOpen = true,
   products,
   query,
 }: {
+  defaultOpen?: boolean;
   products: Product[];
   query: string;
 }) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+  const [expandedProduct, setExpandedProduct] = useState<Product | null>(null);
 
   if (products.length === 0) {
     return (
@@ -87,61 +93,143 @@ export function ProductGrid({
   }
 
   return (
-    <div className="w-full">
-      <div className="group/products overflow-hidden rounded-lg border border-border/60 bg-background/95 shadow-[var(--shadow-float)] backdrop-blur">
-        <button
-          aria-expanded={isOpen}
-          className="flex h-10 w-full cursor-pointer items-center justify-between gap-3 px-3 text-left transition hover:bg-muted/50"
-          onClick={() => setIsOpen((value) => !value)}
-          type="button"
-        >
-          <span className="min-w-0 truncate font-medium text-[13px]">
-            Explore products
-            <span className="ml-2 font-normal text-muted-foreground">
-              {products.length} for {query}
+    <>
+      <div className="w-full">
+        <div className="group/products overflow-hidden rounded-lg border border-border/60 bg-background/95 shadow-[var(--shadow-float)] backdrop-blur">
+          <button
+            aria-expanded={isOpen}
+            className="flex h-10 w-full cursor-pointer items-center justify-between gap-3 px-3 text-left transition hover:bg-muted/50"
+            onClick={() => setIsOpen((value) => !value)}
+            type="button"
+          >
+            <span className="min-w-0 truncate font-medium text-[13px]">
+              Explore products
+              <span className="ml-2 font-normal text-muted-foreground">
+                {products.length} for {query}
+              </span>
             </span>
-          </span>
-          {isOpen ? (
-            <ChevronDownIcon className="size-4 shrink-0 text-muted-foreground" />
-          ) : (
-            <ChevronUpIcon className="size-4 shrink-0 text-muted-foreground" />
-          )}
-        </button>
+            {isOpen ? (
+              <ChevronDownIcon className="size-4 shrink-0 text-muted-foreground" />
+            ) : (
+              <ChevronUpIcon className="size-4 shrink-0 text-muted-foreground" />
+            )}
+          </button>
 
-        {isOpen ? (
-          <div className="border-border/50 border-t p-2">
-            <div className="flex snap-x gap-3 overflow-x-auto overscroll-x-contain pb-1 [scrollbar-color:transparent_transparent] [scrollbar-width:thin] group-hover/products:[scrollbar-color:var(--muted-foreground)_transparent] group-focus-within/products:[scrollbar-color:var(--muted-foreground)_transparent] [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-transparent group-hover/products:[&::-webkit-scrollbar-thumb]:bg-muted-foreground/35 group-focus-within/products:[&::-webkit-scrollbar-thumb]:bg-muted-foreground/35">
-              {products.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
+          {isOpen ? (
+            <div className="border-border/50 border-t p-2">
+              <div className="flex snap-x gap-3 overflow-x-auto overscroll-x-contain pb-1 [scrollbar-color:transparent_transparent] [scrollbar-width:thin] group-hover/products:[scrollbar-color:var(--muted-foreground)_transparent] group-focus-within/products:[scrollbar-color:var(--muted-foreground)_transparent] [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-transparent group-hover/products:[&::-webkit-scrollbar-thumb]:bg-muted-foreground/35 group-focus-within/products:[&::-webkit-scrollbar-thumb]:bg-muted-foreground/35">
+                {products.map((product) => (
+                  <ProductCard
+                    key={product.id}
+                    product={product}
+                    onExpand={() => setExpandedProduct(product)}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
-        ) : null}
+          ) : null}
+        </div>
       </div>
+
+      {expandedProduct && (
+        <ProductDetailOverlay
+          product={expandedProduct}
+          onClose={() => setExpandedProduct(null)}
+        />
+      )}
+    </>
+  );
+}
+
+export function ProductHoverPreview({ product }: { product: Product }) {
+  const image = product.media[0]?.url;
+  const feature =
+    product.topFeatures[0] ?? product.uniqueSellingPoint ?? product.description;
+  const cheapest = product.sellers[0];
+
+  return (
+    <div className="grid gap-3">
+      <div className="flex gap-3">
+        <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-md bg-muted/50">
+          {image ? (
+            // biome-ignore lint/performance/noImgElement: Shopify Catalog images must render directly from live URLs.
+            <img
+              alt={product.media[0]?.altText ?? product.title}
+              className="size-full object-contain p-1.5"
+              src={image}
+            />
+          ) : (
+            <ShoppingCartIcon className="size-6 text-muted-foreground/40" />
+          )}
+        </div>
+        <div className="min-w-0">
+          <div className="line-clamp-2 font-medium text-[13px] leading-snug">
+            {product.title}
+          </div>
+          <div className="mt-1 font-semibold text-[13px]">
+            {formatMoney(
+              product.priceRange.min.amount,
+              product.priceRange.min.currency
+            )}
+          </div>
+          {cheapest ? (
+            <div className="mt-0.5 text-[11px] text-muted-foreground">
+              via {cheapest.shopName}
+            </div>
+          ) : null}
+        </div>
+      </div>
+      {feature ? (
+        <div className="line-clamp-3 text-[12px] text-muted-foreground">
+          {feature}
+        </div>
+      ) : null}
+      {product.topFeatures.length > 1 ? (
+        <div className="grid gap-1">
+          {product.topFeatures.slice(1, 3).map((item) => (
+            <div
+              className="flex items-start gap-1.5 text-[11px] text-muted-foreground"
+              key={item}
+            >
+              <CheckIcon className="mt-0.5 size-3 shrink-0 text-emerald-600" />
+              <span className="line-clamp-2">{item}</span>
+            </div>
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 }
 
-function ProductCard({ product }: { product: Product }) {
+function ProductCard({
+  product,
+  onExpand,
+}: {
+  product: Product;
+  onExpand: () => void;
+}) {
   const cheapest = product.sellers[0];
   const image = product.media[0]?.url;
-  const feature = product.topFeatures[0] ?? product.uniqueSellingPoint;
+  const features =
+    product.topFeatures.length > 0
+      ? product.topFeatures.slice(0, 2)
+      : product.uniqueSellingPoint
+        ? [product.uniqueSellingPoint]
+        : [];
   const [imgLoaded, setImgLoaded] = useState(false);
   const href = product.productUrl || product.primaryCheckoutUrl;
-  const CardElement = href ? "a" : "div";
 
   return (
-    <CardElement
-      className="group relative flex w-[168px] shrink-0 snap-start flex-col overflow-hidden rounded-lg border border-border/60 bg-card text-card-foreground shadow-sm outline-none transition hover:border-border hover:bg-muted/20 focus-visible:ring-2 focus-visible:ring-ring"
-      {...(href
-        ? {
-            href,
-            rel: "noreferrer noopener",
-            target: "_blank",
-          }
-        : {})}
-    >
-      <div className="relative h-[118px] w-full overflow-hidden bg-muted/40">
+    <div className="group relative flex w-[168px] shrink-0 snap-start flex-col overflow-hidden rounded-lg border border-border/60 bg-card text-card-foreground shadow-sm transition-all duration-200 hover:border-border hover:shadow-md hover:-translate-y-0.5">
+      {/* Image area — clicking navigates to product */}
+      <a
+        className="relative block h-[118px] w-full overflow-hidden bg-muted/40 outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        href={href}
+        rel="noreferrer noopener"
+        target="_blank"
+        tabIndex={href ? 0 : -1}
+        aria-label={`View ${product.title}`}
+      >
         {image ? (
           <>
             {!imgLoaded && (
@@ -160,7 +248,15 @@ function ProductCard({ product }: { product: Product }) {
             <ShoppingCartIcon className="size-8 text-muted-foreground/40" />
           </div>
         )}
-      </div>
+
+        {/* Hover overlay on image */}
+        <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-200 group-hover:bg-black/10">
+          <span className="translate-y-1 rounded-md bg-white/90 px-2 py-1 font-medium text-[10px] text-black opacity-0 shadow-sm transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100 dark:bg-black/80 dark:text-white">
+            View product
+          </span>
+        </div>
+      </a>
+
       <div className="flex flex-1 flex-col gap-1.5 p-2.5">
         <div className="line-clamp-2 font-medium text-[12px] leading-snug">
           {product.title}
@@ -171,9 +267,17 @@ function ProductCard({ product }: { product: Product }) {
             {formatRating(product.rating.rating, product.rating.count)}
           </div>
         ) : null}
-        {feature ? (
-          <div className="line-clamp-2 text-[11px] text-muted-foreground">
-            {feature}
+        {features.length > 0 ? (
+          <div className="grid gap-1">
+            {features.map((feature) => (
+              <div
+                className="flex min-w-0 items-start gap-1.5 text-[11px] text-muted-foreground"
+                key={feature}
+              >
+                <CheckIcon className="mt-0.5 size-3 shrink-0 text-emerald-600" />
+                <span className="line-clamp-2">{feature}</span>
+              </div>
+            ))}
           </div>
         ) : null}
         {product.sellers.length > 0 ? (
@@ -197,14 +301,203 @@ function ProductCard({ product }: { product: Product }) {
               </span>
             ) : null}
           </div>
-          {href ? (
-            <span className="inline-flex items-center gap-1 rounded-md bg-primary px-2 py-1.5 font-medium text-[10px] text-primary-foreground transition group-hover:bg-primary/90">
-              Open
-              <ExternalLinkIcon className="size-3" />
-            </span>
-          ) : null}
+          <button
+            className="inline-flex items-center gap-1 rounded-md bg-muted px-2 py-1.5 font-medium text-[10px] text-muted-foreground transition hover:bg-primary hover:text-primary-foreground"
+            onClick={(e) => {
+              e.preventDefault();
+              onExpand();
+            }}
+            type="button"
+            aria-label={`See details for ${product.title}`}
+          >
+            Details
+          </button>
         </div>
       </div>
-    </CardElement>
+    </div>
+  );
+}
+
+function ProductDetailOverlay({
+  product,
+  onClose,
+}: {
+  product: Product;
+  onClose: () => void;
+}) {
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const image = product.media[0]?.url;
+  const href = product.productUrl || product.primaryCheckoutUrl;
+
+  // Close on Escape
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [onClose]);
+
+  return (
+    // biome-ignore lint/a11y/useKeyWithClickEvents: overlay backdrop handles click-outside
+    <div
+      className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 backdrop-blur-sm sm:items-center"
+      onClick={(e) => {
+        if (e.target === overlayRef.current) onClose();
+      }}
+      ref={overlayRef}
+      role="dialog"
+      aria-modal="true"
+      aria-label={product.title}
+    >
+      <div
+        className={cn(
+          "relative w-full max-w-lg overflow-hidden rounded-t-2xl bg-background shadow-2xl sm:rounded-2xl",
+          "animate-in slide-in-from-bottom-4 duration-300 sm:zoom-in-95"
+        )}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className="flex items-start justify-between gap-3 border-b border-border/50 p-4">
+          <div className="flex gap-3">
+            <div className="flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-muted/50">
+              {image ? (
+                // biome-ignore lint/performance/noImgElement: Shopify Catalog images must render directly from live URLs.
+                <img
+                  alt={product.media[0]?.altText ?? product.title}
+                  className="size-full object-contain p-1"
+                  src={image}
+                />
+              ) : (
+                <ShoppingCartIcon className="size-6 text-muted-foreground/40" />
+              )}
+            </div>
+            <div className="min-w-0">
+              <div className="font-semibold text-[14px] leading-snug">
+                {product.title}
+              </div>
+              <div className="mt-1 font-bold text-[16px]">
+                {formatMoney(
+                  product.priceRange.min.amount,
+                  product.priceRange.min.currency
+                )}
+                {product.priceRange.max.amount !== product.priceRange.min.amount && (
+                  <span className="ml-1 font-normal text-[12px] text-muted-foreground">
+                    – {formatMoney(product.priceRange.max.amount, product.priceRange.max.currency)}
+                  </span>
+                )}
+              </div>
+              {product.rating && (
+                <div className="mt-1 flex items-center gap-1 text-[12px] text-muted-foreground">
+                  <StarIcon className="size-3 fill-amber-400 text-amber-400" />
+                  {formatRating(product.rating.rating, product.rating.count)}
+                </div>
+              )}
+            </div>
+          </div>
+          <button
+            className="flex size-7 shrink-0 items-center justify-center rounded-md text-muted-foreground transition hover:bg-muted hover:text-foreground"
+            onClick={onClose}
+            type="button"
+            aria-label="Close"
+          >
+            <XIcon className="size-4" />
+          </button>
+        </div>
+
+        {/* Body */}
+        <div className="max-h-[60vh] overflow-y-auto p-4">
+          {product.uniqueSellingPoint && (
+            <p className="mb-3 text-[13px] text-muted-foreground leading-relaxed">
+              {product.uniqueSellingPoint}
+            </p>
+          )}
+
+          {product.topFeatures.length > 0 && (
+            <div className="mb-4">
+              <div className="mb-2 font-semibold text-[12px] uppercase tracking-wide text-muted-foreground">
+                Top Features
+              </div>
+              <div className="grid gap-1.5">
+                {product.topFeatures.map((f) => (
+                  <div key={f} className="flex items-start gap-2 text-[13px]">
+                    <CheckIcon className="mt-0.5 size-3.5 shrink-0 text-emerald-600" />
+                    <span>{f}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {product.techSpecs.length > 0 && (
+            <div className="mb-4">
+              <div className="mb-2 font-semibold text-[12px] uppercase tracking-wide text-muted-foreground">
+                Specs
+              </div>
+              <div className="grid gap-1">
+                {product.techSpecs.map((s) => (
+                  <div key={s} className="text-[12px] text-muted-foreground">
+                    {s}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {product.sellers.length > 0 && (
+            <div className="mb-2">
+              <div className="mb-2 font-semibold text-[12px] uppercase tracking-wide text-muted-foreground">
+                Available from
+              </div>
+              <div className="grid gap-2">
+                {product.sellers.map((seller, i) => (
+                  <a
+                    key={seller.variantId}
+                    href={seller.checkoutUrl}
+                    rel="noreferrer noopener"
+                    target="_blank"
+                    className={cn(
+                      "flex items-center justify-between rounded-lg border px-3 py-2.5 text-[13px] transition hover:bg-muted",
+                      i === 0 ? "border-emerald-200 bg-emerald-50/50 dark:border-emerald-900 dark:bg-emerald-950/30" : "border-border/50"
+                    )}
+                  >
+                    <div className="flex items-center gap-2">
+                      <StoreIcon className="size-3.5 text-muted-foreground" />
+                      <span className="font-medium">{seller.shopName}</span>
+                      {i === 0 && (
+                        <span className="rounded-full bg-emerald-100 px-1.5 py-0.5 text-[10px] font-medium text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-400">
+                          Best price
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold">
+                        {formatMoney(seller.price, seller.currency)}
+                      </span>
+                      <ExternalLinkIcon className="size-3 text-muted-foreground" />
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Footer CTA */}
+        {href && (
+          <div className="border-t border-border/50 p-4">
+            <a
+              href={href}
+              rel="noreferrer noopener"
+              target="_blank"
+              className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 font-semibold text-[13px] text-primary-foreground transition hover:bg-primary/90"
+            >
+              Shop now
+              <ExternalLinkIcon className="size-3.5" />
+            </a>
+          </div>
+        )}
+      </div>
+    </div>
   );
 }

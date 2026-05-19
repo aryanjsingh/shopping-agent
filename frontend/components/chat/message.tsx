@@ -19,9 +19,14 @@ import { MessageActions } from "./message-actions";
 import { MessageThinking, toThinkingTool } from "./message-thinking";
 import { PreviewAttachment } from "./preview-attachment";
 import { BuyCta } from "./shopping/buy-cta";
+import {
+  isClarifyMenuRestatement,
+  type ClarifyMenuOutput,
+} from "./shopping/clarify-menu-utils";
 import { ComparisonTable } from "./shopping/comparison-table";
 import { OptionChips } from "./shopping/option-chips";
 import { ProductGrid, ProductGridSkeleton } from "./shopping/product-grid";
+import { ProductMarkdownResponse } from "./shopping/product-markdown-response";
 import { SellerComparison } from "./shopping/seller-comparison";
 import { Weather } from "./weather";
 
@@ -47,6 +52,10 @@ type ThinkingDataPart = {
     }[];
   };
 };
+
+type ProductResult = NonNullable<
+  NonNullable<SearchProductsPart["output"]>["products"]
+>[number];
 
 const PurePreviewMessage = ({
   addToolApprovalResponse,
@@ -137,6 +146,7 @@ const PurePreviewMessage = ({
       return (
         <div className="w-full" key={toolCallId ?? key}>
           <ProductGrid
+            defaultOpen={false}
             products={part.output.products ?? []}
             query={part.output.query ?? "products"}
           />
@@ -174,6 +184,34 @@ const PurePreviewMessage = ({
         : null
     )
     .filter(Boolean);
+  const taggableProducts =
+    message.parts
+      ?.flatMap((part) => {
+        if (part.type !== "tool-searchProducts") {
+          return [];
+        }
+        const output = (part as SearchProductsPart).output;
+        return output && !("error" in output) ? (output.products ?? []) : [];
+      })
+      .filter((product): product is ProductResult =>
+        Boolean(product?.title?.trim())
+      ) ?? [];
+  const clarifyOutputs =
+    message.parts
+      ?.filter((part) => part.type === "tool-clarifyIntent")
+      .map((part) => {
+        const output = (part as {
+          state?: string;
+          output?: ClarifyMenuOutput;
+        }).output;
+        return output;
+      })
+      .filter(Boolean) ?? [];
+
+  // Suppress getProduct cards when compareProducts is also in this message
+  const hasCompareProducts = message.parts?.some(
+    (part) => part.type === "tool-compareProducts"
+  ) ?? false;
 
   const thinkingTools =
     message.parts
@@ -235,6 +273,15 @@ const PurePreviewMessage = ({
     }
 
     if (type === "text") {
+      if (
+        isAssistant &&
+        clarifyOutputs.some((output) =>
+          isClarifyMenuRestatement(part.text, output)
+        )
+      ) {
+        return null;
+      }
+
       return (
         <MessageContent
           className={cn("text-[13px] leading-[1.65]", {
@@ -244,7 +291,14 @@ const PurePreviewMessage = ({
           data-testid="message-content"
           key={key}
         >
-          <MessageResponse>{sanitizeText(part.text)}</MessageResponse>
+          {isAssistant && taggableProducts.length > 0 ? (
+            <ProductMarkdownResponse
+              products={taggableProducts}
+              text={sanitizeText(part.text)}
+            />
+          ) : (
+            <MessageResponse>{sanitizeText(part.text)}</MessageResponse>
+          )}
         </MessageContent>
       );
     }
@@ -316,6 +370,8 @@ const PurePreviewMessage = ({
     }
 
     if (type === "tool-getProduct") {
+      // Don't render a card when compareProducts is also present — the comparison table covers it
+      if (hasCompareProducts) return null;
       const { toolCallId, state } = part;
       if (
         state === "output-available" &&
@@ -366,7 +422,13 @@ const PurePreviewMessage = ({
 
     if (type === "tool-clarifyIntent") {
       const { toolCallId, state } = part;
-      if (state === "output-available" && part.output) {
+      // Render chips as soon as output is available (tool echoes its input as output)
+      const chipData = state === "output-available" && part.output
+        ? part.output
+        : state === "input-available" && part.input
+          ? part.input
+          : null;
+      if (chipData && chipData.options?.length > 0) {
         return (
           <div key={toolCallId}>
             <OptionChips
@@ -380,8 +442,10 @@ const PurePreviewMessage = ({
                     }
                   : undefined
               }
-              options={part.output.options}
-              question={part.output.question}
+              options={chipData.options}
+              question={chipData.question}
+              reason={chipData.reason}
+              mode={chipData.mode}
             />
           </div>
         );
@@ -583,7 +647,7 @@ const PurePreviewMessage = ({
       {attachments}
       {thinkingPanel}
       {parts}
-      {productResults}
+      {isAssistant && isLoading ? null : productResults}
       {actions}
     </>
   );

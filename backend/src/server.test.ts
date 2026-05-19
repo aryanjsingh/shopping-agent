@@ -19,7 +19,6 @@ vi.mock("@/lib/db/queries", () => ({
   getDocumentById: vi.fn(),
   getDocumentsById: vi.fn(),
   getMessageById: vi.fn(),
-  getMessageCountByUserId: vi.fn(async () => 0),
   getMessagesByChatId: vi.fn(),
   getOrCreateGuestUser: vi.fn(async () => [
     { id: "guest-1", email: "guest@kasparro.local" },

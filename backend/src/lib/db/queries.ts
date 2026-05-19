@@ -1,7 +1,6 @@
 import {
   and,
   asc,
-  count,
   desc,
   eq,
   gt,
@@ -616,40 +615,6 @@ export async function updateChatTitleById({
     return await getDb().update(chat).set({ title }).where(eq(chat.id, chatId));
   } catch (_error) {
     return;
-  }
-}
-
-export async function getMessageCountByUserId({
-  id,
-  differenceInHours,
-}: {
-  id: string;
-  differenceInHours: number;
-}) {
-  try {
-    const cutoffTime = new Date(
-      Date.now() - differenceInHours * 60 * 60 * 1000
-    );
-
-    const [stats] = await getDb()
-      .select({ count: count(message.id) })
-      .from(message)
-      .innerJoin(chat, eq(message.chatId, chat.id))
-      .where(
-        and(
-          eq(chat.userId, id),
-          gte(message.createdAt, cutoffTime),
-          eq(message.role, "user")
-        )
-      )
-      .execute();
-
-    return stats?.count ?? 0;
-  } catch (_error) {
-    throw new ChatbotError(
-      "bad_request:database",
-      "Failed to get message count by user id"
-    );
   }
 }
 

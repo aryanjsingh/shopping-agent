@@ -30,9 +30,12 @@ const toolLabels: Record<string, string> = {
   getProduct: "Inspecting product",
   getWeather: "Checking weather",
   requestSuggestions: "Requesting suggestions",
-  searchProducts: "Searching products",
+  searchProducts: "Searching catalog",
   updateDocument: "Updating document",
+  webFetch: "Reading page",
+  webSearch: "Searching web",
 };
+
 
 function getToolName(type: string) {
   return type.startsWith("tool-") ? type.slice(5) : type;
@@ -55,32 +58,16 @@ export function toThinkingTool(part: {
   };
 }
 
-function statusLabel(state?: string) {
-  if (state === "output-available") {
-    return "Done";
-  }
-  if (state === "output-error" || state === "output-denied") {
-    return "Issue";
-  }
-  if (state === "approval-requested") {
-    return "Needs approval";
-  }
-  return "Running";
-}
-
-function summarizeInput(input: unknown) {
-  if (!input || typeof input !== "object") {
-    return null;
-  }
+function summarizeInput(input: unknown): string | null {
+  if (!input || typeof input !== "object") return null;
   const record = input as Record<string, unknown>;
-  const query = record.query;
-  if (typeof query === "string" && query.trim()) {
-    return query;
+  if (typeof record.query === "string" && record.query.trim()) return record.query;
+  if (typeof record.url === "string" && record.url.trim()) {
+    try { return new URL(record.url).hostname; } catch { return record.url; }
   }
-  const productId = record.productId;
-  if (typeof productId === "string" && productId.trim()) {
-    return productId;
-  }
+  if (typeof record.productId === "string" && record.productId.trim()) return record.productId;
+  if (Array.isArray(record.productIds) && record.productIds.length > 0) return `${record.productIds.length} products`;
+  if (typeof record.question === "string" && record.question.trim()) return record.question;
   return null;
 }
 
@@ -103,13 +90,13 @@ export function MessageThinking({
       duration={durationSeconds}
       isStreaming={isStreaming}
     >
-      <ThinkingTrigger />
+      <ThinkingTrigger toolCount={tools.length} />
       <ThinkingContent reasoning={reasoning} tools={tools} />
     </Reasoning>
   );
 }
 
-function ThinkingTrigger() {
+function ThinkingTrigger({ toolCount }: { toolCount: number }) {
   const { duration, isOpen, isStreaming, setIsOpen } = useReasoning();
 
   return (
@@ -121,7 +108,7 @@ function ThinkingTrigger() {
       <span>
         {isStreaming ? (
           <Shimmer className="font-medium" duration={1}>
-            Thinking...
+            {toolCount > 0 ? `Using ${toolCount} tool${toolCount > 1 ? "s" : ""}…` : "Thinking…"}
           </Shimmer>
         ) : duration ? (
           `Thought for ${duration}s`
@@ -139,6 +126,35 @@ function ThinkingTrigger() {
   );
 }
 
+function ToolRow({ tool }: { tool: ThinkingTool }) {
+  const isDone = tool.state === "output-available";
+  const isError = tool.state === "output-error" || tool.state === "output-denied";
+  const label = toolLabels[tool.name] ?? tool.name;
+  const inputSummary = summarizeInput(tool.input);
+
+  return (
+    <div className={cn(
+      "flex items-start gap-1.5 text-[11px] leading-relaxed",
+      isDone && "text-muted-foreground/70",
+      isError && "text-red-500/80",
+      !isDone && !isError && "text-foreground/80",
+    )}>
+      <span className="shrink-0 select-none">
+        {isDone ? "✓" : isError ? "✗" : "·"}
+      </span>
+      <span>
+        <span className={cn("font-medium", !isDone && !isError && "font-semibold")}>{label}</span>
+        {inputSummary && (
+          <span className="ml-1 text-muted-foreground/50">({inputSummary})</span>
+        )}
+        {isError && tool.errorText && (
+          <span className="ml-1 text-red-400">— {tool.errorText}</span>
+        )}
+      </span>
+    </div>
+  );
+}
+
 function ThinkingContent({
   reasoning,
   tools,
@@ -149,40 +165,42 @@ function ThinkingContent({
   const { isOpen, isStreaming } = useReasoning();
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const toolTrace =
-    tools.length > 0
-      ? tools
-          .map((tool) => {
-            const input = summarizeInput(tool.input);
-            return [
-              `${toolLabels[tool.name] ?? tool.name}: ${statusLabel(tool.state)}`,
-              input ? ` (${input})` : "",
-              tool.errorText ? ` - ${tool.errorText}` : "",
-            ].join("");
-          })
-          .join("\n")
-      : "";
-  const text = [reasoning.trim(), toolTrace].filter(Boolean).join("\n");
-
   useEffect(() => {
     if (isStreaming && scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
-  }, [isStreaming, text]);
+  }, [isStreaming, tools.length, reasoning]);
 
-  if (!isOpen) {
-    return null;
-  }
+  if (!isOpen) return null;
 
   return (
     <div
       className={cn(
-        "mt-1 max-h-24 w-full overflow-y-auto whitespace-pre-wrap text-muted-foreground/70 text-[11px] leading-relaxed [scrollbar-width:none]",
-        isStreaming && "max-h-32"
+        "mt-1 w-full overflow-y-auto [scrollbar-width:none]",
+        isStreaming ? "max-h-48" : "max-h-36"
       )}
       ref={scrollRef}
     >
-      {text || "Preparing response"}
+      {tools.length > 0 && (
+        <div className="grid gap-0.5 py-0.5">
+          {tools.map((tool) => (
+            <ToolRow key={tool.id} tool={tool} />
+          ))}
+        </div>
+      )}
+      {reasoning.trim() && (
+        <div className={cn(
+          "whitespace-pre-wrap text-muted-foreground/60 text-[11px] leading-relaxed",
+          tools.length > 0 && "mt-1.5 border-t border-border/30 pt-1.5"
+        )}>
+          {reasoning.trim()}
+        </div>
+      )}
+      {!tools.length && !reasoning.trim() && (
+        <div className="text-[11px] text-muted-foreground/50">
+          Preparing response…
+        </div>
+      )}
     </div>
   );
 }
