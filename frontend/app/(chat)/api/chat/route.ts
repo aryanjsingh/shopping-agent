@@ -12,3 +12,10 @@ export function DELETE(request: Request) {
     `/api/chat?${new URL(request.url).searchParams}`
   );
 }
+
+export function PATCH(request: Request) {
+  return proxyToBackend(
+    request,
+    `/api/chat?${new URL(request.url).searchParams}`
+  );
+}

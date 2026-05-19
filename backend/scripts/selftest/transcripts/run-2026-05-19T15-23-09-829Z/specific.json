@@ -1,0 +1,2537 @@
+{
+  "scenario": {
+    "tag": "specific",
+    "text": "find airpods pro 2"
+  },
+  "chatId": "6e4e888a-1ef3-495e-85cd-27bf73a65659",
+  "durationMs": 43596,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "62ba1fe3-0079-4100-94e5-7f6923062335"
+    },
+    {
+      "type": "data-chat-title",
+      "data": "Airpods Pro 2"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "Z7UmNhoy4D0aBjat"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Z7UmNhoy4D0aBjat",
+      "delta": "User"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Z7UmNhoy4D0aBjat",
+      "delta": " wants"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Z7UmNhoy4D0aBjat",
+      "delta": " specific"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Z7UmNhoy4D0aBjat",
+      "delta": " product"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Z7UmNhoy4D0aBjat",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Z7UmNhoy4D0aBjat",
+      "delta": " Use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Z7UmNhoy4D0aBjat",
+      "delta": " search"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Z7UmNhoy4D0aBjat",
+      "delta": "Products"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Z7UmNhoy4D0aBjat",
+      "delta": "."
+    },
+    {
+      "type": "tool-input-start",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "toolName": "searchProducts"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": ""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": "{\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": "query"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": "Air"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": "Pods"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": " Pro"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": "2"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": "limit"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": "12"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": ",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": "sort"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": "Mode"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": "rating"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": "\"\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "inputTextDelta": "}"
+    },
+    {
+      "type": "tool-input-available",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "toolName": "searchProducts",
+      "input": {
+        "query": "AirPods Pro 2",
+        "limit": 12,
+        "sortMode": "rating"
+      },
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "User wants specific product. Use searchProducts.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "reasoning-end",
+      "id": "Z7UmNhoy4D0aBjat",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "User wants specific product. Use searchProducts.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tool-output-available",
+      "toolCallId": "chatcmpl-tool-84d054348e1602e1",
+      "output": {
+        "query": "AirPods Pro 2",
+        "sortMode": "rating",
+        "currentGenOnly": false,
+        "count": 10,
+        "category": "earbuds",
+        "freshnessHint": "This is a earbuds query in a fast-moving category. You MUST now call assessProductFreshness with the top product's title and techSpecs before recommending. If the verdict says shouldCounterSearch=true, follow up with another searchProducts using the counterSearchHint to surface current-gen alternatives in the same budget.",
+        "products": [
+          {
+            "id": "gid://shopify/p/1zzXNzuuBAOi2DtaSIKGN1",
+            "title": "AirPods Pro (2nd generation) with MagSafe Case (USB-C) Bluetooth (White, True Wireless) With One Year Warranty",
+            "description": "All-in-one wireless earbuds with MagSafe case, advanced noise control, and clinical-grade hearing protection.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0275/3655/6093/files/2_611pEx7220L._AC_SL1500_7271f48a-916c-4f9b-a8a8-e7a752b6707d.jpg",
+                "altText": "AirPods Pro (2nd generation) with MagSafe Case (USB-C) Bluetooth (White, True Wireless) With One Year Warranty"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 6900,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 6900,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 6900,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42980849844285?shop=27536556093",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42980849844285?shop=27536556093"
+          },
+          {
+            "id": "gid://shopify/p/4DisowyUhl2C4084MkiUh",
+            "title": "Apple AirPods Pro 2nd Generation with MagSafe Case USB-C White MTJV3AM/A",
+            "description": "Premium wireless earbuds with advanced noise cancellation, adaptive transparency, and MagSafe charging case for seamless connectivity and superior audio.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0030/0938/0421/files/aca9d41e-7709-4b43-9a8f-84f6d2863949-_1_-_2.png",
+                "altText": "Apple AirPods Pro 2nd Generation with MagSafe Case USB-C White MTJV3AM/A"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 10999,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 10999,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 10999,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42033119133751?shop=3009380421",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42033119133751?shop=3009380421"
+          },
+          {
+            "id": "gid://shopify/p/eTXP5eHHXWPGsuT89p7XY",
+            "title": "Apple AirPods Pro 2 Wireless Earbuds",
+            "description": "Wireless earbuds with advanced noise cancellation and high-fidelity audio for a premium listening experience.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0654/5362/1296/files/611pEx7220L._AC_SL1500.jpg",
+                "altText": "Apple AirPods Pro 2 Wireless Earbuds"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 3599,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 6599,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 3599,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42858210394160?shop=65453621296",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42858210394160?shop=65453621296"
+          },
+          {
+            "id": "gid://shopify/p/7M8vV7ZhK3Ez9LwJInNMrs",
+            "title": "Apple AirPods Pro (2nd Gen) with MagSafe Charging Case (USB-C) | 1-Year Warranty | Free 2-Day Shipping",
+            "description": "Premium wireless in-ear headphones with MagSafe charging case, advanced noise cancellation, and USB-C connectivity.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/1502/0354/files/apple-airpods-pro-2nd-gen-magsafe-usb-c-front.jpg",
+                "altText": "Apple AirPods Pro (2nd Gen) with MagSafe Charging Case (USB-C)."
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 22900,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 22900,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 22900,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45429496283307?shop=15020354",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45429496283307?shop=15020354"
+          },
+          {
+            "id": "gid://shopify/p/NGRFjJRU99haxICLBZGpd",
+            "title": "Apple Airpods Pro 2nd Generation w/ Magsafe Charging Case White MQD83AM/A",
+            "description": "Wireless earbuds with advanced noise cancellation, adaptive EQ, and MagSafe charging case for immersive audio and seamless connectivity.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0030/0938/0421/files/4900964_rd-_1.png",
+                "altText": "Apple Airpods Pro 2nd Generation w/ Magsafe Charging Case White MQD83AM/A"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 12900,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 12999,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 12900,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/41989950341175?shop=3009380421",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/41989950341175?shop=3009380421"
+          },
+          {
+            "id": "gid://shopify/p/5KfgQVAMSVFXWLVIfMucLu",
+            "title": "AIRPODS PRO GENERATION 2",
+            "description": "Wireless in-ear headphones with advanced noise cancellation and high-fidelity audio.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0957/6860/9060/files/F530DB14-DDF9-4527-839F-7338E5F3AE12.jpg",
+                "altText": "AIRPODS PRO GENERATION 2"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 10000,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 13500,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 10000,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42952521449539?shop=67801251907",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42952521449539?shop=67801251907"
+          },
+          {
+            "id": "gid://shopify/p/2IOwByKrhseYM1bCCZGHtu",
+            "title": "Apple AirPods Pro 2 White With USB-C Charging Case In Ear Headphones MTJV3AM/A - C",
+            "description": "Wireless in-ear headphones with active noise cancellation, adaptive transparency, and MagSafe charging case for versatile, immersive listening.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0778/5332/7666/files/3a82d3b177c44fab90b87528c43dffd1_7c519f1a-b73b-415c-bfb4-5a7789bc4ca7.jpg",
+                "altText": "Apple AirPods Pro 2 White With USB-C Charging Case In Ear Headphones MTJV3AM/A - C"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 8100,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 13200,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 8100,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/48984870814002?shop=77853327666",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/48984870814002?shop=77853327666"
+          },
+          {
+            "id": "gid://shopify/p/2jwgvB68We958quScYB6u5",
+            "title": "Apple AirPods Pro 2",
+            "description": "Wireless in-ear headphones with customizable sound, active noise cancellation, and MagSafe charging for up to 6 hours of listening.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0248/4037/2312/files/AirPodsPro2.png",
+                "altText": "Apple AirPods Pro 2"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 26900,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 26900,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 26900,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/43076765122648?shop=24840372312",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/43076765122648?shop=24840372312"
+          },
+          {
+            "id": "gid://shopify/p/4QJt45KBLbAVjxuVX9JjLi",
+            "title": "APPLE AIRPODS PRO 2, 2ND GENERATION - AirPods Pro (2nd generation) Active Noise Cancellation with MagSafe Case",
+            "description": "Premium in-ear headphones with advanced active noise cancellation and MagSafe compatibility for immersive listening and seamless connectivity.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0575/0551/3635/files/20241219-104557.jpg",
+                "altText": "APPLE AIRPODS PRO 2, 2ND GENERATION - AirPods Pro (2nd generation) Active Noise Cancellation with MagSafe Case"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 23900,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 23900,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 23900,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45559236788387?shop=57505513635",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45559236788387?shop=57505513635"
+          },
+          {
+            "id": "gid://shopify/p/2UGODA1425jsrjA6Bd4vAy",
+            "title": "AirPods Pro 2",
+            "description": "",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/1002/5497/4278/files/IMG_3361.png",
+                "altText": "AirPods Pro 2"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4800,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4800,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4800,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/56582130630982?shop=100254974278",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/56582130630982?shop=100254974278"
+          }
+        ]
+      }
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "fQkK50wACaWSHvIq"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "fQkK50wACaWSHvIq",
+      "delta": "We"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "fQkK50wACaWSHvIq",
+      "delta": " need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "fQkK50wACaWSHvIq",
+      "delta": " assess"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "fQkK50wACaWSHvIq",
+      "delta": " freshness"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "fQkK50wACaWSHvIq",
+      "delta": " on"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "fQkK50wACaWSHvIq",
+      "delta": " top"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "fQkK50wACaWSHvIq",
+      "delta": " product"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "fQkK50wACaWSHvIq",
+      "delta": "."
+    },
+    {
+      "type": "tool-input-start",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "toolName": "assessProductFreshness"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": ""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "{\""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "product"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "Title"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "\":\""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "Air"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "Pods"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " Pro"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " ("
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "2"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "nd"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " generation"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": ")"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " with"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " Mag"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "Safe"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " Case"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " ("
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "USB"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "-C"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": ")"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " Bluetooth"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " ("
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "White"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": ","
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " True"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " Wireless"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": ")"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " With"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " One"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " Year"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " Warranty"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "\",\""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "tech"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "Specs"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "\":[]"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": ",\""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "user"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "Intent"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "\":\""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "find"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " air"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "pods"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " pro"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "2"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "inputTextDelta": "\"}"
+    },
+    {
+      "type": "tool-input-available",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "toolName": "assessProductFreshness",
+      "input": {
+        "productTitle": "AirPods Pro (2nd generation) with MagSafe Case (USB-C) Bluetooth (White, True Wireless) With One Year Warranty",
+        "techSpecs": [],
+        "userIntent": "find airpods pro 2"
+      },
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need assess freshness on top product.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tool-output-available",
+      "toolCallId": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "output": {
+        "category": "earbuds",
+        "generation": "current",
+        "signals": [
+          {
+            "kind": "current",
+            "label": "MagSafe",
+            "note": "MagSafe wireless — Apple's current standard"
+          }
+        ],
+        "performanceSensitive": false,
+        "shouldCounterSearch": false,
+        "summary": "MagSafe wireless — Apple's current standard",
+        "badgeKind": "current",
+        "badgeLabel": "Current gen"
+      }
+    },
+    {
+      "type": "reasoning-end",
+      "id": "fQkK50wACaWSHvIq",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need assess freshness on top product.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "JJy5Y572WJ71C0rl"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": "We"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " have"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " freshness"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " current"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " no"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " counter"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": ". So"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " recommend"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " top"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " product"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " maybe"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " first"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " Provide"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " options"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " Use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " rating"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " sort"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " already"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " Provide"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": " brief"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "JJy5Y572WJ71C0rl",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-end",
+      "id": "JJy5Y572WJ71C0rl",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have freshness current, no counter. So recommend top product maybe first. Provide options. Use rating sort already. Provide brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "text-start",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "Air"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "Pods"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Pro"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "2"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "nd"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " generation"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": ")"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " with"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Mag"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "Safe"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Case"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "USB"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "C"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": ")**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "69"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "00"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "USD"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "5"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "star"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " rating"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Current"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "gen"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " earbuds"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " with"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Apple"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "’s"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Mag"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "Safe"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " wireless"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " charging"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Adaptive"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Transparency"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " spatial"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " audio"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Best"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " overall"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " value"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " fully"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " up"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "to"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "date"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": ".\n\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "Apple"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Air"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "Pods"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Pro"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "2"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "budget"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "friendly"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": ")**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "35"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "99"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "USD"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "lowest"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " price"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " shown"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": ")."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Same"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " core"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " features"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " but"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " sold"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " without"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " premium"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Mag"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "Safe"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " case"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": ";"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " good"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " if"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " you"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " already"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " have"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " a"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " compatible"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " charger"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": ".\n\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "Apple"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Air"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "Pods"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Pro"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "2"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "mid"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "range"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": ")**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "81"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "00"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "USD"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Includes"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Mag"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "Safe"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " case"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " a"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "1"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "year"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " warranty"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " priced"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " between"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " two"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " extremes"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": ".\n\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "All"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " three"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " are"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " current"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "generation"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "202"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "3"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "24"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": ")"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " cover"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " usual"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " i"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "OS"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " integration"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " active"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " noise"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " cancellation"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " spatial"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " audio"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " Pick"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "69"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "00"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " version"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " for"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " sweet"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " spot"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " of"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " price"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " case"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " convenience"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": " warranty"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE",
+      "delta": "."
+    },
+    {
+      "type": "text-end",
+      "id": "gen-1779204241-6dIoWmjTF0QFHlkDxbqE"
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "finish",
+      "finishReason": "stop"
+    }
+  ],
+  "toolCalls": [
+    {
+      "id": "chatcmpl-tool-84d054348e1602e1",
+      "toolName": "searchProducts",
+      "input": {
+        "query": "AirPods Pro 2",
+        "limit": 12,
+        "sortMode": "rating"
+      },
+      "output": {
+        "query": "AirPods Pro 2",
+        "sortMode": "rating",
+        "currentGenOnly": false,
+        "count": 10,
+        "category": "earbuds",
+        "freshnessHint": "This is a earbuds query in a fast-moving category. You MUST now call assessProductFreshness with the top product's title and techSpecs before recommending. If the verdict says shouldCounterSearch=true, follow up with another searchProducts using the counterSearchHint to surface current-gen alternatives in the same budget.",
+        "products": [
+          {
+            "id": "gid://shopify/p/1zzXNzuuBAOi2DtaSIKGN1",
+            "title": "AirPods Pro (2nd generation) with MagSafe Case (USB-C) Bluetooth (White, True Wireless) With One Year Warranty",
+            "description": "All-in-one wireless earbuds with MagSafe case, advanced noise control, and clinical-grade hearing protection.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0275/3655/6093/files/2_611pEx7220L._AC_SL1500_7271f48a-916c-4f9b-a8a8-e7a752b6707d.jpg",
+                "altText": "AirPods Pro (2nd generation) with MagSafe Case (USB-C) Bluetooth (White, True Wireless) With One Year Warranty"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 6900,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 6900,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 6900,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42980849844285?shop=27536556093",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42980849844285?shop=27536556093"
+          },
+          {
+            "id": "gid://shopify/p/4DisowyUhl2C4084MkiUh",
+            "title": "Apple AirPods Pro 2nd Generation with MagSafe Case USB-C White MTJV3AM/A",
+            "description": "Premium wireless earbuds with advanced noise cancellation, adaptive transparency, and MagSafe charging case for seamless connectivity and superior audio.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0030/0938/0421/files/aca9d41e-7709-4b43-9a8f-84f6d2863949-_1_-_2.png",
+                "altText": "Apple AirPods Pro 2nd Generation with MagSafe Case USB-C White MTJV3AM/A"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 10999,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 10999,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 10999,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42033119133751?shop=3009380421",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42033119133751?shop=3009380421"
+          },
+          {
+            "id": "gid://shopify/p/eTXP5eHHXWPGsuT89p7XY",
+            "title": "Apple AirPods Pro 2 Wireless Earbuds",
+            "description": "Wireless earbuds with advanced noise cancellation and high-fidelity audio for a premium listening experience.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0654/5362/1296/files/611pEx7220L._AC_SL1500.jpg",
+                "altText": "Apple AirPods Pro 2 Wireless Earbuds"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 3599,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 6599,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 3599,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42858210394160?shop=65453621296",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42858210394160?shop=65453621296"
+          },
+          {
+            "id": "gid://shopify/p/7M8vV7ZhK3Ez9LwJInNMrs",
+            "title": "Apple AirPods Pro (2nd Gen) with MagSafe Charging Case (USB-C) | 1-Year Warranty | Free 2-Day Shipping",
+            "description": "Premium wireless in-ear headphones with MagSafe charging case, advanced noise cancellation, and USB-C connectivity.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/1502/0354/files/apple-airpods-pro-2nd-gen-magsafe-usb-c-front.jpg",
+                "altText": "Apple AirPods Pro (2nd Gen) with MagSafe Charging Case (USB-C)."
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 22900,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 22900,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 22900,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45429496283307?shop=15020354",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45429496283307?shop=15020354"
+          },
+          {
+            "id": "gid://shopify/p/NGRFjJRU99haxICLBZGpd",
+            "title": "Apple Airpods Pro 2nd Generation w/ Magsafe Charging Case White MQD83AM/A",
+            "description": "Wireless earbuds with advanced noise cancellation, adaptive EQ, and MagSafe charging case for immersive audio and seamless connectivity.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0030/0938/0421/files/4900964_rd-_1.png",
+                "altText": "Apple Airpods Pro 2nd Generation w/ Magsafe Charging Case White MQD83AM/A"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 12900,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 12999,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 12900,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/41989950341175?shop=3009380421",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/41989950341175?shop=3009380421"
+          },
+          {
+            "id": "gid://shopify/p/5KfgQVAMSVFXWLVIfMucLu",
+            "title": "AIRPODS PRO GENERATION 2",
+            "description": "Wireless in-ear headphones with advanced noise cancellation and high-fidelity audio.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0957/6860/9060/files/F530DB14-DDF9-4527-839F-7338E5F3AE12.jpg",
+                "altText": "AIRPODS PRO GENERATION 2"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 10000,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 13500,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 10000,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42952521449539?shop=67801251907",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42952521449539?shop=67801251907"
+          },
+          {
+            "id": "gid://shopify/p/2IOwByKrhseYM1bCCZGHtu",
+            "title": "Apple AirPods Pro 2 White With USB-C Charging Case In Ear Headphones MTJV3AM/A - C",
+            "description": "Wireless in-ear headphones with active noise cancellation, adaptive transparency, and MagSafe charging case for versatile, immersive listening.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0778/5332/7666/files/3a82d3b177c44fab90b87528c43dffd1_7c519f1a-b73b-415c-bfb4-5a7789bc4ca7.jpg",
+                "altText": "Apple AirPods Pro 2 White With USB-C Charging Case In Ear Headphones MTJV3AM/A - C"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 8100,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 13200,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 8100,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/48984870814002?shop=77853327666",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/48984870814002?shop=77853327666"
+          },
+          {
+            "id": "gid://shopify/p/2jwgvB68We958quScYB6u5",
+            "title": "Apple AirPods Pro 2",
+            "description": "Wireless in-ear headphones with customizable sound, active noise cancellation, and MagSafe charging for up to 6 hours of listening.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0248/4037/2312/files/AirPodsPro2.png",
+                "altText": "Apple AirPods Pro 2"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 26900,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 26900,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 26900,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/43076765122648?shop=24840372312",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/43076765122648?shop=24840372312"
+          },
+          {
+            "id": "gid://shopify/p/4QJt45KBLbAVjxuVX9JjLi",
+            "title": "APPLE AIRPODS PRO 2, 2ND GENERATION - AirPods Pro (2nd generation) Active Noise Cancellation with MagSafe Case",
+            "description": "Premium in-ear headphones with advanced active noise cancellation and MagSafe compatibility for immersive listening and seamless connectivity.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0575/0551/3635/files/20241219-104557.jpg",
+                "altText": "APPLE AIRPODS PRO 2, 2ND GENERATION - AirPods Pro (2nd generation) Active Noise Cancellation with MagSafe Case"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 23900,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 23900,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 23900,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45559236788387?shop=57505513635",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45559236788387?shop=57505513635"
+          },
+          {
+            "id": "gid://shopify/p/2UGODA1425jsrjA6Bd4vAy",
+            "title": "AirPods Pro 2",
+            "description": "",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/1002/5497/4278/files/IMG_3361.png",
+                "altText": "AirPods Pro 2"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4800,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4800,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4800,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/56582130630982?shop=100254974278",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/56582130630982?shop=100254974278"
+          }
+        ]
+      },
+      "state": "output-available"
+    },
+    {
+      "id": "chatcmpl-tool-b9323dfeb8a6b4b4",
+      "toolName": "assessProductFreshness",
+      "input": {
+        "productTitle": "AirPods Pro (2nd generation) with MagSafe Case (USB-C) Bluetooth (White, True Wireless) With One Year Warranty",
+        "techSpecs": [],
+        "userIntent": "find airpods pro 2"
+      },
+      "output": {
+        "category": "earbuds",
+        "generation": "current",
+        "signals": [
+          {
+            "kind": "current",
+            "label": "MagSafe",
+            "note": "MagSafe wireless — Apple's current standard"
+          }
+        ],
+        "performanceSensitive": false,
+        "shouldCounterSearch": false,
+        "summary": "MagSafe wireless — Apple's current standard",
+        "badgeKind": "current",
+        "badgeLabel": "Current gen"
+      },
+      "state": "output-available"
+    }
+  ],
+  "assistantText": "**AirPods Pro (2nd generation) with MagSafe Case (USB‑C)** – $69.00 USD, 5‑star rating. Current‑gen earbuds with Apple’s MagSafe wireless charging, Adaptive Transparency and spatial audio. Best overall value and fully up‑to‑date.\n\n**Apple AirPods Pro 2 (budget‑friendly)** – $35.99 USD (lowest price shown). Same core features but sold without the premium MagSafe case; good if you already have a compatible charger.\n\n**Apple AirPods Pro 2 (mid‑range)** – $81.00 USD. Includes the MagSafe case and a 1‑year warranty, priced between the two extremes.\n\nAll three are current‑generation (2023‑24) and cover the usual iOS integration, active noise cancellation and spatial audio. Pick the $69.00 version for the sweet spot of price, case convenience, and warranty."
+}

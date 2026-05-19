@@ -1,0 +1,15 @@
+[
+  {
+    "tag": "compare",
+    "text": "compare kindle paperwhite vs basic kindle",
+    "chatId": "e5f4c72a-9c22-40b8-a310-9a75f1a00f16",
+    "durationMs": 9480,
+    "ok": true,
+    "fired": [],
+    "wins": [],
+    "issues": [
+      "stream-error: Failed after 3 attempts. Last error: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day"
+    ],
+    "textPreview": ""
+  }
+]

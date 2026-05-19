@@ -1,0 +1,15 @@
+[
+  {
+    "tag": "broad",
+    "text": "i need new headphones",
+    "chatId": "c596e6c7-915e-4df0-8ed3-c0490f253e12",
+    "durationMs": 9007,
+    "ok": true,
+    "fired": [],
+    "wins": [],
+    "issues": [
+      "stream-error: Failed after 3 attempts. Last error: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day"
+    ],
+    "textPreview": ""
+  }
+]

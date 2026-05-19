@@ -1,0 +1,22 @@
+[
+  {
+    "tag": "specific",
+    "text": "find airpods pro 2",
+    "chatId": "e5776ef7-40e9-44a9-942d-73f5edc59c8c",
+    "durationMs": 56598,
+    "ok": true,
+    "fired": [
+      "",
+      "searchProducts",
+      "",
+      "assessProductFreshness",
+      "",
+      ""
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [],
+    "textPreview": "Found AirPods Pro 2 options with wide price variation: **Best Value:** AirPods Pro 2 - $48.00 **Mid-Range:** AirPods Pro (2nd gen) with MagSafe Case USB-C - $69.00 **Premium:** Apple AirPods Pro 2nd Gen with MagSafe Case - $109.99 **High-End:** Apple AirPods Pro (2nd Gen)"
+  }
+]

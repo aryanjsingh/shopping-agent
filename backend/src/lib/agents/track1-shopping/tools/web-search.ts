@@ -158,80 +158,6 @@ async function duckduckgoSearch(query: string, num: number): Promise<SearchResul
   }
 }
 
-async function googleSearch(query: string, num: number): Promise<SearchResult[]> {
-  const browser = await getBrowser();
-  const context = await browser.newContext({
-    userAgent: randomUA(),
-    locale: "en-US",
-    viewport: { width: 1366, height: 768 },
-    extraHTTPHeaders: { "Accept-Language": "en-US,en;q=0.9" },
-  });
-  const page = await context.newPage();
-
-  try {
-    await page.goto("https://www.google.com/?hl=en", {
-      waitUntil: "domcontentloaded",
-      timeout: 15_000,
-    });
-    await page.waitForTimeout(700 + Math.random() * 500);
-
-    const params = new URLSearchParams({ q: query, hl: "en", gl: "us", num: String(Math.min(num + 3, 10)) });
-    await page.goto(`https://www.google.com/search?${params}`, {
-      waitUntil: "networkidle",
-      timeout: 25_000,
-    });
-    await page.waitForTimeout(800 + Math.random() * 600);
-
-    const html = await page.content();
-    if (
-      html.includes("detected unusual traffic") ||
-      html.includes("/sorry/index") ||
-      html.includes("recaptcha") ||
-      (await page.title()).toLowerCase().includes("sorry")
-    ) {
-      return [];
-    }
-
-    const results: SearchResult[] = await page.evaluate((maxNum: number) => {
-      const items: SearchResult[] = [];
-      const seen = new Set<string>();
-
-      document.querySelectorAll("h3").forEach((h3El) => {
-        if (items.length >= maxNum) return;
-        const h3 = h3El as HTMLElement;
-        let a: HTMLAnchorElement | null = h3.closest("a");
-        if (!a) a = h3.parentElement?.closest("a") ?? null;
-        if (!a) return;
-
-        const url = a.href;
-        if (!url.startsWith("http") || url.includes("google.com") || seen.has(url)) return;
-        seen.add(url);
-
-        const title = h3.innerText.trim();
-        if (!title) return;
-
-        const container = h3.closest("[data-hveid]") ?? h3.closest("div.g") ?? h3.parentElement?.parentElement ?? null;
-        const snippetEl =
-          (container?.querySelector("div[data-sncf]") as HTMLElement | null) ??
-          (container?.querySelector("div[class*='VwiC']") as HTMLElement | null) ??
-          (container?.querySelector("div[style*='-webkit-line-clamp']") as HTMLElement | null) ??
-          null;
-
-        let displayUrl = url;
-        try { displayUrl = new URL(url).hostname.replace(/^www\./, ""); } catch {}
-
-        items.push({ title, url, displayUrl, snippet: snippetEl?.innerText?.trim() ?? "" });
-      });
-
-      return items;
-    }, num);
-
-    return results.slice(0, num);
-  } finally {
-    await context.close();
-  }
-}
-
 async function multiEngineSearch(query: string, num: number): Promise<SearchResult[]> {
   // Try Bing first (less aggressive bot detection)
   try {
@@ -245,18 +171,44 @@ async function multiEngineSearch(query: string, num: number): Promise<SearchResu
     if (results.length > 0) return results;
   } catch {}
 
-  // Last resort: Google
-  try {
-    const results = await googleSearch(query, num);
-    if (results.length > 0) return results;
-  } catch {}
-
   return [];
 }
 
+// Tiny TTL cache so repeated webSearch within a chat doesn't re-spawn chromium.
+type CacheEntry = { results: SearchResult[]; expiresAt: number };
+const SEARCH_CACHE = new Map<string, CacheEntry>();
+const SEARCH_TTL_MS = 5 * 60 * 1000;
+
+function cacheKey(query: string, num: number, kind: string) {
+  return `${kind}::${num}::${query.toLowerCase().trim()}`;
+}
+
+function readCache(key: string): SearchResult[] | null {
+  const hit = SEARCH_CACHE.get(key);
+  if (!hit) return null;
+  if (hit.expiresAt < Date.now()) {
+    SEARCH_CACHE.delete(key);
+    return null;
+  }
+  return hit.results;
+}
+
+function writeCache(key: string, results: SearchResult[]) {
+  SEARCH_CACHE.set(key, { results, expiresAt: Date.now() + SEARCH_TTL_MS });
+}
+
+const KIND_TEMPLATES: Record<string, (q: string) => string> = {
+  reviews: (q) => `${q} review 2024 2025`,
+  comparison: (q) => `${q} vs alternatives comparison`,
+  brand_reputation: (q) => `${q} brand reliability complaints`,
+  price_check: (q) => `${q} best price retailer`,
+  generation_check: (q) => `${q} release year chipset specs`,
+  general: (q) => q,
+};
+
 export const webSearch = tool({
   description:
-    "Search the web for real-time information about products, brands, reviews, or any topic the shopper asks about. Use when Shopify catalog results are insufficient or the shopper asks a research question (e.g. 'best running shoes 2025', 'is X brand reliable', 'compare X vs Y'). Returns organic results with title, link, and snippet. Searches Bing first, falls back to DuckDuckGo then Google.",
+    "Search the live web through local SERP scraping with stealth browser contexts. Uses Bing first and DuckDuckGo as a non-Google fallback. Use AFTER searchProducts when the shopper asks about brand reputation ('is X reliable'), expert opinion ('best X for Y'), spec/release-year clarity, or current-vs-old generation context. Set searchKind to focus the query: 'reviews' (expert reviews), 'comparison' (X vs Y), 'brand_reputation' (reliability), 'price_check' (cheapest seller), 'generation_check' (release year + chipset), 'general' (default). Cached for 5 min within the process.",
   inputSchema: z.object({
     query: z.string().min(2).describe("Search query"),
     num: z
@@ -266,24 +218,60 @@ export const webSearch = tool({
       .max(10)
       .optional()
       .describe("Number of results to return (default 5)"),
+    searchKind: z
+      .enum([
+        "reviews",
+        "comparison",
+        "brand_reputation",
+        "price_check",
+        "generation_check",
+        "general",
+      ])
+      .optional()
+      .describe("Focus the search — defaults to 'general'"),
   }),
-  execute: async ({ query, num = 5 }) => {
+  execute: async ({ query, num = 5, searchKind = "general" }) => {
+    const builder = KIND_TEMPLATES[searchKind] ?? KIND_TEMPLATES.general;
+    const finalQuery = builder(query).trim();
+    const key = cacheKey(finalQuery, num, searchKind);
+
+    const cached = readCache(key);
+    if (cached) {
+      return {
+        query: finalQuery,
+        searchKind,
+        cached: true,
+        count: cached.length,
+        results: cached,
+      };
+    }
+
     try {
-      const results = await multiEngineSearch(query, num);
+      const results = await multiEngineSearch(finalQuery, num);
 
       if (results.length === 0) {
         return {
-          error: "All search engines returned no results or triggered bot detection. Try a different query.",
-          query,
+          error:
+            "Bing and DuckDuckGo returned no results or triggered bot detection. Try a different query.",
+          query: finalQuery,
+          searchKind,
           results: [],
         };
       }
 
-      return { query, count: results.length, results };
+      writeCache(key, results);
+      return {
+        query: finalQuery,
+        searchKind,
+        cached: false,
+        count: results.length,
+        results,
+      };
     } catch (err) {
       return {
         error: err instanceof Error ? err.message : "Search failed",
-        query,
+        query: finalQuery,
+        searchKind,
         results: [],
       };
     }

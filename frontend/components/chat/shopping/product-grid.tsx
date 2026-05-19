@@ -5,6 +5,7 @@ import {
   ChevronUpIcon,
   CheckIcon,
   ExternalLinkIcon,
+  ImageOffIcon,
   ShoppingCartIcon,
   StarIcon,
   StoreIcon,
@@ -109,9 +110,9 @@ export function ProductGrid({
               </span>
             </span>
             {isOpen ? (
-              <ChevronDownIcon className="size-4 shrink-0 text-muted-foreground" />
-            ) : (
               <ChevronUpIcon className="size-4 shrink-0 text-muted-foreground" />
+            ) : (
+              <ChevronDownIcon className="size-4 shrink-0 text-muted-foreground" />
             )}
           </button>
 
@@ -217,6 +218,7 @@ function ProductCard({
         ? [product.uniqueSellingPoint]
         : [];
   const [imgLoaded, setImgLoaded] = useState(false);
+  const [imgFailed, setImgFailed] = useState(false);
   const href = product.productUrl || product.primaryCheckoutUrl;
 
   return (
@@ -230,7 +232,7 @@ function ProductCard({
         tabIndex={href ? 0 : -1}
         aria-label={`View ${product.title}`}
       >
-        {image ? (
+        {image && !imgFailed ? (
           <>
             {!imgLoaded && (
               <Skeleton className="absolute inset-0 rounded-none" />
@@ -239,13 +241,15 @@ function ProductCard({
             <img
               alt={product.media[0]?.altText ?? product.title}
               className={`size-full object-contain p-2 transition-opacity duration-300 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
+              onError={() => setImgFailed(true)}
               onLoad={() => setImgLoaded(true)}
               src={image}
             />
           </>
         ) : (
-          <div className="flex size-full items-center justify-center">
-            <ShoppingCartIcon className="size-8 text-muted-foreground/40" />
+          <div className="flex size-full flex-col items-center justify-center gap-1 text-muted-foreground/45">
+            <ImageOffIcon className="size-7" />
+            <span className="text-[10px]">No image</span>
           </div>
         )}
 
@@ -258,8 +262,11 @@ function ProductCard({
       </a>
 
       <div className="flex flex-1 flex-col gap-1.5 p-2.5">
-        <div className="line-clamp-2 font-medium text-[12px] leading-snug">
-          {product.title}
+        <div
+          className="line-clamp-2 break-words font-medium text-[12px] leading-snug"
+          title={product.title}
+        >
+          {truncateAtWord(product.title, 58)}
         </div>
         {product.rating ? (
           <div className="flex items-center gap-1 text-muted-foreground text-xs">
@@ -327,6 +334,7 @@ function ProductDetailOverlay({
 }) {
   const overlayRef = useRef<HTMLDivElement>(null);
   const image = product.media[0]?.url;
+  const [imgFailed, setImgFailed] = useState(false);
   const href = product.productUrl || product.primaryCheckoutUrl;
 
   // Close on Escape
@@ -361,15 +369,16 @@ function ProductDetailOverlay({
         <div className="flex items-start justify-between gap-3 border-b border-border/50 p-4">
           <div className="flex gap-3">
             <div className="flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-muted/50">
-              {image ? (
+              {image && !imgFailed ? (
                 // biome-ignore lint/performance/noImgElement: Shopify Catalog images must render directly from live URLs.
                 <img
                   alt={product.media[0]?.altText ?? product.title}
                   className="size-full object-contain p-1"
+                  onError={() => setImgFailed(true)}
                   src={image}
                 />
               ) : (
-                <ShoppingCartIcon className="size-6 text-muted-foreground/40" />
+                <ImageOffIcon className="size-6 text-muted-foreground/40" />
               )}
             </div>
             <div className="min-w-0">
@@ -500,4 +509,11 @@ function ProductDetailOverlay({
       </div>
     </div>
   );
+}
+
+function truncateAtWord(value: string, maxLength: number) {
+  if (value.length <= maxLength) return value;
+  const truncated = value.slice(0, maxLength + 1);
+  const lastSpace = truncated.lastIndexOf(" ");
+  return `${truncated.slice(0, lastSpace > 24 ? lastSpace : maxLength).trim()}...`;
 }

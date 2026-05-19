@@ -1,0 +1,128 @@
+[
+  {
+    "tag": "broad",
+    "text": "i need new headphones",
+    "chatId": "19a83998-7eaf-412d-85a7-5f4f53174e23",
+    "durationMs": 10535,
+    "ok": true,
+    "fired": [],
+    "wins": [],
+    "issues": [
+      "never called searchProducts or clarifyIntent",
+      "broad request — should have called clarifyIntent first"
+    ],
+    "textPreview": "{ \"mode\": \"use_case\", \"question\": \"What’s the primary way you’ll use the headphones?\", \"reason\": \"Picking use‑case narrows features like ANC, sport‑fit, or studio detail.\", \"options\": [ { \"label\": \"Travel & commuting\", \"value\": \"Travel headphones with acti"
+  },
+  {
+    "tag": "specific",
+    "text": "find airpods pro 2",
+    "chatId": "643bc8f7-4f00-44be-b07a-3a1f7d43370c",
+    "durationMs": 19346,
+    "ok": true,
+    "fired": [
+      "searchProducts",
+      "assessProductFreshness"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [],
+    "textPreview": "You want the latest AirPods Pro 2 – the catalog’s top‑rated pick is the **AirPods Pro (2nd generation) with MagSafe Case (USB‑C)**. At **$69.00** it’s the current‑generation model with Apple’s MagSafe charging, active noise cancellation and adaptive transparency. - Same price ac"
+  },
+  {
+    "tag": "budget",
+    "text": "running shoes under 80 dollars",
+    "chatId": "b7d48dd7-702e-4dfe-a55a-1deeabb555fd",
+    "durationMs": 16328,
+    "ok": true,
+    "fired": [
+      "searchProducts"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [],
+    "textPreview": "- **Avoid ultra‑cheap “fashion” runners** – the $21 Adidas Men’s Run 60s 2.0 look nice but use basic EVA that wears out quickly if you log regular miles. - **Safe pick under $80:** **Brooks Trace 2** (both men’s and women’s versions) – $76 USD, proven cushioning, breathable mes"
+  },
+  {
+    "tag": "compare",
+    "text": "compare kindle paperwhite vs basic kindle",
+    "chatId": "0786bb00-fd55-4d3c-b421-05c1c278b304",
+    "durationMs": 34594,
+    "ok": true,
+    "fired": [
+      "searchProducts",
+      "searchProducts",
+      "compareProducts",
+      "assessProductFreshness"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [],
+    "textPreview": "- **Paperwhite (2024) – $211.00** – Larger 7‑inch glare‑free display, waterproof, 16 GB storage, up to 12 weeks battery. *Two‑year‑old model; still solid but not the newest.* - **Basic (2024) – $151.00** – Smaller 6‑inch display, 16 GB storage, same battery life, no waterproofi"
+  },
+  {
+    "tag": "cheapest",
+    "text": "cheapest place to buy logitech mx master 3s",
+    "chatId": "72680a60-30ff-4b4d-a2bc-fc2d1d22b7f6",
+    "durationMs": 12961,
+    "ok": true,
+    "fired": [
+      "searchProducts",
+      "compareSellers"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [],
+    "textPreview": "- **$71.99** – *Logitech MX Master 3S* (8K DPI, ultra‑fast scroll, Bluetooth + USB‑receiver). The catalog shows a single seller offering it at this price – no cheaper merchants are listed. That’s the lowest‑priced option the Shopify catalog currently has for this mouse. If you"
+  },
+  {
+    "tag": "gift",
+    "text": "gift for dad who likes cooking, under 150",
+    "chatId": "e0bfbe64-e8cf-4ac4-a661-91a65721d2a0",
+    "durationMs": 6307,
+    "ok": true,
+    "fired": [],
+    "wins": [],
+    "issues": [
+      "never called searchProducts or clarifyIntent"
+    ],
+    "textPreview": "What’s the main cooking type he enjoys? **Choose one:** - **Grilling & BBQ** – “perfect for outdoor grilling” - **Home cooking basics** – “versatile tools for everyday meals” - **Specialty gadgets** – “unique kitchen toys that wow”"
+  },
+  {
+    "tag": "phone-old-vs-new",
+    "text": "i need a gaming phone under 500 dollars",
+    "chatId": "bd75049a-e137-4318-8b88-2c5c4ed5abcd",
+    "durationMs": 11917,
+    "ok": true,
+    "fired": [
+      "searchProducts"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [
+      "fast-moving category — assessProductFreshness was not called"
+    ],
+    "textPreview": "I didn’t find any actual gaming phones under $500 – the results were all accessories. **Next step:** try a broader keyword (e.g. “Android gaming phone 2024”) and/or raise the max price a bit (e.g. $550) so the catalog can surface models like the **Xiaomi Black Shark 7**, **ASU"
+  },
+  {
+    "tag": "laptop-video",
+    "text": "good laptop for video editing under 1200",
+    "chatId": "739278a3-845c-4614-9543-98af2a99ba80",
+    "durationMs": 38887,
+    "ok": true,
+    "fired": [
+      "searchProducts",
+      "assessProductFreshness",
+      "searchProducts"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [],
+    "textPreview": "- **What to avoid:** any 2022‑2023 Intel i3 or i5 laptops that only have 8 GB RAM and a slow integrated GPU. They’ll choke on 4K timelines and color‑graded footage, and the CPU is already two‑generations behind the chips designers use for video editing today. - **Safe pick:**"
+  }
+]

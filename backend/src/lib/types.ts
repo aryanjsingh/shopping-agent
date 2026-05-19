@@ -1,6 +1,6 @@
 import type { InferUITool, UIMessage } from "ai";
 import { z } from "zod";
-import type { track1ShoppingAgent } from "./agents/track1-shopping";
+import type { track1ToolTypes } from "./agents/track1-shopping/tool-types";
 import type { Suggestion } from "./db/schema";
 
 export type ArtifactKind = "text" | "code" | "image" | "sheet";
@@ -11,16 +11,20 @@ export const messageMetadataSchema = z.object({
 
 export type MessageMetadata = z.infer<typeof messageMetadataSchema>;
 
-type Track1 = typeof track1ShoppingAgent.tools;
+type Track1 = typeof track1ToolTypes;
 
 export type ChatTools = {
   // Track 1 — Shopping Agent
   searchProducts: InferUITool<Track1["searchProducts"]>;
+  showMore: InferUITool<Track1["showMore"]>;
+  refineSearch: InferUITool<Track1["refineSearch"]>;
   getProduct: InferUITool<Track1["getProduct"]>;
   compareProducts: InferUITool<Track1["compareProducts"]>;
   compareSellers: InferUITool<Track1["compareSellers"]>;
   buyProduct: InferUITool<Track1["buyProduct"]>;
   clarifyIntent: InferUITool<Track1["clarifyIntent"]>;
+  webSearch: InferUITool<Track1["webSearch"]>;
+  webFetch: InferUITool<Track1["webFetch"]>;
 };
 
 export type CustomUIDataTypes = {

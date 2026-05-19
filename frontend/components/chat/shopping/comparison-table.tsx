@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLinkIcon, StarIcon } from "lucide-react";
+import { ExternalLinkIcon, StarIcon, StoreIcon } from "lucide-react";
 import { formatMoney, formatRating } from "./format";
 
 type Row = {
@@ -13,12 +13,23 @@ type Row = {
   topFeatures: string[];
   techSpecs: string[];
   bestCheckoutUrl: string;
+  bestSellerName?: string;
+  bestSellerPrice?: { amount: number; currency: string };
+  sellerCount?: number;
 };
 
 export function ComparisonTable({ rows }: { rows: Row[] }) {
   if (rows.length === 0) {
     return null;
   }
+  // Find the cheapest row to badge it.
+  const cheapestId = rows.reduce(
+    (best, row) =>
+      row.bestSellerPrice && (!best.price || row.bestSellerPrice.amount < best.price)
+        ? { id: row.id, price: row.bestSellerPrice.amount }
+        : best,
+    { id: rows[0].id, price: rows[0].bestSellerPrice?.amount ?? rows[0].priceMin.amount }
+  ).id;
   return (
     <div className="overflow-x-auto rounded-xl border border-border/40 bg-card">
       <table className="w-full min-w-[480px] text-[12px]">
@@ -27,7 +38,14 @@ export function ComparisonTable({ rows }: { rows: Row[] }) {
             <th className="p-3 text-left font-medium">Product</th>
             {rows.map((row) => (
               <th className="p-3 text-left font-medium" key={`h-${row.id}`}>
-                <div className="line-clamp-2 max-w-[180px]">{row.title}</div>
+                <div className="flex items-center gap-1.5">
+                  <span className="line-clamp-2 max-w-[180px]">{row.title}</span>
+                  {row.id === cheapestId && rows.length > 1 ? (
+                    <span className="rounded-full bg-emerald-500/15 px-1.5 py-0.5 text-[9px] font-medium text-emerald-700 dark:text-emerald-300">
+                      Best price
+                    </span>
+                  ) : null}
+                </div>
               </th>
             ))}
           </tr>
@@ -41,7 +59,7 @@ export function ComparisonTable({ rows }: { rows: Row[] }) {
                   // biome-ignore lint/performance/noImgElement: Shopify Catalog images must be rendered live, not cached through an optimizer.
                   <img
                     alt={row.title}
-                    className="size-20 rounded-md object-cover"
+                    className="size-20 rounded-md bg-muted/40 object-contain p-1"
                     src={row.image}
                   />
                 ) : (
@@ -54,11 +72,34 @@ export function ComparisonTable({ rows }: { rows: Row[] }) {
             <td className="font-medium text-muted-foreground">Price</td>
             {rows.map((row) => (
               <td className="font-semibold" key={`p-${row.id}`}>
-                {formatMoney(row.priceMin.amount, row.priceMin.currency)}
+                {formatMoney(
+                  row.bestSellerPrice?.amount ?? row.priceMin.amount,
+                  row.bestSellerPrice?.currency ?? row.priceMin.currency
+                )}
                 {row.priceMax.amount > row.priceMin.amount ? (
                   <span className="ml-1 font-normal text-muted-foreground">
                     – {formatMoney(row.priceMax.amount, row.priceMax.currency)}
                   </span>
+                ) : null}
+              </td>
+            ))}
+          </tr>
+          <tr>
+            <td className="font-medium text-muted-foreground">Best seller</td>
+            {rows.map((row) => (
+              <td key={`s-${row.id}`}>
+                {row.bestSellerName ? (
+                  <span className="inline-flex items-center gap-1 text-foreground/80">
+                    <StoreIcon className="size-3 text-muted-foreground" />
+                    <span className="line-clamp-1">{row.bestSellerName}</span>
+                  </span>
+                ) : (
+                  <span className="text-muted-foreground">—</span>
+                )}
+                {row.sellerCount && row.sellerCount > 1 ? (
+                  <div className="mt-0.5 text-[10px] text-muted-foreground">
+                    {row.sellerCount} sellers total
+                  </div>
                 ) : null}
               </td>
             ))}
@@ -82,27 +123,35 @@ export function ComparisonTable({ rows }: { rows: Row[] }) {
             <td className="font-medium text-muted-foreground">Top features</td>
             {rows.map((row) => (
               <td key={`f-${row.id}`}>
-                <ul className="ml-3 list-disc space-y-1">
-                  {row.topFeatures.map((f) => (
-                    <li className="line-clamp-2" key={f}>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
+                {row.topFeatures.length > 0 ? (
+                  <ul className="ml-3 list-disc space-y-1">
+                    {row.topFeatures.map((f) => (
+                      <li className="line-clamp-2" key={f}>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <span className="text-muted-foreground">—</span>
+                )}
               </td>
             ))}
           </tr>
           <tr>
             <td className="font-medium text-muted-foreground">Specs</td>
             {rows.map((row) => (
-              <td key={`s-${row.id}`}>
-                <ul className="ml-3 list-disc space-y-1">
-                  {row.techSpecs.map((s) => (
-                    <li className="line-clamp-2" key={s}>
-                      {s}
-                    </li>
-                  ))}
-                </ul>
+              <td key={`spec-${row.id}`}>
+                {row.techSpecs.length > 0 ? (
+                  <ul className="ml-3 list-disc space-y-1">
+                    {row.techSpecs.map((s) => (
+                      <li className="line-clamp-2" key={s}>
+                        {s}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <span className="text-muted-foreground">—</span>
+                )}
               </td>
             ))}
           </tr>
@@ -117,10 +166,12 @@ export function ComparisonTable({ rows }: { rows: Row[] }) {
                     rel="noreferrer noopener"
                     target="_blank"
                   >
-                    Buy
+                    Buy{row.bestSellerName ? ` from ${row.bestSellerName}` : ""}
                     <ExternalLinkIcon className="size-3" />
                   </a>
-                ) : null}
+                ) : (
+                  <span className="text-muted-foreground">—</span>
+                )}
               </td>
             ))}
           </tr>

@@ -1,0 +1,162 @@
+{
+  "scenario": {
+    "tag": "compare",
+    "text": "compare kindle paperwhite vs basic kindle"
+  },
+  "chatId": "1730f377-6f8e-4981-b582-4c5237049a8b",
+  "durationMs": 4144,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "0c3d13e0-c8ed-47e5-8491-f92bd827966b"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "TMBvolk6GK6hwuLu"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": "We"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": " need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": " compare"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": " Paper"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": "white"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": " vs"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": " basic"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": " Use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": " search"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": "Products"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": " get"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": " both"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": " Then"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": " compare"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": "Products"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "TMBvolk6GK6hwuLu",
+      "delta": "."
+    },
+    {
+      "type": "data-chat-title",
+      "data": "Paperwhite vs Basic Kindle"
+    },
+    {
+      "type": "reasoning-end",
+      "id": "TMBvolk6GK6hwuLu",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to compare Kindle Paperwhite vs basic Kindle. Use searchProducts to get both. Then compareProducts.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "finish",
+      "finishReason": "stop"
+    }
+  ],
+  "toolCalls": [],
+  "assistantText": ""
+}

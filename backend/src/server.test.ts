@@ -36,7 +36,7 @@ vi.mock("@/lib/db/queries", () => ({
   voteMessage: vi.fn(async () => undefined),
 }));
 
-import { appFetch } from "./server";
+import { appFetch, shouldOfferDiscoveryOptions } from "./server";
 import * as queries from "@/lib/db/queries";
 
 const userHeaders = {
@@ -67,6 +67,30 @@ describe("backend app", () => {
   it("serves health checks", async () => {
     const response = await appFetch(new Request("http://backend/health"));
     await expect(response.json()).resolves.toEqual({ ok: true });
+  });
+
+  it("does not force discovery options for exact-model compatibility questions", () => {
+    expect(
+      shouldOfferDiscoveryOptions(
+        "Sony WH-1000XM5 would be good for apple ecosystem or not",
+        []
+      )
+    ).toBe(false);
+  });
+
+  it("does not force discovery options for named-product suitability questions", () => {
+    expect(
+      shouldOfferDiscoveryOptions(
+        "Swift Sole Running Shoes For Flat Feet Women can I use it as man",
+        []
+      )
+    ).toBe(false);
+  });
+
+  it("still offers discovery options for broad category shopping", () => {
+    expect(shouldOfferDiscoveryOptions("good headphones for commute", [])).toBe(
+      true
+    );
   });
 
   it("serves model metadata", async () => {

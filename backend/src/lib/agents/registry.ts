@@ -1,4 +1,4 @@
-import { track1ShoppingAgent } from "./track1-shopping";
+import { buildTrack1Agent, track1ShoppingAgent } from "./track1-shopping";
 import { track2CheckoutRecoveryAgent } from "./track2-checkout-recovery";
 import { track3CheckoutCopilotAgent } from "./track3-checkout-copilot";
 import { track4SupportAgent } from "./track4-support";
@@ -30,6 +30,30 @@ export function getAgent(id: string | undefined | null) {
     return agentRegistry[id as AgentId];
   }
   return agentRegistry[DEFAULT_AGENT_ID];
+}
+
+/**
+ * Per-chat agent build. Always returns a fresh tool set bound to the chatId
+ * so per-chat memos (last query, last result IDs) and the deterministic seed
+ * stay isolated across concurrent chats.
+ */
+export function buildAgentForChat(args: {
+  agentId: string | undefined | null;
+  chatId: string;
+}): AgentDefinition {
+  const id = args.agentId && args.agentId in agentRegistry ? args.agentId : DEFAULT_AGENT_ID;
+  if (id === "track1-shopping") {
+    const built = buildTrack1Agent({ chatId: args.chatId });
+    return {
+      id: "track1-shopping",
+      name: track1ShoppingAgent.name,
+      description: track1ShoppingAgent.description,
+      systemPrompt: built.systemPrompt,
+      tools: built.tools,
+      activeToolNames: built.activeToolNames,
+    };
+  }
+  return agentRegistry[id as AgentId];
 }
 
 export const agentList = Object.values(agentRegistry);

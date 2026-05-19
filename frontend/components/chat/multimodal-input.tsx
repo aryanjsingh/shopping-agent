@@ -52,6 +52,11 @@ import {
   PromptInputTools,
 } from "../ai-elements/prompt-input";
 import { Button } from "../ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "../ui/tooltip";
 import { ImageIcon, StopIcon } from "./icons";
 import { PreviewAttachment } from "./preview-attachment";
 import {
@@ -656,6 +661,20 @@ function PureModelSelectorCompact({
         </Button>
       </ModelSelectorTrigger>
       <ModelSelectorContent>
+        <div className="flex flex-wrap gap-2 border-border/50 border-b px-3 py-2 text-[11px] text-muted-foreground">
+          <span className="inline-flex items-center gap-1">
+            <WrenchIcon className="size-3" /> Tools
+          </span>
+          <span className="inline-flex items-center gap-1">
+            <EyeIcon className="size-3" /> Vision
+          </span>
+          <span className="inline-flex items-center gap-1">
+            <BrainIcon className="size-3" /> Reasoning
+          </span>
+          <span className="inline-flex items-center gap-1">
+            <LockIcon className="size-3" /> Unavailable
+          </span>
+        </div>
         <ModelSelectorInput placeholder="Search models..." />
         <ModelSelectorList>
           {(() => {
@@ -755,16 +774,36 @@ function PureModelSelectorCompact({
                       <ModelSelectorName>{model.name}</ModelSelectorName>
                       <div className="ml-auto flex items-center gap-2 text-foreground/70">
                         {capabilities?.[model.id]?.tools && (
-                          <WrenchIcon className="size-3.5" />
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <WrenchIcon className="size-3.5" />
+                            </TooltipTrigger>
+                            <TooltipContent>Supports tools</TooltipContent>
+                          </Tooltip>
                         )}
                         {capabilities?.[model.id]?.vision && (
-                          <EyeIcon className="size-3.5" />
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <EyeIcon className="size-3.5" />
+                            </TooltipTrigger>
+                            <TooltipContent>Supports images</TooltipContent>
+                          </Tooltip>
                         )}
                         {capabilities?.[model.id]?.reasoning && (
-                          <BrainIcon className="size-3.5" />
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <BrainIcon className="size-3.5" />
+                            </TooltipTrigger>
+                            <TooltipContent>Shows reasoning</TooltipContent>
+                          </Tooltip>
                         )}
                         {!curated && (
-                          <LockIcon className="size-3 text-muted-foreground/50" />
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <LockIcon className="size-3 text-muted-foreground/50" />
+                            </TooltipTrigger>
+                            <TooltipContent>Not available in this app</TooltipContent>
+                          </Tooltip>
                         )}
                       </div>
                     </ModelSelectorItem>
@@ -789,7 +828,10 @@ function PureStopButton({
   setMessages: UseChatHelpers<ChatMessage>["setMessages"];
 }) {
   return (
+    <Tooltip>
+      <TooltipTrigger asChild>
     <Button
+      aria-label="Stop generation"
       className="h-7 w-7 rounded-xl bg-primary p-1 text-primary-foreground transition-all duration-200 hover:bg-primary/90 active:scale-95 disabled:bg-muted disabled:text-muted-foreground/25 disabled:cursor-not-allowed"
       data-testid="stop-button"
       onClick={(event) => {
@@ -800,6 +842,9 @@ function PureStopButton({
     >
       <StopIcon size={14} />
     </Button>
+      </TooltipTrigger>
+      <TooltipContent>Stop generation</TooltipContent>
+    </Tooltip>
   );
 }
 

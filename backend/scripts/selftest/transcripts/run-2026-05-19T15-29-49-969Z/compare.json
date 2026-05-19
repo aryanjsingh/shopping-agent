@@ -1,0 +1,26 @@
+{
+  "scenario": {
+    "tag": "compare",
+    "text": "compare kindle paperwhite vs basic kindle"
+  },
+  "chatId": "5c03dccf-77cd-4624-be95-da61847291ce",
+  "durationMs": 43974,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "9d105b8c-4053-4850-994c-2b16a5f9937f"
+    },
+    {
+      "type": "data-chat-title",
+      "data": "Kindle Paperwhite vs Basic Kindle"
+    },
+    {
+      "type": "error",
+      "errorText": "Failed after 3 attempts. Last error: [Venice] qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations"
+    }
+  ],
+  "toolCalls": [],
+  "assistantText": ""
+}

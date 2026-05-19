@@ -171,6 +171,40 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
     },
   });
 
+  const stopRef = useRef(stop);
+  const setMessagesRef = useRef(setMessages);
+  stopRef.current = stop;
+  setMessagesRef.current = setMessages;
+
+  useEffect(() => {
+    if (status !== "submitted" && status !== "streaming") {
+      return;
+    }
+
+    const timeout = window.setTimeout(() => {
+      stopRef.current();
+      setMessagesRef.current((currentMessages) => [
+        ...currentMessages,
+        {
+          id: generateUUID(),
+          role: "assistant",
+          parts: [
+            {
+              type: "text",
+              text: "The response timed out before it finished. Use Retry to run the last request again, or adjust the request and send it once more.",
+            },
+          ],
+        } as ChatMessage,
+      ]);
+      toast({
+        type: "error",
+        description: "Response timed out. You can retry from the message actions.",
+      });
+    }, 90_000);
+
+    return () => window.clearTimeout(timeout);
+  }, [status]);
+
   const loadedChatIds = useRef(new Set<string>());
 
   if (isNewChat && !loadedChatIds.current.has(newChatIdRef.current)) {

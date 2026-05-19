@@ -1,0 +1,26 @@
+{
+  "scenario": {
+    "tag": "compare",
+    "text": "compare kindle paperwhite vs basic kindle"
+  },
+  "chatId": "9c3324b7-8a28-43ef-8cd7-13ca7a68f0b0",
+  "durationMs": 50505,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "53b88f7a-4608-44f9-a535-11db6ab98baa"
+    },
+    {
+      "type": "data-chat-title",
+      "data": "Kindle Paperwhite vs Basic Kindle"
+    },
+    {
+      "type": "error",
+      "errorText": "Failed after 3 attempts. Last error: [Venice] qwen/qwen3-next-80b-a3b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations"
+    }
+  ],
+  "toolCalls": [],
+  "assistantText": ""
+}

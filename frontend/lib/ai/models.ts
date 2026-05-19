@@ -1,4 +1,4 @@
-export const DEFAULT_CHAT_MODEL = "openrouter/free";
+export const DEFAULT_CHAT_MODEL = "openai/gpt-oss-120b:free";
 
 export const titleModel = {
   id: "meta-llama/llama-3.2-3b-instruct:free",

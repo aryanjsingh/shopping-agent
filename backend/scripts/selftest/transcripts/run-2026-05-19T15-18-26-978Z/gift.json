@@ -1,0 +1,3949 @@
+{
+  "scenario": {
+    "tag": "gift",
+    "text": "gift for dad who likes cooking, under 150"
+  },
+  "chatId": "c3beee0c-8673-4e95-a4c0-3d55ab3156af",
+  "durationMs": 31759,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "35e90f80-14aa-4fb3-b117-82f8e04f71c6"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "obboFbdTwM72aC36"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": "User"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " wants"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " gift"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " dad"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " who"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " likes"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " cooking"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " budget"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " under"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " $"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": "150"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " Broad"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " category"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " cooking"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " gifts"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " Need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " clarify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " intent"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": "maybe"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " type"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " of"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " gift"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": ")."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " Use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " clarify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": "Intent"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " with"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " options"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " kitchen"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " gadget"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " high"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": "-quality"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " knife"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " cast"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " iron"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " skillet"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " sous"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " vide"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " cooking"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " class"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " voucher"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " Provide"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": " menu"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "obboFbdTwM72aC36",
+      "delta": "."
+    },
+    {
+      "type": "tool-input-start",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "toolName": "clarifyIntent"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": ""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "{\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "question"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "What"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " kind"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " of"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " cooking"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " gift"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " would"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " your"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " dad"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " appreciate"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " most"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "?\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "reason"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "N"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "arrow"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "ing"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " the"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " type"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " helps"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " surface"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " the"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " best"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " options"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " within"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " the"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " budget"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": ".\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "options"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " [\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "data-chat-title",
+      "data": "Dad Cooking Gift 150"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " {\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "label"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "Premium"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " chef"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "'s"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " knife"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "value"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "chef"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "'s"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " knife"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "search"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "Hint"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "premium"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " chef"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "'s"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " knife"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "description"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "High"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "‑"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "carbon"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " steel"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": ","
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " full"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " tang"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": ","
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "8"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "‑"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "10"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "in"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\"\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " },\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " {\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "label"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "Cast"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "‑"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "iron"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " skillet"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "value"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "cast"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " iron"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " skillet"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "search"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "Hint"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "cast"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " iron"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " skillet"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "12"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " inch"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "description"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "Vers"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "atile"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": ","
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " pre"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "‑"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "season"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "ed"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\"\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " },\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " {\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "label"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "Sous"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " vide"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " precision"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " cooker"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "value"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "s"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "ous"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " vide"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " cooker"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "search"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "Hint"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "s"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "ous"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " vide"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " precision"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " cooker"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "description"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "Wifi"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "/B"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "luetooth"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": ","
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "0"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "‑"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "90"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "°C"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\"\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " },\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " {\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "label"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "Premium"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " spice"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " set"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "value"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "sp"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "ice"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " set"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "search"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "Hint"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "g"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "our"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "met"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " spice"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " set"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " gift"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "description"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "Around"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " the"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " world"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " flavors"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\"\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " },\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " {\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "label"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "Cooking"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " class"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " voucher"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "value"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "c"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "ooking"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " class"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " voucher"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "search"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "Hint"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "c"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "ooking"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " class"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " voucher"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "description"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "Local"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " or"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " online"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " lesson"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "\"\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " }\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": " ]\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "inputTextDelta": "}"
+    },
+    {
+      "type": "tool-input-error",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "toolName": "clarifyIntent",
+      "input": {
+        "question": "What kind of cooking gift would your dad appreciate most?",
+        "reason": "Narrowing the type helps surface the best options within the budget.",
+        "options": [
+          {
+            "label": "Premium chef's knife",
+            "value": "chef's knife",
+            "searchHint": "premium chef's knife",
+            "description": "High‑carbon steel, full tang, 8‑10in"
+          },
+          {
+            "label": "Cast‑iron skillet",
+            "value": "cast iron skillet",
+            "searchHint": "cast iron skillet 12 inch",
+            "description": "Versatile, pre‑seasoned"
+          },
+          {
+            "label": "Sous vide precision cooker",
+            "value": "sous vide cooker",
+            "searchHint": "sous vide precision cooker",
+            "description": "Wifi/Bluetooth, 0‑90°C"
+          },
+          {
+            "label": "Premium spice set",
+            "value": "spice set",
+            "searchHint": "gourmet spice set gift",
+            "description": "Around the world flavors"
+          },
+          {
+            "label": "Cooking class voucher",
+            "value": "cooking class voucher",
+            "searchHint": "cooking class voucher",
+            "description": "Local or online lesson"
+          }
+        ]
+      },
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "User wants gift for dad who likes cooking, budget under $150. Broad category cooking gifts. Need to clarify intent (maybe type of gift). Use clarifyIntent with options: kitchen gadget, high-quality knife, cast iron skillet, sous vide, cooking class voucher. Provide menu.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      },
+      "errorText": "Invalid input for tool clarifyIntent: Type validation failed: Value: {\"question\":\"What kind of cooking gift would your dad appreciate most?\",\"reason\":\"Narrowing the type helps surface the best options within the budget.\",\"options\":[{\"label\":\"Premium chef's knife\",\"value\":\"chef's knife\",\"searchHint\":\"premium chef's knife\",\"description\":\"High‑carbon steel, full tang, 8‑10in\"},{\"label\":\"Cast‑iron skillet\",\"value\":\"cast iron skillet\",\"searchHint\":\"cast iron skillet 12 inch\",\"description\":\"Versatile, pre‑seasoned\"},{\"label\":\"Sous vide precision cooker\",\"value\":\"sous vide cooker\",\"searchHint\":\"sous vide precision cooker\",\"description\":\"Wifi/Bluetooth, 0‑90°C\"},{\"label\":\"Premium spice set\",\"value\":\"spice set\",\"searchHint\":\"gourmet spice set gift\",\"description\":\"Around the world flavors\"},{\"label\":\"Cooking class voucher\",\"value\":\"cooking class voucher\",\"searchHint\":\"cooking class voucher\",\"description\":\"Local or online lesson\"}]}.\nError message: [\n  {\n    \"code\": \"too_big\",\n    \"maximum\": 4,\n    \"type\": \"array\",\n    \"inclusive\": true,\n    \"exact\": false,\n    \"message\": \"Array must contain at most 4 element(s)\",\n    \"path\": [\n      \"options\"\n    ]\n  }\n]"
+    },
+    {
+      "type": "tool-output-error",
+      "toolCallId": "chatcmpl-tool-a9ea400f652d0f2d",
+      "errorText": "Invalid input for tool clarifyIntent: Type validation failed: Value: {\"question\":\"What kind of cooking gift would your dad appreciate most?\",\"reason\":\"Narrowing the type helps surface the best options within the budget.\",\"options\":[{\"label\":\"Premium chef's knife\",\"value\":\"chef's knife\",\"searchHint\":\"premium chef's knife\",\"description\":\"High‑carbon steel, full tang, 8‑10in\"},{\"label\":\"Cast‑iron skillet\",\"value\":\"cast iron skillet\",\"searchHint\":\"cast iron skillet 12 inch\",\"description\":\"Versatile, pre‑seasoned\"},{\"label\":\"Sous vide precision cooker\",\"value\":\"sous vide cooker\",\"searchHint\":\"sous vide precision cooker\",\"description\":\"Wifi/Bluetooth, 0‑90°C\"},{\"label\":\"Premium spice set\",\"value\":\"spice set\",\"searchHint\":\"gourmet spice set gift\",\"description\":\"Around the world flavors\"},{\"label\":\"Cooking class voucher\",\"value\":\"cooking class voucher\",\"searchHint\":\"cooking class voucher\",\"description\":\"Local or online lesson\"}]}.\nError message: [\n  {\n    \"code\": \"too_big\",\n    \"maximum\": 4,\n    \"type\": \"array\",\n    \"inclusive\": true,\n    \"exact\": false,\n    \"message\": \"Array must contain at most 4 element(s)\",\n    \"path\": [\n      \"options\"\n    ]\n  }\n]"
+    },
+    {
+      "type": "reasoning-end",
+      "id": "obboFbdTwM72aC36",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "User wants gift for dad who likes cooking, budget under $150. Broad category cooking gifts. Need to clarify intent (maybe type of gift). Use clarifyIntent with options: kitchen gadget, high-quality knife, cast iron skillet, sous vide, cooking class voucher. Provide menu.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "F885W8XndvTYRfMs"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "F885W8XndvTYRfMs",
+      "delta": "Need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "F885W8XndvTYRfMs",
+      "delta": " max"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "F885W8XndvTYRfMs",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "F885W8XndvTYRfMs",
+      "delta": "4"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "F885W8XndvTYRfMs",
+      "delta": " options"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "F885W8XndvTYRfMs",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "F885W8XndvTYRfMs",
+      "delta": " Reduce"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "F885W8XndvTYRfMs",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "F885W8XndvTYRfMs",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "F885W8XndvTYRfMs",
+      "delta": "4"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "F885W8XndvTYRfMs",
+      "delta": "."
+    },
+    {
+      "type": "tool-input-start",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "toolName": "clarifyIntent"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": ""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "{\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "question"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "What"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " cooking"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " gift"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " would"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " your"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " dad"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " enjoy"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "?\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "reason"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "Picking"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " a"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " type"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " lets"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " us"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " hit"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " the"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " $"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "150"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " limit"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " with"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " the"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " right"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " product"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": ".\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "options"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " [\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " {\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "label"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "Premium"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " chef"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "'s"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " knife"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "value"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "chef"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "'s"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " knife"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "search"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "Hint"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "premium"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " chef"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "'s"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " knife"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "description"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "High"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "‑"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "carbon"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " steel"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": ","
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " full"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " tang"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": ","
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "8"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "‑"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "10"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "in"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\"\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " },\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " {\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "label"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "Cast"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "‑"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "iron"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " skillet"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "value"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "cast"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " iron"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " skillet"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "search"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "Hint"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "cast"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " iron"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " skillet"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "12"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " inch"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "description"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "Vers"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "atile"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": ","
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " pre"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "‑"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "season"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "ed"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\"\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " },\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " {\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "label"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "Sous"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " vide"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " cooker"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "value"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "s"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "ous"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " vide"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " cooker"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "search"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "Hint"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "s"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "ous"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " vide"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " precision"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " cooker"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "description"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "Wifi"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "/B"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "luetooth"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": ","
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "0"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "‑"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "90"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "°C"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\"\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " },\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " {\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "label"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "G"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "our"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "met"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " spice"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " set"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "value"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "sp"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "ice"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " set"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "search"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "Hint"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "g"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "our"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "met"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " spice"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " set"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " gift"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "description"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "World"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "‑"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "fl"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "avor"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " collection"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "\"\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " }\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": " ]\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "inputTextDelta": "}"
+    },
+    {
+      "type": "tool-input-available",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "toolName": "clarifyIntent",
+      "input": {
+        "question": "What cooking gift would your dad enjoy?",
+        "reason": "Picking a type lets us hit the $150 limit with the right product.",
+        "options": [
+          {
+            "label": "Premium chef's knife",
+            "description": "High‑carbon steel, full tang, 8‑10in",
+            "value": "chef's knife",
+            "searchHint": "premium chef's knife"
+          },
+          {
+            "label": "Cast‑iron skillet",
+            "description": "Versatile, pre‑seasoned",
+            "value": "cast iron skillet",
+            "searchHint": "cast iron skillet 12 inch"
+          },
+          {
+            "label": "Sous vide cooker",
+            "description": "Wifi/Bluetooth, 0‑90°C",
+            "value": "sous vide cooker",
+            "searchHint": "sous vide precision cooker"
+          },
+          {
+            "label": "Gourmet spice set",
+            "description": "World‑flavor collection",
+            "value": "spice set",
+            "searchHint": "gourmet spice set gift"
+          }
+        ]
+      },
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need max 4 options. Reduce to 4.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tool-output-available",
+      "toolCallId": "chatcmpl-tool-822bb5a566a62c55",
+      "output": {
+        "question": "What cooking gift would your dad enjoy?",
+        "reason": "Picking a type lets us hit the $150 limit with the right product.",
+        "options": [
+          {
+            "label": "Premium chef's knife",
+            "description": "High‑carbon steel, full tang, 8‑10in",
+            "value": "chef's knife",
+            "searchHint": "premium chef's knife"
+          },
+          {
+            "label": "Cast‑iron skillet",
+            "description": "Versatile, pre‑seasoned",
+            "value": "cast iron skillet",
+            "searchHint": "cast iron skillet 12 inch"
+          },
+          {
+            "label": "Sous vide cooker",
+            "description": "Wifi/Bluetooth, 0‑90°C",
+            "value": "sous vide cooker",
+            "searchHint": "sous vide precision cooker"
+          },
+          {
+            "label": "Gourmet spice set",
+            "description": "World‑flavor collection",
+            "value": "spice set",
+            "searchHint": "gourmet spice set gift"
+          }
+        ]
+      }
+    },
+    {
+      "type": "reasoning-end",
+      "id": "F885W8XndvTYRfMs",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need max 4 options. Reduce to 4.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "za6KfF1cioIT7Hd3"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "za6KfF1cioIT7Hd3",
+      "delta": "We"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "za6KfF1cioIT7Hd3",
+      "delta": " need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "za6KfF1cioIT7Hd3",
+      "delta": " user"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "za6KfF1cioIT7Hd3",
+      "delta": " pick"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "za6KfF1cioIT7Hd3",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-end",
+      "id": "za6KfF1cioIT7Hd3",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need user pick.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "text-start",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "What"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " cooking"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " gift"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " would"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " your"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " dad"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " enjoy"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "?"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "  \n\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " Premium"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " chef"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "’s"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " knife"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " high"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "carbon"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " steel"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " full"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " tang"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "8"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "10"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "in"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "search"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "Hint"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": ":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " “"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "premium"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " chef"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " knife"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "”)"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "  \n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " Cast"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "iron"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " skillet"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " pre"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "season"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "ed"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "12"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "in"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "search"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "Hint"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": ":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " “"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "cast"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " iron"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " skillet"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "12"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " inch"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "”)"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "  \n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " Sous"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "vide"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " precision"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " cooker"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " Wi"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "Fi"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "/B"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "luetooth"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "0"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "90"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "°C"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "search"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "Hint"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": ":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " “"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "s"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "ous"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " vide"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " precision"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " cooker"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "”)"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "  \n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " Gourmet"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " spice"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " set"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " curated"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " world"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "fl"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "avor"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " collection"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "search"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "Hint"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": ":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " “"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "g"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "our"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "met"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " spice"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " set"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": " gift"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz",
+      "delta": "”)"
+    },
+    {
+      "type": "text-end",
+      "id": "gen-1779204004-Oq0oFmBmCkGZcz6fawcz"
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "finish",
+      "finishReason": "stop"
+    }
+  ],
+  "toolCalls": [
+    {
+      "id": "chatcmpl-tool-a9ea400f652d0f2d",
+      "toolName": "clarifyIntent",
+      "error": "Invalid input for tool clarifyIntent: Type validation failed: Value: {\"question\":\"What kind of cooking gift would your dad appreciate most?\",\"reason\":\"Narrowing the type helps surface the best options within the budget.\",\"options\":[{\"label\":\"Premium chef's knife\",\"value\":\"chef's knife\",\"searchHint\":\"premium chef's knife\",\"description\":\"High‑carbon steel, full tang, 8‑10in\"},{\"label\":\"Cast‑iron skillet\",\"value\":\"cast iron skillet\",\"searchHint\":\"cast iron skillet 12 inch\",\"description\":\"Versatile, pre‑seasoned\"},{\"label\":\"Sous vide precision cooker\",\"value\":\"sous vide cooker\",\"searchHint\":\"sous vide precision cooker\",\"description\":\"Wifi/Bluetooth, 0‑90°C\"},{\"label\":\"Premium spice set\",\"value\":\"spice set\",\"searchHint\":\"gourmet spice set gift\",\"description\":\"Around the world flavors\"},{\"label\":\"Cooking class voucher\",\"value\":\"cooking class voucher\",\"searchHint\":\"cooking class voucher\",\"description\":\"Local or online lesson\"}]}.\nError message: [\n  {\n    \"code\": \"too_big\",\n    \"maximum\": 4,\n    \"type\": \"array\",\n    \"inclusive\": true,\n    \"exact\": false,\n    \"message\": \"Array must contain at most 4 element(s)\",\n    \"path\": [\n      \"options\"\n    ]\n  }\n]",
+      "state": "error"
+    },
+    {
+      "id": "chatcmpl-tool-822bb5a566a62c55",
+      "toolName": "clarifyIntent",
+      "input": {
+        "question": "What cooking gift would your dad enjoy?",
+        "reason": "Picking a type lets us hit the $150 limit with the right product.",
+        "options": [
+          {
+            "label": "Premium chef's knife",
+            "description": "High‑carbon steel, full tang, 8‑10in",
+            "value": "chef's knife",
+            "searchHint": "premium chef's knife"
+          },
+          {
+            "label": "Cast‑iron skillet",
+            "description": "Versatile, pre‑seasoned",
+            "value": "cast iron skillet",
+            "searchHint": "cast iron skillet 12 inch"
+          },
+          {
+            "label": "Sous vide cooker",
+            "description": "Wifi/Bluetooth, 0‑90°C",
+            "value": "sous vide cooker",
+            "searchHint": "sous vide precision cooker"
+          },
+          {
+            "label": "Gourmet spice set",
+            "description": "World‑flavor collection",
+            "value": "spice set",
+            "searchHint": "gourmet spice set gift"
+          }
+        ]
+      },
+      "output": {
+        "question": "What cooking gift would your dad enjoy?",
+        "reason": "Picking a type lets us hit the $150 limit with the right product.",
+        "options": [
+          {
+            "label": "Premium chef's knife",
+            "description": "High‑carbon steel, full tang, 8‑10in",
+            "value": "chef's knife",
+            "searchHint": "premium chef's knife"
+          },
+          {
+            "label": "Cast‑iron skillet",
+            "description": "Versatile, pre‑seasoned",
+            "value": "cast iron skillet",
+            "searchHint": "cast iron skillet 12 inch"
+          },
+          {
+            "label": "Sous vide cooker",
+            "description": "Wifi/Bluetooth, 0‑90°C",
+            "value": "sous vide cooker",
+            "searchHint": "sous vide precision cooker"
+          },
+          {
+            "label": "Gourmet spice set",
+            "description": "World‑flavor collection",
+            "value": "spice set",
+            "searchHint": "gourmet spice set gift"
+          }
+        ]
+      },
+      "state": "output-available"
+    }
+  ],
+  "assistantText": "What cooking gift would your dad enjoy?  \n\n- Premium chef’s knife – high‑carbon steel, full tang, 8‑10 in (searchHint: “premium chef knife”)  \n- Cast‑iron skillet – pre‑seasoned, 12 in (searchHint: “cast iron skillet 12 inch”)  \n- Sous‑vide precision cooker – Wi‑Fi/Bluetooth, 0‑90 °C (searchHint: “sous vide precision cooker”)  \n- Gourmet spice set – curated world‑flavor collection (searchHint: “gourmet spice set gift”)"
+}

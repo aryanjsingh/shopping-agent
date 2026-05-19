@@ -1,0 +1,26 @@
+{
+  "scenario": {
+    "tag": "laptop-video",
+    "text": "good laptop for video editing under 1200"
+  },
+  "chatId": "3170352d-fd54-4a1a-a0ba-b82b85a930f9",
+  "durationMs": 8945,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "921fbcab-115e-45a7-8826-08a4fd2d6e12"
+    },
+    {
+      "type": "error",
+      "errorText": "Failed after 3 attempts. Last error: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day"
+    },
+    {
+      "type": "data-chat-title",
+      "data": "Good Laptop Video Editing Under"
+    }
+  ],
+  "toolCalls": [],
+  "assistantText": ""
+}

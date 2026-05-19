@@ -1,0 +1,15 @@
+[
+  {
+    "tag": "broad",
+    "text": "i need new headphones",
+    "chatId": "6f3e5447-a96c-4eca-9543-aec31c63486e",
+    "durationMs": 59785,
+    "ok": true,
+    "fired": [],
+    "wins": [],
+    "issues": [
+      "stream-error: Failed after 3 attempts. Last error: [Venice] meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own"
+    ],
+    "textPreview": ""
+  }
+]

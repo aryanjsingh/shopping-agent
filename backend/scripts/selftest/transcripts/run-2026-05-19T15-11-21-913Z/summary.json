@@ -1,0 +1,132 @@
+[
+  {
+    "tag": "broad",
+    "text": "i need new headphones",
+    "chatId": "d2f64fe9-22b0-4591-9a35-241b3452c564",
+    "durationMs": 29834,
+    "ok": true,
+    "fired": [
+      "clarifyIntent"
+    ],
+    "wins": [
+      "clarified before searching"
+    ],
+    "issues": [],
+    "textPreview": "I'll help you find the right headphones. Let's narrow down what you need: What's the primary use for your headphones?"
+  },
+  {
+    "tag": "specific",
+    "text": "find airpods pro 2",
+    "chatId": "6e9c6498-190d-457f-aae8-cbc489a5071f",
+    "durationMs": 58536,
+    "ok": true,
+    "fired": [
+      "searchProducts",
+      "assessProductFreshness"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [],
+    "textPreview": "Here are AirPods Pro 2 options, sorted by price: **Budget pick**: AirPods Pro 2 (2024) - $41.00 **Best value**: AirPods Pro (2nd generation) with MagSafe Case (USB-C) - $69.00 - Current gen with MagSafe wireless charging - 1-year warranty included **Mid-range options**: - Appl"
+  },
+  {
+    "tag": "budget",
+    "text": "running shoes under 80 dollars",
+    "chatId": "54d90081-92ce-4951-bbc1-9529802f0e99",
+    "durationMs": 38848,
+    "ok": true,
+    "fired": [
+      "searchProducts",
+      "assessProductFreshness",
+      "webSearch",
+      "getProduct"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [],
+    "textPreview": "**Best under $80: Nike Air Max DN SE Premium Safari** Released July 2024 — current generation with Air Max cushioning throughout. Available for $42.31-$70.52 (65-61% off retail). Perfect for runners wanting modern cushioning technology. **Budget option: 2024 Model Custom Logo R"
+  },
+  {
+    "tag": "compare",
+    "text": "compare kindle paperwhite vs basic kindle",
+    "chatId": "0fd51273-26dd-45c5-b8e1-fe0d8559c8af",
+    "durationMs": 66143,
+    "ok": true,
+    "fired": [
+      "searchProducts",
+      "searchProducts",
+      "compareProducts",
+      "getProduct",
+      "getProduct",
+      "getProduct"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [],
+    "textPreview": "I'll help you compare Kindle Paperwhite vs basic Kindle. Let me search for both models first. Here's the comparison of Kindle models: **Kindle Paperwhite (2024) - $211** - 7-inch high-contrast display - 16GB storage - Up to 12 weeks battery life - Glare-free design - Better for"
+  },
+  {
+    "tag": "cheapest",
+    "text": "cheapest place to buy logitech mx master 3s",
+    "chatId": "5734f83f-e98f-4e0d-9879-60434d4554cb",
+    "durationMs": 12314,
+    "ok": true,
+    "fired": [
+      "searchProducts"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [
+      "cheapest scenario — compareSellers was not called"
+    ],
+    "textPreview": "I'll find the cheapest places to buy the Logitech MX Master 3s."
+  },
+  {
+    "tag": "gift",
+    "text": "gift for dad who likes cooking, under 150",
+    "chatId": "0481fc07-1eb1-4640-b60f-09f4daa503c2",
+    "durationMs": 18506,
+    "ok": true,
+    "fired": [],
+    "wins": [],
+    "issues": [
+      "never called searchProducts or clarifyIntent",
+      "no assistant text returned"
+    ],
+    "textPreview": ""
+  },
+  {
+    "tag": "phone-old-vs-new",
+    "text": "i need a gaming phone under 500 dollars",
+    "chatId": "c2e3ad70-de26-4532-ba38-0d370f250d52",
+    "durationMs": 22745,
+    "ok": true,
+    "fired": [],
+    "wins": [],
+    "issues": [
+      "never called searchProducts or clarifyIntent",
+      "fast-moving category — assessProductFreshness was not called",
+      "no assistant text returned"
+    ],
+    "textPreview": ""
+  },
+  {
+    "tag": "laptop-video",
+    "text": "good laptop for video editing under 1200",
+    "chatId": "3170352d-fd54-4a1a-a0ba-b82b85a930f9",
+    "durationMs": 8945,
+    "ok": true,
+    "fired": [],
+    "wins": [],
+    "issues": [
+      "never called searchProducts or clarifyIntent",
+      "fast-moving category — assessProductFreshness was not called",
+      "no assistant text returned"
+    ],
+    "textPreview": ""
+  }
+]

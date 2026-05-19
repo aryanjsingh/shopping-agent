@@ -5,11 +5,13 @@ import { useSWRConfig } from "swr";
 import { useCopyToClipboard } from "usehooks-ts";
 import type { Vote } from "@/lib/db/schema";
 import type { ChatMessage } from "@/lib/types";
+import type { UseChatHelpers } from "@ai-sdk/react";
 import {
   MessageAction as Action,
   MessageActions as Actions,
 } from "../ai-elements/message";
 import { CopyIcon, PencilEditIcon, ThumbDownIcon, ThumbUpIcon } from "./icons";
+import { RefreshCwIcon } from "lucide-react";
 
 export function PureMessageActions({
   chatId,
@@ -17,12 +19,14 @@ export function PureMessageActions({
   vote,
   isLoading,
   onEdit,
+  regenerate,
 }: {
   chatId: string;
   message: ChatMessage;
   vote: Vote | undefined;
   isLoading: boolean;
   onEdit?: () => void;
+  regenerate?: UseChatHelpers<ChatMessage>["regenerate"];
 }) {
   const { mutate } = useSWRConfig();
   const [_, copyToClipboard] = useCopyToClipboard();
@@ -75,6 +79,14 @@ export function PureMessageActions({
 
   return (
     <Actions className="-ml-0.5 opacity-0 transition-opacity duration-150 group-hover/message:opacity-100">
+      <Action
+        className="text-muted-foreground/50 hover:text-foreground"
+        onClick={() => regenerate?.()}
+        tooltip="Retry"
+      >
+        <RefreshCwIcon size={14} />
+      </Action>
+
       <Action
         className="text-muted-foreground/50 hover:text-foreground"
         onClick={handleCopy}

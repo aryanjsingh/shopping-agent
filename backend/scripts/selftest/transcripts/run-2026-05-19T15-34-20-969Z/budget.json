@@ -1,0 +1,2522 @@
+{
+  "scenario": {
+    "tag": "budget",
+    "text": "running shoes under 80 dollars"
+  },
+  "chatId": "b7d48dd7-702e-4dfe-a55a-1deeabb555fd",
+  "durationMs": 16328,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "ce4a1663-b295-4cb6-ad56-9c233545f6fa"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "2wE9eXf5cWla1mTe"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "User"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " wants"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " running"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " shoes"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " under"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " $"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "80"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " Need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " convert"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " $"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "80"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " cents"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "800"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "0"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": ","
+    },
+    {
+      "type": "data-chat-title",
+      "data": "Running Shoes under 80"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " search"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "Products"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " with"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " max"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "Price"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "800"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "0"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " query"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " \""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "running"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " shoes"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "\"."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " Category"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " is"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " running"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " shoes"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " fast"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "-moving"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " assess"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " freshness"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " We'll"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " call"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " search"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "Products"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " then"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " assess"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "Product"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "Fresh"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "ness"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " top"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": " product"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "2wE9eXf5cWla1mTe",
+      "delta": "."
+    },
+    {
+      "type": "tool-input-start",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "toolName": "searchProducts"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": ""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "{\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "query"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "running"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": " shoes"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "max"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "Price"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "800"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "0"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": ",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "limit"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "12"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": ",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "sort"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "Mode"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "price"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "_low"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "ships"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "To"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "US"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "\"\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "inputTextDelta": "}"
+    },
+    {
+      "type": "tool-input-available",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "toolName": "searchProducts",
+      "input": {
+        "query": "running shoes",
+        "limit": 12,
+        "maxPrice": 8000,
+        "shipsTo": "US",
+        "sortMode": "price_low"
+      },
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "User wants running shoes under $80. Need convert $80 to cents 8000, searchProducts with maxPrice 8000, query \"running shoes\". Category is running shoes, fast-moving, need assess freshness. We'll call searchProducts then assessProductFreshness for top product.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "reasoning-end",
+      "id": "2wE9eXf5cWla1mTe",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "User wants running shoes under $80. Need convert $80 to cents 8000, searchProducts with maxPrice 8000, query \"running shoes\". Category is running shoes, fast-moving, need assess freshness. We'll call searchProducts then assessProductFreshness for top product.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tool-output-available",
+      "toolCallId": "chatcmpl-tool-8ec1177919dba1a3",
+      "output": {
+        "query": "running shoes",
+        "sortMode": "price_low",
+        "currentGenOnly": false,
+        "count": 10,
+        "category": "running_shoe",
+        "freshnessHint": null,
+        "products": [
+          {
+            "id": "gid://shopify/p/6tFcNCfgfa8asWZGp25gIA",
+            "title": "Adidas Men’s Run 60s 2.0 Shoes",
+            "description": "Classic adidas running shoes blending heritage track design with modern streetwear style.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/1504/4320/files/603b699ccf30bddb9deea7e2bc946ef6.jpg",
+                "altText": "Adidas Men’s Run 60s 2.0 Shoes"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 2100,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 2100,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 2100,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/51065947783483?shop=15044320",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/51065947783483?shop=15044320"
+          },
+          {
+            "id": "gid://shopify/p/2EfXNAZpsClbetM1xO1mav",
+            "title": "Men's adidas Runfalcon 5 Running Shoes",
+            "description": "",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0291/4536/6588/files/b0541fce9b704e3d9c2c948109d12a87.jpg",
+                "altText": "Men's adidas Runfalcon 5 Running Shoes"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4200,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 5900,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4200,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/43837075685436?shop=29145366588",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/43837075685436?shop=29145366588"
+          },
+          {
+            "id": "gid://shopify/p/3WswoNQjKqAul08BGIGYoq",
+            "title": "Men's Zignition Running Shoes",
+            "description": "Cushioned running shoes designed for new runners, offering stability and comfort for mile after mile.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0862/7834/0912/files/100259685_SLC_eCom.jpg",
+                "altText": "The Reebok Men's Zignition Running Shoe in gray with black accents features a lace-up closure and thick, textured sole, shown in side profile on a plain white background."
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4499,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4499,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4499,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/50093726040368?shop=86278340912",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/50093726040368?shop=86278340912"
+          },
+          {
+            "id": "gid://shopify/p/6YIa7WmzfuL1f3tUuu8Dd6",
+            "title": "adidas Galaxy 7 Mens Running Shoes - Blue",
+            "description": "Supportive cushioned running shoes designed for comfort and durability on every run.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0564/9521/0704/files/adidas-Galaxy-7-ID8756.jpg",
+                "altText": "adidas Galaxy 7 Mens Running Shoes - Blue"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 5500,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 5500,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 5500,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/44361834889424?shop=56495210704",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/44361834889424?shop=56495210704"
+          },
+          {
+            "id": "gid://shopify/p/5gG8YQ3E0KWe0FjEZZU4i6",
+            "title": "Mach 6",
+            "description": "Lightweight no-plate tempo trainer shoes with supercritical EVA foam for optimal cadence and comfort.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0633/1649/2459/files/Mach-6-6_fae598c4.png",
+                "altText": "Hoka Mach 6, image 6"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 7500,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 7500,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 7500,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/51776411795822?shop=63316492459",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/51776411795822?shop=63316492459"
+          },
+          {
+            "id": "gid://shopify/p/OD8qxIQJ9dCjg1a4MLr0w",
+            "title": "Brooks Trace 2 Womens Running Shoes - Black",
+            "description": "A soft, breathable running shoe with dynamic cushioning and a secure fit for smooth, comfortable runs.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0564/9521/0704/products/brooks-trace-2-womens-running-shoes-black-37407980650704.jpg",
+                "altText": "Brooks Trace 2 Womens Running Shoes - Black - Start Fitness"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 7600,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 7600,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 7600,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/43744925188304?shop=56495210704",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/43744925188304?shop=56495210704"
+          },
+          {
+            "id": "gid://shopify/p/7eMSc6k6uDdvKzMDScYSo1",
+            "title": "Brooks Trace 2 Mens Running Shoes - Blue",
+            "description": "A cushioned, breathable running shoe designed for smooth, comfortable runs with dynamic impact protection.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0564/9521/0704/products/brooks-trace-2-mens-running-shoes-blue-37408087015632.jpg",
+                "altText": "Brooks Trace 2 Mens Running Shoes - Blue - Start Fitness"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 7600,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 7600,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 7600,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42820045406416?shop=56495210704",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42820045406416?shop=56495210704"
+          },
+          {
+            "id": "gid://shopify/p/1pwWijtZJYB6UxEXZXikOL",
+            "title": "Women's Ghost Max 2",
+            "description": "A cushioned, stable running shoe designed for maximum comfort and smooth transitions, ideal for long runs and recovery.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0663/9406/3038/files/Screenshot2025-09-22at10.40.24AM.png",
+                "altText": "Women's Ghost Max 2"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 7999,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 7999,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 7999,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45082315489470?shop=66394063038",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45082315489470?shop=66394063038"
+          },
+          {
+            "id": "gid://shopify/p/BjnEygFOTGAbr9mIhpBB4",
+            "title": "Brooks Hyperion Tempo Womens Running Shoes - Pink",
+            "description": "Lightweight running shoes with responsive cushioning for high-performance training.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0564/9521/0704/files/Brooks-Hyperion-Tempo-120328-1B876.jpg",
+                "altText": "Brooks Hyperion Tempo Womens Running Shoes - Pink"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 9100,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 9100,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 9100,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/44085111324880?shop=56495210704",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/44085111324880?shop=56495210704"
+          },
+          {
+            "id": "gid://shopify/p/4N6ZspYRiKQ2f2rObfQOZG",
+            "title": "Brooks Ariel 20 WIDE FIT Womens Running Shoes - Black",
+            "description": "A stable, cushioned running shoe designed for women, offering comfort and support with a wide fit and advanced cushioning.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0564/9521/0704/files/Brooks-Ariel-20-Wide-Fit-120315-1D064.jpg",
+                "altText": "Brooks Ariel 20 WIDE FIT Womens Running Shoes - Black"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 9100,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 9100,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 9100,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/43853180469456?shop=56495210704",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/43853180469456?shop=56495210704"
+          }
+        ]
+      }
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "osxf1UZmJ44ui2VJ"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": "Need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " freshness"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " check"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " top"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " product"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " maybe"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " Adidas"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " Run"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": "60"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": "s"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": "2"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": "0"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": "budget"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": ")."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " Running"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " shoes"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " not"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " fast"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": "-moving"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": "?"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " It's"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " footwear"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " not"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " in"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " fast"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": "-moving"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " list"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " So"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " no"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " freshness"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " Provide"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " advice"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " avoid"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " cheap"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " low"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " durability"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " Offer"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " safe"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " pick"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " e"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": ".g"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": ".,"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " Brooks"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " Trace"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": "2"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": "more"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " reputable"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": ")."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " Let's"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": " reply"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "osxf1UZmJ44ui2VJ",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-end",
+      "id": "osxf1UZmJ44ui2VJ",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need freshness check for top product maybe Adidas Run 60s 2.0 (budget). Running shoes not fast-moving? It's footwear, not in fast-moving list. So no freshness. Provide advice, avoid cheap low durability. Offer safe pick e.g., Brooks Trace 2 (more reputable). Let's reply.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "text-start",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " **"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "Avoid"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " ultra"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "cheap"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " “"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "fashion"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "”"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " runners"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "21"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "Ad"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "idas"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " Men"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "’s"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " Run"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "60"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "s"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "2"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "0"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " look"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " nice"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " but"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " use"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " basic"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " EVA"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " that"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " wears"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " out"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " quickly"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " if"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " you"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " log"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " regular"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " miles"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "  \n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " **"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "Safe"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " pick"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " under"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "80"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": ":**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " **"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "Bro"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "oks"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " Trace"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "2"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "both"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " men"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "’s"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " women"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "’s"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " versions"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": ")"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "76"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "USD"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " proven"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " cushioning"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " breathable"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " mesh"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " a"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " solid"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " durability"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " record"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " for"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " everyday"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " training"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "  \n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " **"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "Che"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "aper"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " alternative"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": ":**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " **"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "Men"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "’s"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " Z"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "ign"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "ition"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " Running"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " Shoes"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " at"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "45"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "USD"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " decent"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " comfort"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " for"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " beginners"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " but"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " outsole"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " is"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " softer"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " may"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " need"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " replacement"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " sooner"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "  \n\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "If"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " you"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " want"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " a"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " bit"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " more"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " tech"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "responsive"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " foam"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " better"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " arch"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " support"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": ")"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " can"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " stretch"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " to"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "90"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " let"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " me"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " know"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " I"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "’ll"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " pull"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " next"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": " tier"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh",
+      "delta": "."
+    },
+    {
+      "type": "text-end",
+      "id": "gen-1779204897-h8eWPSJfcn0jsK05uqDh"
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "finish",
+      "finishReason": "stop"
+    }
+  ],
+  "toolCalls": [
+    {
+      "id": "chatcmpl-tool-8ec1177919dba1a3",
+      "toolName": "searchProducts",
+      "input": {
+        "query": "running shoes",
+        "limit": 12,
+        "maxPrice": 8000,
+        "shipsTo": "US",
+        "sortMode": "price_low"
+      },
+      "output": {
+        "query": "running shoes",
+        "sortMode": "price_low",
+        "currentGenOnly": false,
+        "count": 10,
+        "category": "running_shoe",
+        "freshnessHint": null,
+        "products": [
+          {
+            "id": "gid://shopify/p/6tFcNCfgfa8asWZGp25gIA",
+            "title": "Adidas Men’s Run 60s 2.0 Shoes",
+            "description": "Classic adidas running shoes blending heritage track design with modern streetwear style.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/1504/4320/files/603b699ccf30bddb9deea7e2bc946ef6.jpg",
+                "altText": "Adidas Men’s Run 60s 2.0 Shoes"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 2100,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 2100,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 2100,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/51065947783483?shop=15044320",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/51065947783483?shop=15044320"
+          },
+          {
+            "id": "gid://shopify/p/2EfXNAZpsClbetM1xO1mav",
+            "title": "Men's adidas Runfalcon 5 Running Shoes",
+            "description": "",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0291/4536/6588/files/b0541fce9b704e3d9c2c948109d12a87.jpg",
+                "altText": "Men's adidas Runfalcon 5 Running Shoes"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4200,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 5900,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4200,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/43837075685436?shop=29145366588",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/43837075685436?shop=29145366588"
+          },
+          {
+            "id": "gid://shopify/p/3WswoNQjKqAul08BGIGYoq",
+            "title": "Men's Zignition Running Shoes",
+            "description": "Cushioned running shoes designed for new runners, offering stability and comfort for mile after mile.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0862/7834/0912/files/100259685_SLC_eCom.jpg",
+                "altText": "The Reebok Men's Zignition Running Shoe in gray with black accents features a lace-up closure and thick, textured sole, shown in side profile on a plain white background."
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4499,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4499,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4499,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/50093726040368?shop=86278340912",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/50093726040368?shop=86278340912"
+          },
+          {
+            "id": "gid://shopify/p/6YIa7WmzfuL1f3tUuu8Dd6",
+            "title": "adidas Galaxy 7 Mens Running Shoes - Blue",
+            "description": "Supportive cushioned running shoes designed for comfort and durability on every run.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0564/9521/0704/files/adidas-Galaxy-7-ID8756.jpg",
+                "altText": "adidas Galaxy 7 Mens Running Shoes - Blue"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 5500,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 5500,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 5500,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/44361834889424?shop=56495210704",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/44361834889424?shop=56495210704"
+          },
+          {
+            "id": "gid://shopify/p/5gG8YQ3E0KWe0FjEZZU4i6",
+            "title": "Mach 6",
+            "description": "Lightweight no-plate tempo trainer shoes with supercritical EVA foam for optimal cadence and comfort.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0633/1649/2459/files/Mach-6-6_fae598c4.png",
+                "altText": "Hoka Mach 6, image 6"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 7500,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 7500,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 7500,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/51776411795822?shop=63316492459",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/51776411795822?shop=63316492459"
+          },
+          {
+            "id": "gid://shopify/p/OD8qxIQJ9dCjg1a4MLr0w",
+            "title": "Brooks Trace 2 Womens Running Shoes - Black",
+            "description": "A soft, breathable running shoe with dynamic cushioning and a secure fit for smooth, comfortable runs.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0564/9521/0704/products/brooks-trace-2-womens-running-shoes-black-37407980650704.jpg",
+                "altText": "Brooks Trace 2 Womens Running Shoes - Black - Start Fitness"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 7600,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 7600,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 7600,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/43744925188304?shop=56495210704",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/43744925188304?shop=56495210704"
+          },
+          {
+            "id": "gid://shopify/p/7eMSc6k6uDdvKzMDScYSo1",
+            "title": "Brooks Trace 2 Mens Running Shoes - Blue",
+            "description": "A cushioned, breathable running shoe designed for smooth, comfortable runs with dynamic impact protection.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0564/9521/0704/products/brooks-trace-2-mens-running-shoes-blue-37408087015632.jpg",
+                "altText": "Brooks Trace 2 Mens Running Shoes - Blue - Start Fitness"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 7600,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 7600,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 7600,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42820045406416?shop=56495210704",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42820045406416?shop=56495210704"
+          },
+          {
+            "id": "gid://shopify/p/1pwWijtZJYB6UxEXZXikOL",
+            "title": "Women's Ghost Max 2",
+            "description": "A cushioned, stable running shoe designed for maximum comfort and smooth transitions, ideal for long runs and recovery.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0663/9406/3038/files/Screenshot2025-09-22at10.40.24AM.png",
+                "altText": "Women's Ghost Max 2"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 7999,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 7999,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 7999,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45082315489470?shop=66394063038",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45082315489470?shop=66394063038"
+          },
+          {
+            "id": "gid://shopify/p/BjnEygFOTGAbr9mIhpBB4",
+            "title": "Brooks Hyperion Tempo Womens Running Shoes - Pink",
+            "description": "Lightweight running shoes with responsive cushioning for high-performance training.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0564/9521/0704/files/Brooks-Hyperion-Tempo-120328-1B876.jpg",
+                "altText": "Brooks Hyperion Tempo Womens Running Shoes - Pink"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 9100,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 9100,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 9100,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/44085111324880?shop=56495210704",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/44085111324880?shop=56495210704"
+          },
+          {
+            "id": "gid://shopify/p/4N6ZspYRiKQ2f2rObfQOZG",
+            "title": "Brooks Ariel 20 WIDE FIT Womens Running Shoes - Black",
+            "description": "A stable, cushioned running shoe designed for women, offering comfort and support with a wide fit and advanced cushioning.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0564/9521/0704/files/Brooks-Ariel-20-Wide-Fit-120315-1D064.jpg",
+                "altText": "Brooks Ariel 20 WIDE FIT Womens Running Shoes - Black"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 9100,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 9100,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 9100,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/43853180469456?shop=56495210704",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/43853180469456?shop=56495210704"
+          }
+        ]
+      },
+      "state": "output-available"
+    }
+  ],
+  "assistantText": "- **Avoid ultra‑cheap “fashion” runners** – the $21 Adidas Men’s Run 60s 2.0 look nice but use basic EVA that wears out quickly if you log regular miles.  \n- **Safe pick under $80:** **Brooks Trace 2** (both men’s and women’s versions) – $76 USD, proven cushioning, breathable mesh, and a solid durability record for everyday training.  \n- **Cheaper alternative:** **Men’s Zignition Running Shoes** at $45 USD – decent comfort for beginners, but the outsole is softer and may need replacement sooner.  \n\nIf you want a bit more tech (responsive foam, better arch support) and can stretch to $90, let me know and I’ll pull the next tier."
+}

@@ -50,6 +50,7 @@ function PureArtifactMessages({
           addToolApprovalResponse={addToolApprovalResponse}
           chatId={chatId}
           isLoading={status === "streaming" && index === messages.length - 1}
+          isLatestMessage={messages.length - 1 === index}
           isReadonly={isReadonly}
           key={message.id}
           message={message}

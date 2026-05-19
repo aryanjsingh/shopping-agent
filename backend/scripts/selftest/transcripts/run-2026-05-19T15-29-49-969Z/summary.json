@@ -1,0 +1,15 @@
+[
+  {
+    "tag": "compare",
+    "text": "compare kindle paperwhite vs basic kindle",
+    "chatId": "5c03dccf-77cd-4624-be95-da61847291ce",
+    "durationMs": 43974,
+    "ok": true,
+    "fired": [],
+    "wins": [],
+    "issues": [
+      "stream-error: Failed after 3 attempts. Last error: [Venice] qwen/qwen3-coder:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulat"
+    ],
+    "textPreview": ""
+  }
+]

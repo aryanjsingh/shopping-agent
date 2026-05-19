@@ -1,0 +1,7382 @@
+{
+  "scenario": {
+    "tag": "compare",
+    "text": "compare kindle paperwhite vs basic kindle"
+  },
+  "chatId": "0fd51273-26dd-45c5-b8e1-fe0d8559c8af",
+  "durationMs": 66143,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "c16f04ab-dcee-4fb0-a460-e60627e8262c"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "gqPJ8c8dlcKT35kt"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": "The"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " user"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " is"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " asking"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " compare"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " Paper"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": "white"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " vs"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " basic"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " This"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " is"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " a"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " comparison"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " request"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " so"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " I"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " should"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " compare"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": "Products"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " function"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " However"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " I"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " first"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " search"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " these"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " products"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " get"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " their"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " product"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " IDs"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " then"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " compare"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " them"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": ".\n\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": "Let"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " me"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " start"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " by"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " searching"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " Paper"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": "white"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " and"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " basic"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": " products"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "gqPJ8c8dlcKT35kt",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-end",
+      "id": "gqPJ8c8dlcKT35kt",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "\nThe user is asking to compare Kindle Paperwhite vs basic Kindle. This is a comparison request, so I should use the compareProducts function. However, I need to first search for these products to get their product IDs, then compare them.\n\nLet me start by searching for Kindle Paperwhite and basic Kindle products.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "text-start",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": "I"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": "'ll"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": " help"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": " you"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": " compare"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": " Kindle"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": " Paper"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": "white"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": " vs"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": " basic"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": " Kindle"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": " Let"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": " me"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": " search"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": " for"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": " both"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": " models"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": " first"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP",
+      "delta": ".\n"
+    },
+    {
+      "type": "tool-input-start",
+      "toolCallId": "call_3e70614a79ae47fa8985947b",
+      "toolName": "searchProducts"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "call_3e70614a79ae47fa8985947b",
+      "inputTextDelta": "{\"query\":\"Kindle Paperwhite\",\"limit\":4}"
+    },
+    {
+      "type": "tool-input-available",
+      "toolCallId": "call_3e70614a79ae47fa8985947b",
+      "toolName": "searchProducts",
+      "input": {
+        "query": "Kindle Paperwhite",
+        "limit": 4
+      },
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "\nThe user is asking to compare Kindle Paperwhite vs basic Kindle. This is a comparison request, so I should use the compareProducts function. However, I need to first search for these products to get their product IDs, then compare them.\n\nLet me start by searching for Kindle Paperwhite and basic Kindle products.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "text-end",
+      "id": "gen-1779203609-xyaFK7eLDDNMcvL7xwhP"
+    },
+    {
+      "type": "tool-output-available",
+      "toolCallId": "call_3e70614a79ae47fa8985947b",
+      "output": {
+        "query": "Kindle Paperwhite",
+        "sortMode": "relevance",
+        "currentGenOnly": false,
+        "count": 4,
+        "products": [
+          {
+            "id": "gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z",
+            "title": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release",
+            "description": "A lightweight, glare-free e-reader with a 7 inch high-contrast display and up to 12 weeks of battery life for immersive reading anywhere.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_1.jpg",
+                "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 21100,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 21100,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 21100,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/31827792265356?shop=31060295820",
+                "availableForSale": false
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/31827792265356?shop=31060295820"
+          },
+          {
+            "id": "gid://shopify/p/6RhyNzyIo62myQQYluBTUV",
+            "title": "Amazon Kindle Paperwhite Signature Edition (32GB, 7 inch) | 2024 Latest Release",
+            "description": "A lightweight, glare-free e-reader with a fast 7 inch display, wireless charging, and up to 12 weeks of battery life.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KPWSignature_1.jpg",
+                "altText": "Amazon Kindle Paperwhite Signature Edition (32GB, 7 inch) | 2024 Latest Release"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 25400,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 25400,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 25400,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45822257791131?shop=31060295820",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45822257791131?shop=31060295820"
+          },
+          {
+            "id": "gid://shopify/p/4tUb9OFOtKPaWOCGEJl1J6",
+            "title": "Kindle Paperwhite 5 11th 32GB Denim E-Reader",
+            "description": "A compact, rechargeable e-reader with a 6.8-inch E Ink display and 32GB storage for reading on the go.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0259/9469/0645/files/media_31c3cd3c-37fb-4589-9289-3cbda4d53125.png",
+                "altText": "Kindle Paperwhite 5 11th 32GB Denim E-Reader"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 7999,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 7999,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 7999,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42133170356309?shop=25994690645",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42133170356309?shop=25994690645"
+          },
+          {
+            "id": "gid://shopify/p/17iYBawKbVugIui4LPBzQG",
+            "title": "AMAZON KINDLE PAPERWHITE 6.8\" 16GB, 2022, BLACK",
+            "description": "A compact e-reader with 16GB storage, ideal for reading on the go.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0650/4700/3365/files/B09TMN58KL-2_1beba0bd-7e93-4a14-9edf-1f9b9b5effed.png",
+                "altText": "AMAZON KINDLE PAPERWHITE 6.8\" 16GB, 2022, BLACK"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 11899,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 11899,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 11899,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45934679720165?shop=65047003365",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45934679720165?shop=65047003365"
+          }
+        ]
+      }
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "q8nh5s9FjMVHori4"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "q8nh5s9FjMVHori4",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "q8nh5s9FjMVHori4",
+      "delta": "Now"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "q8nh5s9FjMVHori4",
+      "delta": " I"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "q8nh5s9FjMVHori4",
+      "delta": " need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "q8nh5s9FjMVHori4",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "q8nh5s9FjMVHori4",
+      "delta": " search"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "q8nh5s9FjMVHori4",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "q8nh5s9FjMVHori4",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "q8nh5s9FjMVHori4",
+      "delta": " basic"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "q8nh5s9FjMVHori4",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "q8nh5s9FjMVHori4",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "q8nh5s9FjMVHori4",
+      "delta": " get"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "q8nh5s9FjMVHori4",
+      "delta": " its"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "q8nh5s9FjMVHori4",
+      "delta": " product"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "q8nh5s9FjMVHori4",
+      "delta": " ID"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "q8nh5s9FjMVHori4",
+      "delta": "."
+    },
+    {
+      "type": "tool-input-start",
+      "toolCallId": "call_e7d21da849614f00bba56172",
+      "toolName": "searchProducts"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "call_e7d21da849614f00bba56172",
+      "inputTextDelta": "{\"query\":\"basic Kindle\"}"
+    },
+    {
+      "type": "tool-input-available",
+      "toolCallId": "call_e7d21da849614f00bba56172",
+      "toolName": "searchProducts",
+      "input": {
+        "query": "basic Kindle"
+      },
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "\nNow I need to search for the basic Kindle to get its product ID.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "reasoning-end",
+      "id": "q8nh5s9FjMVHori4",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "\nNow I need to search for the basic Kindle to get its product ID.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tool-output-available",
+      "toolCallId": "call_e7d21da849614f00bba56172",
+      "output": {
+        "query": "basic Kindle",
+        "sortMode": "relevance",
+        "currentGenOnly": false,
+        "count": 6,
+        "products": [
+          {
+            "id": "gid://shopify/p/kjT1MJDfRwDibHMnG9iP2",
+            "title": "Amazon Kindle Basic 11 Gen 2024 16GB (Black)",
+            "description": "A lightweight e-reader with a 6-inch glare-free display, fast page turns, and up to 6 weeks of battery life.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0513/8205/9159/files/AmazonKindleBasic11Gen2024_2.jpg",
+                "altText": "Amazon Kindle Basic 11 Gen 2024 16GB (Black)"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 67000000,
+                "currency": "MMK"
+              },
+              "max": {
+                "amount": 67000000,
+                "currency": "MMK"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 67000000,
+                "currency": "MMK",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45574820921495?shop=51382059159",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45574820921495?shop=51382059159"
+          },
+          {
+            "id": "gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ",
+            "title": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release",
+            "description": "A lightweight, compact Kindle with a glare-free 6 inch display, fast page turns, and long battery life for seamless e-reading.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_1.jpg",
+                "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 15100,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 15100,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 15100,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/31905031848076?shop=31060295820",
+                "availableForSale": false
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/31905031848076?shop=31060295820"
+          },
+          {
+            "id": "gid://shopify/p/6Sv8XDrTGh8i7I0JI5WJmi",
+            "title": "Market | Kindle Case",
+            "description": "A stylish, protective Kindle case inspired by weekly farmer's market routines, available in multiple sizes.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0683/0797/6363/files/Farmer_sMarket-Kindlefront.jpg",
+                "altText": "Market | Kindle Case"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4000,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4000,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4000,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45182492836011?shop=68307976363",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45182492836011?shop=68307976363"
+          },
+          {
+            "id": "gid://shopify/p/5uwqCBdEGBkR3mu3xeIROZ",
+            "title": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White",
+            "description": "",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0021/9598/0346/files/2109855432762-0.jpg",
+                "altText": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4500,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4500,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4500,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42084545364016?shop=2195980346",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42084545364016?shop=2195980346"
+          },
+          {
+            "id": "gid://shopify/p/1CrEgHsaSqsq4iruTfOzUX",
+            "title": "Cabana Read",
+            "description": "Durable faux leather case with soft microfiber interior for Kindle Paperwhite and Basic models, offering protection and style.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0667/8960/5570/files/IMG_4463_jpg_9f6ae819-caad-46fe-a477-cf8d980ee49c.jpg",
+                "altText": "Cabana Read"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 3600,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 3600,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 3600,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45079640637634?shop=66789605570",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45079640637634?shop=66789605570"
+          },
+          {
+            "id": "gid://shopify/p/4o9KknLfVKRYg4qia6kJWX",
+            "title": "Delicate Floral Kindle Case – Fits Kindle Paperwhite (12th, 11th, 10th Gen) and Kindle Basic (11th, 10th Gen) – Faux Leather",
+            "description": "A soft faux leather floral case that protects and adds elegance to your Kindle Paperwhite or Kindle Basic.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0624/8841/2262/files/Sac1497fa377c48cc9e99ea0e683bcd3bO.webp",
+                "altText": "Delicate Floral Kindle Case – Fits Kindle Paperwhite (12th, 11th, 10th Gen) and Kindle Basic (11th, 10th Gen) – Faux Leather"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 2900,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 2900,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 2900,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42830314012774?shop=62488412262",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42830314012774?shop=62488412262"
+          }
+        ]
+      }
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "KXhtEs1QJtHcAShp"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Now"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " I"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " have"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " both"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Paper"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "white"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " and"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " basic"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " products"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Let"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " me"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " select"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " most"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " relevant"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " ones"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " comparison"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ":\n\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "For"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Paper"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "white"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ":\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " \""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Amazon"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Paper"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "white"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "16"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " GB"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "7"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " inch"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ")"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " |"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "202"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "4"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Latest"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Release"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "\""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "id"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " gid"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "://"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "shop"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "ify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "/p"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "/"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "1"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "a"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "31"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "OV"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "H"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "x"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "6"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Vk"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "q"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "G"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "RL"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "qb"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "K"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "q"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "I"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "2"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Z"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ")"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " -"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " $"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "211"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " USD"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " \""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Kind"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "le"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Paper"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "white"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "5"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "11"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "th"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "32"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "GB"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Den"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "im"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " E"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Reader"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "\""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "id"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " gid"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "://"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "shop"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "ify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "/p"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "/"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "4"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "t"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Ub"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "9"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "O"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "FO"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "t"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "K"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Pa"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "W"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "OC"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "GE"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "J"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "l"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "1"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "J"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "6"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ")"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " -"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " $"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "79"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "99"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " USD"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "\n\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "For"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " basic"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ":\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " \""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Amazon"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Basic"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "11"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Gen"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "202"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "4"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "16"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "GB"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Black"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ")\""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "id"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " gid"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "://"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "shop"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "ify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "/p"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "/k"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "j"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "T"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "1"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "M"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "JD"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "f"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "R"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "w"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "D"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "ib"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "HM"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "G"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "9"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "iP"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "2"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ")"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " -"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " but"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " this"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " is"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " in"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " MM"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "K"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "My"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "anmar"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Ky"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "at"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "),"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " not"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " USD"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " \""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "New"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Amazon"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Basic"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " |"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "16"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " GB"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "6"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "\\\""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Screen"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " |"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "202"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "4"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Latest"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Release"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "\""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "id"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " gid"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "://"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "shop"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "ify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "/p"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "/"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "1"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "G"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Wi"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "7"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "T"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "uk"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Bg"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "D"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "h"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "2"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Q"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "tf"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "bd"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "w"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "pp"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Z"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ")"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " -"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " $"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "151"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " USD"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " \""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Amazon"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "8"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Basic"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "2"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " -"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "8"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "th"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Generation"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ")"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " -"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "4"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "GB"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Wi"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "-Fi"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "6"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "in"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " -"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " White"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "\""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "id"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " gid"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "://"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "shop"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "ify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "/p"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "/"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "5"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "uw"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "q"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "CB"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "d"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "E"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "GB"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "k"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "R"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "3"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "mu"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "3"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "xe"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "IRO"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Z"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ")"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " -"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " $"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "45"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " USD"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "\n\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Let"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " me"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " pick"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " most"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " current"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " and"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " comparable"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " models"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ":\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "1"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Paper"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "white"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "202"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "4"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ")"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " -"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " gid"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "://"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "shop"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "ify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "/p"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "/"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "1"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "a"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "31"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "OV"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "H"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "x"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "6"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Vk"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "q"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "G"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "RL"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "qb"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "K"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "q"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "I"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "2"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Z"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "2"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " Basic"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "202"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "4"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": ")"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " -"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " gid"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "://"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "shop"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "ify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "/p"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "/"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "1"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "G"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Wi"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "7"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "T"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "uk"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Bg"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "D"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "h"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "2"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Q"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "tf"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "bd"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "w"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "pp"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "Z"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "\n\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "I"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "'ll"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " compare"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " these"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": " two"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "KXhtEs1QJtHcAShp",
+      "delta": "."
+    },
+    {
+      "type": "tool-input-start",
+      "toolCallId": "call_6ba2f6e6f7014714900fdd60",
+      "toolName": "compareProducts"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "call_6ba2f6e6f7014714900fdd60",
+      "inputTextDelta": "{\"productIds\":[\"gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z\", \"gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ\"]}"
+    },
+    {
+      "type": "tool-input-available",
+      "toolCallId": "call_6ba2f6e6f7014714900fdd60",
+      "toolName": "compareProducts",
+      "input": {
+        "productIds": [
+          "gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z",
+          "gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ"
+        ]
+      },
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "\nNow I have both Kindle Paperwhite and basic Kindle products. Let me select the most relevant ones for comparison:\n\nFor Kindle Paperwhite:\n- \"Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release\" (id: gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z) - $211 USD\n- \"Kindle Paperwhite 5 11th 32GB Denim E-Reader\" (id: gid://shopify/p/4tUb9OFOtKPaWOCGEJl1J6) - $79.99 USD\n\nFor basic Kindle:\n- \"Amazon Kindle Basic 11 Gen 2024 16GB (Black)\" (id: gid://shopify/p/kjT1MJDfRwDibHMnG9iP2) - but this is in MMK (Myanmar Kyat), not USD\n- \"New Amazon Kindle Basic | 16 GB, 6\\\" Screen | 2024 Latest Release\" (id: gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ) - $151 USD\n- \"Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White\" (id: gid://shopify/p/5uwqCBdEGBkR3mu3xeIROZ) - $45 USD\n\nLet me pick the most current and comparable models:\n1. Kindle Paperwhite (2024) - gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z\n2. Kindle Basic (2024) - gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ\n\nI'll compare these two.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "reasoning-end",
+      "id": "KXhtEs1QJtHcAShp",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "\nNow I have both Kindle Paperwhite and basic Kindle products. Let me select the most relevant ones for comparison:\n\nFor Kindle Paperwhite:\n- \"Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release\" (id: gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z) - $211 USD\n- \"Kindle Paperwhite 5 11th 32GB Denim E-Reader\" (id: gid://shopify/p/4tUb9OFOtKPaWOCGEJl1J6) - $79.99 USD\n\nFor basic Kindle:\n- \"Amazon Kindle Basic 11 Gen 2024 16GB (Black)\" (id: gid://shopify/p/kjT1MJDfRwDibHMnG9iP2) - but this is in MMK (Myanmar Kyat), not USD\n- \"New Amazon Kindle Basic | 16 GB, 6\\\" Screen | 2024 Latest Release\" (id: gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ) - $151 USD\n- \"Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White\" (id: gid://shopify/p/5uwqCBdEGBkR3mu3xeIROZ) - $45 USD\n\nLet me pick the most current and comparable models:\n1. Kindle Paperwhite (2024) - gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z\n2. Kindle Basic (2024) - gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ\n\nI'll compare these two.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tool-output-available",
+      "toolCallId": "call_6ba2f6e6f7014714900fdd60",
+      "output": {
+        "rows": [
+          {
+            "id": "gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z",
+            "title": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release",
+            "image": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_1.jpg",
+            "priceMin": {
+              "amount": 21100,
+              "currency": "USD"
+            },
+            "priceMax": {
+              "amount": 21100,
+              "currency": "USD"
+            },
+            "topFeatures": [],
+            "techSpecs": [],
+            "bestCheckoutUrl": "",
+            "bestSellerName": "",
+            "bestSellerPrice": {
+              "amount": 21100,
+              "currency": "USD"
+            },
+            "sellerCount": 1
+          },
+          {
+            "id": "gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ",
+            "title": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release",
+            "image": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_1.jpg",
+            "priceMin": {
+              "amount": 15100,
+              "currency": "USD"
+            },
+            "priceMax": {
+              "amount": 15100,
+              "currency": "USD"
+            },
+            "topFeatures": [],
+            "techSpecs": [],
+            "bestCheckoutUrl": "",
+            "bestSellerName": "",
+            "bestSellerPrice": {
+              "amount": 15100,
+              "currency": "USD"
+            },
+            "sellerCount": 1
+          }
+        ]
+      }
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "wGUvrufy6etp7jPc"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "The"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " comparison"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " didn"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "'t"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " show"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " detailed"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " specs"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " but"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " I"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " can"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " see"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " key"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " differences"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": ":\n\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "Kind"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "le"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " Paper"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "white"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "202"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "4"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "):"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " \n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " $"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "211"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " USD"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "7"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "-inch"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " screen"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "16"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "GB"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " storage"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "\n\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "Kind"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "le"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " Basic"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "202"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "4"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "):\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " $"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "151"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " USD"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "  \n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "6"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "-inch"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " screen"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "16"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "GB"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " storage"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "\n\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "Let"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " me"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " get"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " more"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " detailed"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " information"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " about"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " both"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " products"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " to"
+    },
+    {
+      "type": "data-chat-title",
+      "data": "Paperwhite vs Basic Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " provide"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " a"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " comprehensive"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": " comparison"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wGUvrufy6etp7jPc",
+      "delta": "."
+    },
+    {
+      "type": "tool-input-start",
+      "toolCallId": "call_5150bbcdaf694bed873813f4",
+      "toolName": "getProduct"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "call_5150bbcdaf694bed873813f4",
+      "inputTextDelta": "{\"productId\":\"gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z\"}"
+    },
+    {
+      "type": "tool-input-available",
+      "toolCallId": "call_5150bbcdaf694bed873813f4",
+      "toolName": "getProduct",
+      "input": {
+        "productId": "gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z"
+      },
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "\nThe comparison didn't show detailed specs, but I can see the key differences:\n\nKindle Paperwhite (2024): \n- $211 USD\n- 7-inch screen\n- 16GB storage\n\nKindle Basic (2024):\n- $151 USD  \n- 6-inch screen\n- 16GB storage\n\nLet me get more detailed information about both products to provide a comprehensive comparison.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "reasoning-end",
+      "id": "wGUvrufy6etp7jPc",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "\nThe comparison didn't show detailed specs, but I can see the key differences:\n\nKindle Paperwhite (2024): \n- $211 USD\n- 7-inch screen\n- 16GB storage\n\nKindle Basic (2024):\n- $151 USD  \n- 6-inch screen\n- 16GB storage\n\nLet me get more detailed information about both products to provide a comprehensive comparison.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tool-output-available",
+      "toolCallId": "call_5150bbcdaf694bed873813f4",
+      "output": {
+        "product": {
+          "id": "gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z",
+          "title": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release",
+          "description": "A lightweight, glare-free e-reader with a 7 inch high-contrast display and up to 12 weeks of battery life for immersive reading anywhere.",
+          "topFeatures": [],
+          "techSpecs": [],
+          "attributes": [],
+          "media": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_1.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_3.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_2.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KPW_Signature_Rasberry.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KPWSignature_2.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_4.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_5.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_6.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_7.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            }
+          ],
+          "priceRange": {
+            "min": {
+              "amount": 21100,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 21100,
+              "currency": "USD"
+            }
+          },
+          "lookupUrl": "",
+          "variants": [
+            {
+              "id": "gid://shopify/ProductVariant/31827792265356?shop=31060295820",
+              "productId": "gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z",
+              "displayName": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release",
+              "availableForSale": false,
+              "price": {
+                "amount": 21100,
+                "currency": "USD"
+              },
+              "media": [
+                {
+                  "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_1.jpg",
+                  "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+                }
+              ],
+              "options": [],
+              "shop": {
+                "id": "Shopify merchant",
+                "name": "Shopify merchant"
+              },
+              "variantUrl": "",
+              "checkoutUrl": "",
+              "secondhand": false,
+              "lookupUrl": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "XaorSLnpabgg9AoN"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XaorSLnpabgg9AoN",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XaorSLnpabgg9AoN",
+      "delta": "Now"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XaorSLnpabgg9AoN",
+      "delta": " let"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XaorSLnpabgg9AoN",
+      "delta": " me"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XaorSLnpabgg9AoN",
+      "delta": " get"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XaorSLnpabgg9AoN",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XaorSLnpabgg9AoN",
+      "delta": " details"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XaorSLnpabgg9AoN",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XaorSLnpabgg9AoN",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XaorSLnpabgg9AoN",
+      "delta": " basic"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XaorSLnpabgg9AoN",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XaorSLnpabgg9AoN",
+      "delta": "."
+    },
+    {
+      "type": "tool-input-start",
+      "toolCallId": "call_20e04da9af794230acb50daa",
+      "toolName": "getProduct"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "call_20e04da9af794230acb50daa",
+      "inputTextDelta": "{\"productId\":\"gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ\"}"
+    },
+    {
+      "type": "tool-input-available",
+      "toolCallId": "call_20e04da9af794230acb50daa",
+      "toolName": "getProduct",
+      "input": {
+        "productId": "gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ"
+      },
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "\nNow let me get the details for the basic Kindle.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "reasoning-end",
+      "id": "XaorSLnpabgg9AoN",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "\nNow let me get the details for the basic Kindle.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tool-output-available",
+      "toolCallId": "call_20e04da9af794230acb50daa",
+      "output": {
+        "product": {
+          "id": "gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ",
+          "title": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release",
+          "description": "A lightweight, compact Kindle with a glare-free 6 inch display, fast page turns, and long battery life for seamless e-reading.",
+          "topFeatures": [],
+          "techSpecs": [],
+          "attributes": [],
+          "media": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_1.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/products/714brROA9eL._AC_SX679.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_Jade.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_3.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_4.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_5.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_7.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/products/Midnight_Black_1_70281161-584f-47d3-a50b-114afda46cac.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_6.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            }
+          ],
+          "priceRange": {
+            "min": {
+              "amount": 15100,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 15100,
+              "currency": "USD"
+            }
+          },
+          "lookupUrl": "",
+          "variants": [
+            {
+              "id": "gid://shopify/ProductVariant/31905031848076?shop=31060295820",
+              "productId": "gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ",
+              "displayName": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release",
+              "availableForSale": false,
+              "price": {
+                "amount": 15100,
+                "currency": "USD"
+              },
+              "media": [
+                {
+                  "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_1.jpg",
+                  "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+                }
+              ],
+              "options": [],
+              "shop": {
+                "id": "Shopify merchant",
+                "name": "Shopify merchant"
+              },
+              "variantUrl": "",
+              "checkoutUrl": "",
+              "secondhand": false,
+              "lookupUrl": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "eXz1S0n2BCLfQKbL"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": "Now"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " I"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " have"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " basic"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " information"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " both"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " models"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " Let"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " me"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " also"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " get"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " details"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " on"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " older"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " basic"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " model"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " that"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " was"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " much"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " cheaper"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " provide"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " a"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " fuller"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": " comparison"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "eXz1S0n2BCLfQKbL",
+      "delta": "."
+    },
+    {
+      "type": "tool-input-start",
+      "toolCallId": "call_71647212afd4461ab71d048f",
+      "toolName": "getProduct"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "call_71647212afd4461ab71d048f",
+      "inputTextDelta": "{\"productId\":\"gid://shopify/p/5uwqCBdEGBkR3mu3xeIROZ\"}"
+    },
+    {
+      "type": "tool-input-available",
+      "toolCallId": "call_71647212afd4461ab71d048f",
+      "toolName": "getProduct",
+      "input": {
+        "productId": "gid://shopify/p/5uwqCBdEGBkR3mu3xeIROZ"
+      },
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "\nNow I have the basic information for both models. Let me also get details on the older basic Kindle model that was much cheaper to provide a fuller comparison.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "reasoning-end",
+      "id": "eXz1S0n2BCLfQKbL",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "\nNow I have the basic information for both models. Let me also get details on the older basic Kindle model that was much cheaper to provide a fuller comparison.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tool-output-available",
+      "toolCallId": "call_71647212afd4461ab71d048f",
+      "output": {
+        "product": {
+          "id": "gid://shopify/p/5uwqCBdEGBkR3mu3xeIROZ",
+          "title": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White",
+          "description": "",
+          "topFeatures": [],
+          "techSpecs": [],
+          "attributes": [],
+          "media": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0021/9598/0346/files/2109855432762-0.jpg",
+              "altText": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0021/9598/0346/files/2109855432762-1.jpg",
+              "altText": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0021/9598/0346/files/2109855432762-2.jpg",
+              "altText": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0021/9598/0346/files/2109855432762-3.jpg",
+              "altText": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0021/9598/0346/files/2109855432762-4.jpg",
+              "altText": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White"
+            }
+          ],
+          "priceRange": {
+            "min": {
+              "amount": 4500,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 4500,
+              "currency": "USD"
+            }
+          },
+          "lookupUrl": "",
+          "variants": [
+            {
+              "id": "gid://shopify/ProductVariant/42084545364016?shop=2195980346",
+              "productId": "gid://shopify/p/5uwqCBdEGBkR3mu3xeIROZ",
+              "displayName": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White",
+              "availableForSale": true,
+              "price": {
+                "amount": 4500,
+                "currency": "USD"
+              },
+              "media": [
+                {
+                  "url": "https://cdn.shopify.com/s/files/1/0021/9598/0346/files/2109855432762-0.jpg",
+                  "altText": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White"
+                }
+              ],
+              "options": [],
+              "shop": {
+                "id": "Shopify merchant",
+                "name": "Shopify merchant"
+              },
+              "variantUrl": "",
+              "checkoutUrl": "",
+              "secondhand": false,
+              "lookupUrl": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "Ehijris2lGfxDoNN"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "Now"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " I"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " have"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " enough"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " information"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " provide"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " a"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " comprehensive"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " comparison"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Let"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " me"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " summarize"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " key"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " differences"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " between"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " models"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ":\n\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "**"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "Kind"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "le"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Paper"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "white"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "202"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "4"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ")"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "**\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Price"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " $"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "211"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Screen"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "7"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-inch"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " high"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "contrast"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " display"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Storage"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "16"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "GB"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Battery"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Up"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "12"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " weeks"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Description"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " \""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "Light"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "weight"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " glare"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-free"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " e"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-reader"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " with"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "7"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " inch"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " high"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "contrast"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " display"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "\"\n\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "**"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "Kind"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "le"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Basic"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "202"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "4"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ")"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "**\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Price"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " $"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "151"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Screen"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "6"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-inch"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " glare"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-free"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " display"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Storage"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "16"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "GB"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Battery"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Long"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " battery"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " life"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "specific"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " duration"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " not"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " mentioned"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " but"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " implies"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " good"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ")\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Description"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " \""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "Light"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "weight"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " compact"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Kindle"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " with"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "6"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " inch"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " display"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " fast"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " page"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " turns"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " long"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " battery"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " life"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "\"\n\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "**"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "Kind"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "le"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Basic"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "older"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "/"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "8"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "th"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Gen"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ")"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "**\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Price"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " $"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "45"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Screen"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "6"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-inch"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Storage"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "4"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "GB"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Battery"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Not"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " specified"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "-"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Description"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Basic"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " model"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "8"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "th"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " generation"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "\n\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "The"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " main"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " differences"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " are"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " screen"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " size"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " price"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " storage"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " older"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " model"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "),"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " and"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " battery"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " life"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " Let"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " me"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " provide"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " a"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " clear"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": " comparison"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Ehijris2lGfxDoNN",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-end",
+      "id": "Ehijris2lGfxDoNN",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "\nNow I have enough information to provide a comprehensive comparison. Let me summarize the key differences between the models:\n\n**Kindle Paperwhite (2024)**\n- Price: $211\n- Screen: 7-inch, high-contrast display\n- Storage: 16GB\n- Battery: Up to 12 weeks\n- Description: \"Lightweight, glare-free e-reader with 7 inch high-contrast display\"\n\n**Kindle Basic (2024)**\n- Price: $151\n- Screen: 6-inch, glare-free display\n- Storage: 16GB\n- Battery: Long battery life (specific duration not mentioned, but implies good)\n- Description: \"Lightweight, compact Kindle with 6 inch display, fast page turns, long battery life\"\n\n**Kindle Basic (older/8th Gen)**\n- Price: $45\n- Screen: 6-inch\n- Storage: 4GB\n- Battery: Not specified\n- Description: Basic model, 8th generation\n\nThe main differences are screen size, price, storage (for the older model), and battery life. Let me provide a clear comparison.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "text-start",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "Here"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "'s"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " comparison"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " of"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Kindle"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " models"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": ":\n\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "Kind"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "le"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Paper"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "white"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "202"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "4"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": ")"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " -"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "211"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "**\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "7"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-inch"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " high"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "contrast"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " display"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "16"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "GB"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " storage"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Up"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " to"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "12"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " weeks"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " battery"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " life"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Gl"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "are"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-free"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " design"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Better"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " for"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " immersive"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " reading"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " with"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " larger"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " screen"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\n\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "Kind"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "le"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Basic"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "202"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "4"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": ")"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " -"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "151"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "**\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "6"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-inch"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " glare"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-free"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " display"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "  \n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "16"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "GB"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " storage"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Long"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " battery"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " life"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Compact"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " lightweight"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " More"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " affordable"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " entry"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " point"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\n\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "Kind"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "le"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Basic"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "8"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "th"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Gen"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": ")"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " -"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "45"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "**\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "6"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-inch"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " screen"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "4"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "GB"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " storage"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "less"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " than"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " current"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " models"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": ")\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Basic"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " functionality"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Budget"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " option"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " for"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " casual"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " readers"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\n\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "Key"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " differences"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": ":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "**\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " **"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "Price"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " gap"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": ":**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "60"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " between"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " current"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " models"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "166"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " vs"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Paper"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "white"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " **"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "Screen"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " size"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": ":**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "7"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " vs"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "6"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " -"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Paper"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "white"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " offers"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " more"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " reading"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " area"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " **"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "Battery"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": ":**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Paper"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "white"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " claims"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "12"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " weeks"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " vs"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "long"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " battery"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " life"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " on"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Basic"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " **"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "Storage"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": ":**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Both"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " current"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " models"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " have"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "16"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "GB"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "older"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Basic"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " has"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "4"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "GB"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": ")\n\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "Choose"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Paper"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "white"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " if"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " you"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " want"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " best"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " reading"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " experience"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " with"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " larger"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " screen"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " longer"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " battery"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Choose"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Basic"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " for"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " budget"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "-friendly"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " reading"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " with"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " same"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " storage"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " as"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " Paper"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "white"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " but"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " smaller"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": " screen"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv",
+      "delta": "."
+    },
+    {
+      "type": "text-end",
+      "id": "gen-1779203649-ytvmwxvreyg0PQTp16iv"
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "finish",
+      "finishReason": "stop"
+    }
+  ],
+  "toolCalls": [
+    {
+      "id": "call_3e70614a79ae47fa8985947b",
+      "toolName": "searchProducts",
+      "input": {
+        "query": "Kindle Paperwhite",
+        "limit": 4
+      },
+      "output": {
+        "query": "Kindle Paperwhite",
+        "sortMode": "relevance",
+        "currentGenOnly": false,
+        "count": 4,
+        "products": [
+          {
+            "id": "gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z",
+            "title": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release",
+            "description": "A lightweight, glare-free e-reader with a 7 inch high-contrast display and up to 12 weeks of battery life for immersive reading anywhere.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_1.jpg",
+                "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 21100,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 21100,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 21100,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/31827792265356?shop=31060295820",
+                "availableForSale": false
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/31827792265356?shop=31060295820"
+          },
+          {
+            "id": "gid://shopify/p/6RhyNzyIo62myQQYluBTUV",
+            "title": "Amazon Kindle Paperwhite Signature Edition (32GB, 7 inch) | 2024 Latest Release",
+            "description": "A lightweight, glare-free e-reader with a fast 7 inch display, wireless charging, and up to 12 weeks of battery life.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KPWSignature_1.jpg",
+                "altText": "Amazon Kindle Paperwhite Signature Edition (32GB, 7 inch) | 2024 Latest Release"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 25400,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 25400,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 25400,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45822257791131?shop=31060295820",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45822257791131?shop=31060295820"
+          },
+          {
+            "id": "gid://shopify/p/4tUb9OFOtKPaWOCGEJl1J6",
+            "title": "Kindle Paperwhite 5 11th 32GB Denim E-Reader",
+            "description": "A compact, rechargeable e-reader with a 6.8-inch E Ink display and 32GB storage for reading on the go.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0259/9469/0645/files/media_31c3cd3c-37fb-4589-9289-3cbda4d53125.png",
+                "altText": "Kindle Paperwhite 5 11th 32GB Denim E-Reader"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 7999,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 7999,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 7999,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42133170356309?shop=25994690645",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42133170356309?shop=25994690645"
+          },
+          {
+            "id": "gid://shopify/p/17iYBawKbVugIui4LPBzQG",
+            "title": "AMAZON KINDLE PAPERWHITE 6.8\" 16GB, 2022, BLACK",
+            "description": "A compact e-reader with 16GB storage, ideal for reading on the go.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0650/4700/3365/files/B09TMN58KL-2_1beba0bd-7e93-4a14-9edf-1f9b9b5effed.png",
+                "altText": "AMAZON KINDLE PAPERWHITE 6.8\" 16GB, 2022, BLACK"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 11899,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 11899,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 11899,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45934679720165?shop=65047003365",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45934679720165?shop=65047003365"
+          }
+        ]
+      },
+      "state": "output-available"
+    },
+    {
+      "id": "call_e7d21da849614f00bba56172",
+      "toolName": "searchProducts",
+      "input": {
+        "query": "basic Kindle"
+      },
+      "output": {
+        "query": "basic Kindle",
+        "sortMode": "relevance",
+        "currentGenOnly": false,
+        "count": 6,
+        "products": [
+          {
+            "id": "gid://shopify/p/kjT1MJDfRwDibHMnG9iP2",
+            "title": "Amazon Kindle Basic 11 Gen 2024 16GB (Black)",
+            "description": "A lightweight e-reader with a 6-inch glare-free display, fast page turns, and up to 6 weeks of battery life.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0513/8205/9159/files/AmazonKindleBasic11Gen2024_2.jpg",
+                "altText": "Amazon Kindle Basic 11 Gen 2024 16GB (Black)"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 67000000,
+                "currency": "MMK"
+              },
+              "max": {
+                "amount": 67000000,
+                "currency": "MMK"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 67000000,
+                "currency": "MMK",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45574820921495?shop=51382059159",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45574820921495?shop=51382059159"
+          },
+          {
+            "id": "gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ",
+            "title": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release",
+            "description": "A lightweight, compact Kindle with a glare-free 6 inch display, fast page turns, and long battery life for seamless e-reading.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_1.jpg",
+                "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 15100,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 15100,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 15100,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/31905031848076?shop=31060295820",
+                "availableForSale": false
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/31905031848076?shop=31060295820"
+          },
+          {
+            "id": "gid://shopify/p/6Sv8XDrTGh8i7I0JI5WJmi",
+            "title": "Market | Kindle Case",
+            "description": "A stylish, protective Kindle case inspired by weekly farmer's market routines, available in multiple sizes.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0683/0797/6363/files/Farmer_sMarket-Kindlefront.jpg",
+                "altText": "Market | Kindle Case"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4000,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4000,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4000,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45182492836011?shop=68307976363",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45182492836011?shop=68307976363"
+          },
+          {
+            "id": "gid://shopify/p/5uwqCBdEGBkR3mu3xeIROZ",
+            "title": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White",
+            "description": "",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0021/9598/0346/files/2109855432762-0.jpg",
+                "altText": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4500,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4500,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4500,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42084545364016?shop=2195980346",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42084545364016?shop=2195980346"
+          },
+          {
+            "id": "gid://shopify/p/1CrEgHsaSqsq4iruTfOzUX",
+            "title": "Cabana Read",
+            "description": "Durable faux leather case with soft microfiber interior for Kindle Paperwhite and Basic models, offering protection and style.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0667/8960/5570/files/IMG_4463_jpg_9f6ae819-caad-46fe-a477-cf8d980ee49c.jpg",
+                "altText": "Cabana Read"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 3600,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 3600,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 3600,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45079640637634?shop=66789605570",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45079640637634?shop=66789605570"
+          },
+          {
+            "id": "gid://shopify/p/4o9KknLfVKRYg4qia6kJWX",
+            "title": "Delicate Floral Kindle Case – Fits Kindle Paperwhite (12th, 11th, 10th Gen) and Kindle Basic (11th, 10th Gen) – Faux Leather",
+            "description": "A soft faux leather floral case that protects and adds elegance to your Kindle Paperwhite or Kindle Basic.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0624/8841/2262/files/Sac1497fa377c48cc9e99ea0e683bcd3bO.webp",
+                "altText": "Delicate Floral Kindle Case – Fits Kindle Paperwhite (12th, 11th, 10th Gen) and Kindle Basic (11th, 10th Gen) – Faux Leather"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 2900,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 2900,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 2900,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42830314012774?shop=62488412262",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42830314012774?shop=62488412262"
+          }
+        ]
+      },
+      "state": "output-available"
+    },
+    {
+      "id": "call_6ba2f6e6f7014714900fdd60",
+      "toolName": "compareProducts",
+      "input": {
+        "productIds": [
+          "gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z",
+          "gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ"
+        ]
+      },
+      "output": {
+        "rows": [
+          {
+            "id": "gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z",
+            "title": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release",
+            "image": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_1.jpg",
+            "priceMin": {
+              "amount": 21100,
+              "currency": "USD"
+            },
+            "priceMax": {
+              "amount": 21100,
+              "currency": "USD"
+            },
+            "topFeatures": [],
+            "techSpecs": [],
+            "bestCheckoutUrl": "",
+            "bestSellerName": "",
+            "bestSellerPrice": {
+              "amount": 21100,
+              "currency": "USD"
+            },
+            "sellerCount": 1
+          },
+          {
+            "id": "gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ",
+            "title": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release",
+            "image": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_1.jpg",
+            "priceMin": {
+              "amount": 15100,
+              "currency": "USD"
+            },
+            "priceMax": {
+              "amount": 15100,
+              "currency": "USD"
+            },
+            "topFeatures": [],
+            "techSpecs": [],
+            "bestCheckoutUrl": "",
+            "bestSellerName": "",
+            "bestSellerPrice": {
+              "amount": 15100,
+              "currency": "USD"
+            },
+            "sellerCount": 1
+          }
+        ]
+      },
+      "state": "output-available"
+    },
+    {
+      "id": "call_5150bbcdaf694bed873813f4",
+      "toolName": "getProduct",
+      "input": {
+        "productId": "gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z"
+      },
+      "output": {
+        "product": {
+          "id": "gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z",
+          "title": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release",
+          "description": "A lightweight, glare-free e-reader with a 7 inch high-contrast display and up to 12 weeks of battery life for immersive reading anywhere.",
+          "topFeatures": [],
+          "techSpecs": [],
+          "attributes": [],
+          "media": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_1.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_3.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_2.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KPW_Signature_Rasberry.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KPWSignature_2.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_4.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_5.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_6.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_7.jpg",
+              "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+            }
+          ],
+          "priceRange": {
+            "min": {
+              "amount": 21100,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 21100,
+              "currency": "USD"
+            }
+          },
+          "lookupUrl": "",
+          "variants": [
+            {
+              "id": "gid://shopify/ProductVariant/31827792265356?shop=31060295820",
+              "productId": "gid://shopify/p/1a31OVHx6VkqGRLqbKqI2Z",
+              "displayName": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release",
+              "availableForSale": false,
+              "price": {
+                "amount": 21100,
+                "currency": "USD"
+              },
+              "media": [
+                {
+                  "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/KindlePaperwhite2024_1.jpg",
+                  "altText": "Amazon Kindle Paperwhite (16 GB, 7 inch) | 2024 Latest Release"
+                }
+              ],
+              "options": [],
+              "shop": {
+                "id": "Shopify merchant",
+                "name": "Shopify merchant"
+              },
+              "variantUrl": "",
+              "checkoutUrl": "",
+              "secondhand": false,
+              "lookupUrl": ""
+            }
+          ]
+        }
+      },
+      "state": "output-available"
+    },
+    {
+      "id": "call_20e04da9af794230acb50daa",
+      "toolName": "getProduct",
+      "input": {
+        "productId": "gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ"
+      },
+      "output": {
+        "product": {
+          "id": "gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ",
+          "title": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release",
+          "description": "A lightweight, compact Kindle with a glare-free 6 inch display, fast page turns, and long battery life for seamless e-reading.",
+          "topFeatures": [],
+          "techSpecs": [],
+          "attributes": [],
+          "media": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_1.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/products/714brROA9eL._AC_SX679.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_Jade.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_3.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_4.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_5.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_7.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/products/Midnight_Black_1_70281161-584f-47d3-a50b-114afda46cac.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_6.jpg",
+              "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+            }
+          ],
+          "priceRange": {
+            "min": {
+              "amount": 15100,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 15100,
+              "currency": "USD"
+            }
+          },
+          "lookupUrl": "",
+          "variants": [
+            {
+              "id": "gid://shopify/ProductVariant/31905031848076?shop=31060295820",
+              "productId": "gid://shopify/p/1GWi7TukBgDh2QtfbdwppZ",
+              "displayName": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release",
+              "availableForSale": false,
+              "price": {
+                "amount": 15100,
+                "currency": "USD"
+              },
+              "media": [
+                {
+                  "url": "https://cdn.shopify.com/s/files/1/0310/6029/5820/files/Kindle_Basic_24_1.jpg",
+                  "altText": "New Amazon Kindle Basic | 16 GB, 6\" Screen | 2024 Latest Release"
+                }
+              ],
+              "options": [],
+              "shop": {
+                "id": "Shopify merchant",
+                "name": "Shopify merchant"
+              },
+              "variantUrl": "",
+              "checkoutUrl": "",
+              "secondhand": false,
+              "lookupUrl": ""
+            }
+          ]
+        }
+      },
+      "state": "output-available"
+    },
+    {
+      "id": "call_71647212afd4461ab71d048f",
+      "toolName": "getProduct",
+      "input": {
+        "productId": "gid://shopify/p/5uwqCBdEGBkR3mu3xeIROZ"
+      },
+      "output": {
+        "product": {
+          "id": "gid://shopify/p/5uwqCBdEGBkR3mu3xeIROZ",
+          "title": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White",
+          "description": "",
+          "topFeatures": [],
+          "techSpecs": [],
+          "attributes": [],
+          "media": [
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0021/9598/0346/files/2109855432762-0.jpg",
+              "altText": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0021/9598/0346/files/2109855432762-1.jpg",
+              "altText": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0021/9598/0346/files/2109855432762-2.jpg",
+              "altText": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0021/9598/0346/files/2109855432762-3.jpg",
+              "altText": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White"
+            },
+            {
+              "url": "https://cdn.shopify.com/s/files/1/0021/9598/0346/files/2109855432762-4.jpg",
+              "altText": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White"
+            }
+          ],
+          "priceRange": {
+            "min": {
+              "amount": 4500,
+              "currency": "USD"
+            },
+            "max": {
+              "amount": 4500,
+              "currency": "USD"
+            }
+          },
+          "lookupUrl": "",
+          "variants": [
+            {
+              "id": "gid://shopify/ProductVariant/42084545364016?shop=2195980346",
+              "productId": "gid://shopify/p/5uwqCBdEGBkR3mu3xeIROZ",
+              "displayName": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White",
+              "availableForSale": true,
+              "price": {
+                "amount": 4500,
+                "currency": "USD"
+              },
+              "media": [
+                {
+                  "url": "https://cdn.shopify.com/s/files/1/0021/9598/0346/files/2109855432762-0.jpg",
+                  "altText": "Amazon Kindle 8 (Basic 2 - 8th Generation) - 4GB, Wi-Fi, 6in - White"
+                }
+              ],
+              "options": [],
+              "shop": {
+                "id": "Shopify merchant",
+                "name": "Shopify merchant"
+              },
+              "variantUrl": "",
+              "checkoutUrl": "",
+              "secondhand": false,
+              "lookupUrl": ""
+            }
+          ]
+        }
+      },
+      "state": "output-available"
+    }
+  ],
+  "assistantText": "I'll help you compare Kindle Paperwhite vs basic Kindle. Let me search for both models first.\nHere's the comparison of Kindle models:\n\n**Kindle Paperwhite (2024) - $211**\n- 7-inch high-contrast display\n- 16GB storage\n- Up to 12 weeks battery life\n- Glare-free design\n- Better for immersive reading with larger screen\n\n**Kindle Basic (2024) - $151**\n- 6-inch glare-free display  \n- 16GB storage\n- Long battery life\n- Compact, lightweight\n- More affordable entry point\n\n**Kindle Basic (8th Gen) - $45**\n- 6-inch screen\n- 4GB storage (less than current models)\n- Basic functionality\n- Budget option for casual readers\n\n**Key differences:**\n- **Price gap:** $60 between current models, $166 vs Paperwhite\n- **Screen size:** 7\" vs 6\" - Paperwhite offers more reading area\n- **Battery:** Paperwhite claims 12 weeks vs \"long battery life\" on Basic\n- **Storage:** Both current models have 16GB (older Basic has 4GB)\n\nChoose Paperwhite if you want the best reading experience with larger screen and longer battery. Choose Basic for budget-friendly reading with the same storage as Paperwhite but smaller screen."
+}

@@ -1,0 +1,2248 @@
+{
+  "scenario": {
+    "tag": "budget",
+    "text": "running shoes under 80 dollars"
+  },
+  "chatId": "69a68fff-d6f0-415d-8687-26f8acadefef",
+  "durationMs": 15247,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "0985bdb4-18ea-4e04-ba7b-9b408e8a0a3e"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "y6FuvfwiBZekbB91"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": "Need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " clarify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " intent"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": "?"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " Category"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " specific"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " budget"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " Use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " search"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": "Products"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " with"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " max"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": "Price"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": "800"
+    },
+    {
+      "type": "data-chat-title",
+      "data": "Under $80 Running Shoes"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": "0"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " cents"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " Also"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " freshness"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " audit"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " needed"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " running"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " shoes"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " Call"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " search"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": "Products"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " then"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": " assess"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "y6FuvfwiBZekbB91",
+      "delta": "."
+    },
+    {
+      "type": "tool-input-start",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "toolName": "searchProducts"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": ""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "{\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "query"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "running"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " shoes"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " men"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " women"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "max"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "Price"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "800"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "0"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": ",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "limit"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "12"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": ",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "sort"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "Mode"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "price"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "_low"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "ships"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "To"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "US"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "\"\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "inputTextDelta": "}"
+    },
+    {
+      "type": "tool-input-available",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "toolName": "searchProducts",
+      "input": {
+        "query": "running shoes men women",
+        "limit": 12,
+        "maxPrice": 8000,
+        "shipsTo": "US",
+        "sortMode": "price_low"
+      },
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need clarify intent? Category specific, budget. Use searchProducts with maxPrice 8000 cents. Also freshness audit needed for running shoes. Call searchProducts then assess.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "reasoning-end",
+      "id": "y6FuvfwiBZekbB91",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need clarify intent? Category specific, budget. Use searchProducts with maxPrice 8000 cents. Also freshness audit needed for running shoes. Call searchProducts then assess.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tool-output-available",
+      "toolCallId": "chatcmpl-tool-855cf39d449ce6c9",
+      "output": {
+        "query": "running shoes men women",
+        "sortMode": "price_low",
+        "currentGenOnly": false,
+        "count": 10,
+        "products": [
+          {
+            "id": "gid://shopify/p/61BEBUkbMZWwHc9UpuNSRP",
+            "title": "Men Shoes Running Shoes For Men Lightweight Tenis Comfortable Breathable Walking Sneakers",
+            "description": "Lightweight and breathable walking sneakers designed for men, ideal for comfortable long walks or runs.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0577/6870/6117/files/S054b2ac8ae974b02a4e5e98a25a2555eH.webp",
+                "altText": "40896701366341|40896701464645|40896701562949|40896701661253|40896701759557"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 1888,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 2075,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 1888,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/40896701628485?shop=57768706117",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/40896701628485?shop=57768706117"
+          },
+          {
+            "id": "gid://shopify/p/4qxZmQCSoyTvLxzjeHq6tK",
+            "title": "Men's and Women's Shoes Breathable Mesh Outdoor Men and Women Running Shoes Sports Shoes Fitness Jogging Shoes",
+            "description": "Lightweight, breathable running shoes designed for comfort and performance during outdoor activities.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0565/4675/4712/products/270586642277.png",
+                "altText": "Men's and Women's Shoes Breathable Mesh Outdoor Men and Women Running Shoes Sports Shoes Fitness Jogging Shoes Au+hentic Sport Spot"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 3499,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 3499,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 3499,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/41783793942680?shop=56546754712",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/41783793942680?shop=56546754712"
+          },
+          {
+            "id": "gid://shopify/p/3K1rHtsf3cB6C8jSKr9viR",
+            "title": "Men Running Shoes Fashion Breathable Outdoor Male Sports Shoes Sneakers Women Comfortable Athletic Footwear",
+            "description": "Lightweight, cushioned running shoes designed for comfort and breathability during light-distance runs.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0468/3182/9145/files/S04fdb418d94a408d863925484a4475b8y.webp",
+                "altText": "Men Running Shoes Fashion Breathable Outdoor Male Sports Shoes Sneakers Women Comfortable Athletic Footwear"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 3799,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4199,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 3799,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/46599840071910?shop=46831829145",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/46599840071910?shop=46831829145"
+          },
+          {
+            "id": "gid://shopify/p/18prBBM1GzRDGYiLUO0zGe",
+            "title": "Classical Unisex Running Shoes Men's Ladies' Breathable Mesh Sport Shoe Sneakers",
+            "description": "Lightweight breathable running shoes with cushioning for beginners on concrete floors.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0614/6834/4514/products/product-image-1467836040.jpg",
+                "altText": "Classical Unisex Running Shoes Men's Ladies' Breathable Mesh Sport Shoe Sneakers The Clothing Company Sydney"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 3800,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4200,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 3800,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/41908000358594?shop=61468344514",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/41908000358594?shop=61468344514"
+          },
+          {
+            "id": "gid://shopify/p/6DwGF973ulv6xsH3ML1aJN",
+            "title": "Women Men Running Shoes",
+            "description": "Lightweight, breathable loafers designed for comfortable running in spring and autumn.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0667/0666/9848/products/Hfc034a0fe023412f9149eaa5786e1403a.jpg",
+                "altText": "Women Men Running Shoes"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4099,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4099,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4099,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/44126492819736?shop=66706669848",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/44126492819736?shop=66706669848"
+          },
+          {
+            "id": "gid://shopify/p/23x7YCT8ji3dilPo518b4G",
+            "title": "Marathon Running Shoes High Quality Men'S Breathable Lightweight Couple Comfort Sports Non-Slip Casual Outdoor Training Sneakers",
+            "description": "Lightweight, breathable running shoes designed for comfort and non-slip performance during outdoor training.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0758/5254/6286/files/3ecb7d05a4d4c2efb936a21034953690.jpg",
+                "altText": "Marathon Running Shoes High Quality Men'S Breathable Lightweight Couple Comfort Sports Non-Slip Casual Outdoor Training Sneakers"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4499,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4999,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4499,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/47242567254254?shop=75852546286",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/47242567254254?shop=75852546286"
+          },
+          {
+            "id": "gid://shopify/p/5zBwz4YUGJbotxgcMEeaGW",
+            "title": "New Men’s & Women’s Running Shoes",
+            "description": "Lightweight, breathable running shoes designed for men and women, ideal for active lifestyles and everyday wear.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0660/5281/7047/files/Sb6de779f05c24ea99d1a5cebdcc48cfcf.webp",
+                "altText": "44763721334935|44763721367703|44763721400471|44763721433239|44763721466007|44763721498775|44763722186903|44763722219671|44763722252439|44763722285207"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4999,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4999,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4999,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/44763721334935?shop=66052817047",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/44763721334935?shop=66052817047"
+          },
+          {
+            "id": "gid://shopify/p/7HSC5nSej4xseQnKatxvba",
+            "title": "2025New Running Shoes Men Women Breathable Running Footwears Light Weight Walking Shoes Luxury Gym Sneakers Outdoor Sport Tennis",
+            "description": "Lightweight, breathable running shoes designed for comfort and performance in various outdoor activities.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0736/3474/2457/files/Scc55ae40e29c4f3d96584df7ebbee2d0n.webp",
+                "altText": "2025New Running Shoes Men Women Breathable Running Footwears Light Weight Walking Shoes Luxury Gym Sneakers Outdoor Sport Tennis"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 5500,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 5500,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 5500,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45809864671417?shop=73634742457",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45809864671417?shop=73634742457"
+          },
+          {
+            "id": "gid://shopify/p/tEUu4VqYg2aqiWY0Q0iUR",
+            "title": "Running shoes for men / women, lightweight mesh, breathable and comfortable",
+            "description": "Lightweight mesh running shoes designed for comfort and breathability during workouts.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0963/8648/2452/files/Sc8e8b699d09c4c738a0980a94c8ad6a2B.webp",
+                "altText": "Running shoes for men / women, lightweight mesh, breathable and comfortable"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 5999,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 5999,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 5999,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/51699210551572?shop=96386482452",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/51699210551572?shop=96386482452"
+          },
+          {
+            "id": "gid://shopify/p/6esLbtLGm6hplZ5D0WNuXl",
+            "title": "Men's And Women's Couple Running Shoes Breathable And Comfortable",
+            "description": "Breathable and comfortable running shoes designed for adults, suitable for various terrains and daily activities.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0832/8016/7239/files/bdd7ba9b-1303-403c-bbf8-cabc80c45f77.jpg",
+                "altText": "115245804-1"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 6600,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 6600,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 6600,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/53828393173319?shop=83280167239",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/53828393173319?shop=83280167239"
+          }
+        ]
+      }
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "Dsqcy685jhiC7vUA"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": "We"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " avoid"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " outdated"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " poor"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " support"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " The"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " cheapest"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " options"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " likely"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " low"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " quality"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " Highlight"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " avoid"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " cheap"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " non"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": "‑"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": "bre"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": "ath"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": "able"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " Then"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " recommend"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " best"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " within"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " budget"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " Probably"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " assess"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " freshness"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " not"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " needed"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " Just"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " give"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": " picks"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "Dsqcy685jhiC7vUA",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-end",
+      "id": "Dsqcy685jhiC7vUA",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need avoid outdated poor support. The cheapest options likely low quality. Highlight avoid cheap non‑breathable. Then recommend best within budget. Probably assess freshness not needed. Just give picks.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "text-start",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "Avoid"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " ultra"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "cheap"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " mesh"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " shoes"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " that"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " barely"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " cost"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "$"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "19"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "$"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "20"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " They"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " often"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " lack"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " real"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " cushioning"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " have"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " thin"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " soles"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " wear"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " out"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " after"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " a"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " few"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " dozen"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " miles"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " not"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " worth"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " risk"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " of"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " injury"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": ".\n\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "Safe"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " pick"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " under"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "$"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "80"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": ":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " **"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "Men"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "'s"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Women's"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Shoes"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Breath"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "able"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Mesh"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Outdoor"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Men"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Women"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Running"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Shoes"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Sports"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Shoes"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Fitness"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Jog"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "ging"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Shoes"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "34"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "99"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " breathable"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " mesh"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " lightweight"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " solid"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " cushioning"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " for"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " daily"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " runs"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": ".\n\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "If"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " you"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " want"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " a"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " bit"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " more"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " support"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " without"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " breaking"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " budget"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " consider"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " **"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "Men"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Running"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Shoes"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Fashion"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Breath"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "able"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Outdoor"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Male"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Sports"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Shoes"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Sneakers"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Women"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Comfortable"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Athletic"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Foot"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "wear"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "37"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "99"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " thicker"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " mid"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "sole"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " reinforced"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " toe"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " for"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " longer"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " mileage"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " Both"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " stay"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " well"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " within"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " your"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "80"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " limit"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " give"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " you"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " reliable"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " comfort"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": " durability"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc",
+      "delta": "."
+    },
+    {
+      "type": "text-end",
+      "id": "gen-1779203951-P6cCwaq17iLIlfyeOBMc"
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "finish",
+      "finishReason": "stop"
+    }
+  ],
+  "toolCalls": [
+    {
+      "id": "chatcmpl-tool-855cf39d449ce6c9",
+      "toolName": "searchProducts",
+      "input": {
+        "query": "running shoes men women",
+        "limit": 12,
+        "maxPrice": 8000,
+        "shipsTo": "US",
+        "sortMode": "price_low"
+      },
+      "output": {
+        "query": "running shoes men women",
+        "sortMode": "price_low",
+        "currentGenOnly": false,
+        "count": 10,
+        "products": [
+          {
+            "id": "gid://shopify/p/61BEBUkbMZWwHc9UpuNSRP",
+            "title": "Men Shoes Running Shoes For Men Lightweight Tenis Comfortable Breathable Walking Sneakers",
+            "description": "Lightweight and breathable walking sneakers designed for men, ideal for comfortable long walks or runs.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0577/6870/6117/files/S054b2ac8ae974b02a4e5e98a25a2555eH.webp",
+                "altText": "40896701366341|40896701464645|40896701562949|40896701661253|40896701759557"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 1888,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 2075,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 1888,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/40896701628485?shop=57768706117",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/40896701628485?shop=57768706117"
+          },
+          {
+            "id": "gid://shopify/p/4qxZmQCSoyTvLxzjeHq6tK",
+            "title": "Men's and Women's Shoes Breathable Mesh Outdoor Men and Women Running Shoes Sports Shoes Fitness Jogging Shoes",
+            "description": "Lightweight, breathable running shoes designed for comfort and performance during outdoor activities.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0565/4675/4712/products/270586642277.png",
+                "altText": "Men's and Women's Shoes Breathable Mesh Outdoor Men and Women Running Shoes Sports Shoes Fitness Jogging Shoes Au+hentic Sport Spot"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 3499,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 3499,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 3499,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/41783793942680?shop=56546754712",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/41783793942680?shop=56546754712"
+          },
+          {
+            "id": "gid://shopify/p/3K1rHtsf3cB6C8jSKr9viR",
+            "title": "Men Running Shoes Fashion Breathable Outdoor Male Sports Shoes Sneakers Women Comfortable Athletic Footwear",
+            "description": "Lightweight, cushioned running shoes designed for comfort and breathability during light-distance runs.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0468/3182/9145/files/S04fdb418d94a408d863925484a4475b8y.webp",
+                "altText": "Men Running Shoes Fashion Breathable Outdoor Male Sports Shoes Sneakers Women Comfortable Athletic Footwear"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 3799,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4199,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 3799,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/46599840071910?shop=46831829145",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/46599840071910?shop=46831829145"
+          },
+          {
+            "id": "gid://shopify/p/18prBBM1GzRDGYiLUO0zGe",
+            "title": "Classical Unisex Running Shoes Men's Ladies' Breathable Mesh Sport Shoe Sneakers",
+            "description": "Lightweight breathable running shoes with cushioning for beginners on concrete floors.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0614/6834/4514/products/product-image-1467836040.jpg",
+                "altText": "Classical Unisex Running Shoes Men's Ladies' Breathable Mesh Sport Shoe Sneakers The Clothing Company Sydney"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 3800,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4200,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 3800,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/41908000358594?shop=61468344514",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/41908000358594?shop=61468344514"
+          },
+          {
+            "id": "gid://shopify/p/6DwGF973ulv6xsH3ML1aJN",
+            "title": "Women Men Running Shoes",
+            "description": "Lightweight, breathable loafers designed for comfortable running in spring and autumn.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0667/0666/9848/products/Hfc034a0fe023412f9149eaa5786e1403a.jpg",
+                "altText": "Women Men Running Shoes"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4099,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4099,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4099,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/44126492819736?shop=66706669848",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/44126492819736?shop=66706669848"
+          },
+          {
+            "id": "gid://shopify/p/23x7YCT8ji3dilPo518b4G",
+            "title": "Marathon Running Shoes High Quality Men'S Breathable Lightweight Couple Comfort Sports Non-Slip Casual Outdoor Training Sneakers",
+            "description": "Lightweight, breathable running shoes designed for comfort and non-slip performance during outdoor training.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0758/5254/6286/files/3ecb7d05a4d4c2efb936a21034953690.jpg",
+                "altText": "Marathon Running Shoes High Quality Men'S Breathable Lightweight Couple Comfort Sports Non-Slip Casual Outdoor Training Sneakers"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4499,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4999,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4499,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/47242567254254?shop=75852546286",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/47242567254254?shop=75852546286"
+          },
+          {
+            "id": "gid://shopify/p/5zBwz4YUGJbotxgcMEeaGW",
+            "title": "New Men’s & Women’s Running Shoes",
+            "description": "Lightweight, breathable running shoes designed for men and women, ideal for active lifestyles and everyday wear.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0660/5281/7047/files/Sb6de779f05c24ea99d1a5cebdcc48cfcf.webp",
+                "altText": "44763721334935|44763721367703|44763721400471|44763721433239|44763721466007|44763721498775|44763722186903|44763722219671|44763722252439|44763722285207"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4999,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4999,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4999,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/44763721334935?shop=66052817047",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/44763721334935?shop=66052817047"
+          },
+          {
+            "id": "gid://shopify/p/7HSC5nSej4xseQnKatxvba",
+            "title": "2025New Running Shoes Men Women Breathable Running Footwears Light Weight Walking Shoes Luxury Gym Sneakers Outdoor Sport Tennis",
+            "description": "Lightweight, breathable running shoes designed for comfort and performance in various outdoor activities.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0736/3474/2457/files/Scc55ae40e29c4f3d96584df7ebbee2d0n.webp",
+                "altText": "2025New Running Shoes Men Women Breathable Running Footwears Light Weight Walking Shoes Luxury Gym Sneakers Outdoor Sport Tennis"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 5500,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 5500,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 5500,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/45809864671417?shop=73634742457",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/45809864671417?shop=73634742457"
+          },
+          {
+            "id": "gid://shopify/p/tEUu4VqYg2aqiWY0Q0iUR",
+            "title": "Running shoes for men / women, lightweight mesh, breathable and comfortable",
+            "description": "Lightweight mesh running shoes designed for comfort and breathability during workouts.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0963/8648/2452/files/Sc8e8b699d09c4c738a0980a94c8ad6a2B.webp",
+                "altText": "Running shoes for men / women, lightweight mesh, breathable and comfortable"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 5999,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 5999,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 5999,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/51699210551572?shop=96386482452",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/51699210551572?shop=96386482452"
+          },
+          {
+            "id": "gid://shopify/p/6esLbtLGm6hplZ5D0WNuXl",
+            "title": "Men's And Women's Couple Running Shoes Breathable And Comfortable",
+            "description": "Breathable and comfortable running shoes designed for adults, suitable for various terrains and daily activities.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0832/8016/7239/files/bdd7ba9b-1303-403c-bbf8-cabc80c45f77.jpg",
+                "altText": "115245804-1"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 6600,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 6600,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 6600,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/53828393173319?shop=83280167239",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/53828393173319?shop=83280167239"
+          }
+        ]
+      },
+      "state": "output-available"
+    }
+  ],
+  "assistantText": "Avoid the ultra‑cheap mesh shoes that barely cost $19‑$20. They often lack real cushioning, have thin soles, and wear out after a few dozen miles – not worth the risk of injury.\n\nSafe pick under $80: **Men's and Women's Shoes Breathable Mesh Outdoor Men and Women Running Shoes Sports Shoes Fitness Jogging Shoes** – $34.99, breathable mesh, lightweight, and solid cushioning for daily runs.\n\nIf you want a bit more support without breaking the budget, consider **Men Running Shoes Fashion Breathable Outdoor Male Sports Shoes Sneakers Women Comfortable Athletic Footwear** – $37.99, thicker midsole and reinforced toe for longer mileage. Both stay well within your $80 limit and give you reliable comfort and durability."
+}

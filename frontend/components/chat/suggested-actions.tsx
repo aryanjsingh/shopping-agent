@@ -1,8 +1,8 @@
 "use client";
 
 import type { UseChatHelpers } from "@ai-sdk/react";
-import { memo } from "react";
-import { suggestions } from "@/lib/constants";
+import { memo, useMemo } from "react";
+import { pickSuggestionsForChat } from "@/lib/constants";
 import type { ChatMessage } from "@/lib/types";
 import { Suggestion } from "../ai-elements/suggestion";
 
@@ -12,7 +12,10 @@ type SuggestedActionsProps = {
 };
 
 function PureSuggestedActions({ chatId, sendMessage }: SuggestedActionsProps) {
-  const suggestedActions = suggestions;
+  const suggestedActions = useMemo(
+    () => pickSuggestionsForChat(chatId, 4),
+    [chatId]
+  );
 
   return (
     <div

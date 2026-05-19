@@ -29,8 +29,10 @@ const toolLabels: Record<string, string> = {
   createDocument: "Creating document",
   getProduct: "Inspecting product",
   getWeather: "Checking weather",
+  refineSearch: "Refining catalog",
   requestSuggestions: "Requesting suggestions",
   searchProducts: "Searching catalog",
+  showMore: "Finding more options",
   updateDocument: "Updating document",
   webFetch: "Reading page",
   webSearch: "Searching web",
@@ -108,12 +110,12 @@ function ThinkingTrigger({ toolCount }: { toolCount: number }) {
       <span>
         {isStreaming ? (
           <Shimmer className="font-medium" duration={1}>
-            {toolCount > 0 ? `Using ${toolCount} tool${toolCount > 1 ? "s" : ""}…` : "Thinking…"}
+            {toolCount > 0 ? `Checking ${toolCount} source${toolCount > 1 ? "s" : ""}...` : "Preparing response..."}
           </Shimmer>
         ) : duration ? (
-          `Thought for ${duration}s`
+          `How I searched (${duration}s)`
         ) : (
-          "Thought"
+          "How I searched (a few seconds)"
         )}
       </span>
       <ChevronRightIcon
@@ -173,16 +175,18 @@ function ThinkingContent({
 
   if (!isOpen) return null;
 
+  const hasContent = tools.length > 0 || reasoning.trim();
+
   return (
     <div
       className={cn(
-        "mt-1 w-full overflow-y-auto [scrollbar-width:none]",
-        isStreaming ? "max-h-48" : "max-h-36"
+        "mt-1 w-full overflow-y-auto rounded-md border border-border/20 bg-muted/20 px-2.5 py-2 [scrollbar-width:thin]",
+        isStreaming ? "max-h-40" : "max-h-28"
       )}
       ref={scrollRef}
     >
       {tools.length > 0 && (
-        <div className="grid gap-0.5 py-0.5">
+        <div className="grid gap-0.5">
           {tools.map((tool) => (
             <ToolRow key={tool.id} tool={tool} />
           ))}
@@ -191,12 +195,12 @@ function ThinkingContent({
       {reasoning.trim() && (
         <div className={cn(
           "whitespace-pre-wrap text-muted-foreground/60 text-[11px] leading-relaxed",
-          tools.length > 0 && "mt-1.5 border-t border-border/30 pt-1.5"
+          tools.length > 0 && "mt-1.5 border-t border-border/20 pt-1.5"
         )}>
           {reasoning.trim()}
         </div>
       )}
-      {!tools.length && !reasoning.trim() && (
+      {!hasContent && (
         <div className="text-[11px] text-muted-foreground/50">
           Preparing response…
         </div>

@@ -29,6 +29,10 @@ async function getFetchBrowser(): Promise<Browser> {
 
 const MAX_CHARS = 10_000;
 
+type FetchCacheEntry = { content: string; expiresAt: number };
+const FETCH_CACHE = new Map<string, FetchCacheEntry>();
+const FETCH_TTL_MS = 5 * 60 * 1000;
+
 function isPrivateHost(hostname: string): boolean {
   return (
     hostname === "localhost" ||
@@ -117,6 +121,17 @@ export const webFetch = tool({
       return { error: "Private/local URLs are not allowed", url };
     }
 
+    const cached = FETCH_CACHE.get(url);
+    if (cached && cached.expiresAt > Date.now()) {
+      return {
+        url,
+        focus: focus ?? null,
+        length: cached.content.length,
+        cached: true,
+        content: cached.content,
+      };
+    }
+
     try {
       const raw = await fetchWithPlaywright(url);
       const text = cleanText(raw);
@@ -126,10 +141,16 @@ export const webFetch = tool({
         return { error: "Page returned no readable content", url };
       }
 
+      FETCH_CACHE.set(url, {
+        content: trimmed,
+        expiresAt: Date.now() + FETCH_TTL_MS,
+      });
+
       return {
         url,
         focus: focus ?? null,
         length: trimmed.length,
+        cached: false,
         content: trimmed,
       };
     } catch (err) {

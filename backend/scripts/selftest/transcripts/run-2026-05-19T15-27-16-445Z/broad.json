@@ -1,0 +1,26 @@
+{
+  "scenario": {
+    "tag": "broad",
+    "text": "i need new headphones"
+  },
+  "chatId": "c596e6c7-915e-4df0-8ed3-c0490f253e12",
+  "durationMs": 9007,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "2ed60399-20be-4fed-a4d4-0643bf1c6782"
+    },
+    {
+      "type": "error",
+      "errorText": "Failed after 3 attempts. Last error: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day"
+    },
+    {
+      "type": "data-chat-title",
+      "data": "New Headphones"
+    }
+  ],
+  "toolCalls": [],
+  "assistantText": ""
+}

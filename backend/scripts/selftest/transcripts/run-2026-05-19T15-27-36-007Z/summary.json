@@ -1,0 +1,15 @@
+[
+  {
+    "tag": "compare",
+    "text": "compare kindle paperwhite vs basic kindle",
+    "chatId": "d6a82cb2-b4e3-443c-b7da-29ccd3e62a1e",
+    "durationMs": 58055,
+    "ok": true,
+    "fired": [],
+    "wins": [],
+    "issues": [
+      "stream-error: Failed after 3 attempts. Last error: [Venice] meta-llama/llama-3.3-70b-instruct:free is temporarily rate-limited upstream. Please retry shortly, or add your own"
+    ],
+    "textPreview": ""
+  }
+]

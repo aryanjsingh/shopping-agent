@@ -1,0 +1,140 @@
+[
+  {
+    "tag": "broad",
+    "text": "i need new headphones",
+    "chatId": "dc65894b-a97a-47b4-9072-1ace7943af48",
+    "durationMs": 13250,
+    "ok": true,
+    "fired": [
+      "clarifyIntent"
+    ],
+    "wins": [
+      "clarified before searching"
+    ],
+    "issues": [],
+    "textPreview": "What will you use these headphones for most?"
+  },
+  {
+    "tag": "specific",
+    "text": "find airpods pro 2",
+    "chatId": "3179aa39-7817-4fff-9e21-dc796b26d962",
+    "durationMs": 24811,
+    "ok": true,
+    "fired": [
+      "searchProducts",
+      "assessProductFreshness"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [
+      "uses markdown bold — prompt rule says no headings/marketing"
+    ],
+    "textPreview": "Avoid buying a cheap knock‑off or a mismatched case – those often lack the active‑noise cancellation and MagSafe charging that define the genuine AirPods Pro 2. The catalog’s top‑rated genuine option is **AirPods Pro (2nd generation) with MagSafe Case (USB‑C) Bluetooth (White, T"
+  },
+  {
+    "tag": "budget",
+    "text": "running shoes under 80 dollars",
+    "chatId": "69a68fff-d6f0-415d-8687-26f8acadefef",
+    "durationMs": 15247,
+    "ok": true,
+    "fired": [
+      "searchProducts"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [
+      "uses markdown bold — prompt rule says no headings/marketing"
+    ],
+    "textPreview": "Avoid the ultra‑cheap mesh shoes that barely cost $19‑$20. They often lack real cushioning, have thin soles, and wear out after a few dozen miles – not worth the risk of injury. Safe pick under $80: **Men's and Women's Shoes Breathable Mesh Outdoor Men and Women Running Shoes Sp"
+  },
+  {
+    "tag": "compare",
+    "text": "compare kindle paperwhite vs basic kindle",
+    "chatId": "1730f377-6f8e-4981-b582-4c5237049a8b",
+    "durationMs": 4144,
+    "ok": true,
+    "fired": [],
+    "wins": [],
+    "issues": [
+      "never called searchProducts or clarifyIntent",
+      "compare scenario — compareProducts was not called",
+      "no assistant text returned"
+    ],
+    "textPreview": ""
+  },
+  {
+    "tag": "cheapest",
+    "text": "cheapest place to buy logitech mx master 3s",
+    "chatId": "fc68b9d3-be01-4380-a634-68089f34dd71",
+    "durationMs": 14243,
+    "ok": true,
+    "fired": [
+      "searchProducts",
+      "compareSellers"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [
+      "uses markdown bold — prompt rule says no headings/marketing"
+    ],
+    "textPreview": "You want the tiniest price on a Logitech MX Master 3S. The catalog shows a single seller listing it for **$71.99** – that’s the lowest price the catalog has for this model. If you need a different retailer or a used option, let me know and I can dig deeper."
+  },
+  {
+    "tag": "gift",
+    "text": "gift for dad who likes cooking, under 150",
+    "chatId": "c3beee0c-8673-4e95-a4c0-3d55ab3156af",
+    "durationMs": 31759,
+    "ok": true,
+    "fired": [
+      "clarifyIntent",
+      "clarifyIntent"
+    ],
+    "wins": [
+      "clarified before searching"
+    ],
+    "issues": [
+      "tool clarifyIntent errored: Invalid input for tool clarifyIntent: Type validation failed: Value: {\"question\":\"What kind of cooking gift would your d"
+    ],
+    "textPreview": "What cooking gift would your dad enjoy? - Premium chef’s knife – high‑carbon steel, full tang, 8‑10 in (searchHint: “premium chef knife”) - Cast‑iron skillet – pre‑seasoned, 12 in (searchHint: “cast iron skillet 12 inch”) - Sous‑vide precision cooker – Wi‑Fi/Bluetooth, 0‑9"
+  },
+  {
+    "tag": "phone-old-vs-new",
+    "text": "i need a gaming phone under 500 dollars",
+    "chatId": "412296bc-dfcf-4078-b2e7-97e7b9e4b399",
+    "durationMs": 22532,
+    "ok": true,
+    "fired": [
+      "searchProducts",
+      "searchProducts"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [
+      "fast-moving category — assessProductFreshness was not called",
+      "uses markdown bold — prompt rule says no headings/marketing"
+    ],
+    "textPreview": "- The catalog’s top pick is a 2025 flagship “S24 Ultra” at $249 — it’s a premium photo/super‑tablet hybrid, not optimized for sustained gaming and it sits near the top of your budget. - The next cheap entries are generic accessories or rugged phones that lack the high‑refresh d"
+  },
+  {
+    "tag": "laptop-video",
+    "text": "good laptop for video editing under 1200",
+    "chatId": "042aaf53-7469-4be6-94af-4a3a1b83cc5b",
+    "durationMs": 22316,
+    "ok": true,
+    "fired": [
+      "searchProducts",
+      "assessProductFreshness"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [
+      "uses markdown bold — prompt rule says no headings/marketing"
+    ],
+    "textPreview": "HP 15.6” Laptop Computer 2025‑2026 Edition – $499.00 * Intel i3 (12th Gen) + 16 GB RAM + 628 GB hybrid storage. Wi‑Fi 6, long battery – solid for 1080p video editing on a budget. Fresh 2026 model, so no generation concerns. **Upgrade path – creator‑grade** *Look for an “M3"
+  }
+]

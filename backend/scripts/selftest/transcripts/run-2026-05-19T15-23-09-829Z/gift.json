@@ -1,0 +1,2462 @@
+{
+  "scenario": {
+    "tag": "gift",
+    "text": "gift for dad who likes cooking, under 150"
+  },
+  "chatId": "364394d2-91ca-406c-9fba-08d7b26aa5d0",
+  "durationMs": 27809,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "3241ef87-8d0e-4112-8d54-82ade2d07de4"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "YofN18YkrX1zlaw5"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "User"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " wants"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " gift"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " dad"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " cooking"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " budget"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " under"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " $"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "150"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " Broad"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " category"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " gift"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " Need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " clarify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "Intent"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "?"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " It's"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " broad"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " but"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " we"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " have"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " case"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " cooking"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " gift"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " budget"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " Could"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " ask"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " budget"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " menu"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "?"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " But"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " we"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " have"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " budget"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " already"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " Could"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " directly"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " search"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " \""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "c"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "ooking"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " gift"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "\""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " max"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "Price"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " "
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "150"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "00"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " cents"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " Also"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " fresh"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " category"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "?"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " cooking"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " gift"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " not"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " fast"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "-moving"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " No"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " freshness"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " needed"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " So"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " just"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": " search"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "Products"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "YofN18YkrX1zlaw5",
+      "delta": "."
+    },
+    {
+      "type": "tool-input-start",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "toolName": "searchProducts"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": ""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "{\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "query"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "c"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "ooking"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": " gift"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "max"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "Price"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "150"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "00"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": ",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "limit"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "12"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": ",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "sort"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "Mode"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "rating"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "ships"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "To"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "US"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "\"\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "inputTextDelta": "}"
+    },
+    {
+      "type": "tool-input-available",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "toolName": "searchProducts",
+      "input": {
+        "query": "cooking gift",
+        "limit": 12,
+        "maxPrice": 15000,
+        "shipsTo": "US",
+        "sortMode": "rating"
+      },
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "User wants gift for dad, cooking, budget under $150. Broad category gift. Need clarifyIntent? It's broad but we have use case cooking gift, budget. Could ask budget menu? But we have budget already. Could directly search: \"cooking gift\" maxPrice 15000 cents. Also fresh category? cooking gift not fast-moving. No freshness needed. So just searchProducts.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "reasoning-end",
+      "id": "YofN18YkrX1zlaw5",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "User wants gift for dad, cooking, budget under $150. Broad category gift. Need clarifyIntent? It's broad but we have use case cooking gift, budget. Could ask budget menu? But we have budget already. Could directly search: \"cooking gift\" maxPrice 15000 cents. Also fresh category? cooking gift not fast-moving. No freshness needed. So just searchProducts.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tool-output-available",
+      "toolCallId": "chatcmpl-tool-beec855e721db1a5",
+      "output": {
+        "query": "cooking gift",
+        "sortMode": "rating",
+        "currentGenOnly": false,
+        "count": 10,
+        "category": "generic",
+        "freshnessHint": null,
+        "products": [
+          {
+            "id": "gid://shopify/p/4MvxhU9OA2a1frXSID4Phv",
+            "title": "Gift a Cooking Subscription!",
+            "description": "A curated cooking subscription box delivering global cuisine, recipes, and cultural experiences for families and individuals.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0067/3605/2287/files/Gift_A_Cooking_Subscription.png",
+                "altText": "Gift a Cooking Subscription!"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 2625,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 2850,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 2625,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/40188499853366?shop=6736052287",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/40188499853366?shop=6736052287"
+          },
+          {
+            "id": "gid://shopify/p/VIartonBiXo9ZrvAwCreY",
+            "title": "Cooking Gift Set - Apron, Tea Towel, Cooler Bag, Notebook & Pen",
+            "description": "A curated set of essential kitchen tools for chefs and culinary enthusiasts, including an apron, tea towel, cooler bag, notebook, and pen.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0618/5605/5348/files/76105068_Cooking_set.jpg",
+                "altText": "Cooking Gift Set - Apron, Tea Towel, Cooler Bag, Notebook & Pen"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 8499,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 8499,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 8499,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/44487520813108?shop=61856055348",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/44487520813108?shop=61856055348"
+          },
+          {
+            "id": "gid://shopify/p/6TVXIvfZGTCTcChYMKNdkX",
+            "title": "Gourmet Cooking Gift Set – Hand-Blended Spices, Apron, and Tool",
+            "description": "A curated set featuring hand-blended spices, a choice of utensil, and a premium cotton apron for elevate your kitchen experience.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/2007/7195/products/IMG_1838.jpg",
+                "altText": "Gourmet Cooking Gift Set – Hand-Blended Spices, Apron, and Tool - Kitchen on Fire STORE"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4900,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4900,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4900,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42844103475360?shop=20077195",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42844103475360?shop=20077195"
+          },
+          {
+            "id": "gid://shopify/p/4NB59isAypt1wg4MzYV77Z",
+            "title": "Taste of Luxury Gift Box",
+            "description": "A curated gourmet gift box featuring premium olive oil, aged balsamic vinegar, artisan pasta, and culinary accessories for elevating home meals and entertaining.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/1515/9256/files/Taste_of_Luxury_Gift_Box_at_The_Little_Shop_of_Olive_Oils_in_Franklin_MA.jpg",
+                "altText": "Taste of Luxury Gift Box"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 14900,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 14900,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 14900,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/43249734058175?shop=15159256",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/43249734058175?shop=15159256"
+          },
+          {
+            "id": "gid://shopify/p/2sTpl0eN3jOVkklWVeFZ2T",
+            "title": "Wood Smoked Barbecue Kit",
+            "description": "A complete kit to help home cooks master wood smoked barbecue flavors.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/1563/0185/products/wood-smoked-barbecue-kit-3483836.jpg",
+                "altText": "Wood Smoked Barbecue Kit - Cooking Gift Set Co."
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 5499,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 5499,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 5499,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/27059668169?shop=15630185",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/27059668169?shop=15630185"
+          },
+          {
+            "id": "gid://shopify/p/4YqqYz13ZgyzQLSHpDLr1r",
+            "title": "Cooking Gift Set Co. | French Tart Baking Set | Unique Gifts for Women | Baking Tools and Accessories | Kitchen Gifts, Hostess Gifts, Fun Gifts for Women | Gift Sets for Women, Food Gift Sets",
+            "description": "A complete baking kit with essential tools for making French tarts at home, perfect for gift-giving to bakers.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0678/0659/3272/products/cooking-gift-set-co-or-french-tart-baking-set-or-unique-gifts-for-women-or-baking-tools-and-accessories-or-kitchen-gifts-hostess-gifts-fun-gifts-for-women-or-gift-sets-for-women-food-gift-sets-cookcav-53023.jpg",
+                "altText": "Cooking Gift Set Co. | French Tart Baking Set | Unique Gifts for Women | Baking Tools and Accessories | Kitchen Gifts, Hostess Gifts, Fun Gifts for Women | Gift Sets for Women, Food Gift Sets - CookCave"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 5499,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 5499,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 5499,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/44396404506872?shop=67806593272",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/44396404506872?shop=67806593272"
+          },
+          {
+            "id": "gid://shopify/p/2Z7So1SI2Yrd73DvBe5xfv",
+            "title": "Cooking at Home Gift Set",
+            "description": "A curated gift set featuring Italian pasta, premium olive oil, anchovies, and a candle for a cozy, flavorful evening at home.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0554/8965/9064/files/Cooking_at_Home_Gift_Set_2025.png",
+                "altText": "Cooking at Home Gift Set"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 14500,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 14500,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 14500,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/51174045417754?shop=55489659064",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/51174045417754?shop=55489659064"
+          },
+          {
+            "id": "gid://shopify/p/45kw7YYPz9oh2vbTG3q2ii",
+            "title": "Home Cooking Set",
+            "description": "A curated kitchen set featuring a cookbook, apron, and wooden spoon for intentional, joyful home cooking.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/2373/6525/files/Untitleddesign_55_0c9447a0-fa4f-4e40-9d49-94f36e591c02.png",
+                "altText": "Home Cooking Set"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 11500,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 11500,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 11500,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/46097801412761?shop=23736525",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/46097801412761?shop=23736525"
+          },
+          {
+            "id": "gid://shopify/p/5Eqq6ORCkS8MhWqU5ohx9M",
+            "title": "Just The Flavor® Flavor Kit Gift Subscription",
+            "description": "Monthly subscription delivering curated spice blends and cooking inspiration to your recipient.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0726/1588/7105/files/1_6f4ae656-ce21-4e9d-8fbe-fa70edbf15f5.png",
+                "altText": "Just The Flavor® Flavor Kit Gift Subscription"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 1295,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 1995,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 1295,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/46101090173185?shop=72615887105",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/46101090173185?shop=72615887105"
+          },
+          {
+            "id": "gid://shopify/p/7JpeTr7pmPf1Oultn3BaKW",
+            "title": "MOTHER'S DAY SPECIAL - COOKING GIFTS - MAY 2026",
+            "description": "",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0802/4244/2486/files/MOTHER_S_DAY_KITCHEN_GIFTS.png",
+                "altText": "MOTHER'S DAY SPECIAL - COOKING GIFTS - MAY 2026"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4312,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4312,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4312,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/50571527553270?shop=80242442486",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/50571527553270?shop=80242442486"
+          }
+        ]
+      }
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "data-chat-title",
+      "data": "Dad Cooking Gift"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "LhZccSBOKgXSZ9jT"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": "Need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " pick"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " avoid"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " subscription"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": "?"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " maybe"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " avoid"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " subscription"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " if"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " dad"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " prefers"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " tangible"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " Recommend"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " safe"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " pick"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " Cooking"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " Gift"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " Set"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " with"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " apron"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " etc"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " $"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": "84"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": "99"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " Also"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " maybe"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " Taste"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " of"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " Luxury"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " at"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " limit"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " Provide"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": " note"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "LhZccSBOKgXSZ9jT",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-end",
+      "id": "LhZccSBOKgXSZ9jT",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need to pick avoid: subscription? maybe avoid subscription if dad prefers tangible. Recommend safe pick: Cooking Gift Set with apron etc $84.99. Also maybe Taste of Luxury at limit. Provide note.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "text-start",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "Avoid"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " a"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " subscription"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "style"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " gift"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " it"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " can"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " feel"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " imp"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "ersonal"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " may"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " keep"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " arriving"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " after"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " holiday"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "  \n\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "Safe"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " pick"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " **"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "Cooking"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " Gift"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " Set"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " Apr"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "on"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " Tea"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " T"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "owel"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " Cooler"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " Bag"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " Notebook"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " &"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " Pen"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "84"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "99"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " high"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "rating"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " bundle"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " of"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " practical"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " tools"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " a"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " home"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "cook"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " actually"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " uses"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "  \n\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "If"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " you"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " can"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " stretch"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " a"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " few"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " dollars"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " more"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " **"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "Taste"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " of"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " Luxury"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " Gift"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " Box"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " at"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " $"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "149"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "00"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " adds"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " premium"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " olive"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " oil"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " aged"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " bals"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "amic"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " artisan"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " pasta"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " for"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " a"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " truly"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " upscale"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " treat"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "  \n\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "Both"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " ship"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " within"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " U"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": ".S"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " and"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " come"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " from"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " reputable"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " Shopify"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " merchants"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " Let"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " me"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " know"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " which"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " you"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "’d"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " like"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " to"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " lock"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " in"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " or"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " if"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " you"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " want"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " a"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " different"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " angle"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " ("
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": "e"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": ".g"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": ".,"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " BBQ"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " kit"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " spice"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": " set"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P",
+      "delta": ")."
+    },
+    {
+      "type": "text-end",
+      "id": "gen-1779204325-V4WdzdDXrt5IUZ9o1n4P"
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "finish",
+      "finishReason": "stop"
+    }
+  ],
+  "toolCalls": [
+    {
+      "id": "chatcmpl-tool-beec855e721db1a5",
+      "toolName": "searchProducts",
+      "input": {
+        "query": "cooking gift",
+        "limit": 12,
+        "maxPrice": 15000,
+        "shipsTo": "US",
+        "sortMode": "rating"
+      },
+      "output": {
+        "query": "cooking gift",
+        "sortMode": "rating",
+        "currentGenOnly": false,
+        "count": 10,
+        "category": "generic",
+        "freshnessHint": null,
+        "products": [
+          {
+            "id": "gid://shopify/p/4MvxhU9OA2a1frXSID4Phv",
+            "title": "Gift a Cooking Subscription!",
+            "description": "A curated cooking subscription box delivering global cuisine, recipes, and cultural experiences for families and individuals.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0067/3605/2287/files/Gift_A_Cooking_Subscription.png",
+                "altText": "Gift a Cooking Subscription!"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 2625,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 2850,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 2625,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/40188499853366?shop=6736052287",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/40188499853366?shop=6736052287"
+          },
+          {
+            "id": "gid://shopify/p/VIartonBiXo9ZrvAwCreY",
+            "title": "Cooking Gift Set - Apron, Tea Towel, Cooler Bag, Notebook & Pen",
+            "description": "A curated set of essential kitchen tools for chefs and culinary enthusiasts, including an apron, tea towel, cooler bag, notebook, and pen.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0618/5605/5348/files/76105068_Cooking_set.jpg",
+                "altText": "Cooking Gift Set - Apron, Tea Towel, Cooler Bag, Notebook & Pen"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 8499,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 8499,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 8499,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/44487520813108?shop=61856055348",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/44487520813108?shop=61856055348"
+          },
+          {
+            "id": "gid://shopify/p/6TVXIvfZGTCTcChYMKNdkX",
+            "title": "Gourmet Cooking Gift Set – Hand-Blended Spices, Apron, and Tool",
+            "description": "A curated set featuring hand-blended spices, a choice of utensil, and a premium cotton apron for elevate your kitchen experience.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/2007/7195/products/IMG_1838.jpg",
+                "altText": "Gourmet Cooking Gift Set – Hand-Blended Spices, Apron, and Tool - Kitchen on Fire STORE"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4900,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4900,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4900,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/42844103475360?shop=20077195",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/42844103475360?shop=20077195"
+          },
+          {
+            "id": "gid://shopify/p/4NB59isAypt1wg4MzYV77Z",
+            "title": "Taste of Luxury Gift Box",
+            "description": "A curated gourmet gift box featuring premium olive oil, aged balsamic vinegar, artisan pasta, and culinary accessories for elevating home meals and entertaining.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/1515/9256/files/Taste_of_Luxury_Gift_Box_at_The_Little_Shop_of_Olive_Oils_in_Franklin_MA.jpg",
+                "altText": "Taste of Luxury Gift Box"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 14900,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 14900,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 14900,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/43249734058175?shop=15159256",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/43249734058175?shop=15159256"
+          },
+          {
+            "id": "gid://shopify/p/2sTpl0eN3jOVkklWVeFZ2T",
+            "title": "Wood Smoked Barbecue Kit",
+            "description": "A complete kit to help home cooks master wood smoked barbecue flavors.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/1563/0185/products/wood-smoked-barbecue-kit-3483836.jpg",
+                "altText": "Wood Smoked Barbecue Kit - Cooking Gift Set Co."
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 5499,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 5499,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 5499,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/27059668169?shop=15630185",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/27059668169?shop=15630185"
+          },
+          {
+            "id": "gid://shopify/p/4YqqYz13ZgyzQLSHpDLr1r",
+            "title": "Cooking Gift Set Co. | French Tart Baking Set | Unique Gifts for Women | Baking Tools and Accessories | Kitchen Gifts, Hostess Gifts, Fun Gifts for Women | Gift Sets for Women, Food Gift Sets",
+            "description": "A complete baking kit with essential tools for making French tarts at home, perfect for gift-giving to bakers.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0678/0659/3272/products/cooking-gift-set-co-or-french-tart-baking-set-or-unique-gifts-for-women-or-baking-tools-and-accessories-or-kitchen-gifts-hostess-gifts-fun-gifts-for-women-or-gift-sets-for-women-food-gift-sets-cookcav-53023.jpg",
+                "altText": "Cooking Gift Set Co. | French Tart Baking Set | Unique Gifts for Women | Baking Tools and Accessories | Kitchen Gifts, Hostess Gifts, Fun Gifts for Women | Gift Sets for Women, Food Gift Sets - CookCave"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 5499,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 5499,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 5499,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/44396404506872?shop=67806593272",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/44396404506872?shop=67806593272"
+          },
+          {
+            "id": "gid://shopify/p/2Z7So1SI2Yrd73DvBe5xfv",
+            "title": "Cooking at Home Gift Set",
+            "description": "A curated gift set featuring Italian pasta, premium olive oil, anchovies, and a candle for a cozy, flavorful evening at home.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0554/8965/9064/files/Cooking_at_Home_Gift_Set_2025.png",
+                "altText": "Cooking at Home Gift Set"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 14500,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 14500,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 14500,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/51174045417754?shop=55489659064",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/51174045417754?shop=55489659064"
+          },
+          {
+            "id": "gid://shopify/p/45kw7YYPz9oh2vbTG3q2ii",
+            "title": "Home Cooking Set",
+            "description": "A curated kitchen set featuring a cookbook, apron, and wooden spoon for intentional, joyful home cooking.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/2373/6525/files/Untitleddesign_55_0c9447a0-fa4f-4e40-9d49-94f36e591c02.png",
+                "altText": "Home Cooking Set"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 11500,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 11500,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 11500,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/46097801412761?shop=23736525",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/46097801412761?shop=23736525"
+          },
+          {
+            "id": "gid://shopify/p/5Eqq6ORCkS8MhWqU5ohx9M",
+            "title": "Just The Flavor® Flavor Kit Gift Subscription",
+            "description": "Monthly subscription delivering curated spice blends and cooking inspiration to your recipient.",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0726/1588/7105/files/1_6f4ae656-ce21-4e9d-8fbe-fa70edbf15f5.png",
+                "altText": "Just The Flavor® Flavor Kit Gift Subscription"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 1295,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 1995,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 1295,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/46101090173185?shop=72615887105",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/46101090173185?shop=72615887105"
+          },
+          {
+            "id": "gid://shopify/p/7JpeTr7pmPf1Oultn3BaKW",
+            "title": "MOTHER'S DAY SPECIAL - COOKING GIFTS - MAY 2026",
+            "description": "",
+            "topFeatures": [],
+            "techSpecs": [],
+            "media": [
+              {
+                "url": "https://cdn.shopify.com/s/files/1/0802/4244/2486/files/MOTHER_S_DAY_KITCHEN_GIFTS.png",
+                "altText": "MOTHER'S DAY SPECIAL - COOKING GIFTS - MAY 2026"
+              }
+            ],
+            "priceRange": {
+              "min": {
+                "amount": 4312,
+                "currency": "USD"
+              },
+              "max": {
+                "amount": 4312,
+                "currency": "USD"
+              }
+            },
+            "sellers": [
+              {
+                "shopId": "Shopify merchant",
+                "shopName": "Shopify merchant",
+                "price": 4312,
+                "currency": "USD",
+                "checkoutUrl": "",
+                "variantId": "gid://shopify/ProductVariant/50571527553270?shop=80242442486",
+                "availableForSale": true
+              }
+            ],
+            "productUrl": "",
+            "primaryCheckoutUrl": "",
+            "primaryVariantId": "gid://shopify/ProductVariant/50571527553270?shop=80242442486"
+          }
+        ]
+      },
+      "state": "output-available"
+    }
+  ],
+  "assistantText": "**Avoid** a subscription‑style gift – it can feel impersonal and may keep arriving after the holiday.  \n\n**Safe pick** – **Cooking Gift Set – Apron, Tea Towel, Cooler Bag, Notebook & Pen** – $84.99, high‑rating bundle of practical tools a home‑cook actually uses.  \n\nIf you can stretch a few dollars more, the **Taste of Luxury Gift Box** at $149.00 adds premium olive oil, aged balsamic and artisan pasta for a truly upscale treat.  \n\nBoth ship within the U.S. and come from reputable Shopify merchants. Let me know which you’d like to lock in, or if you want a different angle (e.g., BBQ kit, spice set)."
+}

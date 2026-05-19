@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://kasparro-shopping-agent.local"),
   title: "Kasparro Shopper",
   description: "AI shopping agent powered by Shopify Catalog MCP.",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export const viewport = {

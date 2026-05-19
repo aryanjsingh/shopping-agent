@@ -75,7 +75,7 @@ function PureMessages({
             messages.length === 0 && !isLoading && "justify-center"
           )}
         >
-          {messages.length === 0 && !isLoading ? <Greeting /> : null}
+          {messages.length === 0 && !isLoading ? <Greeting chatId={chatId} /> : null}
 
           {isLoading && messages.length === 0 ? (
             <div className="flex flex-col gap-5 md:gap-7">
@@ -109,6 +109,7 @@ function PureMessages({
               isLoading={
                 status === "streaming" && messages.length - 1 === index
               }
+              isLatestMessage={messages.length - 1 === index}
               isReadonly={isReadonly}
               key={message.id}
               message={message}

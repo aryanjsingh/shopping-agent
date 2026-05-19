@@ -22,7 +22,7 @@ export function BuyCta({
         // biome-ignore lint/performance/noImgElement: Shopify Catalog images must be rendered live, not cached through an optimizer.
         <img
           alt={productTitle}
-          className="size-16 shrink-0 rounded-md object-cover"
+          className="size-16 shrink-0 rounded-md bg-muted/40 object-contain p-1"
           src={image}
         />
       ) : null}

@@ -17,6 +17,15 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
 import {
   SidebarGroup,
   SidebarGroupContent,
@@ -118,6 +127,10 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
   const router = useRouter();
   const [deleteId, setDeleteId] = useState<string | null>(null);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+  const [showClearDialog, setShowClearDialog] = useState(false);
+  const [renamingChat, setRenamingChat] = useState<Chat | null>(null);
+  const [renameTitle, setRenameTitle] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const hasReachedEnd = paginatedChatHistories
     ? paginatedChatHistories.some((page) => page.hasMore === false)
@@ -152,6 +165,59 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
     );
 
     toast.success("Chat deleted");
+  };
+
+  const handleRename = async () => {
+    const title = renameTitle.trim();
+    if (!renamingChat || !title) return;
+
+    const chatId = renamingChat.id;
+    setRenamingChat(null);
+
+    mutate((chatHistories) =>
+      chatHistories?.map((chatHistory) => ({
+        ...chatHistory,
+        chats: chatHistory.chats.map((chat) =>
+          chat.id === chatId ? { ...chat, title } : chat
+        ),
+      }))
+    );
+
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/api/chat?id=${chatId}`,
+      {
+        body: JSON.stringify({ title }),
+        headers: { "Content-Type": "application/json" },
+        method: "PATCH",
+      }
+    );
+
+    if (response.ok) {
+      toast.success("Chat renamed");
+    } else {
+      toast.error("Could not rename chat");
+      mutate();
+    }
+  };
+
+  const handleClearAll = async () => {
+    setShowClearDialog(false);
+    mutate((chatHistories) =>
+      chatHistories?.map((chatHistory) => ({ ...chatHistory, chats: [] }))
+    );
+    if (pathname?.startsWith("/chat/")) {
+      router.replace("/");
+    }
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/api/history`,
+      { method: "DELETE" }
+    );
+    if (response.ok) {
+      toast.success("History cleared");
+    } else {
+      toast.error("Could not clear history");
+      mutate();
+    }
   };
 
   if (!user) {
@@ -214,22 +280,53 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
     <>
       <SidebarGroup className="group-data-[collapsible=icon]:hidden">
         <SidebarGroupLabel className="text-[10px] font-semibold uppercase tracking-[0.12em] text-sidebar-foreground/70">
-          History
+          <span>History</span>
+          <button
+            className="ml-auto rounded px-1.5 py-0.5 font-medium normal-case tracking-normal text-sidebar-foreground/50 transition hover:bg-sidebar-accent hover:text-sidebar-foreground"
+            onClick={() => setShowClearDialog(true)}
+            type="button"
+          >
+            Clear all
+          </button>
         </SidebarGroupLabel>
         <SidebarGroupContent>
+          <div className="px-2 pb-2">
+            <Input
+              aria-label="Search history"
+              className="h-8 border-sidebar-border/60 bg-sidebar-accent/30 text-[12px]"
+              onChange={(event) => setSearchQuery(event.target.value)}
+              placeholder="Search history"
+              value={searchQuery}
+            />
+          </div>
           <SidebarMenu>
             {paginatedChatHistories &&
               (() => {
-                const chatsFromHistory = paginatedChatHistories.flatMap(
-                  (paginatedChatHistory) => paginatedChatHistory.chats
-                );
+                const query = searchQuery.trim().toLowerCase();
+                const chatsFromHistory = paginatedChatHistories
+                  .flatMap((paginatedChatHistory) => paginatedChatHistory.chats)
+                  .filter((chat) =>
+                    query ? chat.title.toLowerCase().includes(query) : true
+                  );
+
+                if (chatsFromHistory.length === 0) {
+                  return (
+                    <div className="px-2 py-3 text-[12px] text-sidebar-foreground/50">
+                      No matching chats.
+                    </div>
+                  );
+                }
 
                 const groupedChats = groupChatsByDate(chatsFromHistory);
+                const openRename = (chat: Chat) => {
+                  setRenamingChat(chat);
+                  setRenameTitle(chat.title);
+                };
 
                 return (
                   <div className="flex flex-col gap-4">
                     {groupedChats.today.length > 0 && (
-                      <div>
+                      <div className="flex flex-col gap-1">
                         <div className="px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-sidebar-foreground/70">
                           Today
                         </div>
@@ -242,6 +339,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                               setDeleteId(chatId);
                               setShowDeleteDialog(true);
                             }}
+                            onRename={openRename}
                             setOpenMobile={setOpenMobile}
                           />
                         ))}
@@ -249,7 +347,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                     )}
 
                     {groupedChats.yesterday.length > 0 && (
-                      <div>
+                      <div className="flex flex-col gap-1">
                         <div className="px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-sidebar-foreground/70">
                           Yesterday
                         </div>
@@ -262,6 +360,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                               setDeleteId(chatId);
                               setShowDeleteDialog(true);
                             }}
+                            onRename={openRename}
                             setOpenMobile={setOpenMobile}
                           />
                         ))}
@@ -269,7 +368,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                     )}
 
                     {groupedChats.lastWeek.length > 0 && (
-                      <div>
+                      <div className="flex flex-col gap-1">
                         <div className="px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-sidebar-foreground/70">
                           Last 7 days
                         </div>
@@ -282,6 +381,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                               setDeleteId(chatId);
                               setShowDeleteDialog(true);
                             }}
+                            onRename={openRename}
                             setOpenMobile={setOpenMobile}
                           />
                         ))}
@@ -289,7 +389,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                     )}
 
                     {groupedChats.lastMonth.length > 0 && (
-                      <div>
+                      <div className="flex flex-col gap-1">
                         <div className="px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-sidebar-foreground/70">
                           Last 30 days
                         </div>
@@ -302,6 +402,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                               setDeleteId(chatId);
                               setShowDeleteDialog(true);
                             }}
+                            onRename={openRename}
                             setOpenMobile={setOpenMobile}
                           />
                         ))}
@@ -309,7 +410,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                     )}
 
                     {groupedChats.older.length > 0 && (
-                      <div>
+                      <div className="flex flex-col gap-1">
                         <div className="px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-sidebar-foreground/70">
                           Older
                         </div>
@@ -322,6 +423,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                               setDeleteId(chatId);
                               setShowDeleteDialog(true);
                             }}
+                            onRename={openRename}
                             setOpenMobile={setOpenMobile}
                           />
                         ))}
@@ -368,6 +470,55 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
+      <AlertDialog onOpenChange={setShowClearDialog} open={showClearDialog}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Clear all history?</AlertDialogTitle>
+            <AlertDialogDescription>
+              This permanently deletes every saved chat in this account.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogAction onClick={handleClearAll}>
+              Clear history
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      <Dialog
+        onOpenChange={(open) => {
+          if (!open) setRenamingChat(null);
+        }}
+        open={Boolean(renamingChat)}
+      >
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Rename chat</DialogTitle>
+          </DialogHeader>
+          <Input
+            autoFocus
+            onChange={(event) => setRenameTitle(event.target.value)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter") {
+                event.preventDefault();
+                handleRename();
+              }
+            }}
+            value={renameTitle}
+          />
+          <DialogFooter>
+            <Button variant="ghost" onClick={() => setRenamingChat(null)}>
+              Cancel
+            </Button>
+            <Button disabled={!renameTitle.trim()} onClick={handleRename}>
+              Save
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </>
   );
 }

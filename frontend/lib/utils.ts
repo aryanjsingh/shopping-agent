@@ -95,7 +95,13 @@ export function getDocumentTimestampByIndex(
 }
 
 export function sanitizeText(text: string) {
-  return text.replace('<has_function_call>', '');
+  return text
+    .replace('<has_function_call>', '')
+    .split('\n')
+    .filter((line) => !/^\s*[-*•]\s*$/.test(line))
+    .join('\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
 }
 
 export function convertToUIMessages(messages: DBMessage[]): ChatMessage[] {

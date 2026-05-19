@@ -1,0 +1,131 @@
+[
+  {
+    "tag": "broad",
+    "text": "i need new headphones",
+    "chatId": "02a9dfa1-fda7-45fb-b19b-13e1aa5f5a8b",
+    "durationMs": 30666,
+    "ok": true,
+    "fired": [],
+    "wins": [],
+    "issues": [
+      "never called searchProducts or clarifyIntent",
+      "broad request — should have called clarifyIntent first"
+    ],
+    "textPreview": "{ \"question\": \"What will you mainly use them for?\", \"reason\": \"Pinpointing use case narrows to either gaming, commuting, or audiophile listening, giving better matches.\", \"options\": [ { \"label\": \"Gaming\", \"value\": \"Gaming headphones\", \"searchHint\": \"ga"
+  },
+  {
+    "tag": "specific",
+    "text": "find airpods pro 2",
+    "chatId": "6e4e888a-1ef3-495e-85cd-27bf73a65659",
+    "durationMs": 43596,
+    "ok": true,
+    "fired": [
+      "searchProducts",
+      "assessProductFreshness"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [],
+    "textPreview": "**AirPods Pro (2nd generation) with MagSafe Case (USB‑C)** – $69.00 USD, 5‑star rating. Current‑gen earbuds with Apple’s MagSafe wireless charging, Adaptive Transparency and spatial audio. Best overall value and fully up‑to‑date. **Apple AirPods Pro 2 (budget‑friendly)** – $35.9"
+  },
+  {
+    "tag": "budget",
+    "text": "running shoes under 80 dollars",
+    "chatId": "29ad9b61-8096-4f5e-ba63-cc6718924d0c",
+    "durationMs": 12425,
+    "ok": true,
+    "fired": [
+      "searchProducts"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [
+      "tool searchProducts returned error: Shopify Catalog MCP search_catalog failed (503): <!--\n  The source of truth for this generic error page is https://githu"
+    ],
+    "textPreview": "The catalog search failed—nothing came back. **Next step:** try a broader query without the “men / women” filter and keep the $80 budget. *Example:* “running shoes under $80” (or simply “running shoes $80”). If you’re open to a slightly higher ceiling, raising the max to $90"
+  },
+  {
+    "tag": "compare",
+    "text": "compare kindle paperwhite vs basic kindle",
+    "chatId": "7373cc14-8172-4655-b1aa-93b21bacd97f",
+    "durationMs": 16411,
+    "ok": true,
+    "fired": [],
+    "wins": [],
+    "issues": [
+      "never called searchProducts or clarifyIntent",
+      "compare scenario — compareProducts was not called",
+      "no assistant text returned"
+    ],
+    "textPreview": ""
+  },
+  {
+    "tag": "cheapest",
+    "text": "cheapest place to buy logitech mx master 3s",
+    "chatId": "4a43a5f7-127c-4b83-83d1-47098c0ff2be",
+    "durationMs": 22945,
+    "ok": true,
+    "fired": [
+      "searchProducts",
+      "compareSellers"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [],
+    "textPreview": "**Logitech MX Master 3S – $96.00 (USD)** – the lowest listed price from the catalog. The seller is a Shopify merchant, the mouse is brand‑new, and the checkout link is ready if you want to purchase. Let me know if you’d like the checkout button or another retailer’s option."
+  },
+  {
+    "tag": "gift",
+    "text": "gift for dad who likes cooking, under 150",
+    "chatId": "364394d2-91ca-406c-9fba-08d7b26aa5d0",
+    "durationMs": 27809,
+    "ok": true,
+    "fired": [
+      "searchProducts"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [],
+    "textPreview": "**Avoid** a subscription‑style gift – it can feel impersonal and may keep arriving after the holiday. **Safe pick** – **Cooking Gift Set – Apron, Tea Towel, Cooler Bag, Notebook & Pen** – $84.99, high‑rating bundle of practical tools a home‑cook actually uses. If you can st"
+  },
+  {
+    "tag": "phone-old-vs-new",
+    "text": "i need a gaming phone under 500 dollars",
+    "chatId": "82eebdc1-9101-4340-a7dc-93ae402bbe3e",
+    "durationMs": 29667,
+    "ok": true,
+    "fired": [
+      "searchProducts",
+      "searchProducts",
+      "assessProductFreshness"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [],
+    "textPreview": "A solid gaming phone under $500 means you need the newest chipset, a high‑refresh display and a big battery without blowing the budget. **2025 S24 Ultra 7.3″ 5G – $249** - Current‑gen (2025) flagship‑class hardware. - 16 GB RAM, 1 TB storage, 120 Hz OLED screen, 6000 mAh bat"
+  },
+  {
+    "tag": "laptop-video",
+    "text": "good laptop for video editing under 1200",
+    "chatId": "45ce0166-1df2-4ef4-965b-560650fe6bc0",
+    "durationMs": 39793,
+    "ok": true,
+    "fired": [
+      "searchProducts",
+      "assessProductFreshness",
+      "searchProducts",
+      "assessProductFreshness",
+      "searchProducts"
+    ],
+    "wins": [
+      "searched catalog"
+    ],
+    "issues": [],
+    "textPreview": "- **Dell Precision 5540 (15.6″, Intel i5, 16 GB RAM)** – $139.95. Works for video editing at a rock‑bottom price; solid build, decent GPU for Light‑to‑Medium timelines. Generation unclear, so it may lag behind the latest silicon. - **Apple MacBook Air 15″ M4 (2025, 16 GB RAM,"
+  }
+]

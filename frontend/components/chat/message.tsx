@@ -21,13 +21,19 @@ import { PreviewAttachment } from "./preview-attachment";
 import { BuyCta } from "./shopping/buy-cta";
 import {
   isClarifyMenuRestatement,
+  tryParseClarifyMenuFromText,
   type ClarifyMenuOutput,
 } from "./shopping/clarify-menu-utils";
 import { ComparisonTable } from "./shopping/comparison-table";
 import { OptionChips } from "./shopping/option-chips";
+import { ProductDetailCard } from "./shopping/product-detail-card";
 import { ProductGrid, ProductGridSkeleton } from "./shopping/product-grid";
 import { ProductMarkdownResponse } from "./shopping/product-markdown-response";
 import { SellerComparison } from "./shopping/seller-comparison";
+import {
+  WebSearchResults,
+  type WebSearchResult,
+} from "./shopping/web-search-results";
 import { Weather } from "./weather";
 
 type SearchProductsPart = {
@@ -64,10 +70,11 @@ const PurePreviewMessage = ({
   vote,
   isLoading,
   setMessages: _setMessages,
-  regenerate: _regenerate,
+  regenerate,
   sendMessage,
   isReadonly,
   requiresScrollPadding: _requiresScrollPadding,
+  isLatestMessage,
   onEdit,
 }: {
   addToolApprovalResponse: UseChatHelpers<ChatMessage>["addToolApprovalResponse"];
@@ -80,6 +87,7 @@ const PurePreviewMessage = ({
   sendMessage?: UseChatHelpers<ChatMessage>["sendMessage"];
   isReadonly: boolean;
   requiresScrollPadding: boolean;
+  isLatestMessage: boolean;
   onEdit?: (message: ChatMessage) => void;
 }) => {
   const attachmentsFromMessage = message.parts.filter(
@@ -136,22 +144,14 @@ const PurePreviewMessage = ({
     { text: "", isStreaming: false, rendered: false }
   ) ?? { text: "", isStreaming: false, rendered: false };
 
-  const renderSearchProducts = (part: SearchProductsPart, key: string) => {
+  const renderProductToolFallback = (part: SearchProductsPart, key: string) => {
     const { toolCallId, state } = part;
     if (
       state === "output-available" &&
       part.output &&
       !("error" in part.output)
     ) {
-      return (
-        <div className="w-full" key={toolCallId ?? key}>
-          <ProductGrid
-            defaultOpen={false}
-            products={part.output.products ?? []}
-            query={part.output.query ?? "products"}
-          />
-        </div>
-      );
+      return null;
     }
     if (
       state === "output-available" &&
@@ -174,39 +174,93 @@ const PurePreviewMessage = ({
     );
   };
 
-  const productResults = message.parts
-    ?.map((part, index) =>
-      part.type === "tool-searchProducts"
-        ? renderSearchProducts(
-            part as SearchProductsPart,
-            `message-${message.id}-product-${index}`
-          )
-        : null
-    )
-    .filter(Boolean);
-  const taggableProducts =
+  const productToolParts =
     message.parts
-      ?.flatMap((part) => {
-        if (part.type !== "tool-searchProducts") {
-          return [];
-        }
-        const output = (part as SearchProductsPart).output;
-        return output && !("error" in output) ? (output.products ?? []) : [];
-      })
-      .filter((product): product is ProductResult =>
-        Boolean(product?.title?.trim())
-      ) ?? [];
+      ?.filter(
+        (part) =>
+          part.type === "tool-searchProducts" ||
+          part.type === "tool-showMore" ||
+          part.type === "tool-refineSearch"
+      )
+      .map((part, index) => ({
+        key: `message-${message.id}-product-${index}`,
+        part: part as SearchProductsPart,
+      })) ?? [];
+  const productOutputs = productToolParts
+    .map(({ part }) => part.output)
+    .filter(
+      (
+        output
+      ): output is NonNullable<SearchProductsPart["output"]> & {
+        products: ProductResult[];
+      } =>
+        Boolean(
+          output &&
+            !("error" in output) &&
+            Array.isArray(output.products) &&
+            output.products.length > 0
+        )
+    );
+  const productQuery =
+    productOutputs.length === 1
+      ? (productOutputs[0]?.query ?? "products")
+      : "matched products";
+  const consolidatedProducts = Array.from(
+      productOutputs
+        .flatMap((output) => output.products)
+        .reduce((map, product) => {
+          if (!map.has(product.id)) {
+            map.set(product.id, product);
+          }
+          return map;
+        }, new Map<string, ProductResult>())
+        .values()
+  );
+  const lastProductToolPart = productToolParts.at(-1);
+  const productResults =
+    consolidatedProducts.length > 0 ? (
+      <div className="w-full" key={`message-${message.id}-products`}>
+        <ProductGrid
+          defaultOpen={true}
+          products={consolidatedProducts}
+          query={productQuery}
+        />
+      </div>
+    ) : lastProductToolPart ? (
+      renderProductToolFallback(
+        lastProductToolPart.part,
+        lastProductToolPart.key
+      )
+    ) : null;
+  const shouldRenderClarify = isLatestMessage && productToolParts.length === 0;
+  const taggableProducts =
+    consolidatedProducts.length > 0
+      ? consolidatedProducts.filter((product): product is ProductResult =>
+          Boolean(product?.title?.trim())
+        )
+      : [];
   const clarifyOutputs =
     message.parts
       ?.filter((part) => part.type === "tool-clarifyIntent")
       .map((part) => {
-        const output = (part as {
-          state?: string;
-          output?: ClarifyMenuOutput;
-        }).output;
-        return output;
+        const p = part as { state?: string; output?: unknown; input?: unknown };
+        const raw = p.state === "output-available" ? p.output : p.input;
+        return raw as ClarifyMenuOutput | undefined;
       })
       .filter(Boolean) ?? [];
+
+  // Salvage clarifyIntent menus the model emitted as JSON text instead of a tool call.
+  const salvagedClarify: { partIndex: number; menu: ClarifyMenuOutput }[] = [];
+  if (isAssistant && shouldRenderClarify && clarifyOutputs.length === 0) {
+    message.parts?.forEach((part, idx) => {
+      if (part.type !== "text" || !part.text) return;
+      const parsed = tryParseClarifyMenuFromText(part.text);
+      if (parsed) salvagedClarify.push({ partIndex: idx, menu: parsed });
+    });
+  }
+  const salvagedByPart = new Map(
+    salvagedClarify.map((s) => [s.partIndex, s.menu])
+  );
 
   // Suppress getProduct cards when compareProducts is also in this message
   const hasCompareProducts = message.parts?.some(
@@ -254,7 +308,7 @@ const PurePreviewMessage = ({
     isAssistant &&
     (mergedReasoning.text ||
       displayThinkingTools.length > 0 ||
-      thinkingData?.data?.durationSeconds) ? (
+      thinkingData) ? (
       <MessageThinking
         durationSeconds={thinkingData?.data?.durationSeconds}
         isStreaming={isThinkingPanelStreaming}
@@ -273,6 +327,38 @@ const PurePreviewMessage = ({
     }
 
     if (type === "text") {
+      // Salvaged clarifyIntent JSON — render menu, suppress raw JSON text.
+      const salvaged = salvagedByPart.get(index);
+      if (salvaged) {
+        const menuOptions = (salvaged.options ?? [])
+          .filter(
+            (o): o is { label: string; value: string; description?: string; searchHint?: string } =>
+              typeof o.label === "string" && typeof o.value === "string"
+          );
+        return (
+          <div key={key}>
+            <OptionChips
+              onSelect={
+                sendMessage
+                  ? (value) => {
+                      sendMessage({
+                        role: "user",
+                        parts: [{ type: "text", text: value }],
+                      });
+                    }
+                  : undefined
+              }
+              options={menuOptions}
+              question={salvaged.question ?? ""}
+              reason={salvaged.reason}
+              mode={salvaged.mode}
+            />
+          </div>
+        );
+      }
+
+      // When clarifyIntent is present, suppress only restated menu text — keep
+      // the short setup sentence the model writes above the chips.
       if (
         isAssistant &&
         clarifyOutputs.some((output) =>
@@ -285,7 +371,7 @@ const PurePreviewMessage = ({
       return (
         <MessageContent
           className={cn("text-[13px] leading-[1.65]", {
-            "w-fit max-w-[min(80%,56ch)] overflow-hidden break-words rounded-lg border border-border/40 bg-secondary px-3.5 py-2 shadow-[var(--shadow-card)]":
+            "w-fit max-w-[min(80%,56ch)] whitespace-pre-wrap break-words rounded-lg border border-border/40 bg-secondary px-3.5 py-2 text-left shadow-[var(--shadow-card)]":
               message.role === "user",
           })}
           data-testid="message-content"
@@ -303,7 +389,46 @@ const PurePreviewMessage = ({
       );
     }
 
-    if (type === "tool-searchProducts") {
+    if (type === "tool-searchProducts" || type === "tool-showMore" || type === "tool-refineSearch") {
+      return null;
+    }
+
+    if (type === "tool-webSearch") {
+      const { toolCallId, state } = part;
+      if (state === "output-available" && part.output) {
+        const out = part.output as {
+          query?: string;
+          searchKind?: string;
+          cached?: boolean;
+          results?: WebSearchResult[];
+          error?: string;
+        };
+        if (out.error) {
+          return (
+            <div
+              key={toolCallId}
+              className="rounded-lg border border-amber-300/50 bg-amber-50 px-3 py-2 text-[12px] text-amber-700 dark:border-amber-700/40 dark:bg-amber-950/40 dark:text-amber-300"
+            >
+              Web search couldn't reach a source. Continuing with catalog data.
+            </div>
+          );
+        }
+        return (
+          <div key={toolCallId}>
+            <WebSearchResults
+              query={out.query ?? ""}
+              searchKind={out.searchKind}
+              results={out.results ?? []}
+              cached={out.cached}
+            />
+          </div>
+        );
+      }
+      return null;
+    }
+
+    if (type === "tool-webFetch") {
+      // Hidden by default — fetched content shows up in model narration.
       return null;
     }
 
@@ -379,22 +504,14 @@ const PurePreviewMessage = ({
         "product" in part.output
       ) {
         const product = part.output.product as
-          | { title?: string; uniqueSellingPoint?: string }
+          | Parameters<typeof ProductDetailCard>[0]["product"]
           | undefined;
         if (!product) {
           return null;
         }
         return (
-          <div
-            className="rounded-xl border border-border/40 bg-card p-3 text-[12px]"
-            key={toolCallId}
-          >
-            <div className="font-medium">{product.title}</div>
-            {product.uniqueSellingPoint ? (
-              <div className="mt-1 text-muted-foreground">
-                {product.uniqueSellingPoint}
-              </div>
-            ) : null}
+          <div key={toolCallId}>
+            <ProductDetailCard product={product} />
           </div>
         );
       }
@@ -421,14 +538,22 @@ const PurePreviewMessage = ({
     }
 
     if (type === "tool-clarifyIntent") {
+      if (!shouldRenderClarify) {
+        return null;
+      }
       const { toolCallId, state } = part;
-      // Render chips as soon as output is available (tool echoes its input as output)
-      const chipData = state === "output-available" && part.output
-        ? part.output
-        : state === "input-available" && part.input
-          ? part.input
-          : null;
-      if (chipData && chipData.options?.length > 0) {
+      type ClarifyData = {
+        question?: string;
+        reason?: string;
+        mode?: "use_case" | "budget" | "style" | "feature" | "recipient";
+        options?: { label: string; value: string; description?: string; searchHint?: string }[];
+      };
+      const rawData: unknown =
+        state === "output-available" ? (part as { output?: unknown }).output :
+        state === "input-available" ? (part as { input?: unknown }).input :
+        null;
+      const chipData = rawData as ClarifyData | null;
+      if (chipData && Array.isArray(chipData.options) && chipData.options.length > 0) {
         return (
           <div key={toolCallId}>
             <OptionChips
@@ -443,7 +568,7 @@ const PurePreviewMessage = ({
                   : undefined
               }
               options={chipData.options}
-              question={chipData.question}
+              question={chipData.question ?? ""}
               reason={chipData.reason}
               mode={chipData.mode}
             />
@@ -636,18 +761,24 @@ const PurePreviewMessage = ({
       key={`action-${message.id}`}
       message={message}
       onEdit={onEdit ? () => onEdit(message) : undefined}
+      regenerate={regenerate}
       vote={vote}
     />
   );
 
   const content = isThinking ? (
-    <MessageThinking isStreaming={true} reasoning="" tools={[]} />
+    <MessageThinking
+      durationSeconds={thinkingData?.data?.durationSeconds}
+      isStreaming={true}
+      reasoning=""
+      tools={displayThinkingTools}
+    />
   ) : (
     <>
       {attachments}
       {thinkingPanel}
       {parts}
-      {isAssistant && isLoading ? null : productResults}
+      {productResults}
       {actions}
     </>
   );

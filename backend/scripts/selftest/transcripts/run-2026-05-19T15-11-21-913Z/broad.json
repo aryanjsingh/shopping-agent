@@ -1,0 +1,1335 @@
+{
+  "scenario": {
+    "tag": "broad",
+    "text": "i need new headphones"
+  },
+  "chatId": "d2f64fe9-22b0-4591-9a35-241b3452c564",
+  "durationMs": 29834,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "a7dcc352-9894-42d5-81e9-4543918c6674"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "rzznc4NJQjaY4BKR"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": "The"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " user"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " is"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " asking"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " new"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " headphones"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " This"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " is"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " a"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " broad"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " category"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " request"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " with"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " no"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " specific"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " constraints"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": "brand"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " budget"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " features"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " etc"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": ".)."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " According"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " decision"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " tree"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " this"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " falls"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " under"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " category"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " A"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " \""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": "Broad"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " category"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " no"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " constraint"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": "\""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " which"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " means"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " I"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " should"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " clarify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": "Intent"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " first"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " get"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " more"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " information"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " about"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " their"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " preferences"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " before"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " searching"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " catalog"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": ".\n\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": "I"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " ask"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " a"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " specific"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " question"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " about"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " their"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " primary"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " case"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " budget"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " tier"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " style"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " or"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " must"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": "-have"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " feature"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " Since"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " headphones"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " can"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " vary"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " widely"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " in"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " cases"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": "g"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": "aming"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " music"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " calls"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " etc"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": ".),"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " starting"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " with"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " case"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " would"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " be"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " most"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " helpful"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": ".\n\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": "Let"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " me"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " create"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " a"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " clarify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": "Intent"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " call"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " with"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " a"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": "_case"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": " mode"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "rzznc4NJQjaY4BKR",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-end",
+      "id": "rzznc4NJQjaY4BKR",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "\nThe user is asking for new headphones. This is a broad category request with no specific constraints (brand, budget, features, etc.). According to the decision tree, this falls under category A \"Broad category, no constraint\" which means I should use clarifyIntent first to get more information about their preferences before searching the catalog.\n\nI need to ask a specific question about their primary use case, budget tier, style, or must-have feature. Since headphones can vary widely in use cases (gaming, music, calls, etc.), starting with use case would be most helpful.\n\nLet me create a clarifyIntent call with a use_case mode.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "text-start",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5",
+      "delta": "I"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5",
+      "delta": "'ll"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5",
+      "delta": " help"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5",
+      "delta": " you"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5",
+      "delta": " find"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5",
+      "delta": " right"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5",
+      "delta": " headphones"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5",
+      "delta": "."
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5",
+      "delta": " Let"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5",
+      "delta": "'s"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5",
+      "delta": " narrow"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5",
+      "delta": " down"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5",
+      "delta": " what"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5",
+      "delta": " you"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5",
+      "delta": " need"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5",
+      "delta": ":\n"
+    },
+    {
+      "type": "tool-input-start",
+      "toolCallId": "call_4eb0ec9b73234e8d85cebe87",
+      "toolName": "clarifyIntent"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "call_4eb0ec9b73234e8d85cebe87",
+      "inputTextDelta": "{\"question\":\"What's the primary use for your headphones?\",\"reason\":\"Different headphones excel at different tasks - gaming, calls, music, etc.\",\"mode\":\"use_case\",\"options\":[{\"label\": \"Music & Entertainment\", \"value\": \"music and entertainment\", \"description\": \"Best for music streaming, movies, and general audio\", \"searchHint\": \"wireless headphones music\"}, {\"label\": \"Gaming\", \"value\": \"gaming\", \"description\": \"Low latency, mic clarity, long sessions\", \"searchHint\": \"gaming headset wireless\"}, {\"label\": \"Calls & Work\", \"value\": \"calls and work\", \"description\": \"Clear mic, noise canceling, all-day comfort\", \"searchHint\": \"noise canceling headphones\"}, {\"label\": \"Sports & Exercise\", \"value\": \"sports and exercise\", \"description\": \"Sweat-proof, secure fit, durable\", \"searchHint\": \"sports wireless headphones\"}]}"
+    },
+    {
+      "type": "tool-input-available",
+      "toolCallId": "call_4eb0ec9b73234e8d85cebe87",
+      "toolName": "clarifyIntent",
+      "input": {
+        "question": "What's the primary use for your headphones?",
+        "reason": "Different headphones excel at different tasks - gaming, calls, music, etc.",
+        "mode": "use_case",
+        "options": [
+          {
+            "label": "Music & Entertainment",
+            "description": "Best for music streaming, movies, and general audio",
+            "value": "music and entertainment",
+            "searchHint": "wireless headphones music"
+          },
+          {
+            "label": "Gaming",
+            "description": "Low latency, mic clarity, long sessions",
+            "value": "gaming",
+            "searchHint": "gaming headset wireless"
+          },
+          {
+            "label": "Calls & Work",
+            "description": "Clear mic, noise canceling, all-day comfort",
+            "value": "calls and work",
+            "searchHint": "noise canceling headphones"
+          },
+          {
+            "label": "Sports & Exercise",
+            "description": "Sweat-proof, secure fit, durable",
+            "value": "sports and exercise",
+            "searchHint": "sports wireless headphones"
+          }
+        ]
+      },
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "\nThe user is asking for new headphones. This is a broad category request with no specific constraints (brand, budget, features, etc.). According to the decision tree, this falls under category A \"Broad category, no constraint\" which means I should use clarifyIntent first to get more information about their preferences before searching the catalog.\n\nI need to ask a specific question about their primary use case, budget tier, style, or must-have feature. Since headphones can vary widely in use cases (gaming, music, calls, etc.), starting with use case would be most helpful.\n\nLet me create a clarifyIntent call with a use_case mode.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tool-output-available",
+      "toolCallId": "call_4eb0ec9b73234e8d85cebe87",
+      "output": {
+        "question": "What's the primary use for your headphones?",
+        "reason": "Different headphones excel at different tasks - gaming, calls, music, etc.",
+        "mode": "use_case",
+        "options": [
+          {
+            "label": "Music & Entertainment",
+            "description": "Best for music streaming, movies, and general audio",
+            "value": "music and entertainment",
+            "searchHint": "wireless headphones music"
+          },
+          {
+            "label": "Gaming",
+            "description": "Low latency, mic clarity, long sessions",
+            "value": "gaming",
+            "searchHint": "gaming headset wireless"
+          },
+          {
+            "label": "Calls & Work",
+            "description": "Clear mic, noise canceling, all-day comfort",
+            "value": "calls and work",
+            "searchHint": "noise canceling headphones"
+          },
+          {
+            "label": "Sports & Exercise",
+            "description": "Sweat-proof, secure fit, durable",
+            "value": "sports and exercise",
+            "searchHint": "sports wireless headphones"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text-end",
+      "id": "gen-1779203482-Yuvg2ZHxZN9AvMJ36ga5"
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "WEEwRbYNCuhaLJek"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": "\n"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": "I"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": "'ve"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " presented"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " user"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " with"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " a"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " menu"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " clarify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " their"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " case"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " headphones"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " Now"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " I"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " wait"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " their"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " selection"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " before"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " proceeding"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " with"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " search"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " The"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " options"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " cover"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " main"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " cases"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " headphones"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " and"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " each"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " has"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " a"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " corresponding"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " search"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " hint"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " that"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " will"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " be"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " used"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " the"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " catalog"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " search"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " once"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " they"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " make"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " their"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": " choice"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "WEEwRbYNCuhaLJek",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-end",
+      "id": "WEEwRbYNCuhaLJek",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "\nI've presented the user with a menu to clarify their use case for headphones. Now I need to wait for their selection before proceeding with the search. The options cover the main use cases for headphones and each has a corresponding search hint that will be used for the catalog search once they make their choice.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "text-start",
+      "id": "gen-1779203498-AcYJWJCAxhiar3CqhEZm"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203498-AcYJWJCAxhiar3CqhEZm",
+      "delta": "What"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203498-AcYJWJCAxhiar3CqhEZm",
+      "delta": "'s"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203498-AcYJWJCAxhiar3CqhEZm",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203498-AcYJWJCAxhiar3CqhEZm",
+      "delta": " primary"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203498-AcYJWJCAxhiar3CqhEZm",
+      "delta": " use"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203498-AcYJWJCAxhiar3CqhEZm",
+      "delta": " for"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203498-AcYJWJCAxhiar3CqhEZm",
+      "delta": " your"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203498-AcYJWJCAxhiar3CqhEZm",
+      "delta": " headphones"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203498-AcYJWJCAxhiar3CqhEZm",
+      "delta": "?"
+    },
+    {
+      "type": "text-end",
+      "id": "gen-1779203498-AcYJWJCAxhiar3CqhEZm"
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "finish",
+      "finishReason": "stop"
+    },
+    {
+      "type": "data-chat-title",
+      "data": "New Headphones"
+    }
+  ],
+  "toolCalls": [
+    {
+      "id": "call_4eb0ec9b73234e8d85cebe87",
+      "toolName": "clarifyIntent",
+      "input": {
+        "question": "What's the primary use for your headphones?",
+        "reason": "Different headphones excel at different tasks - gaming, calls, music, etc.",
+        "mode": "use_case",
+        "options": [
+          {
+            "label": "Music & Entertainment",
+            "description": "Best for music streaming, movies, and general audio",
+            "value": "music and entertainment",
+            "searchHint": "wireless headphones music"
+          },
+          {
+            "label": "Gaming",
+            "description": "Low latency, mic clarity, long sessions",
+            "value": "gaming",
+            "searchHint": "gaming headset wireless"
+          },
+          {
+            "label": "Calls & Work",
+            "description": "Clear mic, noise canceling, all-day comfort",
+            "value": "calls and work",
+            "searchHint": "noise canceling headphones"
+          },
+          {
+            "label": "Sports & Exercise",
+            "description": "Sweat-proof, secure fit, durable",
+            "value": "sports and exercise",
+            "searchHint": "sports wireless headphones"
+          }
+        ]
+      },
+      "output": {
+        "question": "What's the primary use for your headphones?",
+        "reason": "Different headphones excel at different tasks - gaming, calls, music, etc.",
+        "mode": "use_case",
+        "options": [
+          {
+            "label": "Music & Entertainment",
+            "description": "Best for music streaming, movies, and general audio",
+            "value": "music and entertainment",
+            "searchHint": "wireless headphones music"
+          },
+          {
+            "label": "Gaming",
+            "description": "Low latency, mic clarity, long sessions",
+            "value": "gaming",
+            "searchHint": "gaming headset wireless"
+          },
+          {
+            "label": "Calls & Work",
+            "description": "Clear mic, noise canceling, all-day comfort",
+            "value": "calls and work",
+            "searchHint": "noise canceling headphones"
+          },
+          {
+            "label": "Sports & Exercise",
+            "description": "Sweat-proof, secure fit, durable",
+            "value": "sports and exercise",
+            "searchHint": "sports wireless headphones"
+          }
+        ]
+      },
+      "state": "output-available"
+    }
+  ],
+  "assistantText": "I'll help you find the right headphones. Let's narrow down what you need:\nWhat's the primary use for your headphones?"
+}

@@ -1,0 +1,26 @@
+{
+  "scenario": {
+    "tag": "compare",
+    "text": "compare kindle paperwhite vs basic kindle"
+  },
+  "chatId": "e5f4c72a-9c22-40b8-a310-9a75f1a00f16",
+  "durationMs": 9480,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "f8e7f2a3-2238-47ce-84b0-e0030bc3038d"
+    },
+    {
+      "type": "error",
+      "errorText": "Failed after 3 attempts. Last error: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day"
+    },
+    {
+      "type": "data-chat-title",
+      "data": "Kindle Paperwhite vs Basic Kindle"
+    }
+  ],
+  "toolCalls": [],
+  "assistantText": ""
+}

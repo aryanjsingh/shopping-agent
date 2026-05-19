@@ -2,12 +2,14 @@
 
 import {
   BadgeDollarSignIcon,
+  ChevronLeftIcon,
   ChevronRightIcon,
   GiftIcon,
   ListChecksIcon,
   PaletteIcon,
   SparklesIcon,
   TargetIcon,
+  XIcon,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -53,6 +55,7 @@ export function OptionChips({
   const [selected, setSelected] = useState<string | null>(null);
   const Icon = modeIcons[mode ?? "use_case"] ?? TargetIcon;
   const accentClass = modeAccents[mode ?? "default"] ?? modeAccents.default;
+  const visibleOptions = options.slice(0, 4);
 
   function handleSelect(value: string) {
     if (selected || !onSelect) return;
@@ -61,71 +64,124 @@ export function OptionChips({
   }
 
   return (
-    <div className="w-full max-w-[520px] overflow-hidden rounded-xl border border-border/60 bg-background shadow-[var(--shadow-card)] animate-in fade-in slide-in-from-bottom-2 duration-300">
-      <div className="flex gap-3 border-border/50 border-b px-3 py-3">
-        <div className={cn("flex size-8 shrink-0 items-center justify-center rounded-md", accentClass)}>
-          <Icon className="size-4" />
+    <div className="w-full max-w-[620px] overflow-hidden rounded-lg border border-border/60 bg-card shadow-[var(--shadow-card)] animate-in fade-in duration-150">
+      <div className="flex items-center justify-between gap-3 border-border/50 border-b px-4 py-3">
+        <div className="flex min-w-0 items-center gap-2.5">
+          <div
+            className={cn(
+              "flex size-7 shrink-0 items-center justify-center rounded-md",
+              accentClass
+            )}
+          >
+            <Icon className="size-4" />
+          </div>
+          <div className="min-w-0">
+            {question ? (
+              <div className="truncate font-semibold text-[14px] leading-snug">
+                {question}
+              </div>
+            ) : null}
+            {reason ? (
+              <div className="mt-0.5 line-clamp-1 text-[12px] text-muted-foreground">
+                {reason}
+              </div>
+            ) : null}
+          </div>
         </div>
-        <div className="min-w-0">
-          {question ? (
-            <div className="font-semibold text-[13px] leading-snug">
-              {question}
-            </div>
-          ) : null}
-          {reason ? (
-            <div className="mt-1 text-[12px] text-muted-foreground leading-relaxed">
-              {reason}
-            </div>
-          ) : null}
+        <div className="flex shrink-0 items-center gap-1 text-muted-foreground">
+          <button
+            aria-label="Previous options"
+            className="flex size-7 items-center justify-center rounded-md opacity-40"
+            disabled
+            type="button"
+          >
+            <ChevronLeftIcon className="size-4" />
+          </button>
+          <span className="min-w-10 text-center text-[12px]">1 of 1</span>
+          <button
+            aria-label="Next options"
+            className="flex size-7 items-center justify-center rounded-md opacity-40"
+            disabled
+            type="button"
+          >
+            <ChevronRightIcon className="size-4" />
+          </button>
+          <button
+            aria-label="Close options"
+            className="ml-1 flex size-7 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+            onClick={() => setSelected("__dismissed__")}
+            type="button"
+          >
+            <XIcon className="size-4" />
+          </button>
         </div>
       </div>
-      <div className="grid gap-1 p-1.5">
-        {options.map((opt, i) => {
+
+      {selected === "__dismissed__" ? null : (
+        <div className="divide-y divide-border/50 px-2 py-2">
+          {visibleOptions.map((opt, i) => {
           const isSelected = selected === opt.value;
           const isDimmed = selected !== null && !isSelected;
           return (
             <button
               className={cn(
-                "group flex min-h-12 w-full items-center justify-between gap-3 rounded-lg px-2.5 py-2 text-left transition-all duration-150",
+                "group flex min-h-12 w-full items-center justify-between gap-3 rounded-md px-2 py-2.5 text-left transition-colors duration-150",
                 "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                 isSelected
-                  ? "bg-primary/10 ring-1 ring-primary/30"
+                  ? "bg-muted text-foreground"
                   : isDimmed
                     ? "opacity-40"
                     : "hover:bg-muted",
-                !onSelect && "cursor-default",
-                // staggered entry animation
-                `animate-in fade-in slide-in-from-left-2 duration-200`,
+                !onSelect && "cursor-default"
               )}
-              style={{ animationDelay: `${i * 40}ms` }}
               disabled={!onSelect || selected !== null}
               key={opt.value}
               onClick={() => handleSelect(opt.value)}
               type="button"
             >
-              <span className="min-w-0">
-                <span className={cn(
-                  "block font-medium text-[12px] leading-tight transition-colors",
-                  isSelected && "text-primary"
-                )}>
-                  {opt.label}
+              <span className="flex min-w-0 items-center gap-3">
+                <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-muted font-semibold text-[12px] text-foreground">
+                  {i + 1}
                 </span>
-                {opt.description ? (
-                  <span className="mt-0.5 line-clamp-2 block text-[11px] text-muted-foreground">
-                    {opt.description}
+                <span className="min-w-0">
+                  <span
+                    className={cn(
+                      "block font-medium text-[13px] leading-tight transition-colors",
+                      isSelected && "text-foreground"
+                    )}
+                  >
+                    {opt.label}
                   </span>
-                ) : null}
+                  {opt.description ? (
+                    <span className="mt-1 line-clamp-2 block text-[12px] text-muted-foreground">
+                      {opt.description}
+                    </span>
+                  ) : null}
+                </span>
               </span>
               <ChevronRightIcon className={cn(
                 "size-4 shrink-0 transition-all duration-150",
                 isSelected
-                  ? "text-primary translate-x-0.5"
+                  ? "text-foreground translate-x-0.5"
                   : "text-muted-foreground group-hover:translate-x-0.5 group-hover:text-foreground"
               )} />
             </button>
           );
-        })}
-      </div>
+          })}
+        </div>
+      )}
+
+      {selected === "__dismissed__" ? null : (
+        <div className="flex items-center justify-end border-border/50 border-t px-4 py-2">
+          <button
+            className="rounded-md border border-border/70 px-3 py-1.5 font-medium text-[12px] text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+            onClick={() => setSelected("__dismissed__")}
+            type="button"
+          >
+            Skip
+          </button>
+        </div>
+      )}
     </div>
   );
 }

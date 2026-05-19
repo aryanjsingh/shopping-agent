@@ -1,0 +1,1346 @@
+{
+  "scenario": {
+    "tag": "broad",
+    "text": "i need new headphones"
+  },
+  "chatId": "dc65894b-a97a-47b4-9072-1ace7943af48",
+  "durationMs": 13250,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "91c26490-c462-4dda-a564-f3fb97e891b2"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "wldlBJSynBvJeBK9"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wldlBJSynBvJeBK9",
+      "delta": "User"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wldlBJSynBvJeBK9",
+      "delta": " broad"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wldlBJSynBvJeBK9",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wldlBJSynBvJeBK9",
+      "delta": " Need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wldlBJSynBvJeBK9",
+      "delta": " clarify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wldlBJSynBvJeBK9",
+      "delta": "Intent"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wldlBJSynBvJeBK9",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wldlBJSynBvJeBK9",
+      "delta": " use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wldlBJSynBvJeBK9",
+      "delta": " case"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "wldlBJSynBvJeBK9",
+      "delta": "."
+    },
+    {
+      "type": "tool-input-start",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "toolName": "clarifyIntent"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": ""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "{\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "mode"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "use"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "_case"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "question"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "What"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " will"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " you"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " use"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " these"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " headphones"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " for"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " most"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "?\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "reason"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "Matching"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " use"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " case"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " helps"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " surface"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " the"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " right"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " performance"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " and"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " price"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " tier"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": ".\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "options"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " [\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " {\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "label"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "Every"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "day"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " music"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " &"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " calls"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "value"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "cas"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "ual"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " listening"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " and"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " calls"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "search"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "Hint"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "cas"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "ual"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " wireless"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " headphones"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\"\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " },\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " {\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "label"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "Gaming"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " /"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " low"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " latency"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "value"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "gaming"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " low"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " latency"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "search"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "Hint"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "gaming"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " low"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " latency"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " headphones"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\"\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " },\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " {\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "label"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "Studio"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " /"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " audio"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " production"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "value"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "studio"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " audio"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " production"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "search"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "Hint"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "studio"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " monitor"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " headphones"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\"\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " },\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " {\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "label"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "Travel"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " &"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " ANC"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "value"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "travel"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " ANC"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\",\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "     "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "search"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "Hint"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\":"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " \""
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "active"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " noise"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " cancelling"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " travel"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " headphones"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "\"\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "   "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " }\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " "
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": " ]\n"
+    },
+    {
+      "type": "tool-input-delta",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "inputTextDelta": "}"
+    },
+    {
+      "type": "tool-input-available",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "toolName": "clarifyIntent",
+      "input": {
+        "question": "What will you use these headphones for most?",
+        "reason": "Matching use case helps surface the right performance and price tier.",
+        "mode": "use_case",
+        "options": [
+          {
+            "label": "Everyday music & calls",
+            "value": "casual listening and calls",
+            "searchHint": "casual wireless headphones"
+          },
+          {
+            "label": "Gaming / low latency",
+            "value": "gaming low latency",
+            "searchHint": "gaming low latency headphones"
+          },
+          {
+            "label": "Studio / audio production",
+            "value": "studio audio production",
+            "searchHint": "studio monitor headphones"
+          },
+          {
+            "label": "Travel & ANC",
+            "value": "travel ANC",
+            "searchHint": "active noise cancelling travel headphones"
+          }
+        ]
+      },
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "User broad. Need clarifyIntent for use case.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "tool-output-available",
+      "toolCallId": "chatcmpl-tool-9230e661a2320e8b",
+      "output": {
+        "question": "What will you use these headphones for most?",
+        "reason": "Matching use case helps surface the right performance and price tier.",
+        "mode": "use_case",
+        "options": [
+          {
+            "label": "Everyday music & calls",
+            "value": "casual listening and calls",
+            "searchHint": "casual wireless headphones"
+          },
+          {
+            "label": "Gaming / low latency",
+            "value": "gaming low latency",
+            "searchHint": "gaming low latency headphones"
+          },
+          {
+            "label": "Studio / audio production",
+            "value": "studio audio production",
+            "searchHint": "studio monitor headphones"
+          },
+          {
+            "label": "Travel & ANC",
+            "value": "travel ANC",
+            "searchHint": "active noise cancelling travel headphones"
+          }
+        ]
+      }
+    },
+    {
+      "type": "reasoning-end",
+      "id": "wldlBJSynBvJeBK9",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "User broad. Need clarifyIntent for use case.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "ahkA5nCl79yCLXQf"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": "User"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": " said"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": " \""
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": "i"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": " need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": " new"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": " headphones"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": "\"."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": " We"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": " asked"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": " use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": " case"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": " Need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": " to"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": " wait"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": " response"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "ahkA5nCl79yCLXQf",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-end",
+      "id": "ahkA5nCl79yCLXQf",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "User said \"i need new headphones\". We asked use case. Need to wait for response.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "text-start",
+      "id": "gen-1779203914-YOq8Zu1zSgTvx0aAOuRg"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203914-YOq8Zu1zSgTvx0aAOuRg",
+      "delta": "What"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203914-YOq8Zu1zSgTvx0aAOuRg",
+      "delta": " will"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203914-YOq8Zu1zSgTvx0aAOuRg",
+      "delta": " you"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203914-YOq8Zu1zSgTvx0aAOuRg",
+      "delta": " use"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203914-YOq8Zu1zSgTvx0aAOuRg",
+      "delta": " these"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203914-YOq8Zu1zSgTvx0aAOuRg",
+      "delta": " headphones"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203914-YOq8Zu1zSgTvx0aAOuRg",
+      "delta": " for"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203914-YOq8Zu1zSgTvx0aAOuRg",
+      "delta": " most"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779203914-YOq8Zu1zSgTvx0aAOuRg",
+      "delta": "?"
+    },
+    {
+      "type": "text-end",
+      "id": "gen-1779203914-YOq8Zu1zSgTvx0aAOuRg"
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "finish",
+      "finishReason": "stop"
+    },
+    {
+      "type": "data-chat-title",
+      "data": "New Headphones"
+    }
+  ],
+  "toolCalls": [
+    {
+      "id": "chatcmpl-tool-9230e661a2320e8b",
+      "toolName": "clarifyIntent",
+      "input": {
+        "question": "What will you use these headphones for most?",
+        "reason": "Matching use case helps surface the right performance and price tier.",
+        "mode": "use_case",
+        "options": [
+          {
+            "label": "Everyday music & calls",
+            "value": "casual listening and calls",
+            "searchHint": "casual wireless headphones"
+          },
+          {
+            "label": "Gaming / low latency",
+            "value": "gaming low latency",
+            "searchHint": "gaming low latency headphones"
+          },
+          {
+            "label": "Studio / audio production",
+            "value": "studio audio production",
+            "searchHint": "studio monitor headphones"
+          },
+          {
+            "label": "Travel & ANC",
+            "value": "travel ANC",
+            "searchHint": "active noise cancelling travel headphones"
+          }
+        ]
+      },
+      "output": {
+        "question": "What will you use these headphones for most?",
+        "reason": "Matching use case helps surface the right performance and price tier.",
+        "mode": "use_case",
+        "options": [
+          {
+            "label": "Everyday music & calls",
+            "value": "casual listening and calls",
+            "searchHint": "casual wireless headphones"
+          },
+          {
+            "label": "Gaming / low latency",
+            "value": "gaming low latency",
+            "searchHint": "gaming low latency headphones"
+          },
+          {
+            "label": "Studio / audio production",
+            "value": "studio audio production",
+            "searchHint": "studio monitor headphones"
+          },
+          {
+            "label": "Travel & ANC",
+            "value": "travel ANC",
+            "searchHint": "active noise cancelling travel headphones"
+          }
+        ]
+      },
+      "state": "output-available"
+    }
+  ],
+  "assistantText": "What will you use these headphones for most?"
+}

@@ -1,10 +1,10 @@
-export const DEFAULT_CHAT_MODEL = "openrouter/free";
+export const DEFAULT_CHAT_MODEL = "openai/gpt-oss-120b:free";
 
 export const titleModel = {
-  id: "meta-llama/llama-3.2-3b-instruct:free",
-  name: "Llama 3.2 3B (Title)",
-  provider: "meta-llama",
-  description: "Tiny fast model for chat titles",
+  id: "openai/gpt-oss-20b:free",
+  name: "GPT OSS 20B (Title)",
+  provider: "openai",
+  description: "Fast free model for chat titles",
 };
 
 export type ModelCapabilities = {

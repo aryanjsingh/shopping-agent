@@ -1,0 +1,26 @@
+{
+  "scenario": {
+    "tag": "phone-old-vs-new",
+    "text": "i need a gaming phone under 500 dollars"
+  },
+  "chatId": "c2e3ad70-de26-4532-ba38-0d370f250d52",
+  "durationMs": 22745,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "7fdfe1fc-f5e1-41a6-86a0-574dc94835c6"
+    },
+    {
+      "type": "error",
+      "errorText": "Failed after 3 attempts. Last error: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day"
+    },
+    {
+      "type": "data-chat-title",
+      "data": "Budget Gaming Phone"
+    }
+  ],
+  "toolCalls": [],
+  "assistantText": ""
+}

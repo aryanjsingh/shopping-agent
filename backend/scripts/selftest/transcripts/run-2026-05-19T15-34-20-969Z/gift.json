@@ -1,0 +1,530 @@
+{
+  "scenario": {
+    "tag": "gift",
+    "text": "gift for dad who likes cooking, under 150"
+  },
+  "chatId": "e0bfbe64-e8cf-4ac4-a661-91a65721d2a0",
+  "durationMs": 6307,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "2480f3f1-05f3-4903-b5ed-9b775d474d8a"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "oixoc7nvjslIxHUD"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": "Need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " clarify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " intent"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " broad"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " category"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " gift"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " cooking"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " under"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " $"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": "150"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " Use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " clarify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": "Intent"
+    },
+    {
+      "type": "data-chat-title",
+      "data": "Cooking Gift for Dad"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " for"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": "_case"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " maybe"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " Provide"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " menu"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " cooking"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " gadgets"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " cookware"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " sets"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " knives"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": ","
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": " etc"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "oixoc7nvjslIxHUD",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-end",
+      "id": "oixoc7nvjslIxHUD",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need clarify intent: broad category gift cooking under $150. Use clarifyIntent for use_case maybe. Provide menu: cooking gadgets, cookware sets, knives, etc.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "text-start",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "What"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "’s"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " the"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " main"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " cooking"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " type"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " he"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " enjoys"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "?"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "  \n\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "Choose"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " one"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": ":**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "  \n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " **"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "Gr"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "illing"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " &"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " BBQ"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " “"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "perfect"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " for"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " outdoor"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " grilling"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "”"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "  \n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " **"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "Home"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " cooking"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " basics"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " “"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "vers"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "atile"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " tools"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " for"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " everyday"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " meals"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "”"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "  \n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "-"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " **"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "Special"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "ty"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " gadgets"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "**"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " –"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " “"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "unique"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " kitchen"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " toys"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " that"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": " wow"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "”"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7",
+      "delta": "  "
+    },
+    {
+      "type": "text-end",
+      "id": "gen-1779204954-xNKTwclm39LFw1BDG9u7"
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "finish",
+      "finishReason": "stop"
+    }
+  ],
+  "toolCalls": [],
+  "assistantText": "What’s the main cooking type he enjoys?  \n\n**Choose one:**  \n- **Grilling & BBQ** – “perfect for outdoor grilling”  \n- **Home cooking basics** – “versatile tools for everyday meals”  \n- **Specialty gadgets** – “unique kitchen toys that wow”  "
+}

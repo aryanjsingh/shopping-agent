@@ -16,7 +16,7 @@ export function useScrollToBottom() {
       return true;
     }
     const { scrollTop, scrollHeight, clientHeight } = containerRef.current;
-    return scrollTop + clientHeight >= scrollHeight - 100;
+    return scrollTop + clientHeight >= scrollHeight - 200;
   }, []);
 
   const scrollToBottom = useCallback((behavior: ScrollBehavior = "smooth") => {

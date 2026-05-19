@@ -1,0 +1,26 @@
+{
+  "scenario": {
+    "tag": "gift",
+    "text": "gift for dad who likes cooking, under 150"
+  },
+  "chatId": "0481fc07-1eb1-4640-b60f-09f4daa503c2",
+  "durationMs": 18506,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "ff222390-0ad3-4963-9ff2-f4b22f023dc3"
+    },
+    {
+      "type": "error",
+      "errorText": "Failed after 3 attempts. Last error: Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day"
+    },
+    {
+      "type": "data-chat-title",
+      "data": "Cooking Gift for Dad"
+    }
+  ],
+  "toolCalls": [],
+  "assistantText": ""
+}

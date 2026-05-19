@@ -1,0 +1,1095 @@
+{
+  "scenario": {
+    "tag": "broad",
+    "text": "i need new headphones"
+  },
+  "chatId": "02a9dfa1-fda7-45fb-b19b-13e1aa5f5a8b",
+  "durationMs": 30666,
+  "ok": true,
+  "status": 200,
+  "events": [
+    {
+      "type": "start",
+      "messageId": "2b7661f5-f938-4f48-9295-5e5512b3ae78"
+    },
+    {
+      "type": "data-chat-title",
+      "data": "Headphone Shopping Guide"
+    },
+    {
+      "type": "start-step"
+    },
+    {
+      "type": "reasoning-start",
+      "id": "XIsLjFBggM7rAlh0"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XIsLjFBggM7rAlh0",
+      "delta": "User"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XIsLjFBggM7rAlh0",
+      "delta": " broad"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XIsLjFBggM7rAlh0",
+      "delta": ":"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XIsLjFBggM7rAlh0",
+      "delta": " just"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XIsLjFBggM7rAlh0",
+      "delta": " headphones"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XIsLjFBggM7rAlh0",
+      "delta": "."
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XIsLjFBggM7rAlh0",
+      "delta": " Need"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XIsLjFBggM7rAlh0",
+      "delta": " clarify"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XIsLjFBggM7rAlh0",
+      "delta": "Intent"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XIsLjFBggM7rAlh0",
+      "delta": " ("
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XIsLjFBggM7rAlh0",
+      "delta": "use"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XIsLjFBggM7rAlh0",
+      "delta": "_case"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XIsLjFBggM7rAlh0",
+      "delta": " maybe"
+    },
+    {
+      "type": "reasoning-delta",
+      "id": "XIsLjFBggM7rAlh0",
+      "delta": ")."
+    },
+    {
+      "type": "reasoning-end",
+      "id": "XIsLjFBggM7rAlh0",
+      "providerMetadata": {
+        "openrouter": {
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "User broad: just headphones. Need clarifyIntent (use_case maybe).",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "text-start",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "{\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "question"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "What"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " will"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " you"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " mainly"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " use"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " them"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " for"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "?\",\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "reason"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "Pin"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "point"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "ing"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " use"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " case"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " nar"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "rows"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " to"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " either"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " gaming"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " commuting"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " or"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " audi"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "ophile"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " listening"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " giving"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " better"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " matches"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": ".\",\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "options"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " [\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "   "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " {\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "     "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "label"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "Gaming"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\",\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "     "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "value"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "Gaming"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " headphones"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\",\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "     "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "search"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "Hint"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "gaming"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " headphones"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\",\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "     "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "description"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "Sur"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "round"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " sound"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " mic"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " low"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " latency"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\"\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "   "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " },\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "   "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " {\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "     "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "label"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "Com"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "mut"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "ing"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\",\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "     "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "value"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "Com"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "mut"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "er"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " headphones"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\",\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "     "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "search"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "Hint"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "wire"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "less"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " commuter"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " headphones"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " noise"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " cancelling"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\",\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "     "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "description"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "Noise"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " cancel"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "ing"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " portable"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " battery"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " life"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\"\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "   "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " },\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "   "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " {\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "     "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "label"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "Audi"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "ophile"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\",\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "     "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "value"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "Audi"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "ophile"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " headphones"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\",\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "     "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "search"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "Hint"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "a"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "udi"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "ophile"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " over"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "ear"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " headphones"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " high"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "‑"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "resolution"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\",\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "     "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "description"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\":"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " \""
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "Neutral"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " sound"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " open"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "/back"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": ","
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " premium"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " drivers"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "\"\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "   "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " }\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " "
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": " ]\n"
+    },
+    {
+      "type": "text-delta",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8",
+      "delta": "}"
+    },
+    {
+      "type": "text-end",
+      "id": "gen-1779204190-JQVm3HiGSHA40nu1Mbf8"
+    },
+    {
+      "type": "finish-step"
+    },
+    {
+      "type": "finish",
+      "finishReason": "stop"
+    }
+  ],
+  "toolCalls": [],
+  "assistantText": "{\n  \"question\": \"What will you mainly use them for?\",\n  \"reason\": \"Pinpointing use case narrows to either gaming, commuting, or audiophile listening, giving better matches.\",\n  \"options\": [\n    {\n      \"label\": \"Gaming\",\n      \"value\": \"Gaming headphones\",\n      \"searchHint\": \"gaming headphones\",\n      \"description\": \"Surround sound, mic, low latency\"\n    },\n    {\n      \"label\": \"Commuting\",\n      \"value\": \"Commuter headphones\",\n      \"searchHint\": \"wireless commuter headphones noise cancelling\",\n      \"description\": \"Noise canceling, portable, battery life\"\n    },\n    {\n      \"label\": \"Audiophile\",\n      \"value\": \"Audiophile headphones\",\n      \"searchHint\": \"audiophile over‑ear headphones high‑resolution\",\n      \"description\": \"Neutral sound, open/back, premium drivers\"\n    }\n  ]\n}"
+}
