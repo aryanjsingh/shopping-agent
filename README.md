@@ -3,6 +3,8 @@
 
 # Shopping Agent
 
+![App Screenshot](docs/screenshot.png)
+
 Track 1 submission for the Kasparro Agentic Commerce Hackathon — an AI shopping concierge grounded in the **Shopify Global Catalog MCP**.
 
 ## What this is
