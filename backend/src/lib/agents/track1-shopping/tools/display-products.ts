@@ -17,7 +17,7 @@ export function createDisplayProductsTool(ctx: DisplayProductsContext) {
         .max(8)
         .optional()
         .describe(
-          "Optional product IDs from prior search results to display. Omit to show the latest curated search results."
+          "Product IDs from prior search results to display. Only omit immediately after searchProducts/refineSearch/showMore in the same turn."
         ),
       queryLabel: z
         .string()
@@ -28,6 +28,15 @@ export function createDisplayProductsTool(ctx: DisplayProductsContext) {
     }),
     execute: async ({ productIds, queryLabel }) => {
       const available = ctx.memo.lastProducts ?? [];
+      if (!productIds?.length && !ctx.memo.updatedThisTurn) {
+        return {
+          error:
+            "displayProducts without productIds can only be used after a catalog search/refine/show-more in the same turn. Pass specific productIds from prior results or run a fresh catalog tool first.",
+          query: queryLabel ?? ctx.memo.lastQuery ?? "products",
+          count: 0,
+          products: [],
+        };
+      }
       const products = selectProducts(available, productIds);
 
       return {

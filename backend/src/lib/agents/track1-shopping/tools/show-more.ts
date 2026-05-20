@@ -90,6 +90,7 @@ export function createShowMoreTool(ctx: ShowMoreContext) {
           ...(ctx.memo.lastProducts ?? []),
           ...productViews,
         ];
+        ctx.memo.updatedThisTurn = true;
 
         return {
           query: lastQuery,

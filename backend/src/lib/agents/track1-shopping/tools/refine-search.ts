@@ -87,6 +87,7 @@ export function createRefineSearchTool(ctx: RefineSearchContext) {
         }));
         ctx.memo.lastProductIds = productViews.map((p) => p.id);
         ctx.memo.lastProducts = productViews;
+        ctx.memo.updatedThisTurn = true;
 
         return {
           query: mergedQuery,

@@ -29,6 +29,7 @@ export type SearchMemo = {
   lastFilters?: { minPrice?: number; maxPrice?: number; shipsTo?: string };
   lastProductIds: string[];
   lastProducts?: ProductView[];
+  updatedThisTurn?: boolean;
 };
 
 const CURRENT_GEN_QUERY_SUFFIX = "(2024 OR 2025 OR 2026)";
@@ -95,6 +96,7 @@ export function createSearchProductsTool(ctx: SearchProductsContext) {
         };
         ctx.memo.lastProductIds = top.map((p) => p.id);
         ctx.memo.lastProducts = top.map(buildProductView);
+        ctx.memo.updatedThisTurn = true;
 
         return {
           query: input.query,

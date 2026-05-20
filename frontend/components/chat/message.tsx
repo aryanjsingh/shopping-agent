@@ -65,6 +65,21 @@ type ProductResult = NonNullable<
   NonNullable<SearchProductsPart["output"]>["products"]
 >[number];
 
+function getDisplayProductSignature(message: ChatMessage) {
+  const productIds = message.parts
+    ?.filter((part) => part.type === "tool-displayProducts")
+    .flatMap((part) => {
+      const products = (part as SearchProductsPart).output?.products;
+      return Array.isArray(products)
+        ? products
+            .map((product) => product?.id)
+            .filter((id): id is string => typeof id === "string")
+        : [];
+    });
+
+  return productIds?.length ? productIds.join("|") : null;
+}
+
 const findSelectedOption = (
   options: { label: string; value: string; description?: string; searchHint?: string }[],
   allMessages?: ChatMessage[],
@@ -262,8 +277,22 @@ const PurePreviewMessage = ({
         .values()
   );
   const lastProductToolPart = productToolParts.at(-1);
+  const productSignature = consolidatedProducts.length
+    ? consolidatedProducts.map((product) => product.id).join("|")
+    : null;
+  const hasDisplayedSameProductsBefore = Boolean(
+    isAssistant &&
+      productSignature &&
+      allMessages
+        ?.slice(0, messageIndex ?? 0)
+        .some(
+          (previous) =>
+            previous.role === "assistant" &&
+            getDisplayProductSignature(previous) === productSignature
+        )
+  );
   const productResults =
-    consolidatedProducts.length > 0 ? (
+    consolidatedProducts.length > 0 && !hasDisplayedSameProductsBefore ? (
       <div className="w-full" key={`message-${message.id}-products`}>
         <ProductGrid
           defaultOpen={true}
@@ -271,7 +300,7 @@ const PurePreviewMessage = ({
           query={productQuery}
         />
       </div>
-    ) : lastProductToolPart ? (
+    ) : consolidatedProducts.length === 0 && lastProductToolPart ? (
       renderProductToolFallback(
         lastProductToolPart.part,
         lastProductToolPart.key
