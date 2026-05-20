@@ -1,3 +1,6 @@
+> **Hackathon Project** — Built for the Kasparro Agentic Commerce Hackathon.
+> **Team** — [@aryanjsingh](https://github.com/aryanjsingh) & [@ridhi001](https://github.com/ridhi001)
+
 # Shopping Agent
 
 Track 1 submission for the Kasparro Agentic Commerce Hackathon — an AI shopping concierge grounded in the **Shopify Global Catalog MCP**.
