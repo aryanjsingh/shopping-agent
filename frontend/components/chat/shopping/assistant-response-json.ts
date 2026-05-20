@@ -99,6 +99,82 @@ function stripCodeFence(value: string) {
     .replace(/\s*```$/i, "");
 }
 
+// Patterns the model uses to "think out loud" in user-facing text. The system
+// prompt forbids these but free-tier models leak them anyway. Match a full
+// sentence/line that starts with one of these cues — usually procedural
+// narration like "Let me check sellers..." or "Now I'll normalize prices...".
+const NARRATION_PREFIXES = [
+  "let me",
+  "let's",
+  "now let me",
+  "now let's",
+  "now i'll",
+  "now i will",
+  "i'll now",
+  "i will now",
+  "i'll",
+  "i will",
+  "i need to",
+  "need to",
+  "first,? i",
+  "next,? i",
+  "then,? i",
+  "allow me",
+  "here'?s the straight read",
+  "here'?s my read",
+  "here'?s my take",
+  "here'?s the breakdown",
+  "here'?s the deal",
+  "here'?s what i",
+  "prices are across currencies so let me",
+  "let me normalize",
+  "let me show",
+  "let me check",
+  "let me compare",
+  "let me find",
+  "let me grab",
+  "let me pull",
+  "let me search",
+  "let me look",
+  "let me dig",
+  "let me run",
+  "let me verify",
+  "let me see",
+  "checking ",
+  "searching ",
+  "comparing ",
+  "looking ",
+  "thinking ",
+];
+
+const NARRATION_REGEX = new RegExp(
+  `^\\s*(?:${NARRATION_PREFIXES.join("|")})\\b[^\\n]*$`,
+  "i"
+);
+
+// Strips sentences/lines the model emitted as procedural narration. Run only on
+// assistant prose, after JSON envelope and code-fence stripping.
+export function stripNarration(text: string): string {
+  const lines = text.split("\n");
+  const kept: string[] = [];
+  for (const line of lines) {
+    if (NARRATION_REGEX.test(line)) {
+      continue;
+    }
+    // Also strip leading narration sentence that runs into real content on the
+    // same line, e.g. "Let me normalize prices. Here are the picks: ..."
+    const cleaned = line.replace(NARRATION_REGEX, "").replace(
+      new RegExp(
+        `^\\s*(?:${NARRATION_PREFIXES.join("|")})\\b[^.!?\\n]*[.!?]\\s+`,
+        "i"
+      ),
+      ""
+    );
+    kept.push(cleaned);
+  }
+  return kept.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+}
+
 // Strips markdown pipe tables (header | separator | rows) from assistant prose.
 // The UI renders compareProducts/compareSellers as native components, so a raw
 // markdown table is always duplicate noise.

@@ -24,6 +24,7 @@ import { PreviewAttachment } from "./preview-attachment";
 import {
   parseAssistantResponseText,
   stripMarkdownPipeTables,
+  stripNarration,
 } from "./shopping/assistant-response-json";
 import { BuyCta } from "./shopping/buy-cta";
 import {
@@ -474,7 +475,7 @@ const PurePreviewMessage = ({
       }
       const rawDisplayText = parsedResponse.responseText ?? part.text;
       const displayText = isAssistant
-        ? stripMarkdownPipeTables(rawDisplayText)
+        ? stripNarration(stripMarkdownPipeTables(rawDisplayText))
         : rawDisplayText;
       if (!displayText.trim()) {
         return null;
