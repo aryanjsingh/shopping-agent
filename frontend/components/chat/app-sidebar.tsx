@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import { ShoppingBagIcon, SquarePen, Search } from "lucide-react";
+import { Compass, Search, ShoppingBagIcon, SquarePen } from "lucide-react";
 import type { User } from "next-auth";
 import {
   Sidebar,
@@ -69,6 +69,18 @@ export function AppSidebar({ user }: { user: User | undefined }) {
             >
               <Search size={16} className="text-sidebar-foreground/75" />
               <span>Search chats</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem className="group-data-[collapsible=icon]:hidden px-2 py-0.5">
+            <SidebarMenuButton
+              asChild
+              isActive={pathname?.startsWith("/discovery")}
+              className="h-10 w-full cursor-pointer px-3 rounded-lg bg-transparent hover:bg-sidebar-accent hover:text-sidebar-foreground data-[active=true]:bg-sidebar-accent data-[active=true]:text-sidebar-foreground transition-all duration-200 active:scale-[0.98] font-medium text-[13px] text-sidebar-foreground/80 flex items-center justify-start gap-2.5 border-none shadow-none"
+            >
+              <Link href="/discovery">
+                <Compass size={16} className="text-sidebar-foreground/75" />
+                <span>Discover</span>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

@@ -258,8 +258,8 @@ function normalizeProduct(product: UcpProduct): CatalogProduct | null {
       max: normalizeMoney(priceRange?.max, fallbackPrice),
     },
     rating:
-      typeof ratingValue === "number"
-        ? { rating: ratingValue, count: product.rating?.count ?? 0 }
+      ratingValue !== undefined && ratingValue !== null && !isNaN(Number(ratingValue))
+        ? { rating: Number(ratingValue), count: Number(product.rating?.count ?? 0) }
         : undefined,
     lookupUrl: product.url ?? "",
     variants,

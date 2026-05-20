@@ -21,7 +21,10 @@ import {
   toThinkingTool,
 } from "./message-thinking";
 import { PreviewAttachment } from "./preview-attachment";
-import { parseAssistantResponseText } from "./shopping/assistant-response-json";
+import {
+  parseAssistantResponseText,
+  stripMarkdownPipeTables,
+} from "./shopping/assistant-response-json";
 import { BuyCta } from "./shopping/buy-cta";
 import {
   type ClarifyMenuOutput,
@@ -358,6 +361,15 @@ const PurePreviewMessage = ({
     message.parts?.some((part) => part.type === "tool-compareProducts") ??
     false;
 
+  // Only render the last compareProducts call when model emits multiple — earlier
+  // calls are usually superseded by the final one.
+  const lastCompareProductsIndex =
+    message.parts?.reduce(
+      (latest, part, index) =>
+        part.type === "tool-compareProducts" ? index : latest,
+      -1
+    ) ?? -1;
+
   const thinkingSteps: ThinkingStep[] = [];
   let toolIndex = 0;
   let reasoningIndex = 0;
@@ -460,7 +472,10 @@ const PurePreviewMessage = ({
       if (isAssistant && parsedResponse.responseText === null) {
         return null;
       }
-      const displayText = parsedResponse.responseText ?? part.text;
+      const rawDisplayText = parsedResponse.responseText ?? part.text;
+      const displayText = isAssistant
+        ? stripMarkdownPipeTables(rawDisplayText)
+        : rawDisplayText;
       if (!displayText.trim()) {
         return null;
       }
@@ -559,6 +574,9 @@ const PurePreviewMessage = ({
 
     if (type === "tool-compareProducts") {
       const { toolCallId, state } = part;
+      if (index !== lastCompareProductsIndex) {
+        return null;
+      }
       if (
         state === "output-available" &&
         part.output &&

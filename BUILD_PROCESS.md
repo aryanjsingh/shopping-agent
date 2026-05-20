@@ -391,6 +391,35 @@ The architecture proved out across rate limits and model swaps. The 3 failures t
 - Expand the chipset table beyond electronics-heavy gear (kitchen, fitness equipment) — current coverage is solid but extensible.
 - Migrate the SearchMemo from per-request memory to chat-history reconstruction so follow-ups across chat reloads still work.
 
+## Recommendation Feed Homepage
+
+The homepage at `/` is now a recommendation feed instead of an empty stub. It is **not** an AI loop — it is a cached Shopify catalog browse-and-search surface so users can discover products before (or instead of) opening the chat agent.
+
+Decisions:
+
+- **No agent calls on the feed.** The feed only hits Shopify Catalog MCP (`search_catalog`) via the existing `backend/src/lib/shopify/catalog.ts` module. The chat agent is opt-in via the "Ask the agent" link.
+- **Daily-rotated category.** A list of 16 query buckets (`headphones`, `espresso`, `running-shoes`, …) rotates on `Math.floor(Date.now() / day) % N`. Same category for everyone on a given UTC day → high cache hit rate.
+- **Two-tier cache.**
+  - Backend Redis via the existing `getOrSet()` helper. Recommendations TTL: 1h. Search TTL: 5m. Keys are `feed:recs:v1:<slug>` and `feed:search:v1:<lowercased-query>`.
+  - Frontend uses Next.js Cache Components (`cacheComponents: true`). The static shell (header, hero, search bar) prerenders; the recommendations and search results stream inside `<Suspense>` boundaries.
+- **Search.** A client `FeedSearchBar` pushes `?q=<query>` to `/`. The page reads `searchParams` inside Suspense, calls the backend `/api/feed/search`, and renders the matching products. Empty query falls back to recommendations.
+- **Routing.** `/` is owned by the new `app/page.tsx` (root layout only — no chat sidebar). Chat shell now lives at `/chat` and `/chat/[id]`. The previous empty `app/(chat)/page.tsx` was removed because route groups can't coexist on the same URL.
+- **Backend endpoints.** `GET /api/feed/recommendations?category=<slug?>` and `GET /api/feed/search?q=<query>`. Both gated by the same `BACKEND_INTERNAL_SECRET` token used by the rest of the internal API surface; no user auth needed because catalog data is not user-scoped.
+- **Why not direct MCP from Next.js?** The backend already has the normalized `CatalogProduct` shape and Redis cache. Re-implementing it on the frontend would duplicate logic and split the cache. Reusing the backend keeps the "frontend → backend → Shopify MCP" pattern consistent with chat.
+- **Refresh strategy.** Recommendations refresh automatically when the daily slot changes or when the 1h Redis TTL expires. Search results refresh after 5 min so popular queries stay snappy without going stale. There's no manual cache-bust UI yet — easy follow-up if needed.
+
+Files:
+
+- `backend/src/lib/feed.ts` — category list, `getRecommendedFeed`, `searchFeed`, `FeedProduct` mapping.
+- `backend/src/server.ts` — adds `/api/feed/recommendations` and `/api/feed/search` route handlers.
+- `frontend/lib/feed/{types,api}.ts` — single fetch boundary calling `backendJson` with `auth: false`.
+- `frontend/components/feed/feed-search-bar.tsx` — client component, pushes `?q=`.
+- `frontend/components/feed/feed-grid.tsx` — server component grid + skeleton + product card.
+- `frontend/app/page.tsx` — homepage; static shell + Suspense around dynamic feed.
+- `frontend/app/(chat)/chat/page.tsx` — minimal landing route so the chat shell still has an entry path after `app/(chat)/page.tsx` was removed.
+
+No new env vars. Reuses `BACKEND_URL`, `BACKEND_INTERNAL_SECRET`, `REDIS_URL`, `SHOPIFY_CATALOG_MCP_URL`, `SHOPIFY_UCP_AGENT_PROFILE`.
+
 ## Submission Requirements To Remember
 
 Final repo should include:
@@ -411,3 +440,11 @@ Judging weights:
 - Product Experience: 20%
 - Business Relevance: 15%
 - Originality & Insight: 15%
+
+## Comparison Table Data & Link Robustness (2026-05-20)
+
+Fixed comparison table missing information and empty columns when products did not have explicit checkout URLs or specific metadata fields populated:
+
+- **Seller & Link Recovery**: Modified `compareProducts` tool to look up alternative product page/variant links (e.g. `variantUrl`, `lookupUrl`, `onlineStoreUrl`) instead of strictly requiring `checkoutUrl`. Handled in-stock sorting and out-of-stock fallback.
+- **Top Features & Tech Specs Fallbacks**: If the Shopify Catalog doesn't provide explicit `topFeatures` or `techSpecs` for a product, the compare tool now gracefully falls back to `uniqueSellingPoint` (for features) and formatted `attributes` (for specs, e.g. "Power: 1200W").
+- **Rating Normalization**: Updated the catalog rating parser to safely parse numeric strings and fallback counts to avoid throwing away rating data.

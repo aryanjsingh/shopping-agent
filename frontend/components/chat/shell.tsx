@@ -77,6 +77,45 @@ export function ChatShell() {
     prevPathnameRef.current = pathname;
   }, [chatId, pathname, setArtifact]);
 
+  // One-shot prefill: when the homepage feed sends a shopper here via
+  // /chat?prefill=<encoded>, fire that text as the first user message and
+  // rewrite the URL to /chat/<chatId> so the chat behaves like any other.
+  const prefillHandledRef = useRef(false);
+  useEffect(() => {
+    if (prefillHandledRef.current) {
+      return;
+    }
+    if (typeof window === "undefined") {
+      return;
+    }
+    const params = new URLSearchParams(window.location.search);
+    const prefill = params.get("prefill");
+    if (!prefill) {
+      return;
+    }
+
+    prefillHandledRef.current = true;
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+    // If the chat already has messages (e.g. user navigated back into a chat
+    // with a stale prefill param), just strip the param without re-sending.
+    if (messages.length === 0) {
+      sendMessage({
+        role: "user",
+        parts: [{ type: "text", text: prefill }],
+      });
+      window.history.replaceState({}, "", `${basePath}/chat/${chatId}`);
+    } else {
+      params.delete("prefill");
+      const search = params.toString();
+      window.history.replaceState(
+        {},
+        "",
+        `${basePath}${pathname}${search ? `?${search}` : ""}`
+      );
+    }
+  }, [chatId, messages.length, pathname, sendMessage]);
+
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       if (

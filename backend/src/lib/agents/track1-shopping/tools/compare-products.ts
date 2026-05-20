@@ -19,9 +19,36 @@ export const compareProducts = tool({
     const rows = products
       .filter((p): p is NonNullable<typeof p> => Boolean(p))
       .map((p) => {
-        const cheapest = p.variants
-          .filter((v) => v.availableForSale && v.checkoutUrl)
-          .sort((a, b) => a.price.amount - b.price.amount)[0];
+        const activeVariants = p.variants.filter(
+          (v) => v.checkoutUrl || v.variantUrl || v.lookupUrl || v.shop.onlineStoreUrl
+        );
+        const cheapest =
+          activeVariants.filter((v) => v.availableForSale).sort((a, b) => a.price.amount - b.price.amount)[0] ||
+          activeVariants.sort((a, b) => a.price.amount - b.price.amount)[0] ||
+          p.variants[0];
+
+        const bestUrl =
+          (cheapest?.checkoutUrl ||
+            cheapest?.variantUrl ||
+            cheapest?.lookupUrl ||
+            cheapest?.shop.onlineStoreUrl ||
+            p.lookupUrl ||
+            "");
+
+        const features = (
+          p.topFeatures && p.topFeatures.length > 0
+            ? p.topFeatures
+            : p.uniqueSellingPoint
+              ? [p.uniqueSellingPoint]
+              : []
+        ).slice(0, 4);
+
+        const specs = (
+          p.techSpecs && p.techSpecs.length > 0
+            ? p.techSpecs
+            : (p.attributes ?? []).map((attr) => `${attr.name}: ${attr.value}`)
+        ).slice(0, 4);
+
         return {
           id: p.id,
           title: p.title,
@@ -29,10 +56,10 @@ export const compareProducts = tool({
           priceMin: p.priceRange.min,
           priceMax: p.priceRange.max,
           rating: p.rating,
-          topFeatures: (p.topFeatures ?? []).slice(0, 4),
-          techSpecs: (p.techSpecs ?? []).slice(0, 4),
-          bestCheckoutUrl: cheapest?.checkoutUrl ?? "",
-          bestSellerName: cheapest?.shop.name ?? "",
+          topFeatures: features,
+          techSpecs: specs,
+          bestCheckoutUrl: bestUrl,
+          bestSellerName: cheapest?.shop?.name ?? "",
           bestSellerPrice: cheapest?.price ?? p.priceRange.min,
           sellerCount: new Set(p.variants.map((v) => v.shop.id)).size,
         };

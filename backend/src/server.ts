@@ -51,6 +51,7 @@ import {
 } from "@/lib/db/queries";
 import type { DBMessage } from "@/lib/db/schema";
 import { ChatbotError } from "@/lib/errors";
+import { getRecommendedFeed, searchFeed } from "@/lib/feed";
 import type { ChatMessage } from "@/lib/types";
 import { convertToUIMessages, getTextFromMessage, generateUUID } from "@/lib/utils";
 import { postRequestBodySchema } from "./chat-api/chat/schema";
@@ -814,6 +815,31 @@ async function handleInternalUsers(request: Request, pathname: string) {
   return json(await createUser(email, password), { status: 201 });
 }
 
+function requireInternalToken(request: Request) {
+  if (
+    INTERNAL_SECRET &&
+    request.headers.get("x-internal-token") !== INTERNAL_SECRET
+  ) {
+    throw new ChatbotError("unauthorized:api");
+  }
+}
+
+async function handleFeedRecommendations(request: Request) {
+  requireInternalToken(request);
+  const url = new URL(request.url);
+  const slug = url.searchParams.get("category") ?? undefined;
+  const refresh = url.searchParams.get("refresh") === "1";
+  return json(await getRecommendedFeed(slug, { refresh }));
+}
+
+async function handleFeedSearch(request: Request) {
+  requireInternalToken(request);
+  const url = new URL(request.url);
+  const query = url.searchParams.get("q") ?? "";
+  const refresh = url.searchParams.get("refresh") === "1";
+  return json(await searchFeed(query, { refresh }));
+}
+
 async function handleAction(request: Request, pathname: string) {
   const user = requireUser(request);
   if (pathname === "/actions/delete-trailing-messages") {
@@ -896,6 +922,12 @@ export async function appFetch(request: Request): Promise<Response> {
     }
     if (pathname === "/api/files/upload" && request.method === "POST") {
       return await handleUpload(request);
+    }
+    if (pathname === "/api/feed/recommendations" && request.method === "GET") {
+      return await handleFeedRecommendations(request);
+    }
+    if (pathname === "/api/feed/search" && request.method === "GET") {
+      return await handleFeedSearch(request);
     }
     if (pathname.startsWith("/actions/")) {
       return await handleAction(request, pathname);

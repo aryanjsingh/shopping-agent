@@ -22,7 +22,10 @@ export async function proxy(request: NextRequest) {
   const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
   if (!token) {
-    const redirectUrl = encodeURIComponent(new URL(request.url).pathname);
+    const url = new URL(request.url);
+    // Preserve query string so links like /chat?prefill=... survive the
+    // guest-auth redirect dance.
+    const redirectUrl = encodeURIComponent(`${url.pathname}${url.search}`);
 
     return NextResponse.redirect(
       new URL(`${base}/api/auth/guest?redirectUrl=${redirectUrl}`, request.url)

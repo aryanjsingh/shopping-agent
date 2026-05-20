@@ -156,9 +156,16 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
     onData: (dataPart) => {
       setDataStream((ds) => (ds ? [...ds, dataPart] : []));
     },
-    onFinish: () => {
+    onFinish: async () => {
       if (messagesKey) {
-        void mutate(messagesKey);
+        try {
+          const refreshed = await mutate(messagesKey);
+          if (refreshed?.messages?.length) {
+            setMessagesRef.current(refreshed.messages);
+          }
+        } catch {
+          // Ignore mutate failures — UI keeps live in-memory state.
+        }
       }
       mutate(unstable_serialize(getChatHistoryPaginationKey));
     },

@@ -12,19 +12,84 @@ export function parseAssistantResponseText(text: string): {
   }
 
   const isJsonLike = cleaned.startsWith("{") || cleaned.startsWith("[");
-  if (!isJsonLike) {
-    return { isJsonLike: false, responseText: cleaned };
+  if (isJsonLike) {
+    try {
+      const parsed = JSON.parse(cleaned) as Partial<AssistantResponsePayload>;
+      return {
+        isJsonLike: true,
+        responseText:
+          typeof parsed.responseText === "string" ? parsed.responseText : null,
+      };
+    } catch {
+      // Fall through to inline-wrapper extraction below.
+    }
+  }
+
+  const inline = extractInlineResponseText(cleaned);
+  if (inline) {
+    const prefix = cleaned.slice(0, inline.start).trim();
+    const suffix = cleaned.slice(inline.end).trim();
+    const merged = [prefix, inline.value, suffix].filter(Boolean).join("\n\n");
+    return { isJsonLike: true, responseText: merged };
+  }
+
+  return { isJsonLike, responseText: isJsonLike ? null : cleaned };
+}
+
+// Locate a {"responseText":"..."} object embedded in a larger text blob and
+// return its boundaries plus the unwrapped value. Handles escaped quotes.
+function extractInlineResponseText(
+  source: string
+): { start: number; end: number; value: string } | null {
+  const marker = '{"responseText":"';
+  const start = source.indexOf(marker);
+  if (start === -1) {
+    return null;
+  }
+
+  const valueStart = start + marker.length;
+  let i = valueStart;
+  while (i < source.length) {
+    const ch = source[i];
+    if (ch === "\\") {
+      i += 2;
+      continue;
+    }
+    if (ch === '"') {
+      break;
+    }
+    i++;
+  }
+  if (i >= source.length) {
+    return null;
+  }
+
+  const raw = source.slice(start, i + 2); // includes closing "}
+  if (!raw.endsWith('"}')) {
+    // Tolerate trailing whitespace before the closing brace.
+    const closeBrace = source.indexOf("}", i);
+    if (closeBrace === -1) {
+      return null;
+    }
+    try {
+      const parsed = JSON.parse(source.slice(start, closeBrace + 1)) as Partial<AssistantResponsePayload>;
+      if (typeof parsed.responseText !== "string") {
+        return null;
+      }
+      return { start, end: closeBrace + 1, value: parsed.responseText };
+    } catch {
+      return null;
+    }
   }
 
   try {
-    const parsed = JSON.parse(cleaned) as Partial<AssistantResponsePayload>;
-    return {
-      isJsonLike: true,
-      responseText:
-        typeof parsed.responseText === "string" ? parsed.responseText : null,
-    };
+    const parsed = JSON.parse(raw) as Partial<AssistantResponsePayload>;
+    if (typeof parsed.responseText !== "string") {
+      return null;
+    }
+    return { start, end: start + raw.length, value: parsed.responseText };
   } catch {
-    return { isJsonLike: true, responseText: null };
+    return null;
   }
 }
 
@@ -32,4 +97,29 @@ function stripCodeFence(value: string) {
   return value
     .replace(/^```(?:json)?\s*/i, "")
     .replace(/\s*```$/i, "");
+}
+
+// Strips markdown pipe tables (header | separator | rows) from assistant prose.
+// The UI renders compareProducts/compareSellers as native components, so a raw
+// markdown table is always duplicate noise.
+export function stripMarkdownPipeTables(text: string): string {
+  const lines = text.split("\n");
+  const result: string[] = [];
+  let i = 0;
+  while (i < lines.length) {
+    const header = lines[i];
+    const separator = lines[i + 1];
+    const isHeader = /^\s*\|.*\|\s*$/.test(header);
+    const isSeparator = /^\s*\|?\s*:?-{2,}.*\|.*$/.test(separator ?? "");
+    if (isHeader && isSeparator) {
+      i += 2;
+      while (i < lines.length && /^\s*\|.*\|\s*$/.test(lines[i])) {
+        i++;
+      }
+      continue;
+    }
+    result.push(header);
+    i++;
+  }
+  return result.join("\n").replace(/\n{3,}/g, "\n\n").trim();
 }

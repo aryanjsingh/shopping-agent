@@ -24,6 +24,9 @@ export function ComparisonTable({ rows }: { rows: Row[] }) {
     return null;
   }
   // Find the cheapest row to badge it.
+  const anyRating = rows.some((row) => row.rating);
+  const anyFeatures = rows.some((row) => row.topFeatures.length > 0);
+  const anySpecs = rows.some((row) => row.techSpecs.length > 0);
   const cheapestId = rows.reduce(
     (best, row) =>
       row.bestSellerPrice &&
@@ -111,57 +114,63 @@ export function ComparisonTable({ rows }: { rows: Row[] }) {
               </td>
             ))}
           </tr>
-          <tr>
-            <td className="font-medium text-muted-foreground">Rating</td>
-            {rows.map((row) => (
-              <td key={`r-${row.id}`}>
-                {row.rating ? (
-                  <span className="inline-flex items-center gap-1">
-                    <StarIcon className="size-3 fill-amber-400 text-amber-400" />
-                    {formatRating(row.rating.rating, row.rating.count)}
-                  </span>
-                ) : (
-                  <span className="text-muted-foreground">—</span>
-                )}
-              </td>
-            ))}
-          </tr>
-          <tr>
-            <td className="font-medium text-muted-foreground">Top features</td>
-            {rows.map((row) => (
-              <td key={`f-${row.id}`}>
-                {row.topFeatures.length > 0 ? (
-                  <ul className="ml-3 list-disc space-y-1">
-                    {row.topFeatures.map((f) => (
-                      <li className="line-clamp-2" key={f}>
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <span className="text-muted-foreground">—</span>
-                )}
-              </td>
-            ))}
-          </tr>
-          <tr>
-            <td className="font-medium text-muted-foreground">Specs</td>
-            {rows.map((row) => (
-              <td key={`spec-${row.id}`}>
-                {row.techSpecs.length > 0 ? (
-                  <ul className="ml-3 list-disc space-y-1">
-                    {row.techSpecs.map((s) => (
-                      <li className="line-clamp-2" key={s}>
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <span className="text-muted-foreground">—</span>
-                )}
-              </td>
-            ))}
-          </tr>
+          {anyRating ? (
+            <tr>
+              <td className="font-medium text-muted-foreground">Rating</td>
+              {rows.map((row) => (
+                <td key={`r-${row.id}`}>
+                  {row.rating ? (
+                    <span className="inline-flex items-center gap-1">
+                      <StarIcon className="size-3 fill-amber-400 text-amber-400" />
+                      {formatRating(row.rating.rating, row.rating.count)}
+                    </span>
+                  ) : (
+                    <span className="text-muted-foreground">—</span>
+                  )}
+                </td>
+              ))}
+            </tr>
+          ) : null}
+          {anyFeatures ? (
+            <tr>
+              <td className="font-medium text-muted-foreground">Top features</td>
+              {rows.map((row) => (
+                <td key={`f-${row.id}`}>
+                  {row.topFeatures.length > 0 ? (
+                    <ul className="ml-3 list-disc space-y-1">
+                      {row.topFeatures.map((f) => (
+                        <li className="line-clamp-2" key={f}>
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <span className="text-muted-foreground">—</span>
+                  )}
+                </td>
+              ))}
+            </tr>
+          ) : null}
+          {anySpecs ? (
+            <tr>
+              <td className="font-medium text-muted-foreground">Specs</td>
+              {rows.map((row) => (
+                <td key={`spec-${row.id}`}>
+                  {row.techSpecs.length > 0 ? (
+                    <ul className="ml-3 list-disc space-y-1">
+                      {row.techSpecs.map((s) => (
+                        <li className="line-clamp-2" key={s}>
+                          {s}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <span className="text-muted-foreground">—</span>
+                  )}
+                </td>
+              ))}
+            </tr>
+          ) : null}
           <tr>
             <td className="font-medium text-muted-foreground">Action</td>
             {rows.map((row) => {
