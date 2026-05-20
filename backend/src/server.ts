@@ -5,12 +5,14 @@ import {
   createUIMessageStream,
   createUIMessageStreamResponse,
   generateText,
+  smoothStream,
   stepCountIs,
   streamText,
   type UIMessage,
 } from "ai";
 import { z } from "zod";
 import { buildAgentForChat, DEFAULT_AGENT_ID } from "@/lib/agents/registry";
+import type { SearchMemo } from "@/lib/agents/track1-shopping/tools/search-products";
 import {
   allowedModelIds,
   DEFAULT_CHAT_MODEL,
@@ -199,7 +201,7 @@ type ClarifyOption = {
 type ClarifyPayload = {
   question: string;
   reason?: string;
-  mode: "use_case" | "budget" | "style" | "feature" | "recipient";
+  mode?: string;
   options: ClarifyOption[];
 };
 
@@ -217,6 +219,43 @@ function hasRecentClarification(messages: DBMessage[]) {
         (part as { type?: string }).type === "tool-clarifyIntent"
     )
   );
+}
+
+function getClarificationOutput(message: DBMessage | undefined) {
+  const parts = Array.isArray(message?.parts) ? message.parts : [];
+  const clarifyPart = parts.find(
+    (part: unknown) =>
+      typeof part === "object" &&
+      part !== null &&
+      "type" in part &&
+      (part as { type?: string }).type === "tool-clarifyIntent"
+  ) as { output?: unknown; input?: unknown; state?: string } | undefined;
+
+  const raw =
+    clarifyPart?.state === "output-available"
+      ? clarifyPart.output
+      : clarifyPart?.output ?? clarifyPart?.input;
+
+  return raw && typeof raw === "object" ? (raw as Partial<ClarifyPayload>) : null;
+}
+
+function getDbMessageText(message: DBMessage | undefined) {
+  const parts = Array.isArray(message?.parts) ? message.parts : [];
+  return parts
+    .map((part: unknown) => {
+      if (
+        typeof part === "object" &&
+        part !== null &&
+        "type" in part &&
+        (part as { type?: string }).type === "text" &&
+        typeof (part as { text?: unknown }).text === "string"
+      ) {
+        return String((part as { text?: unknown }).text);
+      }
+      return "";
+    })
+    .join(" ")
+    .trim();
 }
 
 export function shouldOfferDiscoveryOptions(text: string, messagesFromDb: DBMessage[]) {
@@ -279,7 +318,7 @@ function buildDiscoveryClarification(userText: string): ClarifyPayload {
   ): ClarifyOption => ({
     label,
     description,
-    value: `${userText}. Priority: ${priority}.`,
+    value: priority,
     searchHint,
   });
 
@@ -424,6 +463,79 @@ function withoutThinkingData(messages: ChatMessage[]): ChatMessage[] {
   }));
 }
 
+function hydrateSearchMemo(messages: ChatMessage[]): SearchMemo {
+  const memo: SearchMemo = { lastProductIds: [] };
+
+  for (const message of messages) {
+    for (const part of message.parts ?? []) {
+      if (
+        part.type !== "tool-searchProducts" &&
+        part.type !== "tool-refineSearch" &&
+        part.type !== "tool-showMore" &&
+        part.type !== "tool-displayProducts"
+      ) {
+        continue;
+      }
+
+      const output = (part as { output?: unknown }).output as
+        | {
+            appliedFilters?: SearchMemo["lastFilters"];
+            currentGenOnly?: boolean;
+            products?: (NonNullable<SearchMemo["lastProducts"]>[number] & {
+              id?: unknown;
+            })[];
+            query?: unknown;
+          }
+        | undefined;
+
+      if (!output || typeof output.query !== "string" || output.query.trim().length < 2) {
+        continue;
+      }
+
+      memo.lastQuery = output.query.trim();
+      memo.lastFilters = output.appliedFilters ?? memo.lastFilters;
+      memo.lastProductIds = Array.isArray(output.products)
+        ? output.products
+            .map((product) => product.id)
+            .filter((id): id is string => typeof id === "string")
+        : [];
+      memo.lastProducts = Array.isArray(output.products)
+        ? output.products.filter(
+            (product): product is NonNullable<SearchMemo["lastProducts"]>[number] =>
+              Boolean(product && typeof product.id === "string")
+          )
+        : memo.lastProducts;
+    }
+  }
+
+  if (memo.lastQuery) {
+    return memo;
+  }
+
+  for (let i = messages.length - 1; i >= 0; i--) {
+    const message = messages[i];
+    const hasClarification = message.parts?.some(
+      (part) => part.type === "tool-clarifyIntent"
+    );
+    if (!hasClarification) {
+      continue;
+    }
+
+    for (let j = i - 1; j >= 0; j--) {
+      const previous = messages[j];
+      if (previous.role !== "user") {
+        continue;
+      }
+      const text = getTextFromMessage(previous).trim();
+      if (text.length >= 2) {
+        return { lastProductIds: [], lastQuery: text };
+      }
+    }
+  }
+
+  return memo;
+}
+
 async function handleChatPost(request: Request) {
   const responseStartedAt = Date.now();
   const user = requireUser(request);
@@ -511,8 +623,14 @@ async function handleChatPost(request: Request) {
   }
 
   const userText = message?.role === "user" ? getTextFromMessage(message) : "";
-  if (!isToolApprovalFlow && shouldOfferDiscoveryOptions(userText, messagesFromDb)) {
-    const clarifyData = buildDiscoveryClarification(userText);
+  const clarifyData =
+    !isToolApprovalFlow && message?.role === "user"
+      ? (shouldOfferDiscoveryOptions(userText, messagesFromDb)
+          ? buildDiscoveryClarification(userText)
+          : null)
+      : null;
+
+  if (clarifyData) {
     const toolCallId = generateUUID();
     const stream = createUIMessageStream<ChatMessage>({
       execute: ({ writer }) => {
@@ -528,7 +646,7 @@ async function handleChatPost(request: Request) {
         writer.write({
           type: "text-delta",
           id: "intro",
-          delta: "Pick the priority and I’ll narrow the catalog.",
+          delta: "Pick one option and I’ll narrow the catalog.",
         });
         writer.write({ type: "text-end", id: "intro" });
         writer.write({
@@ -589,6 +707,7 @@ async function handleChatPost(request: Request) {
   const agent = buildAgentForChat({
     agentId: selectedAgentId ?? DEFAULT_AGENT_ID,
     chatId: id,
+    initialSearchMemo: hydrateSearchMemo(uiMessages),
   });
   const modelMessages = await convertToModelMessages(withoutThinkingData(uiMessages));
   const modelCapabilities = getCapabilities()[chatModel] ?? {
@@ -600,15 +719,6 @@ async function handleChatPost(request: Request) {
   const stream = createUIMessageStream({
     originalMessages: isToolApprovalFlow ? uiMessages : undefined,
     execute: async ({ writer: dataStream }) => {
-      dataStream.write({
-        type: "data-thinking",
-        id: "live-thinking",
-        data: {
-          durationSeconds: 0,
-          toolTrace: [],
-        },
-      });
-
       if (provisionalTitle) {
         dataStream.write({
           type: "data-chat-title",
@@ -636,6 +746,10 @@ async function handleChatPost(request: Request) {
         tools: modelCapabilities.tools
           ? (agent.tools as Parameters<typeof streamText>[0]["tools"])
           : undefined,
+        experimental_transform: smoothStream({
+          chunking: "word",
+          delayInMs: 20,
+        }),
         experimental_telemetry: {
           isEnabled: false,
           functionId: "backend-stream-text",

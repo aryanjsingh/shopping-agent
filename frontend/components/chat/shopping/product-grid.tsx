@@ -19,9 +19,11 @@ import { formatMoney, formatRating } from "./format";
 type Seller = {
   shopId: string;
   shopName: string;
+  shopUrl?: string;
   price: number;
   currency: string;
   checkoutUrl: string;
+  productUrl?: string;
   variantId: string;
 };
 
@@ -42,6 +44,27 @@ export type Product = {
   productUrl?: string;
   primaryCheckoutUrl: string;
 };
+
+function preserveChatScroll() {
+  window.dispatchEvent(new Event("chat-preserve-scroll"));
+}
+
+export function getProductHref(product: Product) {
+  const seller = product.sellers.find((item) => item.checkoutUrl || item.productUrl)
+    ?? product.sellers[0];
+  return (
+    product.primaryCheckoutUrl ||
+    seller?.checkoutUrl ||
+    seller?.productUrl ||
+    product.productUrl ||
+    seller?.shopUrl ||
+    ""
+  );
+}
+
+function getSellerHref(seller: Seller) {
+  return seller.checkoutUrl || seller.productUrl || seller.shopUrl || "";
+}
 
 export function ProductGridSkeleton({ count = 4 }: { count?: number }) {
   return (
@@ -94,13 +117,16 @@ export function ProductGrid({
   }
 
   return (
-    <>
+    <div className="block w-full [overflow-anchor:none]">
       <div className="w-full">
         <div className="group/products overflow-hidden rounded-lg border border-border/60 bg-background/95 shadow-[var(--shadow-float)] backdrop-blur">
           <button
             aria-expanded={isOpen}
             className="flex h-10 w-full cursor-pointer items-center justify-between gap-3 px-3 text-left transition hover:bg-muted/50"
-            onClick={() => setIsOpen((value) => !value)}
+            onClick={() => {
+              preserveChatScroll();
+              setIsOpen((value) => !value);
+            }}
             type="button"
           >
             <span className="min-w-0 truncate font-medium text-[13px]">
@@ -117,8 +143,8 @@ export function ProductGrid({
           </button>
 
           {isOpen ? (
-            <div className="border-border/50 border-t p-2">
-              <div className="flex snap-x gap-3 overflow-x-auto overscroll-x-contain pb-1 [scrollbar-color:transparent_transparent] [scrollbar-width:thin] group-hover/products:[scrollbar-color:var(--muted-foreground)_transparent] group-focus-within/products:[scrollbar-color:var(--muted-foreground)_transparent] [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-transparent group-hover/products:[&::-webkit-scrollbar-thumb]:bg-muted-foreground/35 group-focus-within/products:[&::-webkit-scrollbar-thumb]:bg-muted-foreground/35">
+            <div className="block border-border/50 border-t p-2 [overflow-anchor:none]">
+              <div className="flex snap-x gap-3 overflow-x-auto overscroll-x-contain pb-1 pr-2 [scrollbar-color:transparent_transparent] [scrollbar-width:thin] group-hover/products:[scrollbar-color:var(--muted-foreground)_transparent] group-focus-within/products:[scrollbar-color:var(--muted-foreground)_transparent] [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-transparent group-hover/products:[&::-webkit-scrollbar-thumb]:bg-muted-foreground/35 group-focus-within/products:[&::-webkit-scrollbar-thumb]:bg-muted-foreground/35">
                 {products.map((product) => (
                   <ProductCard
                     key={product.id}
@@ -138,7 +164,7 @@ export function ProductGrid({
           onClose={() => setExpandedProduct(null)}
         />
       )}
-    </>
+    </div>
   );
 }
 
@@ -219,7 +245,7 @@ function ProductCard({
         : [];
   const [imgLoaded, setImgLoaded] = useState(false);
   const [imgFailed, setImgFailed] = useState(false);
-  const href = product.productUrl || product.primaryCheckoutUrl;
+  const href = getProductHref(product);
 
   return (
     <div className="group relative flex w-[168px] shrink-0 snap-start flex-col overflow-hidden rounded-lg border border-border/60 bg-card text-card-foreground shadow-sm transition-all duration-200 hover:border-border hover:shadow-md hover:-translate-y-0.5">
@@ -335,7 +361,7 @@ function ProductDetailOverlay({
   const overlayRef = useRef<HTMLDivElement>(null);
   const image = product.media[0]?.url;
   const [imgFailed, setImgFailed] = useState(false);
-  const href = product.productUrl || product.primaryCheckoutUrl;
+  const href = getProductHref(product);
 
   // Close on Escape
   useEffect(() => {
@@ -462,7 +488,7 @@ function ProductDetailOverlay({
                 {product.sellers.map((seller, i) => (
                   <a
                     key={seller.variantId}
-                    href={seller.checkoutUrl}
+                    href={getSellerHref(seller)}
                     rel="noreferrer noopener"
                     target="_blank"
                     className={cn(
@@ -504,6 +530,9 @@ function ProductDetailOverlay({
               Shop now
               <ExternalLinkIcon className="size-3.5" />
             </a>
+            <p className="mt-2 text-center text-[11px] text-muted-foreground/60">
+              Prices shown are estimates and may vary on the merchant's site.
+            </p>
           </div>
         )}
       </div>

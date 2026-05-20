@@ -20,7 +20,23 @@ export function buildSystemPrompt({
   agentPrompt: string;
   requestHints: RequestHints;
 }) {
-  return `${agentPrompt}\n\n${getRequestPromptFromHints(requestHints)}`;
+  const istDateString = new Date().toLocaleString("en-US", {
+    timeZone: "Asia/Kolkata",
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  });
+
+  const timestampPrompt = `\
+Current System Time (IST): ${istDateString}
+`;
+
+  return `${agentPrompt}\n\n${timestampPrompt}\n${getRequestPromptFromHints(requestHints)}`;
 }
 
 // Legacy prompts retained so dormant artifact modules type-check.

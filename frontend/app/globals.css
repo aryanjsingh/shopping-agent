@@ -220,6 +220,36 @@ textarea:focus-visible {
   }
 }
 
+@utility scroll-fade-y {
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 10%,
+    black 88%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 10%,
+    black 88%,
+    transparent 100%
+  );
+}
+
+@utility scroll-fade-bottom {
+  mask-image: linear-gradient(
+    to bottom,
+    black 70%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 70%,
+    transparent 100%
+  );
+}
+
 @layer utilities {
   :root {
     --foreground-rgb: 0, 0, 0;

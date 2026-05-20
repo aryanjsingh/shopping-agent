@@ -10,6 +10,7 @@ import { compareProducts } from "./tools/compare-products";
 import { compareSellers } from "./tools/compare-sellers";
 import { getProduct } from "./tools/get-product";
 import { createSearchProductsTool } from "./tools/search-products";
+import { createDisplayProductsTool } from "./tools/display-products";
 import { createShowMoreTool } from "./tools/show-more";
 import { createRefineSearchTool } from "./tools/refine-search";
 import { webSearch } from "./tools/web-search";
@@ -19,6 +20,7 @@ const _staticCtx = { chatSeed: 1, memo: { lastProductIds: [] } };
 
 export const track1ToolTypes = {
   searchProducts: createSearchProductsTool(_staticCtx),
+  displayProducts: createDisplayProductsTool(_staticCtx),
   showMore: createShowMoreTool(_staticCtx),
   refineSearch: createRefineSearchTool(_staticCtx),
   getProduct,

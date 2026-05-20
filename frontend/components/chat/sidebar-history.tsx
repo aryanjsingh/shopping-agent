@@ -4,9 +4,10 @@ import { isToday, isYesterday, subMonths, subWeeks } from "date-fns";
 import { motion } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 import type { User } from "next-auth";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { toast } from "sonner";
 import useSWRInfinite from "swr/infinite";
+import { Search } from "lucide-react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -34,7 +35,7 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import type { Chat } from "@/lib/db/schema";
-import { fetcher } from "@/lib/utils";
+import { cn, fetcher } from "@/lib/utils";
 import { LoaderIcon } from "./icons";
 import { ChatItem } from "./sidebar-history-item";
 
@@ -107,7 +108,15 @@ export function getChatHistoryPaginationKey(
   return `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/api/history?ending_before=${firstChatFromPage.id}&limit=${PAGE_SIZE}`;
 }
 
-export function SidebarHistory({ user }: { user: User | undefined }) {
+export function SidebarHistory({
+  user,
+  isSearchOpen,
+  setIsSearchOpen,
+}: {
+  user: User | undefined;
+  isSearchOpen: boolean;
+  setIsSearchOpen: (open: boolean) => void;
+}) {
   const { setOpenMobile } = useSidebar();
   const pathname = usePathname();
   const id = pathname?.startsWith("/chat/") ? pathname.split("/")[2] : null;
@@ -131,6 +140,12 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
   const [renamingChat, setRenamingChat] = useState<Chat | null>(null);
   const [renameTitle, setRenameTitle] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    if (!isSearchOpen) {
+      setSearchQuery("");
+    }
+  }, [isSearchOpen]);
 
   const hasReachedEnd = paginatedChatHistories
     ? paginatedChatHistories.some((page) => page.hasMore === false)
@@ -222,7 +237,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
 
   if (!user) {
     return (
-      <SidebarGroup className="group-data-[collapsible=icon]:hidden">
+      <SidebarGroup className="group-data-[collapsible=icon]:hidden pt-6">
         <SidebarGroupContent>
           <div className="flex w-full flex-row items-center justify-center gap-2 px-2 text-[13px] text-sidebar-foreground/60">
             Login to save and revisit previous chats!
@@ -234,10 +249,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
 
   if (isLoading) {
     return (
-      <SidebarGroup className="group-data-[collapsible=icon]:hidden">
-        <SidebarGroupLabel className="text-[10px] font-semibold uppercase tracking-[0.12em] text-sidebar-foreground/70">
-          History
-        </SidebarGroupLabel>
+      <SidebarGroup className="group-data-[collapsible=icon]:hidden pt-6">
         <SidebarGroupContent>
           <div className="flex flex-col gap-0.5 px-1">
             {[44, 32, 28, 64, 52].map((item) => (
@@ -263,10 +275,7 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
 
   if (hasEmptyChatHistory) {
     return (
-      <SidebarGroup className="group-data-[collapsible=icon]:hidden">
-        <SidebarGroupLabel className="text-[10px] font-semibold uppercase tracking-[0.12em] text-sidebar-foreground/70">
-          History
-        </SidebarGroupLabel>
+      <SidebarGroup className="group-data-[collapsible=icon]:hidden pt-6">
         <SidebarGroupContent>
           <div className="flex w-full flex-row items-center justify-center gap-2 px-2 text-[13px] text-sidebar-foreground/60">
             Your conversations will appear here once you start chatting!
@@ -278,27 +287,8 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
 
   return (
     <>
-      <SidebarGroup className="group-data-[collapsible=icon]:hidden">
-        <SidebarGroupLabel className="text-[10px] font-semibold uppercase tracking-[0.12em] text-sidebar-foreground/70">
-          <span>History</span>
-          <button
-            className="ml-auto rounded px-1.5 py-0.5 font-medium normal-case tracking-normal text-sidebar-foreground/50 transition hover:bg-sidebar-accent hover:text-sidebar-foreground"
-            onClick={() => setShowClearDialog(true)}
-            type="button"
-          >
-            Clear all
-          </button>
-        </SidebarGroupLabel>
+      <SidebarGroup className="group-data-[collapsible=icon]:hidden pt-6">
         <SidebarGroupContent>
-          <div className="px-2 pb-2">
-            <Input
-              aria-label="Search history"
-              className="h-8 border-sidebar-border/60 bg-sidebar-accent/30 text-[12px]"
-              onChange={(event) => setSearchQuery(event.target.value)}
-              placeholder="Search history"
-              value={searchQuery}
-            />
-          </div>
           <SidebarMenu>
             {paginatedChatHistories &&
               (() => {
@@ -317,7 +307,16 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
                   );
                 }
 
-                const groupedChats = groupChatsByDate(chatsFromHistory);
+                // Deduplicate "New Chat" entries — keep only the most recent one
+                const seen = new Set<string>();
+                const deduped = chatsFromHistory.filter((chat) => {
+                  const key = chat.title === "New Chat" ? "New Chat" : chat.id;
+                  if (seen.has(key)) return false;
+                  seen.add(key);
+                  return true;
+                });
+
+                const groupedChats = groupChatsByDate(deduped);
                 const openRename = (chat: Chat) => {
                   setRenamingChat(chat);
                   setRenameTitle(chat.title);
@@ -517,6 +516,71 @@ export function SidebarHistory({ user }: { user: User | undefined }) {
               Save
             </Button>
           </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={isSearchOpen} onOpenChange={setIsSearchOpen}>
+        <DialogContent className="max-w-md p-0 overflow-hidden bg-card/95 backdrop-blur border-border/40 shadow-2xl rounded-2xl">
+          <DialogHeader className="px-4 pt-4 pb-2 border-b border-border/20 flex flex-row items-center gap-2.5">
+            <Search className="size-4 text-muted-foreground/70 shrink-0" />
+            <DialogTitle className="sr-only">Search chats</DialogTitle>
+            <input
+              autoFocus
+              type="text"
+              placeholder="Search all chats..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="flex-1 bg-transparent border-none outline-none text-[14px] text-foreground placeholder:text-muted-foreground/50 py-1"
+            />
+          </DialogHeader>
+          <div className="max-h-[300px] overflow-y-auto p-2 scroll-fade-y">
+            {paginatedChatHistories && (() => {
+              const query = searchQuery.trim().toLowerCase();
+              const chatsFromHistory = paginatedChatHistories
+                .flatMap((paginatedChatHistory) => paginatedChatHistory.chats)
+                .filter((chat) =>
+                  query ? chat.title.toLowerCase().includes(query) : true
+                )
+                .filter((chat) => chat.title !== "New Chat" || query === "new chat");
+
+              if (chatsFromHistory.length === 0) {
+                return (
+                  <div className="px-4 py-8 text-center text-[13px] text-muted-foreground/60">
+                    No matching conversations found.
+                  </div>
+                );
+              }
+
+              return (
+                <div className="flex flex-col gap-0.5">
+                  {chatsFromHistory.map((chat) => {
+                    const isChatActive = chat.id === id;
+                    return (
+                      <button
+                        key={chat.id}
+                        onClick={() => {
+                          setIsSearchOpen(false);
+                          setOpenMobile(false);
+                          router.push(`/chat/${chat.id}`);
+                        }}
+                        className={cn(
+                          "w-full text-left px-3 py-2.5 rounded-xl transition-all duration-150 flex items-center justify-between text-[13px] group border border-transparent",
+                          isChatActive
+                            ? "bg-primary/10 text-primary border-primary/20"
+                            : "text-foreground/80 hover:bg-sidebar-accent hover:text-foreground"
+                        )}
+                      >
+                        <span className="truncate font-medium flex-1 pr-4">{chat.title}</span>
+                        <span className="text-[10px] text-muted-foreground/65 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
+                          Open →
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              );
+            })()}
+          </div>
         </DialogContent>
       </Dialog>
     </>

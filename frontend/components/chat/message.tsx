@@ -16,11 +16,13 @@ import { DocumentToolResult } from "./document";
 import { DocumentPreview } from "./document-preview";
 import { SparklesIcon } from "./icons";
 import { MessageActions } from "./message-actions";
-import { MessageThinking, toThinkingTool } from "./message-thinking";
+import { MessageThinking, toThinkingTool, type ThinkingStep } from "./message-thinking";
 import { PreviewAttachment } from "./preview-attachment";
+import { parseAssistantResponseText } from "./shopping/assistant-response-json";
 import { BuyCta } from "./shopping/buy-cta";
 import {
   isClarifyMenuRestatement,
+  looksLikeClarifyMenuJson,
   tryParseClarifyMenuFromText,
   type ClarifyMenuOutput,
 } from "./shopping/clarify-menu-utils";
@@ -63,6 +65,47 @@ type ProductResult = NonNullable<
   NonNullable<SearchProductsPart["output"]>["products"]
 >[number];
 
+const findSelectedOption = (
+  options: { label: string; value: string; description?: string; searchHint?: string }[],
+  allMessages?: ChatMessage[],
+  messageIndex?: number
+): string | undefined => {
+  if (!allMessages || messageIndex === undefined || messageIndex === -1) return undefined;
+  
+  for (let i = messageIndex + 1; i < allMessages.length; i++) {
+    const nextMsg = allMessages[i];
+    if (nextMsg.role === "user") {
+      const textParts = nextMsg.parts
+        ?.filter((p) => p.type === "text" && typeof (p as { text?: string }).text === "string")
+        .map((p) => ((p as { text: string }).text).trim().toLowerCase()) ?? [];
+      
+      for (const opt of options) {
+        const valLower = opt.value.toLowerCase();
+        const lblLower = opt.label.toLowerCase();
+        const hintLower = opt.searchHint?.toLowerCase();
+        
+        if (
+          textParts.some(
+            (t) =>
+              t === valLower ||
+              t === lblLower ||
+              (hintLower && t === hintLower) ||
+              valLower.includes(t) ||
+              lblLower.includes(t) ||
+              t.includes(valLower) ||
+              t.includes(lblLower)
+          )
+        ) {
+          return opt.value;
+        }
+      }
+    } else if (nextMsg.role === "assistant") {
+      break;
+    }
+  }
+  return undefined;
+};
+
 const PurePreviewMessage = ({
   addToolApprovalResponse,
   chatId,
@@ -76,6 +119,8 @@ const PurePreviewMessage = ({
   requiresScrollPadding: _requiresScrollPadding,
   isLatestMessage,
   onEdit,
+  messageIndex,
+  allMessages,
 }: {
   addToolApprovalResponse: UseChatHelpers<ChatMessage>["addToolApprovalResponse"];
   chatId: string;
@@ -89,6 +134,8 @@ const PurePreviewMessage = ({
   requiresScrollPadding: boolean;
   isLatestMessage: boolean;
   onEdit?: (message: ChatMessage) => void;
+  messageIndex?: number;
+  allMessages?: ChatMessage[];
 }) => {
   const attachmentsFromMessage = message.parts.filter(
     (part) => part.type === "file"
@@ -178,9 +225,7 @@ const PurePreviewMessage = ({
     message.parts
       ?.filter(
         (part) =>
-          part.type === "tool-searchProducts" ||
-          part.type === "tool-showMore" ||
-          part.type === "tool-refineSearch"
+          part.type === "tool-displayProducts"
       )
       .map((part, index) => ({
         key: `message-${message.id}-product-${index}`,
@@ -248,10 +293,11 @@ const PurePreviewMessage = ({
         return raw as ClarifyMenuOutput | undefined;
       })
       .filter(Boolean) ?? [];
+  const hasClarifyIntent = clarifyOutputs.length > 0;
 
   // Salvage clarifyIntent menus the model emitted as JSON text instead of a tool call.
   const salvagedClarify: { partIndex: number; menu: ClarifyMenuOutput }[] = [];
-  if (isAssistant && shouldRenderClarify && clarifyOutputs.length === 0) {
+  if (isAssistant && clarifyOutputs.length === 0) {
     message.parts?.forEach((part, idx) => {
       if (part.type !== "text" || !part.text) return;
       const parsed = tryParseClarifyMenuFromText(part.text);
@@ -267,11 +313,23 @@ const PurePreviewMessage = ({
     (part) => part.type === "tool-compareProducts"
   ) ?? false;
 
-  const thinkingTools =
-    message.parts
-      ?.filter((part) => part.type.startsWith("tool-"))
-      .map((part) =>
-        toThinkingTool(
+  const thinkingSteps: ThinkingStep[] = [];
+  let toolIndex = 0;
+  let reasoningIndex = 0;
+
+  if (message.parts) {
+    message.parts.forEach((part, index) => {
+      if (part.type === "reasoning") {
+        const text = part.text || "";
+        if (text.trim().length > 0) {
+          thinkingSteps.push({
+            type: "reasoning",
+            text,
+            id: `reasoning-${index}-${reasoningIndex++}`,
+          });
+        }
+      } else if (part.type.startsWith("tool-")) {
+        const tool = toThinkingTool(
           part as {
             type: string;
             toolCallId?: string;
@@ -279,8 +337,16 @@ const PurePreviewMessage = ({
             input?: unknown;
             errorText?: string;
           }
-        )
-      ) ?? [];
+        );
+        thinkingSteps.push({
+          type: "tool",
+          tool,
+          id: tool.id || `tool-${index}-${toolIndex++}`,
+        });
+      }
+    });
+  }
+
   const thinkingData = message.parts?.find(
     (part) => part.type === "data-thinking"
   ) as ThinkingDataPart | undefined;
@@ -294,26 +360,35 @@ const PurePreviewMessage = ({
         type: `tool-${tool.name}`,
       })
     ) ?? [];
-  const displayThinkingTools =
-    thinkingTools.length > 0 ? thinkingTools : persistedThinkingTools;
-  const hasRunningTool = thinkingTools.some(
-    (tool) =>
-      tool.state !== "output-available" &&
-      tool.state !== "output-denied" &&
-      tool.state !== "output-error"
+
+  // Fallback to persisted tools if no live tool parts exist in the parts list
+  const hasLiveTools = thinkingSteps.some((step) => step.type === "tool");
+  if (!hasLiveTools && persistedThinkingTools.length > 0) {
+    persistedThinkingTools.forEach((tool, index) => {
+      thinkingSteps.push({
+        type: "tool",
+        tool,
+        id: tool.id || `persisted-tool-${index}`,
+      });
+    });
+  }
+
+  const hasRunningTool = thinkingSteps.some(
+    (step) =>
+      step.type === "tool" &&
+      step.tool.state !== "output-available" &&
+      step.tool.state !== "output-denied" &&
+      step.tool.state !== "output-error"
   );
   const isThinkingPanelStreaming =
     isAssistant && isLoading && (!hasTextContent || hasRunningTool);
+
   const thinkingPanel =
-    isAssistant &&
-    (mergedReasoning.text ||
-      displayThinkingTools.length > 0 ||
-      thinkingData) ? (
+    isAssistant && (thinkingSteps.length > 0 || thinkingData) ? (
       <MessageThinking
         durationSeconds={thinkingData?.data?.durationSeconds}
         isStreaming={isThinkingPanelStreaming}
-        reasoning={mergedReasoning.text}
-        tools={displayThinkingTools}
+        steps={thinkingSteps}
       />
     ) : null;
 
@@ -327,6 +402,24 @@ const PurePreviewMessage = ({
     }
 
     if (type === "text") {
+      if (isAssistant && hasClarifyIntent) {
+        return null;
+      }
+
+      if (isAssistant && looksLikeClarifyMenuJson(part.text)) {
+        return null;
+      }
+      const parsedResponse = isAssistant
+        ? parseAssistantResponseText(part.text)
+        : { isJsonLike: false, responseText: part.text };
+      if (isAssistant && parsedResponse.responseText === null) {
+        return null;
+      }
+      const displayText = parsedResponse.responseText ?? part.text;
+      if (!displayText.trim()) {
+        return null;
+      }
+
       // Salvaged clarifyIntent JSON — render menu, suppress raw JSON text.
       const salvaged = salvagedByPart.get(index);
       if (salvaged) {
@@ -335,11 +428,12 @@ const PurePreviewMessage = ({
             (o): o is { label: string; value: string; description?: string; searchHint?: string } =>
               typeof o.label === "string" && typeof o.value === "string"
           );
+        const selectedValue = findSelectedOption(menuOptions, allMessages, messageIndex);
         return (
           <div key={key}>
             <OptionChips
               onSelect={
-                sendMessage
+                sendMessage && !selectedValue
                   ? (value) => {
                       sendMessage({
                         role: "user",
@@ -352,6 +446,7 @@ const PurePreviewMessage = ({
               question={salvaged.question ?? ""}
               reason={salvaged.reason}
               mode={salvaged.mode}
+              selectedValue={selectedValue}
             />
           </div>
         );
@@ -370,8 +465,8 @@ const PurePreviewMessage = ({
 
       return (
         <MessageContent
-          className={cn("text-[13px] leading-[1.65]", {
-            "w-fit max-w-[min(80%,56ch)] whitespace-pre-wrap break-words rounded-lg border border-border/40 bg-secondary px-3.5 py-2 text-left shadow-[var(--shadow-card)]":
+          className={cn("text-[15px] leading-[1.65]", {
+            "w-fit max-w-[min(80%,56ch)] whitespace-pre-wrap break-words rounded-2xl border border-border/40 bg-secondary px-3.5 py-2 text-left shadow-[var(--shadow-card)]":
               message.role === "user",
           })}
           data-testid="message-content"
@@ -380,50 +475,26 @@ const PurePreviewMessage = ({
           {isAssistant && taggableProducts.length > 0 ? (
             <ProductMarkdownResponse
               products={taggableProducts}
-              text={sanitizeText(part.text)}
+              text={sanitizeText(displayText)}
             />
           ) : (
-            <MessageResponse>{sanitizeText(part.text)}</MessageResponse>
+            <MessageResponse>{sanitizeText(displayText)}</MessageResponse>
           )}
         </MessageContent>
       );
     }
 
-    if (type === "tool-searchProducts" || type === "tool-showMore" || type === "tool-refineSearch") {
+    if (
+      type === "tool-searchProducts" ||
+      type === "tool-displayProducts" ||
+      type === "tool-showMore" ||
+      type === "tool-refineSearch"
+    ) {
       return null;
     }
 
     if (type === "tool-webSearch") {
-      const { toolCallId, state } = part;
-      if (state === "output-available" && part.output) {
-        const out = part.output as {
-          query?: string;
-          searchKind?: string;
-          cached?: boolean;
-          results?: WebSearchResult[];
-          error?: string;
-        };
-        if (out.error) {
-          return (
-            <div
-              key={toolCallId}
-              className="rounded-lg border border-amber-300/50 bg-amber-50 px-3 py-2 text-[12px] text-amber-700 dark:border-amber-700/40 dark:bg-amber-950/40 dark:text-amber-300"
-            >
-              Web search couldn't reach a source. Continuing with catalog data.
-            </div>
-          );
-        }
-        return (
-          <div key={toolCallId}>
-            <WebSearchResults
-              query={out.query ?? ""}
-              searchKind={out.searchKind}
-              results={out.results ?? []}
-              cached={out.cached}
-            />
-          </div>
-        );
-      }
+      // Consolidated inside the thinking collapsible panel
       return null;
     }
 
@@ -538,14 +609,11 @@ const PurePreviewMessage = ({
     }
 
     if (type === "tool-clarifyIntent") {
-      if (!shouldRenderClarify) {
-        return null;
-      }
       const { toolCallId, state } = part;
       type ClarifyData = {
         question?: string;
         reason?: string;
-        mode?: "use_case" | "budget" | "style" | "feature" | "recipient";
+        mode?: string;
         options?: { label: string; value: string; description?: string; searchHint?: string }[];
       };
       const rawData: unknown =
@@ -554,11 +622,16 @@ const PurePreviewMessage = ({
         null;
       const chipData = rawData as ClarifyData | null;
       if (chipData && Array.isArray(chipData.options) && chipData.options.length > 0) {
+        const menuOptions = chipData.options.filter(
+          (o): o is { label: string; value: string; description?: string; searchHint?: string } =>
+            typeof o.label === "string" && typeof o.value === "string"
+        );
+        const selectedValue = findSelectedOption(menuOptions, allMessages, messageIndex);
         return (
           <div key={toolCallId}>
             <OptionChips
               onSelect={
-                sendMessage
+                sendMessage && shouldRenderClarify && !selectedValue
                   ? (value) => {
                       sendMessage({
                         role: "user",
@@ -567,10 +640,11 @@ const PurePreviewMessage = ({
                     }
                   : undefined
               }
-              options={chipData.options}
+              options={menuOptions}
               question={chipData.question ?? ""}
               reason={chipData.reason}
               mode={chipData.mode}
+              selectedValue={selectedValue}
             />
           </div>
         );
@@ -766,49 +840,74 @@ const PurePreviewMessage = ({
     />
   );
 
-  const content = isThinking ? (
-    <MessageThinking
-      durationSeconds={thinkingData?.data?.durationSeconds}
-      isStreaming={true}
-      reasoning=""
-      tools={displayThinkingTools}
-    />
-  ) : (
+  const hasResponseContent =
+    attachmentsFromMessage.length > 0 ||
+    (message.parts?.some(
+      (part) =>
+        (part.type === "text" && part.text?.trim().length > 0) ||
+        part.type === "tool-compareProducts" ||
+        part.type === "tool-compareSellers" ||
+        part.type === "tool-getProduct" ||
+        part.type === "tool-buyProduct" ||
+        part.type === "tool-clarifyIntent" ||
+        part.type === "tool-getWeather" ||
+        part.type === "tool-createDocument" ||
+        part.type === "tool-updateDocument" ||
+        part.type === "tool-requestSuggestions" ||
+        consolidatedProducts.length > 0
+    ) ?? false);
+
+  if (isAssistant) {
+    return (
+      <div
+        className="group/message w-full flex flex-col gap-3"
+        data-role="assistant"
+        data-testid="message-assistant"
+      >
+        {/* Render thinking panel full-width at the top, without any avatar on the left */}
+        {(thinkingPanel || isThinking) && (
+          <div className="w-full">
+            {isThinking ? (
+              <MessageThinking
+                durationSeconds={thinkingData?.data?.durationSeconds}
+                isStreaming={true}
+                steps={thinkingSteps}
+              />
+            ) : (
+              thinkingPanel
+            )}
+          </div>
+        )}
+
+        {/* Render actual response, but only if there is response content */}
+        {hasResponseContent && (
+          <div className="flex min-w-0 flex-1 flex-col gap-2 w-full">
+            {attachments}
+            {parts}
+            {productResults}
+            {actions}
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // User message rendering
+  const content = (
     <>
       {attachments}
-      {thinkingPanel}
       {parts}
-      {productResults}
-      {actions}
     </>
   );
 
   return (
     <div
-      className={cn(
-        "group/message w-full",
-        !isAssistant && "animate-[fade-up_0.25s_cubic-bezier(0.22,1,0.36,1)]"
-      )}
+      className="group/message w-full animate-[fade-up_0.25s_cubic-bezier(0.22,1,0.36,1)]"
       data-role={message.role}
       data-testid={`message-${message.role}`}
     >
-      <div
-        className={cn(
-          isUser ? "flex flex-col items-end gap-2" : "flex items-start gap-3"
-        )}
-      >
-        {isAssistant && (
-          <div className="flex h-[calc(13px*1.65)] shrink-0 items-center">
-            <div className="flex size-7 items-center justify-center rounded-lg bg-muted/60 text-muted-foreground ring-1 ring-border/50">
-              <SparklesIcon size={13} />
-            </div>
-          </div>
-        )}
-        {isAssistant ? (
-          <div className="flex min-w-0 flex-1 flex-col gap-2">{content}</div>
-        ) : (
-          content
-        )}
+      <div className="flex flex-col items-end gap-2">
+        {content}
       </div>
     </div>
   );
@@ -824,17 +923,10 @@ export const ThinkingMessage = () => {
       data-testid="message-assistant-loading"
     >
       <div className="flex items-start gap-3">
-        <div className="flex h-[calc(13px*1.65)] shrink-0 items-center">
-          <div className="flex size-7 items-center justify-center rounded-lg bg-muted/60 text-muted-foreground ring-1 ring-border/50">
-            <SparklesIcon size={13} />
-          </div>
-        </div>
-
         <div className="min-w-0 flex-1">
           <MessageThinking
             isStreaming={true}
-            reasoning=""
-            tools={[]}
+            steps={[]}
           />
         </div>
       </div>

@@ -205,21 +205,24 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
     return () => window.clearTimeout(timeout);
   }, [status]);
 
-  const loadedChatIds = useRef(new Set<string>());
-
-  if (isNewChat && !loadedChatIds.current.has(newChatIdRef.current)) {
-    loadedChatIds.current.add(newChatIdRef.current);
-  }
+  const serverMessagesLoadedRef = useRef<string | null>(null);
 
   useEffect(() => {
-    if (loadedChatIds.current.has(chatId)) {
-      return;
-    }
+    if (isNewChat) return;
+    if (serverMessagesLoadedRef.current === chatId) return;
     if (chatData?.messages) {
-      loadedChatIds.current.add(chatId);
+      if (
+        chatData.messages.length === 0 &&
+        messages.length > 0 &&
+        (status === "submitted" || status === "streaming")
+      ) {
+        return;
+      }
+
+      serverMessagesLoadedRef.current = chatId;
       setMessages(chatData.messages);
     }
-  }, [chatId, chatData?.messages, setMessages]);
+  }, [chatId, isNewChat, chatData?.messages, messages.length, setMessages, status]);
 
   const prevChatIdRef = useRef(chatId);
   useEffect(() => {
@@ -292,7 +295,7 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
       setInput,
       visibilityType: visibility,
       isReadonly,
-      isLoading: !isNewChat && isLoading,
+      isLoading: !isNewChat && (isLoading || (!!chatData && serverMessagesLoadedRef.current !== chatId && messages.length === 0)),
       votes,
       currentModelId,
       setCurrentModelId,
@@ -313,6 +316,7 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
       isReadonly,
       isNewChat,
       isLoading,
+      chatData,
       votes,
       currentModelId,
       showCreditCardAlert,

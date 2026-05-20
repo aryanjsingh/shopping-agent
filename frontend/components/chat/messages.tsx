@@ -65,17 +65,17 @@ function PureMessages({
   return (
     <div className="relative flex-1 bg-background">
       <div
-        className="absolute inset-0 touch-pan-y overflow-y-auto"
+        className="absolute inset-0 touch-pan-y overflow-y-auto scroll-fade-y [overflow-anchor:none]"
         ref={messagesContainerRef}
         style={isArtifactVisible ? { scrollbarWidth: "none" } : undefined}
       >
         <div
           className={cn(
-            "mx-auto flex min-h-full min-w-0 max-w-4xl flex-col gap-5 px-2 pt-6 pb-2 md:gap-7 md:px-4",
-            messages.length === 0 && !isLoading && "justify-center"
+            "mx-auto flex min-h-full min-w-0 max-w-4xl flex-col gap-5 px-2 pt-16 pb-2 md:gap-7 md:px-4 md:pt-20",
+            messages.length === 0 && !isLoading && status === "ready" && "justify-center"
           )}
         >
-          {messages.length === 0 && !isLoading ? <Greeting chatId={chatId} /> : null}
+          {messages.length === 0 && !isLoading && status === "ready" ? <Greeting chatId={chatId} /> : null}
 
           {isLoading && messages.length === 0 ? (
             <div className="flex flex-col gap-5 md:gap-7">
@@ -125,10 +125,12 @@ function PureMessages({
                   ? votes.find((vote) => vote.messageId === message.id)
                   : undefined
               }
+              messageIndex={index}
+              allMessages={messages}
             />
           ))}
 
-          {status === "submitted" && messages.at(-1)?.role !== "assistant" && (
+          {(status === "submitted" || (status === "ready" && messages.at(-1)?.role === "user")) && messages.at(-1)?.role !== "assistant" && (
             <ThinkingMessage />
           )}
 

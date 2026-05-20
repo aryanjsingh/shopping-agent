@@ -3,7 +3,7 @@ import { z } from "zod";
 
 export const clarifyIntent = tool({
   description:
-    "Show the shopper a small guided menu before catalog search when their request is broad or missing a key buying preference. Use this to act like a shopping agent: ask for the primary use case, budget tier, style, or must-have feature, then search Shopify Catalog MCP with the selected constraint. Prefer this for broad category requests like 'shoes', 'headphones', 'backpack', 'laptop', or 'gift'. Do not ask more than one menu in a row.",
+    "Create a small guided options UI when the shopper's request is underspecified or a missing choice would materially change the product set. Use this before catalog search and again for follow-up clarification when useful. Ask one useful question at a time. Choose the options freely; do not assume a fixed taxonomy.",
   inputSchema: z.object({
     question: z
       .string()
@@ -17,9 +17,13 @@ export const clarifyIntent = tool({
         "One short sentence explaining why this choice improves catalog results"
       ),
     mode: z
-      .enum(["use_case", "budget", "style", "feature", "recipient"])
+      .string()
+      .min(1)
+      .max(32)
       .optional()
-      .describe("The type of decision the menu is helping the shopper make"),
+      .describe(
+        "Optional short UI hint for presentation only. Choose any short string or omit it."
+      ),
     options: z
       .array(
         z.object({

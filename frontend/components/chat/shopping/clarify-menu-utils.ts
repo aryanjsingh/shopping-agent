@@ -2,7 +2,7 @@ export type ClarifyMenuOutput = {
   options?: { description?: string; label?: string; value?: string; searchHint?: string }[];
   question?: string;
   reason?: string;
-  mode?: "use_case" | "budget" | "style" | "feature" | "recipient";
+  mode?: string;
 };
 
 export function isClarifyMenuRestatement(
@@ -49,6 +49,25 @@ export function tryParseClarifyMenuFromText(
   }
 
   return null;
+}
+
+export function looksLikeClarifyMenuJson(text: string) {
+  const normalized = text.trim();
+  if (!normalized) return false;
+
+  const stripped = normalized
+    .replace(/^```(?:json)?/i, "")
+    .replace(/```$/i, "")
+    .trim();
+
+  if (!(stripped.startsWith("{") || stripped.startsWith("["))) {
+    return false;
+  }
+
+  return (
+    /"?(clarifyIntent|question|options|searchHint|mode)"?\s*:/i.test(stripped) ||
+    /"options"?\s*:\s*\[/i.test(stripped)
+  );
 }
 
 function extractJsonCandidates(text: string) {

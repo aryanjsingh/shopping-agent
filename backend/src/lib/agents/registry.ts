@@ -1,4 +1,8 @@
-import { buildTrack1Agent, track1ShoppingAgent } from "./track1-shopping";
+import {
+  buildTrack1Agent,
+  track1ShoppingAgent,
+  type Track1BuildContext,
+} from "./track1-shopping";
 import { track2CheckoutRecoveryAgent } from "./track2-checkout-recovery";
 import { track3CheckoutCopilotAgent } from "./track3-checkout-copilot";
 import { track4SupportAgent } from "./track4-support";
@@ -40,10 +44,14 @@ export function getAgent(id: string | undefined | null) {
 export function buildAgentForChat(args: {
   agentId: string | undefined | null;
   chatId: string;
+  initialSearchMemo?: Track1BuildContext["initialMemo"];
 }): AgentDefinition {
   const id = args.agentId && args.agentId in agentRegistry ? args.agentId : DEFAULT_AGENT_ID;
   if (id === "track1-shopping") {
-    const built = buildTrack1Agent({ chatId: args.chatId });
+    const built = buildTrack1Agent({
+      chatId: args.chatId,
+      initialMemo: args.initialSearchMemo,
+    });
     return {
       id: "track1-shopping",
       name: track1ShoppingAgent.name,

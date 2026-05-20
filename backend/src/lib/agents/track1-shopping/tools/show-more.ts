@@ -47,42 +47,54 @@ export function createShowMoreTool(ctx: ShowMoreContext) {
           ctx.chatSeed ^ hashStringToSeed(`more:${ctx.memo.lastProductIds.length}`)
         );
         const slice = shuffled.slice(0, count ?? 6);
+        const productViews = slice.map((p) => ({
+          id: p.id,
+          title: p.title,
+          description: p.description,
+          uniqueSellingPoint: p.uniqueSellingPoint,
+          topFeatures: p.topFeatures ?? [],
+          techSpecs: p.techSpecs ?? [],
+          media: p.media?.slice(0, 1) ?? [],
+          priceRange: p.priceRange,
+          rating: p.rating,
+          sellers: p.variants.map((v) => ({
+            shopId: v.shop.id,
+            shopName: v.shop.name,
+            shopUrl: v.shop.onlineStoreUrl,
+            price: v.price.amount,
+            currency: v.price.currency,
+            checkoutUrl: v.checkoutUrl,
+            productUrl: v.checkoutUrl || v.variantUrl || v.shop.onlineStoreUrl || "",
+            variantId: v.id,
+            availableForSale: v.availableForSale,
+          })),
+          productUrl:
+            p.variants.find((v) => v.checkoutUrl && v.availableForSale)
+              ?.checkoutUrl ??
+            p.variants.find((v) => v.variantUrl && v.availableForSale)
+              ?.variantUrl ??
+            "",
+          primaryCheckoutUrl:
+            p.variants.find((v) => v.checkoutUrl && v.availableForSale)
+              ?.checkoutUrl ?? "",
+          primaryVariantId:
+            p.variants.find((v) => v.availableForSale)?.id ?? "",
+        }));
 
         // Append IDs to memo so a second showMore doesn't repeat.
         ctx.memo.lastProductIds = [
           ...ctx.memo.lastProductIds,
-          ...slice.map((p) => p.id),
+          ...productViews.map((p) => p.id),
+        ];
+        ctx.memo.lastProducts = [
+          ...(ctx.memo.lastProducts ?? []),
+          ...productViews,
         ];
 
         return {
           query: lastQuery,
-          count: slice.length,
-          products: slice.map((p) => ({
-            id: p.id,
-            title: p.title,
-            description: p.description,
-            uniqueSellingPoint: p.uniqueSellingPoint,
-            topFeatures: p.topFeatures ?? [],
-            techSpecs: p.techSpecs ?? [],
-            media: p.media?.slice(0, 1) ?? [],
-            priceRange: p.priceRange,
-            rating: p.rating,
-            sellers: p.variants.map((v) => ({
-              shopId: v.shop.id,
-              shopName: v.shop.name,
-              price: v.price.amount,
-              currency: v.price.currency,
-              checkoutUrl: v.checkoutUrl,
-              variantId: v.id,
-              availableForSale: v.availableForSale,
-            })),
-            productUrl: p.lookupUrl,
-            primaryCheckoutUrl:
-              p.variants.find((v) => v.checkoutUrl && v.availableForSale)
-                ?.checkoutUrl ?? "",
-            primaryVariantId:
-              p.variants.find((v) => v.availableForSale)?.id ?? "",
-          })),
+          count: productViews.length,
+          products: productViews,
         };
       } catch (err) {
         return {

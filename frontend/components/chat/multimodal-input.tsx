@@ -391,6 +391,7 @@ function PureMultimodalInput({
       {!editingMessage &&
         !isLoading &&
         messages.length === 0 &&
+        (status === "ready" || status === "error") &&
         attachments.length === 0 &&
         uploadQueue.length === 0 && (
           <SuggestedActions chatId={chatId} sendMessage={sendMessage} />
@@ -417,7 +418,7 @@ function PureMultimodalInput({
       </div>
 
       <PromptInput
-        className="[&>div]:rounded-lg [&>div]:border [&>div]:border-border/40 [&>div]:bg-card [&>div]:shadow-[var(--shadow-composer)] [&>div]:transition-shadow [&>div]:duration-200 [&>div]:focus-within:shadow-[var(--shadow-composer-focus)]"
+        className="rounded-3xl border border-border/40 bg-card shadow-[var(--shadow-composer)] transition-shadow duration-200 focus-within:shadow-[var(--shadow-composer-focus)] !ring-0 !ring-offset-0 focus-within:!border-border/40"
         onSubmit={() => {
           if (input.startsWith("/")) {
             const query = input.slice(1).trim();

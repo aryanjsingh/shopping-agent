@@ -9,6 +9,7 @@ import {
   createSearchProductsTool,
   type SearchMemo,
 } from "./tools/search-products";
+import { createDisplayProductsTool } from "./tools/display-products";
 import { createShowMoreTool } from "./tools/show-more";
 import { createRefineSearchTool } from "./tools/refine-search";
 import { webSearch } from "./tools/web-search";
@@ -17,6 +18,8 @@ import { webFetch } from "./tools/web-fetch";
 export type Track1BuildContext = {
   /** Stable identifier for this chat — used for deterministic seed. */
   chatId: string;
+  /** Search context recovered from previous persisted tool calls. */
+  initialMemo?: SearchMemo;
 };
 
 export type Track1Build = {
@@ -27,6 +30,7 @@ export type Track1Build = {
 
 const ACTIVE_TOOL_NAMES = [
   "searchProducts",
+  "displayProducts",
   "showMore",
   "refineSearch",
   "getProduct",
@@ -40,11 +44,17 @@ const ACTIVE_TOOL_NAMES = [
 
 export function buildTrack1Agent(ctx: Track1BuildContext): Track1Build {
   const chatSeed = hashStringToSeed(ctx.chatId || "default-chat");
-  const memo: SearchMemo = { lastProductIds: [] };
+  const memo: SearchMemo = {
+    lastProductIds: ctx.initialMemo?.lastProductIds ?? [],
+    lastProducts: ctx.initialMemo?.lastProducts,
+    lastFilters: ctx.initialMemo?.lastFilters,
+    lastQuery: ctx.initialMemo?.lastQuery,
+  };
   const personality = pickPersonalityHint(chatSeed);
 
   const tools = {
     searchProducts: createSearchProductsTool({ chatSeed, memo }),
+    displayProducts: createDisplayProductsTool({ memo }),
     showMore: createShowMoreTool({ chatSeed, memo }),
     refineSearch: createRefineSearchTool({ chatSeed, memo }),
     getProduct,

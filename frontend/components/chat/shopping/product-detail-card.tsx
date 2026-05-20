@@ -5,10 +5,12 @@ import { formatMoney, formatRating } from "./format";
 
 type Variant = {
   id?: string;
-  shop?: { name?: string };
+  shop?: { name?: string; onlineStoreUrl?: string };
   price?: { amount?: number; currency?: string };
   availableForSale?: boolean;
   checkoutUrl?: string;
+  variantUrl?: string;
+  productUrl?: string;
 };
 
 export type DetailProduct = {
@@ -27,6 +29,16 @@ export type DetailProduct = {
   variants?: Variant[];
   lookupUrl?: string;
 };
+
+function getVariantHref(variant?: Variant) {
+  return (
+    variant?.checkoutUrl ||
+    variant?.productUrl ||
+    variant?.variantUrl ||
+    variant?.shop?.onlineStoreUrl ||
+    ""
+  );
+}
 
 export function ProductDetailCard({ product }: { product: DetailProduct }) {
   if (!product?.title) return null;
@@ -120,9 +132,9 @@ export function ProductDetailCard({ product }: { product: DetailProduct }) {
               : `${product.variants?.length ?? 0} seller${(product.variants?.length ?? 0) === 1 ? "" : "s"}`}
           </span>
         </div>
-        {cheapest?.checkoutUrl ? (
+        {getVariantHref(cheapest) ? (
           <a
-            href={cheapest.checkoutUrl}
+            href={getVariantHref(cheapest)}
             rel="noreferrer noopener"
             target="_blank"
             className="inline-flex items-center gap-1 rounded-md bg-primary px-2.5 py-1.5 font-medium text-[11px] text-primary-foreground transition hover:bg-primary/90"
@@ -131,6 +143,9 @@ export function ProductDetailCard({ product }: { product: DetailProduct }) {
             <ExternalLinkIcon className="size-3" />
           </a>
         ) : null}
+      </div>
+      <div className="px-3 pb-2.5 text-[10px] text-muted-foreground/50">
+        Prices are estimates and may vary on the merchant's site.
       </div>
     </div>
   );

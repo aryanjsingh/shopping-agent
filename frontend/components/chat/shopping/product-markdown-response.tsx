@@ -7,7 +7,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { ProductHoverPreview, type Product } from "./product-grid";
+import { getProductHref, ProductHoverPreview, type Product } from "./product-grid";
 
 export function ProductMarkdownResponse({
   products,
@@ -71,15 +71,19 @@ function tagProductText(children: ReactNode, products: Product[]) {
 }
 
 function ProductTag({ product, text }: { product: Product; text: string }) {
+  const href = getProductHref(product);
+
   return (
     <HoverCard openDelay={120}>
       <HoverCardTrigger asChild>
-        <button
+        <a
           className="mx-0.5 inline-flex max-w-full items-center rounded-md border border-border/70 bg-muted/50 px-1.5 py-0.5 align-baseline font-medium text-[12px] leading-none text-foreground transition hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-          type="button"
+          href={href}
+          rel="noreferrer noopener"
+          target="_blank"
         >
           {text}
-        </button>
+        </a>
       </HoverCardTrigger>
       <HoverCardContent align="start" className="w-80 p-3">
         <ProductHoverPreview product={product} />

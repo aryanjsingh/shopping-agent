@@ -6,6 +6,7 @@ export function useScrollToBottom() {
   const [isAtBottom, setIsAtBottom] = useState(true);
   const isAtBottomRef = useRef(true);
   const isUserScrollingRef = useRef(false);
+  const preserveScrollUntilRef = useRef(0);
 
   useEffect(() => {
     isAtBottomRef.current = isAtBottom;
@@ -59,13 +60,49 @@ export function useScrollToBottom() {
 
   useEffect(() => {
     const container = containerRef.current;
+    const win = container?.ownerDocument.defaultView;
+    if (!container || !win) {
+      return;
+    }
+
+    const preserveScroll = () => {
+      const scrollTop = container.scrollTop;
+      preserveScrollUntilRef.current = Date.now() + 500;
+
+      const restore = () => {
+        container.scrollTop = scrollTop;
+      };
+
+      restore();
+      requestAnimationFrame(() => {
+        restore();
+        requestAnimationFrame(restore);
+      });
+    };
+
+    win.addEventListener("chat-preserve-scroll", preserveScroll);
+    return () => {
+      win.removeEventListener("chat-preserve-scroll", preserveScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const container = containerRef.current;
     if (!container) {
       return;
     }
 
     const scrollIfNeeded = () => {
+      if (Date.now() < preserveScrollUntilRef.current) {
+        return;
+      }
+
       if (isAtBottomRef.current && !isUserScrollingRef.current) {
         requestAnimationFrame(() => {
+          if (Date.now() < preserveScrollUntilRef.current) {
+            return;
+          }
+
           container.scrollTo({
             top: container.scrollHeight,
             behavior: "instant",

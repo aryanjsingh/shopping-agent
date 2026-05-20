@@ -62,7 +62,31 @@ export function createRefineSearchTool(ctx: RefineSearchContext) {
 
         ctx.memo.lastQuery = mergedQuery;
         ctx.memo.lastFilters = { minPrice, maxPrice, shipsTo };
-        ctx.memo.lastProductIds = seeded.map((p) => p.id);
+        const productViews = seeded.map((p) => ({
+          id: p.id,
+          title: p.title,
+          description: p.description,
+          uniqueSellingPoint: p.uniqueSellingPoint,
+          topFeatures: p.topFeatures ?? [],
+          techSpecs: p.techSpecs ?? [],
+          media: p.media?.slice(0, 1) ?? [],
+          priceRange: p.priceRange,
+          rating: p.rating,
+          sellers: dedupeSellers(p.variants),
+          productUrl:
+            p.variants.find((v) => v.checkoutUrl && v.availableForSale)
+              ?.checkoutUrl ??
+            p.variants.find((v) => v.variantUrl && v.availableForSale)
+              ?.variantUrl ??
+            "",
+          primaryCheckoutUrl:
+            p.variants.find((v) => v.checkoutUrl && v.availableForSale)
+              ?.checkoutUrl ?? "",
+          primaryVariantId:
+            p.variants.find((v) => v.availableForSale)?.id ?? "",
+        }));
+        ctx.memo.lastProductIds = productViews.map((p) => p.id);
+        ctx.memo.lastProducts = productViews;
 
         return {
           query: mergedQuery,
@@ -72,25 +96,8 @@ export function createRefineSearchTool(ctx: RefineSearchContext) {
             shipsTo,
             addedKeywords: input.addedKeywords,
           },
-          count: seeded.length,
-          products: seeded.map((p) => ({
-            id: p.id,
-            title: p.title,
-            description: p.description,
-            uniqueSellingPoint: p.uniqueSellingPoint,
-            topFeatures: p.topFeatures ?? [],
-            techSpecs: p.techSpecs ?? [],
-            media: p.media?.slice(0, 1) ?? [],
-            priceRange: p.priceRange,
-            rating: p.rating,
-            sellers: dedupeSellers(p.variants),
-            productUrl: p.lookupUrl,
-            primaryCheckoutUrl:
-              p.variants.find((v) => v.checkoutUrl && v.availableForSale)
-                ?.checkoutUrl ?? "",
-            primaryVariantId:
-              p.variants.find((v) => v.availableForSale)?.id ?? "",
-          })),
+          count: productViews.length,
+          products: productViews,
         };
       } catch (err) {
         return {
@@ -106,9 +113,10 @@ export function createRefineSearchTool(ctx: RefineSearchContext) {
 
 function dedupeSellers(
   variants: {
-    shop: { id: string; name: string };
+    shop: { id: string; name: string; onlineStoreUrl?: string };
     price: { amount: number; currency: string };
     checkoutUrl: string;
+    variantUrl: string;
     id: string;
     availableForSale: boolean;
   }[]
@@ -118,9 +126,11 @@ function dedupeSellers(
     {
       shopId: string;
       shopName: string;
+      shopUrl?: string;
       price: number;
       currency: string;
       checkoutUrl: string;
+      productUrl: string;
       variantId: string;
       availableForSale: boolean;
     }
@@ -136,9 +146,11 @@ function dedupeSellers(
       map.set(v.shop.id, {
         shopId: v.shop.id,
         shopName: v.shop.name,
+        shopUrl: v.shop.onlineStoreUrl,
         price: v.price.amount,
         currency: v.price.currency,
         checkoutUrl: v.checkoutUrl,
+        productUrl: v.checkoutUrl || v.variantUrl || v.shop.onlineStoreUrl || "",
         variantId: v.id,
         availableForSale: v.availableForSale,
       });

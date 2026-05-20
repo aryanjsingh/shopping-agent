@@ -6,12 +6,16 @@ import { hashStringToSeed, shuffleWithSeed } from "../seed";
 type Seller = {
   shopId: string;
   shopName: string;
+  shopUrl?: string;
   price: number;
   currency: string;
   checkoutUrl: string;
+  productUrl: string;
   variantId: string;
   availableForSale: boolean;
 };
+
+export type ProductView = ReturnType<typeof buildProductView>;
 
 export type SearchProductsContext = {
   /** Stable per-chat seed so a returning user sees consistent ordering. */
@@ -24,6 +28,7 @@ export type SearchMemo = {
   lastQuery?: string;
   lastFilters?: { minPrice?: number; maxPrice?: number; shipsTo?: string };
   lastProductIds: string[];
+  lastProducts?: ProductView[];
 };
 
 const CURRENT_GEN_QUERY_SUFFIX = "(2024 OR 2025 OR 2026)";
@@ -31,7 +36,7 @@ const CURRENT_GEN_QUERY_SUFFIX = "(2024 OR 2025 OR 2026)";
 export function createSearchProductsTool(ctx: SearchProductsContext) {
   return tool({
     description:
-      "Search Shopify Catalog MCP for real products. Pass a tight keyword query (e.g. 'noise canceling wireless headphones'). Translate non-USD budgets to USD whole cents before filling minPrice/maxPrice. Set currentGenOnly=true when the user wants the latest tech (gaming/video editing/'newest'/'2025'). Set sortMode='price_low' to surface affordable picks first, 'rating' to lead with best-reviewed, 'random' for variety on broad queries. For device queries, search for the device itself, not cases, covers, chargers, or sleeves. Top 6 of 12 are returned, deterministically shuffled per chat so re-runs feel fresh.",
+      "Search Shopify Catalog MCP for real products only after the shopper's intent is specific enough to avoid guessy results. If an unanswered preference would materially change the product set, call clarifyIntent before this tool. Pass a tight keyword query. Translate non-USD budgets to USD whole cents before filling minPrice/maxPrice. Set currentGenOnly=true when the user wants the latest tech. Set sortMode='price_low' to surface affordable picks first, 'rating' to lead with best-reviewed, 'random' for variety. For device queries, search for the device itself, not accessories unless requested. Top 6 of 12 are returned, deterministically shuffled per chat so re-runs feel fresh.",
     inputSchema: z.object({
       query: z.string().min(2).describe("Keyword search string"),
       limit: z.number().int().min(1).max(12).optional(),
@@ -89,13 +94,14 @@ export function createSearchProductsTool(ctx: SearchProductsContext) {
           shipsTo: input.shipsTo ?? "US",
         };
         ctx.memo.lastProductIds = top.map((p) => p.id);
+        ctx.memo.lastProducts = top.map(buildProductView);
 
         return {
           query: input.query,
           sortMode: input.sortMode ?? "relevance",
           currentGenOnly: input.currentGenOnly ?? false,
           count: top.length,
-          products: top.map(buildProductView),
+          products: ctx.memo.lastProducts,
         };
       } catch (err) {
         return {
@@ -182,7 +188,7 @@ function buildProductView(p: Awaited<ReturnType<typeof searchCatalog>>[number]) 
     priceRange: p.priceRange,
     rating: p.rating,
     sellers,
-    productUrl: p.lookupUrl,
+    productUrl: primarySeller?.checkoutUrl || primarySeller?.productUrl || "",
     primaryCheckoutUrl: primarySeller?.checkoutUrl ?? "",
     primaryVariantId: primarySeller?.variantId ?? "",
   };
@@ -190,9 +196,10 @@ function buildProductView(p: Awaited<ReturnType<typeof searchCatalog>>[number]) 
 
 function dedupeSellers(
   variants: {
-    shop: { id: string; name: string };
+    shop: { id: string; name: string; onlineStoreUrl?: string };
     price: { amount: number; currency: string };
     checkoutUrl: string;
+    variantUrl: string;
     id: string;
     availableForSale: boolean;
   }[]
@@ -209,9 +216,11 @@ function dedupeSellers(
       map.set(v.shop.id, {
         shopId: v.shop.id,
         shopName: v.shop.name,
+        shopUrl: v.shop.onlineStoreUrl,
         price: v.price.amount,
         currency: v.price.currency,
         checkoutUrl: v.checkoutUrl,
+        productUrl: v.checkoutUrl || v.variantUrl || v.shop.onlineStoreUrl || "",
         variantId: v.id,
         availableForSale: v.availableForSale,
       });

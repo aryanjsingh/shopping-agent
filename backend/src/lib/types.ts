@@ -16,6 +16,7 @@ type Track1 = typeof track1ToolTypes;
 export type ChatTools = {
   // Track 1 — Shopping Agent
   searchProducts: InferUITool<Track1["searchProducts"]>;
+  displayProducts: InferUITool<Track1["displayProducts"]>;
   showMore: InferUITool<Track1["showMore"]>;
   refineSearch: InferUITool<Track1["refineSearch"]>;
   getProduct: InferUITool<Track1["getProduct"]>;

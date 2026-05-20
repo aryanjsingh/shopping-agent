@@ -65,10 +65,19 @@ export async function proxyToBackend(request: Request, path: string) {
     duplex: "half",
   } as RequestInit);
 
+  const responseHeaders = new Headers(response.headers);
+  responseHeaders.delete("content-length");
+  responseHeaders.delete("content-encoding");
+  responseHeaders.set("cache-control", "no-cache, no-transform");
+
+  if (responseHeaders.get("content-type")?.includes("text/event-stream")) {
+    responseHeaders.set("x-accel-buffering", "no");
+  }
+
   return new Response(response.body, {
     status: response.status,
     statusText: response.statusText,
-    headers: response.headers,
+    headers: responseHeaders,
   });
 }
 

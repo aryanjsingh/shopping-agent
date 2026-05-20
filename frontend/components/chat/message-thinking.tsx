@@ -6,7 +6,7 @@ import { ChevronRightIcon } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { Shimmer } from "../ai-elements/shimmer";
 
-type ThinkingTool = {
+export type ThinkingTool = {
   id: string;
   name: string;
   state?: string;
@@ -14,11 +14,14 @@ type ThinkingTool = {
   errorText?: string;
 };
 
+export type ThinkingStep =
+  | { type: "reasoning"; text: string; id: string }
+  | { type: "tool"; tool: ThinkingTool; id: string };
+
 type MessageThinkingProps = {
   durationSeconds?: number;
   isStreaming: boolean;
-  tools: ThinkingTool[];
-  reasoning: string;
+  steps: ThinkingStep[];
 };
 
 const toolLabels: Record<string, string> = {
@@ -27,6 +30,7 @@ const toolLabels: Record<string, string> = {
   compareProducts: "Comparing products",
   compareSellers: "Checking sellers",
   createDocument: "Creating document",
+  displayProducts: "Preparing product cards",
   getProduct: "Inspecting product",
   getWeather: "Checking weather",
   refineSearch: "Refining catalog",
@@ -73,57 +77,70 @@ function summarizeInput(input: unknown): string | null {
   return null;
 }
 
+function preserveChatScroll() {
+  window.dispatchEvent(new Event("chat-preserve-scroll"));
+}
+
 export function MessageThinking({
   durationSeconds,
   isStreaming,
-  tools,
-  reasoning,
+  steps,
 }: MessageThinkingProps) {
-  const hasReasoning = reasoning.trim().length > 0;
+  const hasContent = steps.length > 0;
 
-  if (!(hasReasoning || tools.length > 0 || isStreaming)) {
+  if (!(hasContent || isStreaming)) {
     return null;
   }
 
   return (
     <Reasoning
-      className="w-full"
+      className="block w-full [overflow-anchor:none]"
       defaultOpen={isStreaming}
       duration={durationSeconds}
       isStreaming={isStreaming}
     >
-      <ThinkingTrigger toolCount={tools.length} />
-      <ThinkingContent reasoning={reasoning} tools={tools} />
+      <ThinkingTrigger hasDetails={steps.length > 0} />
+      <ThinkingContent steps={steps} />
     </Reasoning>
   );
 }
 
-function ThinkingTrigger({ toolCount }: { toolCount: number }) {
+function ThinkingTrigger({ hasDetails }: { hasDetails: boolean }) {
   const { duration, isOpen, isStreaming, setIsOpen } = useReasoning();
 
   return (
     <button
-      className="flex w-fit cursor-pointer items-center gap-1 text-muted-foreground text-[12px] leading-[1.65] transition-colors hover:text-foreground"
+      className={cn(
+        "flex w-fit items-center gap-1 text-muted-foreground text-[14px] leading-[1.65] transition-colors",
+        hasDetails ? "cursor-pointer hover:text-foreground" : "cursor-default"
+      )}
       type="button"
-      onClick={() => setIsOpen(!isOpen)}
+      onClick={() => {
+        if (hasDetails) {
+          preserveChatScroll();
+          setIsOpen(!isOpen);
+        }
+      }}
     >
       <span>
         {isStreaming ? (
           <Shimmer className="font-medium" duration={1}>
-            {toolCount > 0 ? `Checking ${toolCount} source${toolCount > 1 ? "s" : ""}...` : "Preparing response..."}
+            Thinking
           </Shimmer>
         ) : duration ? (
-          `How I searched (${duration}s)`
+          `Thought for ${duration}s`
         ) : (
-          "How I searched (a few seconds)"
+          "Thought for a few seconds"
         )}
       </span>
-      <ChevronRightIcon
-        className={cn(
-          "size-3.5 transition-transform",
-          isOpen ? "rotate-90" : "rotate-0"
-        )}
-      />
+      {hasDetails ? (
+        <ChevronRightIcon
+          className={cn(
+            "size-3.5 transition-transform",
+            isOpen ? "rotate-90" : "rotate-0"
+          )}
+        />
+      ) : null}
     </button>
   );
 }
@@ -136,7 +153,7 @@ function ToolRow({ tool }: { tool: ThinkingTool }) {
 
   return (
     <div className={cn(
-      "flex items-start gap-1.5 text-[11px] leading-relaxed",
+      "flex items-start gap-1.5 text-[13px] leading-relaxed",
       isDone && "text-muted-foreground/70",
       isError && "text-red-500/80",
       !isDone && !isError && "text-foreground/80",
@@ -158,11 +175,9 @@ function ToolRow({ tool }: { tool: ThinkingTool }) {
 }
 
 function ThinkingContent({
-  reasoning,
-  tools,
+  steps,
 }: {
-  reasoning: string;
-  tools: ThinkingTool[];
+  steps: ThinkingStep[];
 }) {
   const { isOpen, isStreaming } = useReasoning();
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -171,40 +186,37 @@ function ThinkingContent({
     if (isStreaming && scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
-  }, [isStreaming, tools.length, reasoning]);
+  }, [isStreaming, steps.length]);
 
   if (!isOpen) return null;
 
-  const hasContent = tools.length > 0 || reasoning.trim();
+  const hasContent = steps.length > 0;
+  if (!hasContent) return null;
 
   return (
     <div
       className={cn(
-        "mt-1 w-full overflow-y-auto rounded-md border border-border/20 bg-muted/20 px-2.5 py-2 [scrollbar-width:thin]",
+        "mt-1 block w-full overflow-y-auto py-1.5 [overflow-anchor:none] [scrollbar-width:thin]",
         isStreaming ? "max-h-40" : "max-h-28"
       )}
       ref={scrollRef}
     >
-      {tools.length > 0 && (
-        <div className="grid gap-0.5">
-          {tools.map((tool) => (
-            <ToolRow key={tool.id} tool={tool} />
-          ))}
-        </div>
-      )}
-      {reasoning.trim() && (
-        <div className={cn(
-          "whitespace-pre-wrap text-muted-foreground/60 text-[11px] leading-relaxed",
-          tools.length > 0 && "mt-1.5 border-t border-border/20 pt-1.5"
-        )}>
-          {reasoning.trim()}
-        </div>
-      )}
-      {!hasContent && (
-        <div className="text-[11px] text-muted-foreground/50">
-          Preparing response…
-        </div>
-      )}
+      <div className="flex flex-col gap-1.5">
+        {steps.map((step) => {
+          if (step.type === "tool") {
+            return <ToolRow key={step.id} tool={step.tool} />;
+          } else {
+            return (
+              <div
+                key={step.id}
+                className="whitespace-pre-wrap text-muted-foreground/60 text-[13px] leading-relaxed"
+              >
+                {step.text.trim()}
+              </div>
+            );
+          }
+        })}
+      </div>
     </div>
   );
 }
