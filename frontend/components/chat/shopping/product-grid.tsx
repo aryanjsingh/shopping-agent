@@ -1,9 +1,9 @@
 "use client";
 
 import {
+  CheckIcon,
   ChevronDownIcon,
   ChevronUpIcon,
-  CheckIcon,
   ExternalLinkIcon,
   ImageOffIcon,
   ShoppingCartIcon,
@@ -11,10 +11,11 @@ import {
   StoreIcon,
   XIcon,
 } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 import { formatMoney, formatRating } from "./format";
+import { getExternalHref } from "./link-utils";
 
 type Seller = {
   shopId: string;
@@ -50,23 +51,29 @@ function preserveChatScroll() {
 }
 
 export function getProductHref(product: Product) {
-  const seller = product.sellers.find((item) => item.checkoutUrl || item.productUrl)
-    ?? product.sellers[0];
-  return (
-    product.primaryCheckoutUrl ||
-    seller?.checkoutUrl ||
-    seller?.productUrl ||
-    product.productUrl ||
-    seller?.shopUrl ||
-    ""
+  const seller =
+    product.sellers.find((item) =>
+      getExternalHref(item.checkoutUrl, item.productUrl, item.shopUrl)
+    ) ?? product.sellers[0];
+  return getExternalHref(
+    product.primaryCheckoutUrl,
+    seller?.checkoutUrl,
+    seller?.productUrl,
+    product.productUrl,
+    seller?.shopUrl
   );
 }
 
 function getSellerHref(seller: Seller) {
-  return seller.checkoutUrl || seller.productUrl || seller.shopUrl || "";
+  return getExternalHref(seller.checkoutUrl, seller.productUrl, seller.shopUrl);
 }
 
 export function ProductGridSkeleton({ count = 4 }: { count?: number }) {
+  const skeletonKeys = Array.from(
+    { length: count },
+    (_, index) => `product-grid-skeleton-${count}-${index}`
+  );
+
   return (
     <div className="w-full">
       <div className="rounded-lg border border-border/60 bg-background/95 p-2 shadow-[var(--shadow-float)] backdrop-blur">
@@ -75,11 +82,10 @@ export function ProductGridSkeleton({ count = 4 }: { count?: number }) {
           <Skeleton className="size-7 rounded-md" />
         </div>
         <div className="flex gap-3 overflow-hidden">
-          {Array.from({ length: count }).map((_, i) => (
-            // biome-ignore lint/suspicious/noArrayIndexKey: skeleton placeholders
+          {skeletonKeys.map((key) => (
             <div
-              key={i}
               className="w-[168px] shrink-0 overflow-hidden rounded-lg border border-border/60 bg-card"
+              key={key}
             >
               <Skeleton className="h-[118px] w-full rounded-none" />
               <div className="flex flex-col gap-2 p-2.5">
@@ -148,8 +154,8 @@ export function ProductGrid({
                 {products.map((product) => (
                   <ProductCard
                     key={product.id}
-                    product={product}
                     onExpand={() => setExpandedProduct(product)}
+                    product={product}
                   />
                 ))}
               </div>
@@ -160,8 +166,8 @@ export function ProductGrid({
 
       {expandedProduct && (
         <ProductDetailOverlay
-          product={expandedProduct}
           onClose={() => setExpandedProduct(null)}
+          product={expandedProduct}
         />
       )}
     </div>
@@ -246,46 +252,52 @@ function ProductCard({
   const [imgLoaded, setImgLoaded] = useState(false);
   const [imgFailed, setImgFailed] = useState(false);
   const href = getProductHref(product);
+  const mediaContent = (
+    <>
+      {image && !imgFailed ? (
+        <>
+          {!imgLoaded && <Skeleton className="absolute inset-0 rounded-none" />}
+          {/* biome-ignore lint/performance/noImgElement lint/a11y/noNoninteractiveElementInteractions: Shopify Catalog images must render live and update fallback state on load failure. */}
+          <img
+            alt={product.media[0]?.altText ?? product.title}
+            className={`size-full object-contain p-2 transition-opacity duration-300 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
+            onError={() => setImgFailed(true)}
+            onLoad={() => setImgLoaded(true)}
+            src={image}
+          />
+        </>
+      ) : (
+        <div className="flex size-full flex-col items-center justify-center gap-1 text-muted-foreground/45">
+          <ImageOffIcon className="size-7" />
+          <span className="text-[10px]">No image</span>
+        </div>
+      )}
+
+      <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-200 group-hover:bg-black/10">
+        <span className="translate-y-1 rounded-md bg-white/90 px-2 py-1 font-medium text-[10px] text-black opacity-0 shadow-sm transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100 dark:bg-black/80 dark:text-white">
+          {href ? "View product" : "Product preview"}
+        </span>
+      </div>
+    </>
+  );
 
   return (
     <div className="group relative flex w-[168px] shrink-0 snap-start flex-col overflow-hidden rounded-lg border border-border/60 bg-card text-card-foreground shadow-sm transition-all duration-200 hover:border-border hover:shadow-md hover:-translate-y-0.5">
-      {/* Image area — clicking navigates to product */}
-      <a
-        className="relative block h-[118px] w-full overflow-hidden bg-muted/40 outline-none focus-visible:ring-2 focus-visible:ring-ring"
-        href={href}
-        rel="noreferrer noopener"
-        target="_blank"
-        tabIndex={href ? 0 : -1}
-        aria-label={`View ${product.title}`}
-      >
-        {image && !imgFailed ? (
-          <>
-            {!imgLoaded && (
-              <Skeleton className="absolute inset-0 rounded-none" />
-            )}
-            {/* biome-ignore lint/performance/noImgElement: Shopify Catalog images must be rendered live, not cached through an optimizer. */}
-            <img
-              alt={product.media[0]?.altText ?? product.title}
-              className={`size-full object-contain p-2 transition-opacity duration-300 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
-              onError={() => setImgFailed(true)}
-              onLoad={() => setImgLoaded(true)}
-              src={image}
-            />
-          </>
-        ) : (
-          <div className="flex size-full flex-col items-center justify-center gap-1 text-muted-foreground/45">
-            <ImageOffIcon className="size-7" />
-            <span className="text-[10px]">No image</span>
-          </div>
-        )}
-
-        {/* Hover overlay on image */}
-        <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-200 group-hover:bg-black/10">
-          <span className="translate-y-1 rounded-md bg-white/90 px-2 py-1 font-medium text-[10px] text-black opacity-0 shadow-sm transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100 dark:bg-black/80 dark:text-white">
-            View product
-          </span>
+      {href ? (
+        <a
+          aria-label={`View ${product.title}`}
+          className="relative block h-[118px] w-full overflow-hidden bg-muted/40 outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          href={href}
+          rel="noreferrer noopener"
+          target="_blank"
+        >
+          {mediaContent}
+        </a>
+      ) : (
+        <div className="relative block h-[118px] w-full overflow-hidden bg-muted/40">
+          {mediaContent}
         </div>
-      </a>
+      )}
 
       <div className="flex flex-1 flex-col gap-1.5 p-2.5">
         <div
@@ -320,8 +332,8 @@ function ProductCard({
             {product.sellers.length === 1 ? "" : "s"}
           </div>
         ) : null}
-        <div className="mt-auto flex items-center justify-between gap-2 pt-1.5">
-          <div className="flex flex-col">
+        <div className="mt-auto flex flex-col gap-2 pt-1.5">
+          <div className="flex flex-col min-w-0">
             <span className="font-semibold text-[14px]">
               {formatMoney(
                 product.priceRange.min.amount,
@@ -329,22 +341,39 @@ function ProductCard({
               )}
             </span>
             {cheapest ? (
-              <span className="text-[10px] text-muted-foreground">
+              <span className="truncate text-[10px] text-muted-foreground" title={`via ${cheapest.shopName}`}>
                 via {cheapest.shopName}
               </span>
             ) : null}
           </div>
-          <button
-            className="inline-flex items-center gap-1 rounded-md bg-muted px-2 py-1.5 font-medium text-[10px] text-muted-foreground transition hover:bg-primary hover:text-primary-foreground"
-            onClick={(e) => {
-              e.preventDefault();
-              onExpand();
-            }}
-            type="button"
-            aria-label={`See details for ${product.title}`}
-          >
-            Details
-          </button>
+          <div className="flex items-center gap-1.5">
+            <button
+              aria-label={`See details for ${product.title}`}
+              className={cn(
+                "inline-flex items-center justify-center rounded-md bg-muted px-2 py-1.5 font-medium text-[10px] text-muted-foreground transition hover:bg-primary hover:text-primary-foreground",
+                href ? "flex-1" : "w-full"
+              )}
+              onClick={(e) => {
+                e.preventDefault();
+                onExpand();
+              }}
+              type="button"
+            >
+              Details
+            </button>
+            {href ? (
+              <a
+                aria-label={`Buy ${product.title}`}
+                className="flex-1 inline-flex items-center justify-center gap-1 rounded-md bg-primary px-2 py-1.5 font-medium text-[10px] text-primary-foreground transition hover:bg-primary/90"
+                href={href}
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Buy
+                <ExternalLinkIcon className="size-3" />
+              </a>
+            ) : null}
+          </div>
         </div>
       </div>
     </div>
@@ -366,37 +395,40 @@ function ProductDetailOverlay({
   // Close on Escape
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") {
+        onClose();
+      }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, [onClose]);
 
   return (
-    // biome-ignore lint/a11y/useKeyWithClickEvents: overlay backdrop handles click-outside
+    // biome-ignore lint/a11y/useKeyWithClickEvents lint/a11y/noNoninteractiveElementInteractions: overlay backdrop handles click-outside for mouse users; Escape handles keyboard close.
     <div
+      aria-label={product.title}
+      aria-modal="true"
       className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 backdrop-blur-sm sm:items-center"
       onClick={(e) => {
-        if (e.target === overlayRef.current) onClose();
+        if (e.target === overlayRef.current) {
+          onClose();
+        }
       }}
       ref={overlayRef}
       role="dialog"
-      aria-modal="true"
-      aria-label={product.title}
     >
       <div
         className={cn(
           "relative w-full max-w-lg overflow-hidden rounded-t-2xl bg-background shadow-2xl sm:rounded-2xl",
           "animate-in slide-in-from-bottom-4 duration-300 sm:zoom-in-95"
         )}
-        onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="flex items-start justify-between gap-3 border-b border-border/50 p-4">
           <div className="flex gap-3">
             <div className="flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-muted/50">
               {image && !imgFailed ? (
-                // biome-ignore lint/performance/noImgElement: Shopify Catalog images must render directly from live URLs.
+                // biome-ignore lint/performance/noImgElement lint/a11y/noNoninteractiveElementInteractions: Shopify Catalog images must render live and update fallback state on load failure.
                 <img
                   alt={product.media[0]?.altText ?? product.title}
                   className="size-full object-contain p-1"
@@ -416,9 +448,14 @@ function ProductDetailOverlay({
                   product.priceRange.min.amount,
                   product.priceRange.min.currency
                 )}
-                {product.priceRange.max.amount !== product.priceRange.min.amount && (
+                {product.priceRange.max.amount !==
+                  product.priceRange.min.amount && (
                   <span className="ml-1 font-normal text-[12px] text-muted-foreground">
-                    – {formatMoney(product.priceRange.max.amount, product.priceRange.max.currency)}
+                    –{" "}
+                    {formatMoney(
+                      product.priceRange.max.amount,
+                      product.priceRange.max.currency
+                    )}
                   </span>
                 )}
               </div>
@@ -431,10 +468,10 @@ function ProductDetailOverlay({
             </div>
           </div>
           <button
+            aria-label="Close"
             className="flex size-7 shrink-0 items-center justify-center rounded-md text-muted-foreground transition hover:bg-muted hover:text-foreground"
             onClick={onClose}
             type="button"
-            aria-label="Close"
           >
             <XIcon className="size-4" />
           </button>
@@ -455,7 +492,7 @@ function ProductDetailOverlay({
               </div>
               <div className="grid gap-1.5">
                 {product.topFeatures.map((f) => (
-                  <div key={f} className="flex items-start gap-2 text-[13px]">
+                  <div className="flex items-start gap-2 text-[13px]" key={f}>
                     <CheckIcon className="mt-0.5 size-3.5 shrink-0 text-emerald-600" />
                     <span>{f}</span>
                   </div>
@@ -471,7 +508,7 @@ function ProductDetailOverlay({
               </div>
               <div className="grid gap-1">
                 {product.techSpecs.map((s) => (
-                  <div key={s} className="text-[12px] text-muted-foreground">
+                  <div className="text-[12px] text-muted-foreground" key={s}>
                     {s}
                   </div>
                 ))}
@@ -485,34 +522,53 @@ function ProductDetailOverlay({
                 Available from
               </div>
               <div className="grid gap-2">
-                {product.sellers.map((seller, i) => (
-                  <a
-                    key={seller.variantId}
-                    href={getSellerHref(seller)}
-                    rel="noreferrer noopener"
-                    target="_blank"
-                    className={cn(
-                      "flex items-center justify-between rounded-lg border px-3 py-2.5 text-[13px] transition hover:bg-muted",
-                      i === 0 ? "border-emerald-200 bg-emerald-50/50 dark:border-emerald-900 dark:bg-emerald-950/30" : "border-border/50"
-                    )}
-                  >
-                    <div className="flex items-center gap-2">
-                      <StoreIcon className="size-3.5 text-muted-foreground" />
-                      <span className="font-medium">{seller.shopName}</span>
-                      {i === 0 && (
-                        <span className="rounded-full bg-emerald-100 px-1.5 py-0.5 text-[10px] font-medium text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-400">
-                          Best price
+                {product.sellers.map((seller, i) => {
+                  const sellerHref = getSellerHref(seller);
+                  const className = cn(
+                    "flex items-center justify-between rounded-lg border px-3 py-2.5 text-[13px] transition",
+                    sellerHref ? "hover:bg-muted" : "",
+                    i === 0
+                      ? "border-emerald-200 bg-emerald-50/50 dark:border-emerald-900 dark:bg-emerald-950/30"
+                      : "border-border/50"
+                  );
+                  const content = (
+                    <>
+                      <div className="flex items-center gap-2">
+                        <StoreIcon className="size-3.5 text-muted-foreground" />
+                        <span className="font-medium">{seller.shopName}</span>
+                        {i === 0 && (
+                          <span className="rounded-full bg-emerald-100 px-1.5 py-0.5 font-medium text-[10px] text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-400">
+                            Best price
+                          </span>
+                        )}
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="font-semibold">
+                          {formatMoney(seller.price, seller.currency)}
                         </span>
-                      )}
+                        {sellerHref ? (
+                          <ExternalLinkIcon className="size-3 text-muted-foreground" />
+                        ) : null}
+                      </div>
+                    </>
+                  );
+
+                  return sellerHref ? (
+                    <a
+                      className={className}
+                      href={sellerHref}
+                      key={seller.variantId}
+                      rel="noreferrer noopener"
+                      target="_blank"
+                    >
+                      {content}
+                    </a>
+                  ) : (
+                    <div className={className} key={seller.variantId}>
+                      {content}
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold">
-                        {formatMoney(seller.price, seller.currency)}
-                      </span>
-                      <ExternalLinkIcon className="size-3 text-muted-foreground" />
-                    </div>
-                  </a>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}
@@ -522,10 +578,10 @@ function ProductDetailOverlay({
         {href && (
           <div className="border-t border-border/50 p-4">
             <a
+              className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 font-semibold text-[13px] text-primary-foreground transition hover:bg-primary/90"
               href={href}
               rel="noreferrer noopener"
               target="_blank"
-              className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 font-semibold text-[13px] text-primary-foreground transition hover:bg-primary/90"
             >
               Shop now
               <ExternalLinkIcon className="size-3.5" />
@@ -541,7 +597,9 @@ function ProductDetailOverlay({
 }
 
 function truncateAtWord(value: string, maxLength: number) {
-  if (value.length <= maxLength) return value;
+  if (value.length <= maxLength) {
+    return value;
+  }
   const truncated = value.slice(0, maxLength + 1);
   const lastSpace = truncated.lastIndexOf(" ");
   return `${truncated.slice(0, lastSpace > 24 ? lastSpace : maxLength).trim()}...`;

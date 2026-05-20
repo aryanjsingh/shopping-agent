@@ -14,17 +14,20 @@ import {
 import { useDataStream } from "./data-stream-provider";
 import { DocumentToolResult } from "./document";
 import { DocumentPreview } from "./document-preview";
-import { SparklesIcon } from "./icons";
 import { MessageActions } from "./message-actions";
-import { MessageThinking, toThinkingTool, type ThinkingStep } from "./message-thinking";
+import {
+  MessageThinking,
+  type ThinkingStep,
+  toThinkingTool,
+} from "./message-thinking";
 import { PreviewAttachment } from "./preview-attachment";
 import { parseAssistantResponseText } from "./shopping/assistant-response-json";
 import { BuyCta } from "./shopping/buy-cta";
 import {
+  type ClarifyMenuOutput,
   isClarifyMenuRestatement,
   looksLikeClarifyMenuJson,
   tryParseClarifyMenuFromText,
-  type ClarifyMenuOutput,
 } from "./shopping/clarify-menu-utils";
 import { ComparisonTable } from "./shopping/comparison-table";
 import { OptionChips } from "./shopping/option-chips";
@@ -32,10 +35,6 @@ import { ProductDetailCard } from "./shopping/product-detail-card";
 import { ProductGrid, ProductGridSkeleton } from "./shopping/product-grid";
 import { ProductMarkdownResponse } from "./shopping/product-markdown-response";
 import { SellerComparison } from "./shopping/seller-comparison";
-import {
-  WebSearchResults,
-  type WebSearchResult,
-} from "./shopping/web-search-results";
 import { Weather } from "./weather";
 
 type SearchProductsPart = {
@@ -81,24 +80,36 @@ function getDisplayProductSignature(message: ChatMessage) {
 }
 
 const findSelectedOption = (
-  options: { label: string; value: string; description?: string; searchHint?: string }[],
+  options: {
+    label: string;
+    value: string;
+    description?: string;
+    searchHint?: string;
+  }[],
   allMessages?: ChatMessage[],
   messageIndex?: number
 ): string | undefined => {
-  if (!allMessages || messageIndex === undefined || messageIndex === -1) return undefined;
-  
+  if (!allMessages || messageIndex === undefined || messageIndex === -1) {
+    return undefined;
+  }
+
   for (let i = messageIndex + 1; i < allMessages.length; i++) {
     const nextMsg = allMessages[i];
     if (nextMsg.role === "user") {
-      const textParts = nextMsg.parts
-        ?.filter((p) => p.type === "text" && typeof (p as { text?: string }).text === "string")
-        .map((p) => ((p as { text: string }).text).trim().toLowerCase()) ?? [];
-      
+      const textParts =
+        nextMsg.parts
+          ?.filter(
+            (p) =>
+              p.type === "text" &&
+              typeof (p as { text?: string }).text === "string"
+          )
+          .map((p) => (p as { text: string }).text.trim().toLowerCase()) ?? [];
+
       for (const opt of options) {
         const valLower = opt.value.toLowerCase();
         const lblLower = opt.label.toLowerCase();
         const hintLower = opt.searchHint?.toLowerCase();
-        
+
         if (
           textParts.some(
             (t) =>
@@ -158,7 +169,6 @@ const PurePreviewMessage = ({
 
   useDataStream();
 
-  const isUser = message.role === "user";
   const isAssistant = message.role === "assistant";
 
   const hasAnyContent = message.parts?.some(
@@ -215,11 +225,7 @@ const PurePreviewMessage = ({
     ) {
       return null;
     }
-    if (
-      state === "output-available" &&
-      part.output &&
-      "error" in part.output
-    ) {
+    if (state === "output-available" && part.output && "error" in part.output) {
       return (
         <div
           className="rounded-lg border border-red-200 bg-red-50 p-3 text-red-600 text-sm dark:bg-red-950/50"
@@ -238,10 +244,7 @@ const PurePreviewMessage = ({
 
   const productToolParts =
     message.parts
-      ?.filter(
-        (part) =>
-          part.type === "tool-displayProducts"
-      )
+      ?.filter((part) => part.type === "tool-displayProducts")
       .map((part, index) => ({
         key: `message-${message.id}-product-${index}`,
         part: part as SearchProductsPart,
@@ -266,15 +269,15 @@ const PurePreviewMessage = ({
       ? (productOutputs[0]?.query ?? "products")
       : "matched products";
   const consolidatedProducts = Array.from(
-      productOutputs
-        .flatMap((output) => output.products)
-        .reduce((map, product) => {
-          if (!map.has(product.id)) {
-            map.set(product.id, product);
-          }
-          return map;
-        }, new Map<string, ProductResult>())
-        .values()
+    productOutputs
+      .flatMap((output) => output.products)
+      .reduce((map, product) => {
+        if (!map.has(product.id)) {
+          map.set(product.id, product);
+        }
+        return map;
+      }, new Map<string, ProductResult>())
+      .values()
   );
   const lastProductToolPart = productToolParts.at(-1);
   const productSignature = consolidatedProducts.length
@@ -306,7 +309,16 @@ const PurePreviewMessage = ({
         lastProductToolPart.key
       )
     ) : null;
-  const shouldRenderClarify = isLatestMessage && productToolParts.length === 0;
+  const latestClarifyPartIndex =
+    message.parts?.reduce(
+      (latest, part, index) =>
+        part.type === "tool-clarifyIntent" ? index : latest,
+      -1
+    ) ?? -1;
+  const shouldRenderClarify =
+    isLatestMessage &&
+    productToolParts.length === 0 &&
+    latestClarifyPartIndex !== -1;
   const taggableProducts =
     consolidatedProducts.length > 0
       ? consolidatedProducts.filter((product): product is ProductResult =>
@@ -328,9 +340,13 @@ const PurePreviewMessage = ({
   const salvagedClarify: { partIndex: number; menu: ClarifyMenuOutput }[] = [];
   if (isAssistant && clarifyOutputs.length === 0) {
     message.parts?.forEach((part, idx) => {
-      if (part.type !== "text" || !part.text) return;
+      if (part.type !== "text" || !part.text) {
+        return;
+      }
       const parsed = tryParseClarifyMenuFromText(part.text);
-      if (parsed) salvagedClarify.push({ partIndex: idx, menu: parsed });
+      if (parsed) {
+        salvagedClarify.push({ partIndex: idx, menu: parsed });
+      }
     });
   }
   const salvagedByPart = new Map(
@@ -338,9 +354,9 @@ const PurePreviewMessage = ({
   );
 
   // Suppress getProduct cards when compareProducts is also in this message
-  const hasCompareProducts = message.parts?.some(
-    (part) => part.type === "tool-compareProducts"
-  ) ?? false;
+  const hasCompareProducts =
+    message.parts?.some((part) => part.type === "tool-compareProducts") ??
+    false;
 
   const thinkingSteps: ThinkingStep[] = [];
   let toolIndex = 0;
@@ -452,15 +468,25 @@ const PurePreviewMessage = ({
       // Salvaged clarifyIntent JSON — render menu, suppress raw JSON text.
       const salvaged = salvagedByPart.get(index);
       if (salvaged) {
-        const menuOptions = (salvaged.options ?? [])
-          .filter(
-            (o): o is { label: string; value: string; description?: string; searchHint?: string } =>
-              typeof o.label === "string" && typeof o.value === "string"
-          );
-        const selectedValue = findSelectedOption(menuOptions, allMessages, messageIndex);
+        const menuOptions = (salvaged.options ?? []).filter(
+          (
+            o
+          ): o is {
+            label: string;
+            value: string;
+            description?: string;
+            searchHint?: string;
+          } => typeof o.label === "string" && typeof o.value === "string"
+        );
+        const selectedValue = findSelectedOption(
+          menuOptions,
+          allMessages,
+          messageIndex
+        );
         return (
           <div key={key}>
             <OptionChips
+              mode={salvaged.mode}
               onSelect={
                 sendMessage && !selectedValue
                   ? (value) => {
@@ -474,7 +500,6 @@ const PurePreviewMessage = ({
               options={menuOptions}
               question={salvaged.question ?? ""}
               reason={salvaged.reason}
-              mode={salvaged.mode}
               selectedValue={selectedValue}
             />
           </div>
@@ -596,7 +621,9 @@ const PurePreviewMessage = ({
 
     if (type === "tool-getProduct") {
       // Don't render a card when compareProducts is also present — the comparison table covers it
-      if (hasCompareProducts) return null;
+      if (hasCompareProducts) {
+        return null;
+      }
       const { toolCallId, state } = part;
       if (
         state === "output-available" &&
@@ -638,27 +665,52 @@ const PurePreviewMessage = ({
     }
 
     if (type === "tool-clarifyIntent") {
+      if (index !== latestClarifyPartIndex) {
+        return null;
+      }
       const { toolCallId, state } = part;
       type ClarifyData = {
         question?: string;
         reason?: string;
         mode?: string;
-        options?: { label: string; value: string; description?: string; searchHint?: string }[];
+        options?: {
+          label: string;
+          value: string;
+          description?: string;
+          searchHint?: string;
+        }[];
       };
       const rawData: unknown =
-        state === "output-available" ? (part as { output?: unknown }).output :
-        state === "input-available" ? (part as { input?: unknown }).input :
-        null;
+        state === "output-available"
+          ? (part as { output?: unknown }).output
+          : state === "input-available"
+            ? (part as { input?: unknown }).input
+            : null;
       const chipData = rawData as ClarifyData | null;
-      if (chipData && Array.isArray(chipData.options) && chipData.options.length > 0) {
+      if (
+        chipData &&
+        Array.isArray(chipData.options) &&
+        chipData.options.length > 0
+      ) {
         const menuOptions = chipData.options.filter(
-          (o): o is { label: string; value: string; description?: string; searchHint?: string } =>
-            typeof o.label === "string" && typeof o.value === "string"
+          (
+            o
+          ): o is {
+            label: string;
+            value: string;
+            description?: string;
+            searchHint?: string;
+          } => typeof o.label === "string" && typeof o.value === "string"
         );
-        const selectedValue = findSelectedOption(menuOptions, allMessages, messageIndex);
+        const selectedValue = findSelectedOption(
+          menuOptions,
+          allMessages,
+          messageIndex
+        );
         return (
           <div key={toolCallId}>
             <OptionChips
+              mode={chipData.mode}
               onSelect={
                 sendMessage && shouldRenderClarify && !selectedValue
                   ? (value) => {
@@ -672,7 +724,6 @@ const PurePreviewMessage = ({
               options={menuOptions}
               question={chipData.question ?? ""}
               reason={chipData.reason}
-              mode={chipData.mode}
               selectedValue={selectedValue}
             />
           </div>
@@ -884,7 +935,8 @@ const PurePreviewMessage = ({
         part.type === "tool-updateDocument" ||
         part.type === "tool-requestSuggestions" ||
         consolidatedProducts.length > 0
-    ) ?? false);
+    ) ??
+      false);
 
   if (isAssistant) {
     return (
@@ -935,9 +987,7 @@ const PurePreviewMessage = ({
       data-role={message.role}
       data-testid={`message-${message.role}`}
     >
-      <div className="flex flex-col items-end gap-2">
-        {content}
-      </div>
+      <div className="flex flex-col items-end gap-2">{content}</div>
     </div>
   );
 };
@@ -953,10 +1003,7 @@ export const ThinkingMessage = () => {
     >
       <div className="flex items-start gap-3">
         <div className="min-w-0 flex-1">
-          <MessageThinking
-            isStreaming={true}
-            steps={[]}
-          />
+          <MessageThinking isStreaming={true} steps={[]} />
         </div>
       </div>
     </div>

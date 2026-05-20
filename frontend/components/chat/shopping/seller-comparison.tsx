@@ -2,6 +2,7 @@
 
 import { ExternalLinkIcon } from "lucide-react";
 import { formatMoney } from "./format";
+import { getExternalHref } from "./link-utils";
 
 type Seller = {
   variantId: string;
@@ -37,6 +38,11 @@ export function SellerComparison({
       <ul className="divide-y divide-border/30">
         {sellers.map((seller) => {
           const isBest = seller.variantId === cheapest.variantId;
+          const href = getExternalHref(
+            seller.checkoutUrl,
+            seller.productUrl,
+            seller.shopUrl
+          );
           return (
             <li
               className="flex items-center justify-between gap-3 px-3 py-2 text-[12px]"
@@ -68,15 +74,17 @@ export function SellerComparison({
                 <span className="font-semibold">
                   {formatMoney(seller.price.amount, seller.price.currency)}
                 </span>
-                <a
-                  className="inline-flex items-center gap-1 rounded-md bg-primary px-2.5 py-1 font-medium text-[11px] text-primary-foreground transition hover:bg-primary/90"
-                  href={seller.checkoutUrl}
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  Buy
-                  <ExternalLinkIcon className="size-3" />
-                </a>
+                {href ? (
+                  <a
+                    className="inline-flex items-center gap-1 rounded-md bg-primary px-2.5 py-1 font-medium text-[11px] text-primary-foreground transition hover:bg-primary/90"
+                    href={href}
+                    rel="noreferrer noopener"
+                    target="_blank"
+                  >
+                    Buy
+                    <ExternalLinkIcon className="size-3" />
+                  </a>
+                ) : null}
               </div>
             </li>
           );

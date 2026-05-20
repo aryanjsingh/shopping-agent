@@ -1,3 +1,4 @@
+export const DEEPSEEK_DIRECT_MODEL_ID = "deepseek-v4-flash";
 export const DEFAULT_CHAT_MODEL = "openai/gpt-oss-120b:free";
 
 export const titleModel = {
@@ -17,6 +18,7 @@ export type ChatModel = {
   id: string;
   name: string;
   provider: string;
+  gatewayProvider?: "openrouter" | "deepseek";
   description: string;
   fallbacks?: string[];
   reasoningEffort?: "none" | "minimal" | "low" | "medium" | "high";
@@ -41,6 +43,7 @@ function freeModel(
     id,
     name,
     provider,
+    gatewayProvider: "openrouter",
     description,
     capabilities,
     fallbacks: defaultFallbacks.filter((fallback) => fallback !== id),
@@ -48,6 +51,14 @@ function freeModel(
 }
 
 export const chatModels: ChatModel[] = [
+  {
+    id: DEEPSEEK_DIRECT_MODEL_ID,
+    name: "DeepSeek V4 Flash",
+    provider: "deepseek",
+    gatewayProvider: "deepseek",
+    description: "Direct DeepSeek API model. Only direct DeepSeek model enabled.",
+    capabilities: { tools: true, vision: false, reasoning: false },
+  },
   freeModel("openrouter/free", "Free Models Router", "openrouter", "OpenRouter router across currently available free models", { tools: true, vision: true, reasoning: true }),
   freeModel("openrouter/owl-alpha", "Owl Alpha", "openrouter", "Free long-context agent model with tool support", { tools: true, vision: false, reasoning: false }),
   freeModel("arcee-ai/trinity-large-thinking:free", "Trinity Large Thinking (free)", "arcee-ai", "Free thinking model with tool support", { tools: true, vision: false, reasoning: true }),

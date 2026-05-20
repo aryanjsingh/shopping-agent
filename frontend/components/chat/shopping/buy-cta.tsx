@@ -2,6 +2,7 @@
 
 import { ExternalLinkIcon, ShieldCheckIcon } from "lucide-react";
 import { formatMoney } from "./format";
+import { getExternalHref } from "./link-utils";
 
 export function BuyCta({
   productTitle,
@@ -16,6 +17,8 @@ export function BuyCta({
   image?: string;
   checkoutUrl: string;
 }) {
+  const href = getExternalHref(checkoutUrl);
+
   return (
     <div className="flex w-full max-w-md items-center gap-3 rounded-xl border border-border/40 bg-card p-3 shadow-sm">
       {image ? (
@@ -40,15 +43,17 @@ export function BuyCta({
         <span className="font-semibold text-[14px]">
           {formatMoney(price.amount, price.currency)}
         </span>
-        <a
-          className="inline-flex items-center gap-1 rounded-md bg-primary px-3 py-1.5 font-medium text-[11px] text-primary-foreground transition hover:bg-primary/90"
-          href={checkoutUrl}
-          rel="noreferrer noopener"
-          target="_blank"
-        >
-          Checkout
-          <ExternalLinkIcon className="size-3" />
-        </a>
+        {href ? (
+          <a
+            className="inline-flex items-center gap-1 rounded-md bg-primary px-3 py-1.5 font-medium text-[11px] text-primary-foreground transition hover:bg-primary/90"
+            href={href}
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Checkout
+            <ExternalLinkIcon className="size-3" />
+          </a>
+        ) : null}
       </div>
     </div>
   );

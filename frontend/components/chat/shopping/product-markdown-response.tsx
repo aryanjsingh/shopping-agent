@@ -2,12 +2,7 @@
 
 import { Children, isValidElement, type ReactNode } from "react";
 import { MessageResponse } from "@/components/ai-elements/message";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
-import { getProductHref, ProductHoverPreview, type Product } from "./product-grid";
+import { getProductHref, type Product } from "./product-grid";
 
 export function ProductMarkdownResponse({
   products,
@@ -73,52 +68,112 @@ function tagProductText(children: ReactNode, products: Product[]) {
 function ProductTag({ product, text }: { product: Product; text: string }) {
   const href = getProductHref(product);
 
+  if (!href) {
+    return text;
+  }
+
   return (
-    <HoverCard openDelay={120}>
-      <HoverCardTrigger asChild>
-        <a
-          className="mx-0.5 inline-flex max-w-full items-center rounded-md border border-border/70 bg-muted/50 px-1.5 py-0.5 align-baseline font-medium text-[12px] leading-none text-foreground transition hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-          href={href}
-          rel="noreferrer noopener"
-          target="_blank"
-        >
-          {text}
-        </a>
-      </HoverCardTrigger>
-      <HoverCardContent align="start" className="w-80 p-3">
-        <ProductHoverPreview product={product} />
-      </HoverCardContent>
-    </HoverCard>
+    <a
+      className="font-semibold text-primary underline underline-offset-2 transition hover:text-primary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      href={href}
+      rel="noreferrer noopener"
+      target="_blank"
+    >
+      {text}
+    </a>
   );
 }
 
+function getTitleVariations(title: string): string[] {
+  const variations = new Set<string>();
+  const cleanTitle = title.trim();
+  variations.add(cleanTitle);
+
+  // Clean delimiters
+  const separators = /[\-|::,\(\[\{]/;
+  const parts = title.split(separators);
+  if (parts.length > 1) {
+    const firstPart = parts[0].trim();
+    if (firstPart.length >= 4) {
+      variations.add(firstPart);
+    }
+  }
+
+  // Word prefixes
+  const words = cleanTitle.split(/\s+/);
+  if (words.length >= 2) {
+    variations.add(words.slice(0, 2).join(" "));
+  }
+  if (words.length >= 3) {
+    variations.add(words.slice(0, 3).join(" "));
+  }
+  if (words.length >= 4) {
+    variations.add(words.slice(0, 4).join(" "));
+  }
+
+  // Blacklist of common descriptor words
+  const BLACKLIST = new Set([
+    "wireless", "headphones", "headphone", "active", "noise", "cancelling",
+    "canceling", "over-ear", "in-ear", "earbuds", "earbud", "with", "charging",
+    "case", "bluetooth", "stereo", "sound", "smart", "pro", "max", "mini",
+    "plus", "gen", "generation", "edition", "color", "black", "white", "silver",
+    "grey", "gray", "blue", "gold", "pink", "green", "red"
+  ]);
+
+  // Individual non-blacklisted words of length >= 4
+  for (const word of words) {
+    const cleanWord = word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").trim();
+    if (cleanWord.length >= 4 && !BLACKLIST.has(cleanWord.toLowerCase())) {
+      variations.add(cleanWord);
+    }
+  }
+
+  return Array.from(variations)
+    .map((v) => v.trim())
+    .filter((v) => v.length >= 4)
+    .sort((a, b) => b.length - a.length);
+}
+
 function splitProductTags(text: string, products: Product[]) {
-  const names = products
-    .map((product) => ({
-      lowerTitle: product.title.toLowerCase(),
-      product,
-      title: product.title,
-    }))
-    .filter(({ title }) => title.length >= 8)
-    .sort((a, b) => b.title.length - a.title.length)
-    .slice(0, 8);
+  const candidates: { variation: string; product: Product }[] = [];
+  for (const product of products) {
+    const variations = getTitleVariations(product.title);
+    for (const v of variations) {
+      candidates.push({ variation: v.toLowerCase(), product });
+    }
+  }
+
+  // Sort candidates by length of variation descending to match longest possible string first
+  candidates.sort((a, b) => b.variation.length - a.variation.length);
+
   const pieces: { product?: Product; text: string }[] = [];
   const lowerText = text.toLowerCase();
   let cursor = 0;
 
   while (cursor < text.length) {
-    let match: { index: number; product: Product; title: string } | undefined;
+    let match: { index: number; product: Product; variation: string } | undefined;
 
-    for (const candidate of names) {
-      const index = lowerText.indexOf(candidate.lowerTitle, cursor);
+    for (const candidate of candidates) {
+      const index = lowerText.indexOf(candidate.variation, cursor);
       if (index === -1) {
         continue;
       }
+
+      // Check word boundaries
+      const startWordBoundary = index === 0 || /\W/.test(lowerText[index - 1]);
+      const endWordBoundary =
+        index + candidate.variation.length === lowerText.length ||
+        /\W/.test(lowerText[index + candidate.variation.length]);
+
+      if (!startWordBoundary || !endWordBoundary) {
+        continue;
+      }
+
       if (!match || index < match.index) {
         match = {
           index,
           product: candidate.product,
-          title: candidate.title,
+          variation: candidate.variation,
         };
       }
     }
@@ -133,9 +188,9 @@ function splitProductTags(text: string, products: Product[]) {
     }
     pieces.push({
       product: match.product,
-      text: text.slice(match.index, match.index + match.title.length),
+      text: text.slice(match.index, match.index + match.variation.length),
     });
-    cursor = match.index + match.title.length;
+    cursor = match.index + match.variation.length;
   }
 
   return pieces.length > 0 ? pieces : [{ text }];

@@ -1,7 +1,7 @@
 "use client";
 
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -28,6 +28,7 @@ import { MultimodalInput } from "./multimodal-input";
 
 export function ChatShell() {
   const router = useRouter();
+  const pathname = usePathname();
   const {
     chatId,
     messages,
@@ -49,7 +50,9 @@ export function ChatShell() {
     setShowCreditCardAlert,
   } = useActiveChat();
 
-  const [editingMessage, setEditingMessage] = useState<ChatMessage | null>(null);
+  const [editingMessage, setEditingMessage] = useState<ChatMessage | null>(
+    null
+  );
   const [attachments, setAttachments] = useState<Attachment[]>([]);
   const isArtifactVisible = useArtifactSelector((state) => state.isVisible);
   const { setArtifact } = useArtifact();
@@ -58,19 +61,29 @@ export function ChatShell() {
   stopRef.current = stop;
 
   const prevChatIdRef = useRef(chatId);
+  const prevPathnameRef = useRef(pathname);
   useEffect(() => {
-    if (prevChatIdRef.current !== chatId) {
+    const prevChatId = prevChatIdRef.current;
+    if (prevChatId !== chatId) {
       prevChatIdRef.current = chatId;
-      stopRef.current();
+      const prevPathname = prevPathnameRef.current;
+      if (prevPathname.includes("/chat/")) {
+        stopRef.current();
+      }
       setArtifact(initialArtifactData);
       setEditingMessage(null);
       setAttachments([]);
     }
-  }, [chatId, setArtifact]);
+    prevPathnameRef.current = pathname;
+  }, [chatId, pathname, setArtifact]);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
-      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key.toLowerCase() === "o") {
+      if (
+        (event.ctrlKey || event.metaKey) &&
+        event.shiftKey &&
+        event.key.toLowerCase() === "o"
+      ) {
         event.preventDefault();
         router.push("/");
       }

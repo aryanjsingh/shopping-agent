@@ -84,7 +84,8 @@ export function createSearchProductsTool(ctx: SearchProductsContext) {
         });
 
         const relevantProducts = filterAccessoryMismatches(products, input.query);
-        const ranked = rerank(relevantProducts, input.sortMode ?? "relevance", ctx.chatSeed, finalQuery);
+        const ratingFiltered = filterLowRated(relevantProducts);
+        const ranked = rerank(ratingFiltered, input.sortMode ?? "relevance", ctx.chatSeed, finalQuery);
         const top = ranked.slice(0, limit);
 
         // Update memo so showMore / refineSearch can pick up the thread.
@@ -115,6 +116,17 @@ export function createSearchProductsTool(ctx: SearchProductsContext) {
       }
     },
   });
+}
+
+const MIN_RATING = 3.0;
+const MIN_RATED_RESULTS = 3;
+
+function filterLowRated(products: Awaited<ReturnType<typeof searchCatalog>>) {
+  const passing = products.filter(
+    (p) => p.rating == null || p.rating.rating >= MIN_RATING
+  );
+  // Fall back to unfiltered if too few survive (avoids empty/tiny result sets).
+  return passing.length >= MIN_RATED_RESULTS ? passing : products;
 }
 
 function filterAccessoryMismatches(

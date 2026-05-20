@@ -82,10 +82,12 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
   const [input, setInput] = useState("");
   const [showCreditCardAlert, setShowCreditCardAlert] = useState(false);
 
+  const messagesKey = isNewChat
+    ? null
+    : `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/api/messages?chatId=${chatId}`;
+
   const { data: chatData, isLoading } = useSWR(
-    isNewChat
-      ? null
-      : `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/api/messages?chatId=${chatId}`,
+    messagesKey,
     fetcher,
     { revalidateOnFocus: false }
   );
@@ -155,6 +157,9 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
       setDataStream((ds) => (ds ? [...ds, dataPart] : []));
     },
     onFinish: () => {
+      if (messagesKey) {
+        void mutate(messagesKey);
+      }
       mutate(unstable_serialize(getChatHistoryPaginationKey));
     },
     onError: (error) => {
@@ -213,8 +218,7 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
     if (chatData?.messages) {
       if (
         chatData.messages.length === 0 &&
-        messages.length > 0 &&
-        (status === "submitted" || status === "streaming")
+        messages.length > 0
       ) {
         return;
       }
@@ -222,7 +226,7 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
       serverMessagesLoadedRef.current = chatId;
       setMessages(chatData.messages);
     }
-  }, [chatId, isNewChat, chatData?.messages, messages.length, setMessages, status]);
+  }, [chatId, isNewChat, chatData?.messages, messages.length, setMessages]);
 
   const prevChatIdRef = useRef(chatId);
   useEffect(() => {
@@ -317,6 +321,7 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
       isNewChat,
       isLoading,
       chatData,
+      messagesKey,
       votes,
       currentModelId,
       showCreditCardAlert,

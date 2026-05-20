@@ -1,9 +1,11 @@
+import { createOpenAI } from "@ai-sdk/openai";
 import { createOpenRouter } from "@openrouter/ai-sdk-provider";
 import { isTestEnvironment } from "../constants";
-import { titleModel } from "./models";
+import { DEEPSEEK_DIRECT_MODEL_ID, titleModel } from "./models";
 
 let testProvider: ReturnType<typeof loadTestProvider> | null = null;
 let openrouter: ReturnType<typeof createOpenRouter> | null = null;
+let deepseek: ReturnType<typeof createOpenAI> | null = null;
 
 function loadTestProvider() {
   const { customProvider } = require("ai");
@@ -37,9 +39,40 @@ function getOpenRouter() {
   return openrouter;
 }
 
+function getDeepSeek() {
+  if (!process.env.DEEPSEEK_API_KEY) {
+    throw new Error("DEEPSEEK_API_KEY is not set");
+  }
+
+  deepseek ??= createOpenAI({
+    apiKey: process.env.DEEPSEEK_API_KEY,
+    baseURL: process.env.DEEPSEEK_BASE_URL ?? "https://api.deepseek.com",
+    fetch: async (input, init) => {
+      if (typeof init?.body === "string") {
+        try {
+          const body = JSON.parse(init.body) as Record<string, unknown>;
+          init.body = JSON.stringify({
+            ...body,
+            thinking: { type: "disabled" },
+          });
+        } catch {
+          // Keep original request body if it is not JSON.
+        }
+      }
+      return fetch(input, init);
+    },
+    name: "deepseek",
+  });
+
+  return deepseek;
+}
+
 export function getLanguageModel(modelId: string) {
   if (isTestEnvironment && testProvider) {
     return testProvider.languageModel(modelId);
+  }
+  if (modelId === DEEPSEEK_DIRECT_MODEL_ID) {
+    return getDeepSeek().chat(DEEPSEEK_DIRECT_MODEL_ID);
   }
   return getOpenRouter().chat(modelId);
 }

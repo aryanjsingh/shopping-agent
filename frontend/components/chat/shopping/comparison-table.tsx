@@ -2,6 +2,7 @@
 
 import { ExternalLinkIcon, StarIcon, StoreIcon } from "lucide-react";
 import { formatMoney, formatRating } from "./format";
+import { getExternalHref } from "./link-utils";
 
 type Row = {
   id: string;
@@ -25,10 +26,14 @@ export function ComparisonTable({ rows }: { rows: Row[] }) {
   // Find the cheapest row to badge it.
   const cheapestId = rows.reduce(
     (best, row) =>
-      row.bestSellerPrice && (!best.price || row.bestSellerPrice.amount < best.price)
+      row.bestSellerPrice &&
+      (!best.price || row.bestSellerPrice.amount < best.price)
         ? { id: row.id, price: row.bestSellerPrice.amount }
         : best,
-    { id: rows[0].id, price: rows[0].bestSellerPrice?.amount ?? rows[0].priceMin.amount }
+    {
+      id: rows[0].id,
+      price: rows[0].bestSellerPrice?.amount ?? rows[0].priceMin.amount,
+    }
   ).id;
   return (
     <div className="overflow-x-auto rounded-xl border border-border/40 bg-card">
@@ -39,7 +44,9 @@ export function ComparisonTable({ rows }: { rows: Row[] }) {
             {rows.map((row) => (
               <th className="p-3 text-left font-medium" key={`h-${row.id}`}>
                 <div className="flex items-center gap-1.5">
-                  <span className="line-clamp-2 max-w-[180px]">{row.title}</span>
+                  <span className="line-clamp-2 max-w-[180px]">
+                    {row.title}
+                  </span>
                   {row.id === cheapestId && rows.length > 1 ? (
                     <span className="rounded-full bg-emerald-500/15 px-1.5 py-0.5 text-[9px] font-medium text-emerald-700 dark:text-emerald-300">
                       Best price
@@ -157,23 +164,27 @@ export function ComparisonTable({ rows }: { rows: Row[] }) {
           </tr>
           <tr>
             <td className="font-medium text-muted-foreground">Action</td>
-            {rows.map((row) => (
-              <td key={`b-${row.id}`}>
-                {row.bestCheckoutUrl ? (
-                  <a
-                    className="inline-flex items-center gap-1 rounded-md bg-primary px-2.5 py-1.5 font-medium text-[11px] text-primary-foreground transition hover:bg-primary/90"
-                    href={row.bestCheckoutUrl}
-                    rel="noreferrer noopener"
-                    target="_blank"
-                  >
-                    Buy{row.bestSellerName ? ` from ${row.bestSellerName}` : ""}
-                    <ExternalLinkIcon className="size-3" />
-                  </a>
-                ) : (
-                  <span className="text-muted-foreground">—</span>
-                )}
-              </td>
-            ))}
+            {rows.map((row) => {
+              const href = getExternalHref(row.bestCheckoutUrl);
+              return (
+                <td key={`b-${row.id}`}>
+                  {href ? (
+                    <a
+                      className="inline-flex items-center gap-1 rounded-md bg-primary px-2.5 py-1.5 font-medium text-[11px] text-primary-foreground transition hover:bg-primary/90"
+                      href={href}
+                      rel="noreferrer noopener"
+                      target="_blank"
+                    >
+                      Buy
+                      {row.bestSellerName ? ` from ${row.bestSellerName}` : ""}
+                      <ExternalLinkIcon className="size-3" />
+                    </a>
+                  ) : (
+                    <span className="text-muted-foreground">—</span>
+                  )}
+                </td>
+              );
+            })}
           </tr>
         </tbody>
       </table>

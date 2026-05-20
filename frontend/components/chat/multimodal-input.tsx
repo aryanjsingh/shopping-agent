@@ -52,11 +52,7 @@ import {
   PromptInputTools,
 } from "../ai-elements/prompt-input";
 import { Button } from "../ui/button";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "../ui/tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import { ImageIcon, StopIcon } from "./icons";
 import { PreviewAttachment } from "./preview-attachment";
 import {
@@ -641,13 +637,26 @@ function PureModelSelectorCompact({
   const capabilities: Record<string, ModelCapabilities> | undefined =
     modelsData?.capabilities ?? modelsData;
   const dynamicModels: ChatModel[] | undefined = modelsData?.models;
-  const activeModels = dynamicModels ?? chatModels;
+  const curatedIds = new Set(chatModels.map((m) => m.id));
+  const allModels = dynamicModels
+    ? [
+        ...chatModels,
+        ...dynamicModels.filter((model) => !curatedIds.has(model.id)),
+      ]
+    : chatModels;
 
   const selectedModel =
-    activeModels.find((m: ChatModel) => m.id === selectedModelId) ??
-    activeModels.find((m: ChatModel) => m.id === DEFAULT_CHAT_MODEL) ??
-    activeModels[0];
-  const [provider] = selectedModel.id.split("/");
+    allModels.find((model: ChatModel) => model.id === selectedModelId) ??
+    allModels.find((model: ChatModel) => model.id === DEFAULT_CHAT_MODEL) ??
+    allModels[0];
+  const selectedGateway = selectedModel.gatewayProvider ?? "openrouter";
+  const gatewayLabels: Record<
+    NonNullable<ChatModel["gatewayProvider"]>,
+    string
+  > = {
+    deepseek: "DeepSeek",
+    openrouter: "OpenRouter",
+  };
 
   return (
     <ModelSelector onOpenChange={setOpen} open={open}>
@@ -657,11 +666,37 @@ function PureModelSelectorCompact({
           data-testid="model-selector"
           variant="ghost"
         >
-          {provider && <ModelSelectorLogo provider={provider} />}
+          <ModelSelectorLogo provider={selectedModel.provider} />
           <ModelSelectorName>{selectedModel.name}</ModelSelectorName>
         </Button>
       </ModelSelectorTrigger>
       <ModelSelectorContent>
+        <div className="grid grid-cols-2 gap-1 border-border/50 border-b p-2">
+          {(["openrouter", "deepseek"] as const).map((gateway) => (
+            <button
+              className={cn(
+                "rounded-md px-2.5 py-1.5 text-[12px] transition-colors",
+                selectedGateway === gateway
+                  ? "bg-muted text-foreground"
+                  : "text-muted-foreground hover:bg-muted/60 hover:text-foreground"
+              )}
+              key={gateway}
+              onClick={() => {
+                const firstModel = allModels.find(
+                  (model) => (model.gatewayProvider ?? "openrouter") === gateway
+                );
+                if (!firstModel || firstModel.id === selectedModel.id) {
+                  return;
+                }
+                onModelChange?.(firstModel.id);
+                setCookie("chat-model", firstModel.id);
+              }}
+              type="button"
+            >
+              {gatewayLabels[gateway]}
+            </button>
+          ))}
+        </div>
         <div className="flex flex-wrap gap-2 border-border/50 border-b px-3 py-2 text-[11px] text-muted-foreground">
           <span className="inline-flex items-center gap-1">
             <WrenchIcon className="size-3" /> Tools
@@ -679,19 +714,16 @@ function PureModelSelectorCompact({
         <ModelSelectorInput placeholder="Search models..." />
         <ModelSelectorList>
           {(() => {
-            const curatedIds = new Set(chatModels.map((m) => m.id));
-            const allModels = dynamicModels
-              ? [
-                  ...chatModels,
-                  ...dynamicModels.filter((m) => !curatedIds.has(m.id)),
-                ]
-              : chatModels;
+            const visibleModels = allModels.filter(
+              (model) =>
+                (model.gatewayProvider ?? "openrouter") === selectedGateway
+            );
 
             const grouped: Record<
               string,
               { model: ChatModel; curated: boolean }[]
             > = {};
-            for (const model of allModels) {
+            for (const model of visibleModels) {
               const key = curatedIds.has(model.id)
                 ? "_available"
                 : model.provider;
@@ -746,7 +778,6 @@ function PureModelSelectorCompact({
                 key={key}
               >
                 {grouped[key].map(({ model, curated }) => {
-                  const logoProvider = model.id.split("/")[0];
                   return (
                     <ModelSelectorItem
                       className={cn(
@@ -771,7 +802,7 @@ function PureModelSelectorCompact({
                       }}
                       value={model.id}
                     >
-                      <ModelSelectorLogo provider={logoProvider} />
+                      <ModelSelectorLogo provider={model.provider} />
                       <ModelSelectorName>{model.name}</ModelSelectorName>
                       <div className="ml-auto flex items-center gap-2 text-foreground/70">
                         {capabilities?.[model.id]?.tools && (
@@ -803,7 +834,9 @@ function PureModelSelectorCompact({
                             <TooltipTrigger asChild>
                               <LockIcon className="size-3 text-muted-foreground/50" />
                             </TooltipTrigger>
-                            <TooltipContent>Not available in this app</TooltipContent>
+                            <TooltipContent>
+                              Not available in this app
+                            </TooltipContent>
                           </Tooltip>
                         )}
                       </div>
@@ -831,18 +864,18 @@ function PureStopButton({
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-    <Button
-      aria-label="Stop generation"
-      className="h-7 w-7 rounded-xl bg-primary p-1 text-primary-foreground transition-all duration-200 hover:bg-primary/90 active:scale-95 disabled:bg-muted disabled:text-muted-foreground/25 disabled:cursor-not-allowed"
-      data-testid="stop-button"
-      onClick={(event) => {
-        event.preventDefault();
-        stop();
-        setMessages((messages) => messages);
-      }}
-    >
-      <StopIcon size={14} />
-    </Button>
+        <Button
+          aria-label="Stop generation"
+          className="h-7 w-7 rounded-xl bg-primary p-1 text-primary-foreground transition-all duration-200 hover:bg-primary/90 active:scale-95 disabled:bg-muted disabled:text-muted-foreground/25 disabled:cursor-not-allowed"
+          data-testid="stop-button"
+          onClick={(event) => {
+            event.preventDefault();
+            stop();
+            setMessages((messages) => messages);
+          }}
+        >
+          <StopIcon size={14} />
+        </Button>
       </TooltipTrigger>
       <TooltipContent>Stop generation</TooltipContent>
     </Tooltip>

@@ -1,7 +1,14 @@
 "use client";
 
-import { CheckIcon, ExternalLinkIcon, ShoppingCartIcon, StarIcon, StoreIcon } from "lucide-react";
+import {
+  CheckIcon,
+  ExternalLinkIcon,
+  ShoppingCartIcon,
+  StarIcon,
+  StoreIcon,
+} from "lucide-react";
 import { formatMoney, formatRating } from "./format";
+import { getExternalHref } from "./link-utils";
 
 type Variant = {
   id?: string;
@@ -31,24 +38,26 @@ export type DetailProduct = {
 };
 
 function getVariantHref(variant?: Variant) {
-  return (
-    variant?.checkoutUrl ||
-    variant?.productUrl ||
-    variant?.variantUrl ||
-    variant?.shop?.onlineStoreUrl ||
-    ""
+  return getExternalHref(
+    variant?.checkoutUrl,
+    variant?.productUrl,
+    variant?.variantUrl,
+    variant?.shop?.onlineStoreUrl
   );
 }
 
 export function ProductDetailCard({ product }: { product: DetailProduct }) {
-  if (!product?.title) return null;
+  if (!product?.title) {
+    return null;
+  }
   const image = product.media?.[0]?.url;
   const minAmount = product.priceRange?.min?.amount ?? 0;
   const minCurrency = product.priceRange?.min?.currency ?? "USD";
   const maxAmount = product.priceRange?.max?.amount ?? minAmount;
   const cheapest = (product.variants ?? [])
-    .filter((v) => v.checkoutUrl && v.availableForSale)
+    .filter((v) => getVariantHref(v) && v.availableForSale)
     .sort((a, b) => (a.price?.amount ?? 0) - (b.price?.amount ?? 0))[0];
+  const cheapestHref = getVariantHref(cheapest);
   const features = (product.topFeatures ?? []).slice(0, 4);
   const specs = (product.techSpecs ?? []).slice(0, 4);
 
@@ -75,7 +84,11 @@ export function ProductDetailCard({ product }: { product: DetailProduct }) {
             {formatMoney(minAmount, minCurrency)}
             {maxAmount > minAmount ? (
               <span className="ml-1 font-normal text-[12px] text-muted-foreground">
-                – {formatMoney(maxAmount, product.priceRange?.max?.currency ?? minCurrency)}
+                –{" "}
+                {formatMoney(
+                  maxAmount,
+                  product.priceRange?.max?.currency ?? minCurrency
+                )}
               </span>
             ) : null}
           </div>
@@ -132,12 +145,12 @@ export function ProductDetailCard({ product }: { product: DetailProduct }) {
               : `${product.variants?.length ?? 0} seller${(product.variants?.length ?? 0) === 1 ? "" : "s"}`}
           </span>
         </div>
-        {getVariantHref(cheapest) ? (
+        {cheapestHref ? (
           <a
-            href={getVariantHref(cheapest)}
+            className="inline-flex items-center gap-1 rounded-md bg-primary px-2.5 py-1.5 font-medium text-[11px] text-primary-foreground transition hover:bg-primary/90"
+            href={cheapestHref}
             rel="noreferrer noopener"
             target="_blank"
-            className="inline-flex items-center gap-1 rounded-md bg-primary px-2.5 py-1.5 font-medium text-[11px] text-primary-foreground transition hover:bg-primary/90"
           >
             Buy
             <ExternalLinkIcon className="size-3" />

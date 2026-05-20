@@ -5,6 +5,7 @@ import {
   createUIMessageStream,
   createUIMessageStreamResponse,
   generateText,
+  hasToolCall,
   smoothStream,
   stepCountIs,
   streamText,
@@ -191,54 +192,6 @@ function summarizeToolInput(input: unknown) {
   return undefined;
 }
 
-type ClarifyOption = {
-  label: string;
-  description?: string;
-  value: string;
-  searchHint?: string;
-};
-
-type ClarifyPayload = {
-  question: string;
-  reason?: string;
-  mode?: string;
-  options: ClarifyOption[];
-};
-
-function hasRecentClarification(messages: DBMessage[]) {
-  const lastAssistant = [...messages]
-    .reverse()
-    .find((msg) => msg.role === "assistant");
-  const parts = Array.isArray(lastAssistant?.parts) ? lastAssistant.parts : [];
-  return Boolean(
-    parts.some(
-      (part: unknown) =>
-        typeof part === "object" &&
-        part !== null &&
-        "type" in part &&
-        (part as { type?: string }).type === "tool-clarifyIntent"
-    )
-  );
-}
-
-function getClarificationOutput(message: DBMessage | undefined) {
-  const parts = Array.isArray(message?.parts) ? message.parts : [];
-  const clarifyPart = parts.find(
-    (part: unknown) =>
-      typeof part === "object" &&
-      part !== null &&
-      "type" in part &&
-      (part as { type?: string }).type === "tool-clarifyIntent"
-  ) as { output?: unknown; input?: unknown; state?: string } | undefined;
-
-  const raw =
-    clarifyPart?.state === "output-available"
-      ? clarifyPart.output
-      : clarifyPart?.output ?? clarifyPart?.input;
-
-  return raw && typeof raw === "object" ? (raw as Partial<ClarifyPayload>) : null;
-}
-
 function getDbMessageText(message: DBMessage | undefined) {
   const parts = Array.isArray(message?.parts) ? message.parts : [];
   return parts
@@ -256,153 +209,6 @@ function getDbMessageText(message: DBMessage | undefined) {
     })
     .join(" ")
     .trim();
-}
-
-export function shouldOfferDiscoveryOptions(text: string, messagesFromDb: DBMessage[]) {
-  const normalized = text.toLowerCase().trim();
-  if (!normalized || hasRecentClarification(messagesFromDb)) {
-    return false;
-  }
-
-  const researchOrCompatibilityPatterns = [
-    /\b(would|is|are|do|does|can|should)\b[\s\S]*\b(good|worth|compatible|work|works|fit|fits|ok|okay)\b/i,
-    /\bcan\s+i\s+(use|wear|buy|order|choose|get)\b[\s\S]*\b(it|this|them|as|for)\b/i,
-    /\b(would|should)\s+i\s+(use|wear|buy|order|choose|get)\b[\s\S]*\b(it|this|them|as|for)\b/i,
-    /\b(for|made for|designed for)\s+(men|man|male|women|woman|female|kids|children)\b[\s\S]*\b(can|could|should|would)\s+i\s+(use|wear|buy|order|choose|get)\b/i,
-    /\b(apple ecosystem|ecosystem|ios|iphone|ipad|macbook|android|windows)\b[\s\S]*\b(compatible|work|works|good|fit|fits)\b/i,
-    /\b(good|compatible|work|works|fit|fits)\b[\s\S]*\b(apple ecosystem|ecosystem|ios|iphone|ipad|macbook|android|windows)\b/i,
-  ];
-  if (researchOrCompatibilityPatterns.some((pattern) => pattern.test(normalized))) {
-    return false;
-  }
-
-  const skipPatterns = [
-    /\b(compare| vs |versus)\b/i,
-    /\b(cheapest|best price|who sells|where can i buy)\b/i,
-    /\b(show more|what else|other options|more like)\b/i,
-    /\b(i'?ll take|buy this|checkout|add to cart)\b/i,
-  ];
-  if (skipPatterns.some((pattern) => pattern.test(normalized))) {
-    return false;
-  }
-
-  const exactModelSignals = [
-    /\bairpods?\s+pro\b/i,
-    /\bairpods?\s+max\b/i,
-    /\bsony\s+w[fh][-\s]?1000x?m\d\b/i,
-    /\bw[fh][-\s]?1000x?m\d\b/i,
-    /\bbose\s+(quietcomfort|qc)\s*(ultra|\d+)?\b/i,
-    /\bkindle\s+(paperwhite|basic|scribe)\b/i,
-    /\bmx\s+master\s*3s\b/i,
-    /\bro[gq]\s+phone\b/i,
-    /\biphone\s+\d+/i,
-    /\bgalaxy\s+s\d+/i,
-    /\bipad\s+(air|pro|mini)\b/i,
-  ];
-  if (exactModelSignals.some((pattern) => pattern.test(normalized))) {
-    return false;
-  }
-
-  return /\b(under|below|around|budget|best|good|easy|compact|gift|for|with|need|want|looking)\b/i.test(
-    normalized
-  );
-}
-
-function buildDiscoveryClarification(userText: string): ClarifyPayload {
-  const lower = userText.toLowerCase();
-  const option = (
-    label: string,
-    description: string,
-    priority: string,
-    searchHint = priority
-  ): ClarifyOption => ({
-    label,
-    description,
-    value: priority,
-    searchHint,
-  });
-
-  if (/\b(espresso|coffee machine|coffee maker)\b/.test(lower)) {
-    return {
-      question: "What matters most for the machine?",
-      reason: "One priority keeps the results from mixing convenience machines with enthusiast gear.",
-      mode: "feature",
-      options: [
-        option("Easiest cleaning", "Removable parts, minimal grinder mess, quick rinse routine.", "easy cleaning and low maintenance"),
-        option("Small footprint", "Compact body first, with acceptable cleanup tradeoffs.", "compact footprint"),
-        option("Best shot quality", "PID, pressure stability, and better espresso consistency.", "best espresso quality"),
-        option("Lowest price", "Keep the budget tight and avoid premium features.", "lowest price"),
-      ],
-    };
-  }
-
-  if (/\b(earbud|headphone|anc|noise.?cancel)\b/.test(lower)) {
-    return {
-      question: "Which tradeoff should I optimize for?",
-      reason: "Earbuds vary a lot by ANC, calls, comfort, and battery.",
-      mode: "feature",
-      options: [
-        option("Strongest ANC", "Prioritize isolation for flights, commute, and office noise.", "strongest noise cancellation"),
-        option("Calls and mic", "Clear voice pickup matters more than max bass.", "clear calls microphone quality"),
-        option("Comfort and battery", "Long sessions, smaller fit, and fewer charge breaks.", "comfort long battery life"),
-        option("Lowest price", "Stay cheap and accept some ANC compromise.", "lowest price"),
-      ],
-    };
-  }
-
-  if (/\b(laptop|macbook|notebook)\b/.test(lower)) {
-    return {
-      question: "What should the laptop be best at?",
-      reason: "This decides whether to bias CPU/GPU, display, battery, or portability.",
-      mode: "use_case",
-      options: [
-        option("Video editing", "Prioritize CPU/GPU, RAM, and color-accurate display.", "video editing performance"),
-        option("Portable work", "Lightweight, battery life, and quiet operation.", "portable work laptop"),
-        option("Gaming", "GPU and cooling come before thinness.", "gaming performance"),
-        option("Lowest price", "Best value within the budget.", "budget laptop"),
-      ],
-    };
-  }
-
-  if (/\b(phone|smartphone|gaming phone)\b/.test(lower)) {
-    return {
-      question: "What should the phone optimize for?",
-      reason: "Phone recommendations change fast depending on performance, camera, and battery.",
-      mode: "use_case",
-      options: [
-        option("Gaming speed", "Current chipset, cooling, and high refresh display.", "gaming performance current chipset"),
-        option("Camera", "Photo/video quality first.", "best camera"),
-        option("Battery", "Long runtime and fast charging.", "battery life"),
-        option("Lowest price", "Best value under the budget.", "budget phone"),
-      ],
-    };
-  }
-
-  if (/\b(gift|dad|mom|friend|wife|husband|kid)\b/.test(lower)) {
-    return {
-      question: "What kind of gift should it feel like?",
-      reason: "Gift results get better once the vibe is clear.",
-      mode: "recipient",
-      options: [
-        option("Practical", "Useful daily item, low risk.", "practical gift"),
-        option("Premium feel", "Looks and feels more expensive.", "premium gift"),
-        option("Hobby upgrade", "Matches an interest or routine.", "hobby upgrade gift"),
-        option("Safe budget pick", "Thoughtful without stretching price.", "budget gift"),
-      ],
-    };
-  }
-
-  return {
-    question: "What should I optimize for first?",
-    reason: "Pick one priority and I’ll narrow the catalog before comparing.",
-    mode: "feature",
-    options: [
-      option("Best overall", "Balanced quality, price, and reliability.", "best overall"),
-      option("Lowest price", "Cheapest viable options first.", "lowest price"),
-      option("Premium quality", "Better materials, performance, or brand strength.", "premium quality"),
-      option("Easy ownership", "Low maintenance, simple setup, fewer hassles.", "easy ownership"),
-    ],
-  };
 }
 
 function removeUndefined<T>(value: T): T {
@@ -622,88 +428,6 @@ async function handleChatPost(request: Request) {
     });
   }
 
-  const userText = message?.role === "user" ? getTextFromMessage(message) : "";
-  const clarifyData =
-    !isToolApprovalFlow && message?.role === "user"
-      ? (shouldOfferDiscoveryOptions(userText, messagesFromDb)
-          ? buildDiscoveryClarification(userText)
-          : null)
-      : null;
-
-  if (clarifyData) {
-    const toolCallId = generateUUID();
-    const stream = createUIMessageStream<ChatMessage>({
-      execute: ({ writer }) => {
-        if (provisionalTitle) {
-          writer.write({
-            type: "data-chat-title",
-            data: provisionalTitle,
-            transient: true,
-          });
-        }
-        writer.write({ type: "start" });
-        writer.write({ type: "text-start", id: "intro" });
-        writer.write({
-          type: "text-delta",
-          id: "intro",
-          delta: "Pick one option and I’ll narrow the catalog.",
-        });
-        writer.write({ type: "text-end", id: "intro" });
-        writer.write({
-          type: "tool-input-available",
-          toolCallId,
-          toolName: "clarifyIntent",
-          input: clarifyData,
-        });
-        writer.write({
-          type: "tool-output-available",
-          toolCallId,
-          output: clarifyData,
-        });
-        writer.write({ type: "finish", finishReason: "stop" });
-      },
-      generateId: generateUUID,
-      onFinish: async ({ messages: finishedMessages }) => {
-        const durationSeconds = Math.max(
-          1,
-          Math.ceil((Date.now() - responseStartedAt) / 1000)
-        );
-        try {
-          await saveMessages({
-            messages: finishedMessages.map((currentMessage) => ({
-              id: currentMessage.id,
-              role: currentMessage.role,
-              parts:
-                currentMessage.role === "assistant"
-                  ? withThinkingPart(currentMessage.parts, durationSeconds)
-                  : currentMessage.parts,
-              createdAt: new Date(),
-              attachments: [],
-              chatId: id,
-            })),
-          });
-        } catch (error) {
-          console.error("[backend-chat-persist] failed to save clarify message", error);
-        }
-
-        if (titlePromise) {
-          try {
-            const title = await titlePromise;
-            await updateChatTitleById({ chatId: id, title });
-          } catch (error) {
-            console.warn("[backend-chat-title] failed to persist title", error);
-          }
-        }
-      },
-      onError: (error) => {
-        console.error("[backend-chat-clarify] error", error);
-        return "Something went wrong while preparing options. Try again.";
-      },
-    });
-
-    return createUIMessageStreamResponse({ stream });
-  }
-
   const agent = buildAgentForChat({
     agentId: selectedAgentId ?? DEFAULT_AGENT_ID,
     chatId: id,
@@ -739,7 +463,7 @@ async function handleChatPost(request: Request) {
           },
         }),
         messages: modelMessages,
-        stopWhen: stepCountIs(10),
+        stopWhen: [stepCountIs(10), hasToolCall("clarifyIntent")],
         activeTools: modelCapabilities.tools
           ? ([...agent.activeToolNames] as string[])
           : [],

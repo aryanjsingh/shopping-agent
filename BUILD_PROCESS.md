@@ -345,6 +345,31 @@ Same chat is stable across reloads (state lives in chatId). Different chats get 
 
 Free-tier models occasionally emit the `clarifyIntent` payload as JSON-shaped text instead of actually calling the tool. New `tryParseClarifyMenuFromText()` in `clarify-menu-utils.ts` detects these payloads and `message.tsx` renders the menu chips anyway. Defensive layer — works regardless of whether the model behaves.
 
+### Model provider selection
+
+The model selector now separates runtime providers from model vendors:
+
+- **OpenRouter** — existing OpenRouter-backed model list remains selectable.
+- **DeepSeek** — direct DeepSeek API integration is enabled with only `deepseek-v4-flash`.
+
+Reason: OpenRouter remains useful for model variety, but DeepSeek direct calls should use the official DeepSeek OpenAI-compatible API (`https://api.deepseek.com`) and avoid exposing every DeepSeek API model in the UI. The direct DeepSeek provider reads `DEEPSEEK_API_KEY` from local env only. No API keys belong in tracked files.
+
+Direct DeepSeek `deepseek-v4-flash` currently disables DeepSeek thinking mode at the API request layer. DeepSeek thinking mode requires `reasoning_content` to be preserved and replayed across follow-up tool-call turns; the current AI SDK/UI-message persistence path does not keep that provider-specific field. Disabling thinking keeps direct DeepSeek usable with tools until native `reasoning_content` replay is implemented.
+
+### Clarification menu stability
+
+Clarification menus are now treated as terminal for a single assistant turn: the backend stops the tool loop after `clarifyIntent`, and the frontend renders only the latest clarification card from a message. The shopping prompt was softened from "mandatory clarify first" to "clarify only when a missing choice materially changes the product set." Reason: repeated option menus after the shopper already gave a constraint made the agent feel random and caused stacked UI cards.
+
+### Product link rendering
+
+Product-name hover tags in assistant prose were removed. Matched product names now render as plain text links to the merchant URL, without the pill/card hover treatment. Reason: the hover tag made normal shopping advice look like internal annotations.
+
+All shopping CTAs now validate URLs through a shared `getExternalHref()` helper and only use absolute `http`/`https` merchant links. Empty or relative URLs no longer become app-local links. Product cards also show a visible Buy action when a direct merchant URL exists, instead of relying only on the image click or detail modal.
+
+### Compatibility answer safety
+
+For factual compatibility/research questions, the shopping prompt now requires tool evidence before giving a yes/no answer. If web/product lookup fails, the agent should say it could not verify instead of answering from memory. Reason: showing a product to a shopper is different from making unsupported compatibility claims.
+
 ### Self-test harness
 
 `backend/scripts/selftest/run.mjs` — runs 8 scenarios (broad / specific / budget / compare / cheapest / gift / phone-old-vs-new / laptop-video) against `/api/chat`, parses the SSE stream, and scores each turn on tool sequencing, hallucination heuristics, and markdown contract. Transcripts saved per run for inspection.
