@@ -23,7 +23,7 @@ Considered showing every `tool-compareProducts` invocation, vs. only the last on
 Considered caching `search_catalog` responses in Redis, vs. obeying Shopify's "do not cache search results or catalog images" policy. Chose policy compliance. Because catalog freshness is the entire point, and a UCP profile signed by us implicitly accepts the rules of the road. `cache: "no-store"` on every MCP call. Catalog images render directly from merchant URLs, not through a Next/Image optimizer.
 
 ### Recommendation feed is non-AI
-Considered making the homepage an AI loop ("here is what's hot today"), vs. a deterministic feed backed by Redis cache. Chose deterministic. Because the agent is rate-limited and the feed should be free to browse without spending a free-tier token. Cache TTLs: 1h for recommendations, 5m for search. Daily-rotated category bucket means most users hit a cached response.
+Considered making the discovery surface an AI loop ("here is what's hot today"), vs. a deterministic feed backed by Redis cache. Chose deterministic. Because the agent is rate-limited and the feed should be free to browse without spending a free-tier token. Cache TTLs: 1h for recommendations, 5m for search. Daily-rotated category bucket means most users hit a cached response.
 
 ### Clarify only when missing info changes the answer
 Considered forcing clarifyIntent at the start of every shopping turn, vs. clarifying only when a missing constraint materially changes the product set. Chose the latter. Because forced clarification on every turn made the chat feel like a form. Tradeoff accepted: the agent sometimes picks one product class when two were plausible.
@@ -46,8 +46,8 @@ Considered persisting the last query/filters/result IDs in the DB, vs. reconstru
 ### Generative UI > model-emitted markdown
 Considered letting the model render product info as markdown, vs. forcing native UI components keyed on tool outputs. Chose native components. Because the model cannot fabricate a tool result, so the UI is grounded by construction. The prompt explicitly forbids markdown tables and headings.
 
-### Free-tier OpenRouter primary, DeepSeek direct optional
-Considered paid OpenAI / Anthropic for reliability, vs. free OpenRouter with fallback chain + direct DeepSeek. Chose free with fallbacks. Because the hackathon submission should be reproducible without committing paid keys. Tradeoff: occasional rate limit during the demo, mitigated by the fallback chain.
+### Free-tier OpenRouter models only, DeepSeek direct optional
+Considered paid OpenAI / Anthropic for reliability, vs. free OpenRouter models + direct DeepSeek. Chose free. Because the hackathon submission should be reproducible without committing paid keys. Tradeoff: occasional rate limit during the demo, and recovery is manual — the model picker in the chat header is the only failover. We did not build automatic retry onto a second model.
 
 ### Disable DeepSeek thinking mode at the API layer
 Considered enabling DeepSeek's native thinking mode, vs. disabling it for now. Chose disabling. Because thinking mode requires `reasoning_content` to be preserved and replayed across follow-up tool turns, and the current AI SDK / UI-message persistence path drops the provider-specific field. Disabling keeps direct DeepSeek usable with tools.
@@ -59,13 +59,13 @@ Considered making login/register the only entry, vs. exposing "Continue as guest
 Considered open backend endpoints, vs. requiring an internal-secret header on every frontend → backend call. Chose the secret. Because the catalog data is not user-scoped but the LLM cost is real; the secret keeps random scrapers from hammering the agent surface.
 
 ### Single-file backend `server.ts`
-Considered modularizing routes into separate files, vs. one Hono file. Chose one file for now. Because the surface is small (chat, messages, votes, feed) and one file keeps the streaming + persistence flow visible end-to-end. Split when it crosses ~800 lines or when route count > ~10.
+Considered modularizing routes into separate files, vs. one hand-rolled `node:http` router file. Chose one file for now. Because the surface is small (chat, messages, votes, feed) and one file keeps the streaming + persistence flow visible end-to-end. Split when it crosses ~800 lines or when route count > ~10.
 
-### Freshness audit as a separate tool
-Considered baking generation detection into `searchProducts`, vs. exposing a dedicated `assessProductFreshness` tool. Chose the dedicated tool. Because the search response gains a `freshnessHint` field telling the model "you may want to run the audit", which makes the decision visible to the model and to the buyer (via the GenerationVerdictCard) rather than hidden inside ranking logic.
+### Generation freshness as a search flag, not a tool
+Considered a dedicated freshness-audit tool that classifies a product as current-gen / previous-gen / legacy, vs. a `currentGenOnly` flag on `searchProducts` that appends a current-year filter to the catalog query. Chose the flag. Because the audit needs a maintained chipset-and-signals table to be worth anything, and a stale table would confidently mislabel products — worse than not labelling them. The flag plus a system-prompt rule ("set currentGenOnly when intent is performance-sensitive") gets most of the benefit with nothing to maintain.
 
-### Web search via Playwright with provider chain
-Considered using a commercial search API (Brave, Serper, Tavily), vs. Playwright over Bing → DuckDuckGo → Google. Chose Playwright. Because the hackathon submission should run on a laptop with no SaaS account. Tradeoff: slower, occasional CAPTCHA on Google from datacenter IPs — mitigated by the provider chain and an optional `SEARCH_PROXY_URL`.
+### Web search via Playwright, not a search API
+Considered using a commercial search API (Brave, Serper, Tavily), vs. Playwright scraping Bing with a DuckDuckGo fallback. Chose Playwright. Because the hackathon submission should run on a laptop with no SaaS account. Tradeoff: much slower (a headless Chromium per process), and it breaks whenever either SERP changes its markup.
 
 ### Track-agnostic agent registry from day one
 Considered hard-coding Track 1 logic in the server, vs. designing a registry that maps `agentId` → `AgentDefinition`. Chose the registry. Because Tracks 2–5 should be addable without surgery, and the registry shape is cheap. Tracks 2–5 are currently stubs.

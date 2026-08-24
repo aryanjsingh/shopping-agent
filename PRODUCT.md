@@ -6,9 +6,9 @@ An AI shopping concierge that turns plain-language shopping intent into grounded
 
 Live in this submission:
 
-- Chat surface at `/chat` for the agent loop.
-- Recommendation feed at `/` for catalog discovery without an AI call.
-- Generative UI parts (product grid, comparison table, seller comparison, freshness verdict card, option chips, web-search evidence panel) rendered from tool outputs.
+- Chat surface at `/` for the agent loop.
+- Recommendation feed at `/discovery` for catalog discovery without an AI call.
+- Generative UI parts (product grid, product detail card, comparison table, seller comparison, option chips, web-search evidence panel, buy CTA) rendered from tool outputs.
 - Per-chat personality + seeded shuffle so two judges hitting the same demo see different orderings of the same catalog, without breaking factual grounding.
 
 ## Who it is for
@@ -22,7 +22,7 @@ Two audiences, same surface:
 
 Classic search is keyword-shaped. Buyers are intent-shaped. The gap costs merchants conversions and costs buyers confidence. Three concrete failures we wanted to remove:
 
-- **Stale recommendations in fast-moving categories.** A "gaming phone" search surfacing a Snapdragon 845 device is technically a match but a real-world wrong answer. Our freshness audit detects category + chipset + signals (Wi-Fi 7, BT 5.4, USB-C PD, etc.) and labels current-gen vs. previous-gen vs. legacy before the buyer commits.
+- **Stale recommendations in fast-moving categories.** A "gaming phone" search surfacing a Snapdragon 845 device is technically a match but a real-world wrong answer. `searchProducts` takes a `currentGenOnly` flag that appends a current-year filter to the catalog query, and the system prompt instructs the agent to set it whenever intent is performance-sensitive ("gaming", "video editing", "latest").
 - **Comparison without context.** Side-by-side spec tables that hide the actual decision. Our comparison output highlights the cheapest variant, surfaces the best seller, and the model is forced to name the tradeoff in its prose.
 - **Hand-waved compatibility claims.** The model is constrained to refuse compatibility answers without tool evidence. If web/product lookup fails, it says it could not verify rather than guess.
 
@@ -31,9 +31,8 @@ Classic search is keyword-shaped. Buyers are intent-shaped. The gap costs mercha
 1. Buyer describes intent in natural language.
 2. Agent asks one follow-up only when a missing constraint materially changes the product set. Clarifications render as quick-reply chips.
 3. Agent searches the Shopify Catalog MCP.
-4. For fast-moving categories, agent runs `assessProductFreshness` and may counter-search with a current-gen hint in the same budget.
-5. Agent presents 2–6 products as cards, compares 2–4 side-by-side on demand, or breaks down sellers per product.
-6. Buyer clicks Buy on the cheapest in-stock variant. URL is the merchant's own Shop Pay / variant / product page — no checkout proxy.
+4. Agent presents 2–6 products as cards, compares 2–4 side-by-side on demand, or breaks down sellers per product.
+5. Buyer clicks Buy on the cheapest in-stock variant. URL is the merchant's own Shop Pay / variant / product page — no checkout proxy.
 
 ## Key product decisions and tradeoffs
 
@@ -50,18 +49,18 @@ Free-tier LLMs love to emit markdown headings, bullet thickets, and pipe tables.
 Same query in two different chats should not produce identical orderings or identical opening sentences. A 32-bit `chatId` hash seeds:
 - a personality hint in the system prompt,
 - the shuffle of the long tail of search results (top-2 stable),
-- the homepage suggested-action chips,
+- the suggested-action chips on an empty chat,
 - the greeting copy.
 Tradeoff: more state to test, but reproducibility within a chat is preserved (same chat → same outputs across reloads).
 
 ### Generative UI as first-class output
 Tool outputs render as native components, not as model-emitted markdown. The model can lie in prose; it cannot fabricate a product card without a tool result. Tradeoff: more frontend surface area, but the UI grounding is the strongest defense against hallucination.
 
-### Free-tier model chain with fallbacks
-Primary `z-ai/glm-4.5-air:free`, fallbacks `openai/gpt-oss-120b:free` and `meta-llama/llama-3.3-70b-instruct:free`. Direct DeepSeek `deepseek-v4-flash` is also wired. Tradeoff: rate limits during demos; mitigated by fallback chain and graceful degradation when the chosen model 429s.
+### Free-tier models only
+Default `openai/gpt-oss-120b:free` on OpenRouter, with ~29 free models exposed in the in-chat model picker. Direct DeepSeek `deepseek-v4-flash` is also wired. Tradeoff: rate limits during demos. Recovery is manual — the buyer (or the judge) switches model in the chat header; there is no automatic failover.
 
-### Recommendation feed at `/` is non-AI
-The homepage browses the live Shopify catalog with daily-rotated categories and 5-min/1h Redis caches. Zero LLM cost. Tradeoff: feed quality is bounded by raw catalog ranking, but it gives judges a "look at the product surface without spending a token" entry path before they open the chat.
+### Recommendation feed at `/discovery` is non-AI
+The feed browses the live Shopify catalog with daily-rotated categories and 5-min/1h Redis caches. Zero LLM cost. Tradeoff: feed quality is bounded by raw catalog ranking, but it gives judges a "look at the product surface without spending a token" entry path before they open the chat.
 
 ### Guest auth as the dominant CTA
 Login and register both lead with "Continue as guest" so a judge can demo without signup friction. Tradeoff: anonymous chats are pruned aggressively and not personalized.
@@ -72,9 +71,8 @@ In scope:
 
 - Cross-merchant product discovery via Shopify Catalog MCP.
 - Conversational refinement (search → refine → showMore → compare).
-- Freshness audit for 19 fast-moving categories.
 - Web search evidence for reviews and compatibility questions.
-- Generative UI for products, comparisons, sellers, freshness verdicts, web evidence.
+- Generative UI for products, comparisons, sellers, web evidence, checkout CTA.
 - Recommendation feed surface for non-chat discovery.
 - Guest mode.
 
@@ -91,13 +89,12 @@ Out of scope (for this submission):
 
 - Time-to-first-good-recommendation under 30 seconds against the live Shopify Catalog MCP.
 - Buyer can compare 2–4 products without scrolling through a markdown wall.
-- Stale gear in fast-moving categories is flagged before the buyer commits.
 - Every product link goes to a real merchant page; no dead Buy buttons.
 - Two judges hitting the same demo see different conversational tone without different facts.
 
 ## Why this is hackathon-strong
 
 - Track 1 framing literally calls out cross-merchant discovery → Catalog MCP is the right primitive.
-- The freshness layer is the differentiator. Generic agent demos do not address generation drift in electronics. Ours does, with a curated chipset table and a counter-search hint.
-- The generative UI grounding is a real anti-hallucination mechanism, not a UX flourish — the model cannot show a card it did not earn from a tool.
+- The generative-UI grounding contract is the differentiator, and it is a real anti-hallucination mechanism rather than a UX flourish — the model cannot show a card it did not earn from a tool.
+- An automated self-test harness (8 scenarios) asserts on the agent's *tool sequence*, not just its prose, and archives scored transcripts per run.
 - The submission includes a non-chat surface (the feed) and a chat surface, which mirrors how a real Shopify merchant would deploy this: a browse layer plus an agent layer over the same catalog.

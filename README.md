@@ -9,30 +9,30 @@ Track 1 submission for the Kasparro Agentic Commerce Hackathon — an AI shoppin
 
 ## What this is
 
-A buyer types what they want in natural language ("gaming laptop under $1500 with good battery"). The agent asks one clarifying question only when the missing constraint actually changes the answer, searches the live cross-merchant Shopify catalog, audits products in fast-moving categories for generation freshness, compares 2–4 picks side-by-side, and links straight out to the merchant's Shop Pay checkout.
+A buyer types what they want in natural language ("gaming laptop under $1500 with good battery"). The agent asks one clarifying question only when the missing constraint actually changes the answer, searches the live cross-merchant Shopify catalog, compares 2–4 picks side-by-side, and links straight out to the merchant's Shop Pay checkout.
 
 Two surfaces:
 
-- **`/chat`** — the agent loop.
-- **`/`** — a non-AI recommendation feed over the same Shopify Catalog MCP. Browse without spending a free-tier LLM token.
+- **`/`** — the agent loop. (A specific conversation lives at `/chat/<id>`.)
+- **`/discovery`** — a non-AI recommendation feed over the same Shopify Catalog MCP. Browse without spending a free-tier LLM token.
 
 ## Submission documents
 
 - [PRODUCT.md](./PRODUCT.md) — what we built, for whom, why, scope, tradeoffs.
 - [TECHNICAL.md](./TECHNICAL.md) — architecture, implementation, failure handling, limitations.
 - [DECISIONS.md](./DECISIONS.md) — decision log ("considered X, chose Y, because Z").
-- [CONTRIBUTION.md](./CONTRIBUTION.md) — solo build; time split across product vs. engineering.
+- [CONTRIBUTION.md](./CONTRIBUTION.md) — two-person build; how the work split across product vs. engineering.
 - [BUILD_PROCESS.md](./BUILD_PROCESS.md) — running build notebook (source for the four docs above).
 - Demo video: _add unlisted YouTube / Drive link here_.
 
 ## Stack
 
 - **Frontend** — Next.js 16 App Router, React, Tailwind, shadcn/ui, Vercel AI SDK 6.
-- **Backend** — Node + tsx, Vercel AI SDK 6, Hono-style route handler in one `server.ts`.
-- **LLM** — OpenRouter (`z-ai/glm-4.5-air:free` primary, free fallbacks) and optional direct DeepSeek (`deepseek-v4-flash`).
+- **Backend** — Node + tsx, Vercel AI SDK 6, hand-rolled `node:http` router in one `server.ts`.
+- **LLM** — OpenRouter (default `openai/gpt-oss-120b:free`; ~29 free models selectable from the in-chat model picker) and optional direct DeepSeek (`deepseek-v4-flash`).
 - **Catalog** — Shopify Global Catalog MCP (`https://catalog.shopify.com/api/ucp/mcp`).
 - **Storage** — Postgres 16 + Redis 7 via Docker Compose.
-- **Web evidence** — Playwright + stealth, Bing → DuckDuckGo → Google fallback chain.
+- **Web evidence** — Playwright + stealth, Bing with a DuckDuckGo fallback.
 
 ## Prerequisites
 
@@ -78,8 +78,6 @@ OPENROUTER_REFERRER=http://localhost:3000
 DEEPSEEK_API_KEY=
 SHOPIFY_CATALOG_MCP_URL=https://catalog.shopify.com/api/ucp/mcp
 SHOPIFY_UCP_AGENT_PROFILE=https://shopify.dev/ucp/agent-profiles/examples/2026-04-08/valid-with-capabilities.json
-# optional: residential proxy for Google search on datacenter IPs
-SEARCH_PROXY_URL=
 ```
 
 ### 4. Configure frontend
@@ -140,8 +138,8 @@ cd frontend && pnpm dev
 
 ### 8. Open the app
 
-- Chat: http://localhost:3000/chat
-- Recommendation feed: http://localhost:3000/
+- Chat: http://localhost:3000/
+- Recommendation feed: http://localhost:3000/discovery
 
 Click **Continue as guest** on the auth screens — no signup needed for the demo path.
 
@@ -149,7 +147,7 @@ Click **Continue as guest** on the auth screens — no signup needed for the dem
 
 A quick sanity flow:
 
-1. Open `http://localhost:3000/chat`.
+1. Open `http://localhost:3000/`.
 2. Send: _"gaming laptop under $1500 with good battery"_
 3. Agent should ask one clarifying question (use case) as quick-reply chips.
 4. Pick a chip — agent searches Shopify Catalog MCP and renders 2–6 product cards.
@@ -161,8 +159,8 @@ A quick sanity flow:
 ```
 shopping-agent/
 ├── frontend/                       # Next.js 16 App Router app
-│   ├── app/(chat)/                 # /chat shell + chat by id
-│   ├── app/page.tsx                # Recommendation feed homepage
+│   ├── app/(chat)/                 # Agent surface at / + chat by id
+│   ├── app/discovery/page.tsx      # Recommendation feed
 │   ├── components/chat/            # Chat surface
 │   │   └── shopping/               # Generative UI parts
 │   ├── hooks/use-active-chat.tsx   # useChat wrapper, transport, persistence sync
@@ -173,7 +171,7 @@ shopping-agent/
 │   ├── src/server.ts               # All routes — chat, messages, feed, votes
 │   └── src/lib/
 │       ├── agents/registry.ts      # Track 1 wired, Tracks 2–5 stubs
-│       ├── agents/track1-shopping/ # System prompt + 12 tools + freshness lib
+│       ├── agents/track1-shopping/ # System prompt + 11 tools
 │       ├── shopify/catalog.ts      # Shopify Catalog MCP JSON-RPC client
 │       ├── ai/providers.ts         # OpenRouter + direct DeepSeek
 │       └── cache/redis.ts          # getOrSet helper
@@ -197,7 +195,7 @@ shopping-agent/
 - **`Shopify Catalog MCP search_catalog failed (4xx)`** — check that your machine has outbound HTTPS to `catalog.shopify.com`. No auth token is required for the public global endpoint.
 - **OpenRouter `429 rate limit`** — switch to a different model in the chat header (model picker), or wait the cooldown.
 - **`AUTH_SECRET` missing** — frontend will refuse to start. Generate with `openssl rand -base64 32`.
-- **Google CAPTCHA in `webSearch`** — set `SEARCH_PROXY_URL` to a residential proxy URL in `backend/.env`. DuckDuckGo / Bing legs of the chain usually succeed without it.
+- **`webSearch` returns nothing** — the Bing leg was likely blocked or the page layout changed; the DuckDuckGo fallback normally covers it. Re-run the query, or ask the agent to search different terms.
 
 ## License
 

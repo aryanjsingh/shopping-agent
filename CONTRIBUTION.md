@@ -14,7 +14,7 @@ Work split roughly 50/50. Both contributed jointly to product framing, decision-
 ### Joint (both led together, ~30% of total time)
 - Track 1 framing and scope decisions.
 - Choosing Shopify Catalog MCP over a custom dev store + CSV pipeline.
-- Freshness audit as the differentiator (which categories, which signals, where the verdict surfaces).
+- Generation-freshness handling: a `currentGenOnly` search flag plus a system-prompt rule, rather than a maintained chipset table.
 - Clarify-only-when-it-matters policy.
 - Generative-UI-as-grounding principle.
 - Per-chat seeded variation strategy (system prompt, search shuffle, suggested actions, greeting).
@@ -25,10 +25,9 @@ Work split roughly 50/50. Both contributed jointly to product framing, decision-
 - Backend server (`backend/src/server.ts`): chat streaming, message persistence, vote routes, feed routes, internal-secret gating.
 - Shopify Catalog MCP client (`backend/src/lib/shopify/catalog.ts`): JSON-RPC client, normalization of UCP product/variant shapes, no-store policy compliance.
 - Track 1 agent definition and system prompt (`backend/src/lib/agents/track1-shopping/`): persona, decision tree, tool-sequencing rules, response shape, error recovery, per-chat agentSeed.
-- 12 tools: `searchProducts`, `refineSearch`, `showMore`, `getProduct`, `compareProducts`, `compareSellers`, `displayProducts`, `clarifyIntent`, `assessProductFreshness`, `webSearch`, `webFetch`, `buyProduct`.
-- Freshness library (`freshness/`): 19-category detector, curated chipset table (Apple A/M, Snapdragon, Dimensity, Tensor, Exynos, Intel, AMD, Nvidia, AMD RX), non-silicon signals (Wi-Fi 7, BT 5.4, USB-C PD, OLED variants, etc.), verdict composer.
-- Web search hardening: Bing → DuckDuckGo → Google fallback chain with Playwright + stealth, 5-min TTL cache, residential proxy support.
-- Provider router (`backend/src/lib/ai/providers.ts`): OpenRouter primary chain + direct DeepSeek with thinking-mode handling.
+- 11 tools: `searchProducts`, `refineSearch`, `showMore`, `getProduct`, `compareProducts`, `compareSellers`, `displayProducts`, `clarifyIntent`, `webSearch`, `webFetch`, `buyProduct`.
+- Web search (`webSearch`, `webFetch`): Playwright + stealth over Bing with a DuckDuckGo fallback, rotating user agents, 5-min in-process TTL cache.
+- Provider router (`backend/src/lib/ai/providers.ts`): OpenRouter plus direct DeepSeek, with DeepSeek thinking mode disabled at the request layer.
 - Postgres + Redis Docker setup; Drizzle schema + queries used by both processes.
 - Self-test harness (`backend/scripts/selftest/run.mjs`): 8 scenarios, transcript scoring, iteration log.
 - Backend low-rating filter and ranking logic.
@@ -36,9 +35,9 @@ Work split roughly 50/50. Both contributed jointly to product framing, decision-
 ### Ridhi led (~35% of total time)
 - Frontend chat shell (`frontend/app/(chat)/`, `frontend/components/chat/`): message list, multimodal input, sidebar history, model picker, auth pages with guest CTA.
 - `hooks/use-active-chat.tsx`: `useChat` wrapper, transport to backend, SWR mutate-on-finish that syncs DB state back into in-memory messages, auto-resume bridge.
-- Generative UI parts (`frontend/components/chat/shopping/`): `ProductGrid`, `ProductCard`, `ProductDetailCard`, `ComparisonTable`, `SellerComparison`, `FreshnessBadge`, `GenerationVerdictCard`, `WebSearchResults`, `OptionChips`, `BuyCta`.
+- Generative UI parts (`frontend/components/chat/shopping/`): `ProductGrid`, `ProductCard`, `ProductDetailCard`, `ComparisonTable`, `SellerComparison`, `WebSearchResults`, `OptionChips`, `BuyCta`, `ProductMarkdownResponse`.
 - Defensive parsing layer (`assistant-response-json.ts`): JSON envelope unwrap, inline-wrapper extraction, markdown pipe-table stripper, narration stripper, clarify-menu salvage.
-- Recommendation feed homepage (`frontend/app/page.tsx`, `frontend/components/feed/`): static shell + Suspense streaming, daily-rotated categories, feed search bar.
+- Recommendation feed (`frontend/app/discovery/page.tsx`, `frontend/components/feed/`): static shell + Suspense streaming, daily-rotated categories, feed search bar.
 - Thinking panel UX (`MessageThinking`, `MessageReasoning`): collapsed-by-default trace, tool icons, streaming spinner, persisted-tool fallback.
 - next-auth setup with guest provider, Drizzle session storage.
 - Tailwind + shadcn/ui theming, dark mode, responsive layouts.
@@ -78,9 +77,9 @@ Work split roughly 50/50. Both contributed jointly to product framing, decision-
 
 ### LLM providers
 - OpenRouter via `@openrouter/ai-sdk-provider`
-  - Primary: `z-ai/glm-4.5-air:free`
-  - Fallbacks: `openai/gpt-oss-120b:free`, `meta-llama/llama-3.3-70b-instruct:free`
-  - Title model: `meta-llama/llama-3.2-3b-instruct:free`
+  - Default chat model: `openai/gpt-oss-120b:free`
+  - ~29 free models exposed in the in-chat picker; no automatic failover between them
+  - Title model: `openai/gpt-oss-20b:free`
 - DeepSeek direct via OpenAI-compatible API (`https://api.deepseek.com`) with `deepseek-v4-flash`
 - `@ai-sdk/openai` for the OpenAI-compatible adapter
 - Optional Vercel AI Gateway path (kept compatible)
@@ -88,8 +87,7 @@ Work split roughly 50/50. Both contributed jointly to product framing, decision-
 ### Data sources & external services
 - **Shopify Global Catalog MCP** — `https://catalog.shopify.com/api/ucp/mcp` (`search_catalog`, `lookup_catalog`, `get_product`) with UCP agent profile
 - Playwright + `playwright-extra` + `puppeteer-extra-plugin-stealth` for web search/fetch
-- Bing, DuckDuckGo, Google as search providers (fallback chain)
-- Optional residential proxy via `SEARCH_PROXY_URL`
+- Bing as the primary SERP source, DuckDuckGo as fallback
 
 ### Storage
 - Postgres 16 (Docker) for users, chats, messages, votes
@@ -119,11 +117,11 @@ Work split roughly 50/50. Both contributed jointly to product framing, decision-
 - `OPENROUTER_API_KEY`, `OPENROUTER_REFERRER`
 - `DEEPSEEK_API_KEY`, `DEEPSEEK_BASE_URL`
 - `SHOPIFY_CATALOG_MCP_URL`, `SHOPIFY_UCP_AGENT_PROFILE`
-- Optional: `SEARCH_PROXY_URL`, `SHOPIFY_SHOP`, `SHOPIFY_CLIENT_ID`, `SHOPIFY_CLIENT_SECRET`, `SHOPIFY_ADMIN_ACCESS_TOKEN`, `SHOPIFY_STOREFRONT_ACCESS_TOKEN` (legacy helper scripts only)
+- Optional: `SHOPIFY_SHOP`, `SHOPIFY_CLIENT_ID`, `SHOPIFY_CLIENT_SECRET`, `SHOPIFY_ADMIN_ACCESS_TOKEN`, `SHOPIFY_STOREFRONT_ACCESS_TOKEN` (legacy helper scripts only)
 
 ## How we worked
 
-- Pair-design on the big decisions (catalog source, generative-UI contract, freshness audit shape, clarify policy), solo-execute on the implementation slices.
+- Pair-design on the big decisions (catalog source, generative-UI contract, clarify policy, per-chat seeding), solo-execute on the implementation slices.
 - `BUILD_PROCESS.md` is the running notebook both authors wrote into during the build. The four submission docs (PRODUCT, TECHNICAL, DECISIONS, this file) are derived from it.
 - Decision Log (`DECISIONS.md`) captures every load-bearing choice, including dropped ones — own Shopify dev store, dashboard shell, artifact tools, always-clarify.
 - All git authorship under `aryanjsingh` for the hackathon submission; pairing happened live so commits do not split per-person.

@@ -2,11 +2,11 @@
 
 ## Architecture
 
-Three-process system. Frontend (Next.js 16 App Router) talks to a Hono/Node backend (`tsx src/server.ts`) which is the only process that talks to the Shopify Catalog MCP server. Postgres + Redis run locally in Docker.
+Three-process system. Frontend (Next.js 16 App Router) talks to a Node backend (`tsx src/server.ts`) which is the only process that talks to the Shopify Catalog MCP server. Postgres + Redis run locally in Docker.
 
 ```
  ┌────────────┐   HTTPS    ┌──────────────────┐   HTTPS   ┌─────────────────────────┐
- │  Browser   │ ─────────▶ │  Next.js (3000)  │ ────────▶ │  Backend Hono (4000)    │
+ │  Browser   │ ─────────▶ │  Next.js (3000)  │ ────────▶ │  Backend Node (4000)    │
  │  React UI  │            │  - chat shell    │           │  - /api/chat (SSE)      │
  │            │            │  - feed pages    │           │  - /api/messages        │
  │            │            │  - next-auth     │           │  - /api/feed/*          │
@@ -42,17 +42,18 @@ Three-process system. Frontend (Next.js 16 App Router) talks to a Hono/Node back
 
 ### Frontend (`frontend/`)
 - Next.js 16 App Router, Turbopack dev, React Server Components.
-- `app/(chat)/chat/[id]/page.tsx` — chat shell, loads message history via SWR.
-- `app/page.tsx` — recommendation feed homepage.
+- `app/(chat)/layout.tsx` — renders `ChatShell` for the whole group, so the agent surface is served at `/`.
+- `app/(chat)/chat/[id]/page.tsx` — a specific conversation, loads message history via SWR.
+- `app/discovery/page.tsx` — recommendation feed.
 - `components/chat/*` — message list, multimodal input, sidebar history, generative UI parts.
-- `components/chat/shopping/*` — domain-specific UI: `product-grid`, `product-card`, `comparison-table`, `seller-comparison`, `freshness-badge`, `generation-verdict-card`, `web-search-results`, `option-chips`, `buy-cta`, `assistant-response-json` parser.
+- `components/chat/shopping/*` — domain-specific UI: `product-grid` (with its `ProductCard`), `product-detail-card`, `comparison-table`, `seller-comparison`, `web-search-results`, `option-chips`, `buy-cta`, `product-markdown-response`, `assistant-response-json` parser.
 - `hooks/use-active-chat.tsx` — wraps `useChat` from `@ai-sdk/react` with transport that points at `${BASE}/api/chat`. Owns optimistic message state, SWR mutate on stream finish, and the auto-resume bridge.
 - `lib/db/*` — Drizzle schema + queries (Postgres). Exposed only on the frontend Next.js server, which is allowed to read `POSTGRES_URL` for next-auth.
 - `lib/feed/*` — typed client around the backend's `/api/feed/*` endpoints.
 - `instrumentation.ts` — OTel hooks (no-op in dev).
 
 ### Backend (`backend/src/`)
-- `server.ts` — single-file route handler using Hono primitives + Vercel AI SDK 6. Routes:
+- `server.ts` — single-file router over `node:http` + Vercel AI SDK 6. No web framework; routes are matched by hand. Routes:
   - `POST /api/chat` — opens an `createUIMessageStream` over a `streamText` call. Persists user message immediately; persists assistant message in `onFinish`.
   - `GET /api/messages?chatId=...` — returns the chat row, message list (converted to UI message shape), and visibility.
   - `POST /api/vote`, `GET /api/vote` — message votes.
@@ -61,7 +62,7 @@ Three-process system. Frontend (Next.js 16 App Router) talks to a Hono/Node back
 - `src/lib/shopify/catalog.ts` — Shopify Catalog MCP JSON-RPC client. Normalizes UCP `product` and `variant` shapes into internal `CatalogProduct` / `CatalogVariant`. Sends `meta.ucp-agent.profile` per request. `cache: "no-store"` per Shopify catalog policy.
 - `src/lib/ai/providers.ts` — model router. OpenRouter via `@openrouter/ai-sdk-provider`, DeepSeek via OpenAI-compatible base URL.
 - `src/lib/db/queries.ts` — same Drizzle schema as the frontend, accessed via the `backend` condition export.
-- `src/lib/cache/redis.ts` — `getOrSet(key, ttl, fn)` helper for feed/web caches.
+- `src/lib/cache.ts` — `cacheGet` / `cacheSet` helpers over node-redis, used by the feed routes.
 
 ### Storage
 - Postgres 16 (Docker, port 5433 → 5432 inside).
@@ -77,7 +78,7 @@ Three-process system. Frontend (Next.js 16 App Router) talks to a Hono/Node back
 
 | Tool | Purpose | Backed by |
 |---|---|---|
-| `searchProducts` | Cross-merchant product search with sortMode, freshnessHint, lightShuffle | Shopify Catalog MCP `search_catalog` |
+| `searchProducts` | Cross-merchant product search with sortMode, currentGenOnly, lightShuffle | Shopify Catalog MCP `search_catalog` |
 | `refineSearch` | Merges new keywords into prior query within the same chat | Same MCP, with `SearchMemo` |
 | `showMore` | Paginates prior query, filters seen IDs, seeded shuffle within unseen | Same MCP |
 | `getProduct` | Single-product detail | MCP `get_product` with `lookup_catalog` fallback |
@@ -85,8 +86,7 @@ Three-process system. Frontend (Next.js 16 App Router) talks to a Hono/Node back
 | `compareSellers` | All variants/merchants for one product | Variant data already in catalog payload |
 | `displayProducts` | Carousel rendering trigger (UI surface) | Memo of last results |
 | `clarifyIntent` | Quick-reply chip menu | UI tool, no external call |
-| `assessProductFreshness` | Wraps the freshness lib | Curated chipset + signals tables |
-| `webSearch` | Bing → DuckDuckGo → Google fallback | Playwright + stealth + optional proxy |
+| `webSearch` | Bing with DuckDuckGo fallback | Playwright + stealth |
 | `webFetch` | Single-URL content fetch | Playwright |
 | `buyProduct` | Emits checkout CTA card | UI tool, pass-through |
 
@@ -143,10 +143,10 @@ These guards mean the UI degrades gracefully when the model misbehaves, instead 
 
 Two-tier on the feed surface:
 
-- **Backend Redis** via `getOrSet(key, ttl, fn)`:
+- **Backend Redis** via `cacheGet` / `cacheSet`:
   - `feed:recs:v1:<category>` — 1 hour TTL.
   - `feed:search:v1:<query>` — 5 minute TTL.
-- **Next.js Cache Components** (`cacheComponents: true`) for the homepage shell prerender. Dynamic feed and search results stream inside `<Suspense>`.
+- **Next.js Cache Components** (`cacheComponents: true`) for the discovery shell prerender. Dynamic feed and search results stream inside `<Suspense>`.
 
 Web search/fetch:
 - `webSearch` keyed on `(searchKind, num, query)`, in-memory TTL ~5 min.
@@ -160,23 +160,22 @@ Catalog search/lookup: not cached. Shopify's catalog policy prohibits caching se
 |---|---|---|
 | MCP returns 0 results or errors | Tool execute() result | Model is instructed to retry the same turn with broader/different terms (up to ~3 attempts) before telling the buyer. |
 | MCP transient 503 | Catch in `callCatalogTool` | Error thrown with status + body. Model surfaces a soft "couldn't reach catalog, retrying" path; usually resolves on next attempt. |
-| LLM provider rate limit (429) | OpenRouter error | Provider router falls through to the next free model in the chain. |
+| LLM provider rate limit (429) | OpenRouter error | Surfaced to the buyer; recovery is manual — switch model in the chat header. There is no automatic failover. |
 | Stream drops mid-response | Frontend timeout (90s) | Inserts a synthetic "response timed out" assistant message + toast. User can retry from message actions. |
 | Last DB message is user role on chat open | `use-auto-resume.ts` | Calls `resumeStream()` to recover from a dropped stream. |
 | Model emits markdown pipe table | Frontend `stripMarkdownPipeTables` | Stripped before render. |
 | Model emits `{"responseText":...}` wrapper | Frontend `parseAssistantResponseText` | Unwrapped to inner string; surrounding prose kept. |
 | Model emits clarify payload as text | Frontend `tryParseClarifyMenuFromText` | Renders chips anyway. |
 | Tool output state stuck in "streaming" client-side | Frontend `onFinish` SWR mutate + setMessages | Replaced with DB-fresh snapshot when stream closes. |
-| Web search blocked by Google CAPTCHA | Playwright + provider chain | Fallback to DuckDuckGo / Bing. Optional `SEARCH_PROXY_URL` for residential proxy. |
+| Bing SERP blocked or re-laid-out | `bingSearch` returns 0 results | Falls back to DuckDuckGo HTML endpoint. |
 | Multiple compareProducts calls in one message | Frontend `lastCompareProductsIndex` | Only the last call's table renders. |
 | Empty rating / specs in compare data | Frontend `ComparisonTable` | Entire row hidden if no product in the comparison has that field. |
 | Low-rated product surfacing first | Backend `filterLowRated` in `search-products.ts` | Drops products with rating < 3.0 unless fewer than 3 survive the filter. |
-| Stale product in fast-moving category | `assessProductFreshness` | Surfaces a generation verdict + suggests `counterSearchHint`. |
 | Compatibility question without evidence | System prompt rule | Agent must run `webSearch` before answering; refuses if all retries fail. |
 
 ## Security and secrets
 
-- All Shopify, OpenRouter, DeepSeek, web-search proxy, AUTH_SECRET, AI_GATEWAY, BLOB tokens live in `.env` files outside git.
+- All Shopify, OpenRouter, DeepSeek, AUTH_SECRET, AI_GATEWAY, BLOB tokens live in `.env` files outside git.
 - Backend exposes routes behind `BACKEND_INTERNAL_SECRET` — every frontend call carries this header. Catalog and feed read endpoints accept it without user auth (catalog data is not user-scoped).
 - User auth via next-auth credentials provider, password hashed with `bcrypt-ts`. Guest mode is a real (anonymous) user row.
 - No image proxying. Catalog images render directly from merchant CDN URLs per Shopify catalog policy.
@@ -190,7 +189,7 @@ Catalog search/lookup: not cached. Shopify's catalog policy prohibits caching se
 - **Catalog field coverage.** Many Shopify merchants do not populate `topFeatures` / `techSpecs` / `rating`. The compare table now hides empty rows. We do not synthesize.
 - **No native mobile.** Responsive web only.
 - **Tracks 2–5 are stubs.** They share the agent shape but have no system prompts or tools yet.
-- **Web search depends on Playwright.** Long-running, optional residential proxy may be needed on datacenter IPs.
+- **Web search depends on Playwright.** It launches a headless Chromium per process and scrapes SERP HTML, so it is slow and breaks whenever Bing or DuckDuckGo change their markup. There is no proxy support and no commercial search API fallback.
 - **No streaming of titles to the sidebar.** Title is generated in `onFinish` and shows on next list refresh.
 
 ## How to extend
